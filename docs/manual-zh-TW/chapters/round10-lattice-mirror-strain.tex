@@ -1,0 +1,29 @@
+\subsubsection{反向一條晶格向量}
+
+\ui{映象晶格}輸入晶格向量序號1、2或3，將相應向量反向，其他兩行不變。用一個對角矩陣 $D_i$ 表示這一操作：它的第 $i$ 個對角元素為 $-1$，另外兩個為1，於是
+\begin{equation}
+ A'=D_iA,\qquad \mathbf f'=\mathbf f.
+ \label{eq:mirror-lattice-row}
+\end{equation}
+例如選第1條軸，就是 $\mathbf a'=-\mathbf a$。分數座標 $(u,v,w)$ 對應的位置由 $u\mathbf a+v\mathbf b+w\mathbf c$ 變成 $-u\mathbf a+v\mathbf b+w\mathbf c$。由於 $\det D_i=-1$，晶胞體積的大小不變，基矢的手性改變。
+
+這與\ui{映象原子}的作用不同。在一般斜晶胞中，反向 $\mathbf a$ 並不同時把 $\mathbf b$、$\mathbf c$ 關於某個笛卡爾平面反射，原子間的某些距離可能改變。若目的是將整個分子關於空間中的平面翻到另一側，應使用前面的平面映象公式；若要改晶格基矢方向，則按本式操作並核對原子位置。
+
+\ui{旋轉晶格}輸入旋轉角度和全域性軸方向，會同時改變晶格與隨晶格擺放的原子；其行矩陣關係為 $A'=AR^{\mathsf T}$，分數座標保持不變。\ui{交換座標軸}則同時重排晶格行與分數座標分量：依次填2、1、3可交換 $\mathbf a$ 與 $\mathbf b$，同時交換 $u$ 與 $v$，因此笛卡爾位置不變。每次只做一種變化，按表\ref{tab:round10-lattice-invariants}核對後再儲存。
+
+\subsubsection{沿晶格方向施加應變}
+
+\ui{施加應變}和\ui{結構應變}使用無量綱相對伸縮量。為突出作用方向，本書將三個輸入記為 $\varepsilon_a,\varepsilon_b,\varepsilon_c$；它們依次縮放晶格矩陣的三行：
+\begin{equation}
+ A'=\begin{bmatrix}
+ 1+\varepsilon_a&0&0\\
+ 0&1+\varepsilon_b&0\\
+ 0&0&1+\varepsilon_c
+ \end{bmatrix}A,\qquad \mathbf f'=\mathbf f.
+ \label{eq:lattice-axial-strain}
+\end{equation}
+對話方塊中的三個分量仍以 $x,y,z$ 命名；在這個工具中應按第1、2、3條晶格向量理解，斜胞時不能把它們當作沿全域性 $x,y,z$ 分別拉伸。標量0.01使三行都乘1.01；輸入\literalinput{0.01 0 0}只使 $\mathbf a$ 乘1.01。0.01表示伸長1\%，不是增加 $0.01\,\text{\AA}$，也不是將胞長直接設為1.01\,\AA。
+
+仍用第\ref{ch:modeling}章的手算斜胞，$\mathbf a=(4,0,0)$、$\mathbf b=(1,3,0)$、$\mathbf c=(0,0,6)$，單位為\AA。施加\literalinput{0.01 0 0}後，只有 $\mathbf a$ 變為 $(4.04,0,0)\,\text{\AA}$；$\mathbf b$ 的 $x$ 分量仍為1\,\AA。分數座標 $(0.5,0.5,0)$ 不變，笛卡爾位置則由 $(2.5,1.5,0)$ 變為 $(2.52,1.5,0)\,\text{\AA}$。這個結果也說明，它不是把所有原子的全域性 $x$ 座標統一乘1.01。
+
+先儲存未變形模型，再填寫應變、預覽並應用。按上述小比例檢查基矢長度和代表性原子的位置，最後另存結果。這兩個工具提供三條晶格向量的伸縮，不含剪下應變；施加形變後若需要平衡結構，應另行設定相應的最佳化計算。

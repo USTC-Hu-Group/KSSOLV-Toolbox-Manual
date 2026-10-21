@@ -1,0 +1,30 @@
+設編輯前後的晶格分別為 $A$、$A'$。\ui{保持笛卡爾座標不變}決定了原子怎樣適應新外框，其關係可直接從式\eqref{eq:row-lattice-coordinates}讀出：
+\begin{equation}
+ \begin{aligned}
+ \text{保留分數座標：}\quad&\mathbf f'=\mathbf f,
+       &\mathbf r'&=\mathbf f A',\\
+ \text{保留笛卡爾位置：}\quad&\mathbf r'=\mathbf r,
+       &\mathbf f'&=\mathbf r(A')^{-1}.
+ \end{aligned}
+ \label{eq:lattice-preservation-options}
+\end{equation}
+例如，立方晶胞邊長由4改為8\,\AA，一個原子的原分數座標為 $(0.5,0,0)$，原位置為 $(2,0,0)\,\text{\AA}$。不勾選保持笛卡爾位置時，它仍在晶胞的一半處，位置變為 $(4,0,0)\,\text{\AA}$；勾選時，位置保留為 $(2,0,0)\,\text{\AA}$，分數座標改為 $(0.25,0,0)$。兩種選擇都可能有用，先決定要保留哪一種幾何關係，再改表格。
+
+\begin{table}[!htb]
+\centering\small
+\begin{tabularx}{\linewidth}{p{30mm}XX}
+\toprule
+操作 & 保留什麼 & 重點檢查什麼\\
+\midrule
+編輯晶格，保留分數座標 & $\mathbf f$和位點數 & 胞長、夾角及改變後的原子間距。\\
+編輯晶格，保留笛卡爾位置 & $\mathbf r$和位點數 & 新分數座標與週期邊界接觸。\\
+構建超胞 & 原材料的週期排列 & $|\det S|$倍的體積和獨立位點數。\\
+旋轉晶格 & 整體內部幾何、位點數 & 晶格與原子是否一起轉動。\\
+交換座標軸 & 笛卡爾幾何、位點數 & 新基矢順序與對應分數座標。\\
+映象晶格 & 分數座標、位點數 & 所選基矢取反及晶胞手性。\\
+施加應變 & 分數座標、位點數 & 三條基矢的長度及受影響的距離。\\
+\bottomrule
+\end{tabularx}
+\caption{按希望保留的量選擇晶格操作。表中的內部幾何指原子間距離與角度；改變週期邊界時，還需結合新晶胞檢查鄰近映像。}
+\label{tab:round10-lattice-invariants}
+\end{table}

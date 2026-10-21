@@ -1,0 +1,39 @@
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=1mm,y=1mm,font=\sffamily\small,>=stealth]
+  \foreach \shift in {0,65} {
+    \fill[paleblue] (\shift+12,15) rectangle (\shift+44,25);
+    \draw[teal] (\shift+12,15) -- (\shift+44,15);
+    \draw[teal] (\shift+12,25) -- (\shift+44,25);
+    \foreach \x in {16,25,34,43} {
+      \fill[brand] (\shift+\x,18) circle (1.3);
+      \fill[teal] (\shift+\x-2,22) circle (1.3);
+    }
+    \draw[->,brand,line width=.7pt] (\shift+12,6) -- (\shift+45,6)
+      node[right] {$\mathbf a$};
+    \draw[densely dashed,muted] (\shift+12,25) -- (\shift+12,53);
+  }
+  \node[text=brand] at (29,65) {倾斜的第三晶格矢量};
+  \node[text=brand] at (94,65) {第三晶格矢量沿法向};
+  \draw[->,brand,line width=.8pt] (12,6) -- (34,44)
+    node[pos=.55,right] {$\mathbf c$};
+  \draw[->,teal,line width=1pt] (34,44) -- (41,56)
+    node[pos=.6,right] {$\Delta\mathbf c$};
+  \draw[densely dashed,muted] (34,44) -- (51,44);
+  \draw[densely dashed,muted] (41,56) -- (51,56);
+  \draw[<->,teal] (49,44) -- (49,56);
+  \node[anchor=south,text=teal,font=\sffamily\footnotesize] at (48,57) {$\Delta H$};
+  \draw[->,muted,line width=.7pt] (6,28) -- (6,49)
+    node[above] {$\hat{\mathbf n}$};
+  \draw[->,brand,line width=.8pt] (77,6) -- (77,44)
+    node[pos=.52,left] {$\mathbf c$};
+  \draw[->,teal,line width=1pt] (77,44) -- (77,56)
+    node[right] {$\Delta H=\Delta$};
+  \node[align=center,font=\sffamily\footnotesize] at (29,-4)
+    {法向增加量小于沿 $\mathbf c$ 的新增长度};
+  \node[align=center,font=\sffamily\footnotesize] at (94,-4)
+    {输入的新增长度就是法向增加量};
+\end{tikzpicture}
+\caption{添加真空层时的方向关系（截面示意）。薄片内部的相对位置保持不变，第三晶格矢量沿原方向伸长，工具同时将薄片重新居中；只有当它垂直于表面时，新增长度才全部用于增大法向间隔。}
+\label{fig:surface-vacuum-geometry}
+\end{figure}

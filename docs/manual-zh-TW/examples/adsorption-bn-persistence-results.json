@@ -1,0 +1,56 @@
+{
+  "mode": "MATLAB-source-nojvm",
+  "JVM": false,
+  "sourceConstructionRerun": false,
+  "MOLBondShape": [
+    1,
+    3
+  ],
+  "JSONBondShape": [
+    3,
+    1
+  ],
+  "JSONBondValues": [
+    1,
+    2,
+    1
+  ],
+  "JSONTopologyReadError": "KSSOLV:Modeling:MoleculeTopology",
+  "outputAdsorbateMetadata": {
+    "Pt111_OH_c_offset": {
+      "bondArrayShape": [
+        3,
+        1
+      ],
+      "bondValues": [
+        1,
+        2,
+        1
+      ]
+    },
+    "Pt111_normal_c_OH_ontop": {
+      "bondArrayShape": [
+        3,
+        1
+      ],
+      "bondValues": [
+        1,
+        2,
+        1
+      ]
+    },
+    "Pt111_OH_candidate_1": {
+      "bondArrayShape": [
+        3,
+        1
+      ],
+      "bondValues": [
+        1,
+        2,
+        1
+      ]
+    }
+  },
+  "structureFilesRead": 6,
+  "explicitMOLInputRead": true
+}

@@ -1,0 +1,57 @@
+\subsubsection{把一組原子移到目標中心}
+
+居中時，同一組中的所有原子使用同一個位移。設選擇中有 $N$ 個原子，分子用笛卡爾位置 $\mathbf r_i$，晶體用分數座標 $\mathbf f_i$，兩種情況分別為
+\begin{equation}
+ \begin{aligned}
+ \Delta\mathbf r&=\mathbf r_{\mathrm{target}}-
+        \frac1N\sum_{i=1}^{N}\mathbf r_i,
+ &\mathbf r_i'&=\mathbf r_i+\Delta\mathbf r,\\
+ \Delta\mathbf f&=\mathbf f_{\mathrm{target}}-
+        \frac1N\sum_{i=1}^{N}\mathbf f_i,
+ &\mathbf f_i'&=\mathbf f_i+\Delta\mathbf f.
+ \end{aligned}
+ \label{eq:center-selected-atoms}
+\end{equation}
+第一行用於分子，位置與位移的單位都是\AA；第二行用於晶體，各量均為無量綱分數座標。分子常用目標 $(0,0,0)$，晶體常用 $(0.5,0.5,0.5)$。每個原子在平均值中佔相同權重，因此居中不使用原子質量，也不改變所選原子之間的距離。
+
+例如，分子中兩個原子的 $x$ 座標為1和3\,\AA，要把它們的平均位置移到原點，共同位移就是 $-2\,\text{\AA}$；處理後為 $-1$ 和1\,\AA，間距仍為2\,\AA。晶體中若兩個位點的第一分數分量為0.1和0.3，目標為0.5，則都加0.3，得到0.4和0.6。這裡只取一個分量說明計算，其餘兩個分量同樣處理。
+
+週期邊界附近要先看清使用的是哪一個映像。0.99與0.01的普通平均為0.5，但兩個位點可能實際聚集在邊界兩側；若要以這段連續結構的中心為準，應先整理為相鄰的連續映像再居中。應用後坐標可能被歸回晶胞，因此還應從週期連線看整體，而不只比較某個座標的正負。
+
+\subsubsection{繞指定錨點旋轉}
+
+旋轉先從每個位置中減去錨點，再轉動這個相對向量，最後加回錨點。這樣，錨點本身不動，離錨點的距離也不變。沿用行向量表示，有
+\begin{equation}
+ \mathbf r'=\mathbf p+(\mathbf r-\mathbf p)
+              R(\hat{\mathbf n},\theta)^{\mathsf T}.
+ \label{eq:rotate-row-position}
+\end{equation}
+$\mathbf p$ 是以\AA 為單位的錨點，$\hat{\mathbf n}$ 是旋轉軸的單位方向，$\theta$ 是轉角；上標 $\mathsf T$ 表示轉置。對話方塊中填寫度數，正角遵循右手定則：右手拇指沿輸入軸的正向，四指彎曲的方向為正轉向。軸向量只決定方向，例如\literalinput{0 0 1}和\literalinput{0 0 2}表示同一根正向轉軸。
+
+繞全域性 $z$ 軸旋轉時，常用的矩陣為
+\[
+ R_z(\theta)=\begin{bmatrix}
+ \cos\theta&-\sin\theta&0\\
+ \sin\theta&\cos\theta&0\\
+ 0&0&1
+ \end{bmatrix}.
+\]
+取錨點 $\mathbf p=(1,1,0)\,\text{\AA}$，位置 $\mathbf r=(2,1,0)\,\text{\AA}$，繞 $z$ 軸正轉 $90^\circ$，得到 $\mathbf r'=(1,2,0)\,\text{\AA}$。這個小例子可用來辨認旋轉方向；旋轉後原子到錨點仍相距1\,\AA。晶體中原子的等價位置還會歸回晶胞，預覽時應連同邊界映像一起觀察。
+
+\subsubsection{關於一個平面作映象}
+
+映象需要一個平面上的點 $\mathbf p$ 和非零笛卡爾法向 $\mathbf n$。先把法向歸一化，再減去兩倍的有向投影：
+\begin{equation}
+ \begin{aligned}
+ \hat{\mathbf n}&=\frac{\mathbf n}{\|\mathbf n\|},\\
+ \mathbf r'&=\mathbf r-
+ 2\bigl[(\mathbf r-\mathbf p)\cdot\hat{\mathbf n}\bigr]
+       \hat{\mathbf n}.
+ \end{aligned}
+ \label{eq:mirror-cartesian-plane}
+\end{equation}
+點積 $(\mathbf r-\mathbf p)\cdot\hat{\mathbf n}$ 是原子到平面的有向距離，單位為\AA。映象後它的符號反轉，大小相同；位於平面上的原子保持不動。法向填\literalinput{1 0 0}，平面點取 $(1,0,0)\,\text{\AA}$，就是 $x=1\,\text{\AA}$ 的平面。位置 $(1.5,2,0)\,\text{\AA}$ 映象後變為 $(0.5,2,0)\,\text{\AA}$，兩側到平面均為0.5\,\AA。
+
+\input{figures/round10-anchor-mirror}
+
+居中、旋轉和映象均為幾何操作。處理分子時，先選擇需要整體移動的部分，再按下面的步驟操作；若只需調整觀察方向，旋轉相機即可。

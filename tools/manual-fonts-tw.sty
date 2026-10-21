@@ -1,0 +1,15 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{manual-fonts-tw}[2026/10/21 Taiwan Traditional Chinese fonts]
+% Run tools/download_tw_fonts.py before building. Fonts are not vendored.
+\setCJKmainfont{NotoSerifCJKtc-Regular.otf}[Path=../../output/fonts/noto-cjk/,BoldFont=NotoSerifCJKtc-Bold.otf,AutoFakeSlant=0.2]
+\setCJKsansfont{NotoSansCJKtc-Regular.otf}[Path=../../output/fonts/noto-cjk/,BoldFont=NotoSansCJKtc-Bold.otf,AutoFakeSlant=0.2]
+\setCJKmonofont{NotoSansCJKtc-Regular.otf}[Path=../../output/fonts/noto-cjk/,BoldFont=NotoSansCJKtc-Bold.otf]
+\setCJKfamilyfont{zhsong}{NotoSerifCJKtc-Regular.otf}[Path=../../output/fonts/noto-cjk/,BoldFont=NotoSerifCJKtc-Bold.otf,AutoFakeSlant=0.2]
+\setCJKfamilyfont{zhhei}{NotoSansCJKtc-Regular.otf}[Path=../../output/fonts/noto-cjk/,BoldFont=NotoSansCJKtc-Bold.otf,AutoFakeSlant=0.2]
+\newcommand{\songti}{\CJKfamily{zhsong}}
+\newcommand{\heiti}{\CJKfamily{zhhei}}
+\newcommand{\fangsong}{\CJKfamily{zhsong}}
+\newcommand{\kaishu}{\CJKfamily{zhsong}\itshape}
+% Taiwanese phrases can be longer; permit additional paragraph stretch while
+% retaining the shared page size and rejecting actual overfull lines.
+\AtBeginDocument{\setlength{\emergencystretch}{4em}}

@@ -1,0 +1,50 @@
+{
+  "sqs-cu-ni-input": {
+    "sites": 4,
+    "composition": {
+      "Cu": 2.0,
+      "Ni": 2.0
+    },
+    "pairDistances": [
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367
+    ],
+    "CIFRows": 8,
+    "CIFLabelsUnique": true
+  },
+  "sqs-cu-ni-ordered": {
+    "sites": 4,
+    "composition": {
+      "Cu": 2,
+      "Ni": 2
+    },
+    "pairDistances": [
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367
+    ],
+    "CIFRows": 4,
+    "CIFLabelsUnique": true
+  },
+  "independentArithmetic": {
+    "configurationCount": 6,
+    "objectives": [
+      0.16666666666666669,
+      0.16666666666666669,
+      0.16666666666666669,
+      0.16666666666666669,
+      0.16666666666666669,
+      0.16666666666666669
+    ],
+    "minimumObjective": 0.16666666666666669,
+    "passed": true,
+    "productionCommandRerun": false
+  }
+}

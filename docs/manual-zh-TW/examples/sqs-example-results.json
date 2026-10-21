@@ -1,0 +1,220 @@
+{
+  "MATLAB": "26.2.0.3386108 (R2026b)",
+  "architecture": "maca64",
+  "mode": "MATLAB-source-nojvm",
+  "JVM": false,
+  "GUIOperated": false,
+  "DFTCalculation": false,
+  "command": "generate_sqs_model",
+  "parameters": {
+    "scaling": 1,
+    "searchTime": 1
+  },
+  "coordinateUnit": "angstrom",
+  "input": {
+    "sites": 4,
+    "isOrdered": false,
+    "composition": {
+      "Cu": 2,
+      "Ni": 2
+    },
+    "speciesPerSite": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "occupancies": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "siteSpecies": [
+      "Cu:0.5, Ni:0.5",
+      "Cu:0.5, Ni:0.5",
+      "Cu:0.5, Ni:0.5",
+      "Cu:0.5, Ni:0.5"
+    ],
+    "fractionalCoordinates": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0,
+        0.5
+      ],
+      [
+        0.5,
+        0.5,
+        0
+      ]
+    ],
+    "lattice": [
+      [
+        3.61,
+        0,
+        0
+      ],
+      [
+        0,
+        3.61,
+        0
+      ],
+      [
+        0,
+        0,
+        3.61
+      ]
+    ],
+    "volume": 47.045880999999994,
+    "pbc": [
+      true,
+      true,
+      true
+    ],
+    "minimumPeriodicDistance": 2.5526554800834367,
+    "pairDistances": [
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367
+    ]
+  },
+  "output": {
+    "sites": 4,
+    "isOrdered": true,
+    "composition": {
+      "Cu": 2,
+      "Ni": 2
+    },
+    "speciesPerSite": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "occupancies": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "siteSpecies": [
+      "Cu",
+      "Cu",
+      "Ni",
+      "Ni"
+    ],
+    "fractionalCoordinates": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0,
+        0.5
+      ],
+      [
+        0.5,
+        0.5,
+        0
+      ]
+    ],
+    "lattice": [
+      [
+        3.61,
+        0,
+        0
+      ],
+      [
+        0,
+        3.61,
+        0
+      ],
+      [
+        0,
+        0,
+        3.61
+      ]
+    ],
+    "volume": 47.045880999999994,
+    "pbc": [
+      true,
+      true,
+      true
+    ],
+    "minimumPeriodicDistance": 2.5526554800834367,
+    "pairDistances": [
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367,
+      2.5526554800834367
+    ]
+  },
+  "sqs": {
+    "search_mode": "exact-enumeration",
+    "configuration_count": 6,
+    "objective_function": 0.16666666666666669,
+    "pair_shells": 3,
+    "search_budget_seconds": 1
+  },
+  "elapsedSeconds": 4.4058517083333335,
+  "inputPersistence": {
+    "json": {
+      "imported": true,
+      "sites": 4,
+      "compositionAndOccupancyPreserved": true,
+      "maximumPairDistanceError": 0,
+      "sqsMetadataPreserved": false
+    },
+    "cif": {
+      "imported": true,
+      "sites": 4,
+      "compositionAndOccupancyPreserved": true,
+      "maximumPairDistanceError": 0,
+      "sqsMetadataPreserved": false
+    }
+  },
+  "outputPersistence": {
+    "json": {
+      "imported": true,
+      "sites": 4,
+      "compositionAndOccupancyPreserved": true,
+      "maximumPairDistanceError": 0,
+      "sqsMetadataPreserved": true
+    },
+    "cif": {
+      "imported": true,
+      "sites": 4,
+      "compositionAndOccupancyPreserved": true,
+      "maximumPairDistanceError": 0,
+      "sqsMetadataPreserved": false
+    }
+  },
+  "productionResultMessage": "SQS model generated (exact-enumeration, objective 0.16667).",
+  "passed": true
+}

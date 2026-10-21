@@ -1,0 +1,25 @@
+\subsubsection{中間構型怎樣分佈}
+
+若填寫$M$箇中間構型，連同兩端共有$M+2$個結構。以$j=0,\ldots,M+1$編號。對於非週期模型，或已選定連續週期映像的兩端，線性插值的位置關係為
+\begin{equation}
+  \alpha_j=\frac{j}{M+1},\qquad
+  \mathbf r_i^{(j)}=(1-\alpha_j)\mathbf r_i^{(0)}
+     +\alpha_j\mathbf r_i^{(M+1)}.
+  \label{eq:neb-image-interpolation}
+\end{equation}
+$i$表示同一個原子在兩端對應的序號，$\alpha_j$是無量綱路徑引數，位置以\AA 表示。週期結構還要按所用週期邊界處理端點位移，不能將同一原子在兩個不同週期映像中的座標直接當作很長的遷移距離。
+
+IDPP進一步使每個構型中的原子對距離接近插值目標：
+\begin{equation}
+\begin{aligned}
+  d_{ik}^{*,(j)}&=(1-\alpha_j)d_{ik}^{(0)}
+                      +\alpha_j d_{ik}^{(M+1)},\\
+  E_{\mathrm{IDPP}}^{(j)}&=
+    \sum_{i<k}\frac{\bigl(d_{ik}^{(j)}-d_{ik}^{*,(j)}\bigr)^2}
+                         {\bigl(d_{ik}^{(j)}\bigr)^4}.
+\end{aligned}
+\label{eq:idpp-pair-objective}
+\end{equation}
+其中$i,k$為原子序號，$j$為構型序號；$d_{ik}^{(j)}$是當前原子對距離，$d_{ik}^{*,(j)}$是對應的目標距離。分母使過短的原子間距受到較強懲罰，因此IDPP往往能改善線性插值中的碰撞。上式給出單個構型的原子對目標；路徑最佳化還會考慮相鄰構型之間的聯絡。
+
+$E_{\mathrm{IDPP}}$是幾何插值的輔助目標，其值用於評價路徑幾何；反應能壘需由後續能量計算確定。視窗中的\ui{IDPP力收斂閾值}用於這一步輔助最佳化，與電子結構計算中的原子力閾值分別設定。$M=5$時，路徑引數依次為$0,1/6,2/6,\ldots,1$；本例的00至06正好對應七個結構。

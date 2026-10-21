@@ -1,0 +1,1641 @@
+{
+  "mode": "MATLAB-source-nojvm",
+  "MATLAB": "26.2.0.3386108 (R2026b)",
+  "architecture": "maca64",
+  "JVM": false,
+  "GUIOperated": false,
+  "DFTCalculation": false,
+  "relaxation": false,
+  "coordinateUnit": "angstrom",
+  "neighborCutoffAngstrom": 1.65,
+  "original120Input": {
+    "sites": 2,
+    "composition": {
+      "C": 2
+    },
+    "pbc": [
+      true,
+      true,
+      false
+    ],
+    "lattice": [
+      [
+        2.46,
+        0,
+        0
+      ],
+      [
+        -1.2299999999999998,
+        2.1304224933097191,
+        0
+      ],
+      [
+        0,
+        0,
+        15
+      ]
+    ],
+    "lengths": [
+      2.46,
+      2.46,
+      15
+    ],
+    "angles": [
+      90,
+      90,
+      119.99999999999999
+    ],
+    "volume": 78.612590003128631,
+    "spans": [
+      1.1102230246251565E-16,
+      1.4202816622064793,
+      0
+    ],
+    "minimumCoordinates": [
+      0,
+      0,
+      7.5
+    ],
+    "maximumCoordinates": [
+      1.1102230246251565E-16,
+      1.4202816622064793,
+      7.5
+    ],
+    "minimumPeriodicDistance": 1.4202816622064793,
+    "nearestNeighborDistances": [
+      1.4202816622064793,
+      1.4202816622064793
+    ],
+    "neighborCutoffAngstrom": 1.65,
+    "neighborCounts": [
+      3,
+      3
+    ],
+    "coincidentMatchesIncludingSelf": [
+      1,
+      1
+    ],
+    "properties": {}
+  },
+  "original120Ribbon": {
+    "commandId": "cut_nanoribbon",
+    "parameters": {
+      "width": 3,
+      "length": 2,
+      "edgeType": "armchair",
+      "vacuum": 5,
+      "maximumAtoms": 500
+    },
+    "success": true,
+    "geometry": {
+      "sites": 24,
+      "composition": {
+        "C": 24
+      },
+      "pbc": [
+        false,
+        true,
+        false
+      ],
+      "lattice": [
+        [
+          21.362253297651833,
+          0,
+          0
+        ],
+        [
+          0,
+          4.92,
+          0
+        ],
+        [
+          0,
+          0,
+          10
+        ]
+      ],
+      "lengths": [
+        21.362253297651833,
+        4.92,
+        10
+      ],
+      "angles": [
+        90,
+        90,
+        90
+      ],
+      "volume": 1051.0228622444702,
+      "spans": [
+        11.362253297651833,
+        4.919999999999999,
+        0
+      ],
+      "minimumCoordinates": [
+        5,
+        0,
+        5
+      ],
+      "maximumCoordinates": [
+        16.362253297651833,
+        4.919999999999999,
+        5
+      ],
+      "minimumPeriodicDistance": 1.4202816622064764,
+      "nearestNeighborDistances": [
+        1.4202816622064776,
+        1.420281662206478,
+        1.4202816622064789,
+        1.4202816622064771,
+        1.4202816622064764,
+        1.4202816622064764,
+        1.4202816622064791,
+        1.4202816622064791,
+        1.4202816622064784,
+        1.4202816622064776,
+        1.4202816622064789,
+        1.4202816622064789,
+        1.4202816622064776,
+        1.4202816622064776,
+        1.4202816622064791,
+        1.4202816622064771,
+        1.4202816622064764,
+        1.4202816622064764,
+        1.4202816622064791,
+        1.4202816622064791,
+        1.4202816622064784,
+        1.4202816622064776,
+        1.4202816622064789,
+        1.4202816622064789
+      ],
+      "neighborCutoffAngstrom": 1.65,
+      "neighborCounts": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        3,
+        3,
+        3,
+        2,
+        3,
+        3,
+        2,
+        3,
+        3,
+        3,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "coincidentMatchesIncludingSelf": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "properties": {
+        "nanoribbon": {
+          "edge_type": "armchair",
+          "width": 3,
+          "length": 2
+        }
+      }
+    },
+    "errorIdentifier": "",
+    "errorMessage": "",
+    "acceptedForArmchairTutorial": false
+  },
+  "original120Tube": {
+    "commandId": "roll_nanotube",
+    "parameters": {
+      "chiralIndices": [
+        4,
+        0
+      ],
+      "length": 2,
+      "vacuum": 6,
+      "maximumAtoms": 500
+    },
+    "success": true,
+    "geometry": {
+      "sites": 32,
+      "composition": {
+        "C": 32
+      },
+      "pbc": [
+        false,
+        false,
+        true
+      ],
+      "lattice": [
+        [
+          15.132169280048501,
+          0,
+          0
+        ],
+        [
+          0,
+          15.132169280048501,
+          0
+        ],
+        [
+          0,
+          0,
+          13.017096450437785
+        ]
+      ],
+      "lengths": [
+        15.132169280048501,
+        15.132169280048501,
+        13.017096450437785
+      ],
+      "angles": [
+        90,
+        90,
+        90
+      ],
+      "volume": 2980.687901328522,
+      "spans": [
+        3.132169280048501,
+        3.132169280048501,
+        12.552200148636437
+      ],
+      "minimumCoordinates": [
+        6,
+        6,
+        0
+      ],
+      "maximumCoordinates": [
+        9.132169280048501,
+        9.132169280048501,
+        12.552200148636437
+      ],
+      "minimumPeriodicDistance": 0.92979260360269578,
+      "nearestNeighborDistances": [
+        0.92979260360269578,
+        0.92979260360270022,
+        0.92979260360269889,
+        0.92979260360269711,
+        0.92979260360269933,
+        0.92979260360269933,
+        0.92979260360270022,
+        0.92979260360269667,
+        0.92979260360269755,
+        0.92979260360269933,
+        0.92979260360269933,
+        0.92979260360269933,
+        0.92979260360269755,
+        0.92979260360269933,
+        1.2856285421077365,
+        1.2856285421077327,
+        0.92979260360269578,
+        0.92979260360270022,
+        0.92979260360269889,
+        0.92979260360269711,
+        0.92979260360269933,
+        0.92979260360269933,
+        0.92979260360270022,
+        0.92979260360269667,
+        0.92979260360269755,
+        0.92979260360269933,
+        0.92979260360269933,
+        0.92979260360269933,
+        0.92979260360269755,
+        0.92979260360269933,
+        1.2856285421077354,
+        1.2856285421077382
+      ],
+      "neighborCutoffAngstrom": 1.65,
+      "neighborCounts": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        3,
+        4,
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "coincidentMatchesIncludingSelf": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "properties": {
+        "nanotube": {
+          "chiral_indices": [
+            4,
+            0
+          ],
+          "radius": 1.56608464002425,
+          "axial_translation": [
+            1,
+            -2
+          ],
+          "length": 2
+        }
+      }
+    },
+    "errorIdentifier": "",
+    "errorMessage": "",
+    "acceptedForTutorial": false
+  },
+  "basisChange": {
+    "commandId": "build_supercell",
+    "integerMatrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "determinant": 1,
+    "inputSites": 2,
+    "outputSites": 2,
+    "inputGamma": 119.99999999999999,
+    "outputGamma": 59.999999999999993,
+    "volumeError": 0
+  },
+  "input60": {
+    "sites": 2,
+    "composition": {
+      "C": 2
+    },
+    "pbc": [
+      true,
+      true,
+      false
+    ],
+    "lattice": [
+      [
+        2.46,
+        0,
+        0
+      ],
+      [
+        1.2300000000000002,
+        2.1304224933097191,
+        0
+      ],
+      [
+        0,
+        0,
+        15
+      ]
+    ],
+    "lengths": [
+      2.46,
+      2.46,
+      15
+    ],
+    "angles": [
+      90,
+      90,
+      59.999999999999993
+    ],
+    "volume": 78.612590003128631,
+    "spans": [
+      2.46,
+      1.4202816622064793,
+      0
+    ],
+    "minimumCoordinates": [
+      0,
+      0,
+      7.5
+    ],
+    "maximumCoordinates": [
+      2.46,
+      1.4202816622064793,
+      7.5
+    ],
+    "minimumPeriodicDistance": 1.4202816622064791,
+    "nearestNeighborDistances": [
+      1.4202816622064791,
+      1.4202816622064791
+    ],
+    "neighborCutoffAngstrom": 1.65,
+    "neighborCounts": [
+      3,
+      3
+    ],
+    "coincidentMatchesIncludingSelf": [
+      1,
+      1
+    ],
+    "properties": {},
+    "persistence": {
+      "JSONImported": true,
+      "JSONCoordinatesAndPBCPreserved": true,
+      "CIFImported": true,
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 1.4202816621899927E-5,
+      "CIFCheckToleranceAngstrom": 0.001
+    }
+  },
+  "ribbon": {
+    "sites": 24,
+    "composition": {
+      "C": 24
+    },
+    "pbc": [
+      false,
+      true,
+      false
+    ],
+    "lattice": [
+      [
+        16.150000000000002,
+        0,
+        0
+      ],
+      [
+        0,
+        8.5216899732388764,
+        0
+      ],
+      [
+        0,
+        0,
+        10
+      ]
+    ],
+    "lengths": [
+      16.150000000000002,
+      8.5216899732388764,
+      10
+    ],
+    "angles": [
+      90,
+      90,
+      90
+    ],
+    "volume": 1376.2529306780787,
+    "spans": [
+      6.1500000000000021,
+      7.1014083110323982,
+      0
+    ],
+    "minimumCoordinates": [
+      5,
+      0,
+      5
+    ],
+    "maximumCoordinates": [
+      11.150000000000002,
+      7.1014083110323982,
+      5
+    ],
+    "minimumPeriodicDistance": 1.4202816622064762,
+    "nearestNeighborDistances": [
+      1.420281662206478,
+      1.4202816622064807,
+      1.420281662206478,
+      1.4202816622064762,
+      1.4202816622064796,
+      1.4202816622064773,
+      1.4202816622064791,
+      1.4202816622064787,
+      1.4202816622064789,
+      1.4202816622064782,
+      1.4202816622064789,
+      1.4202816622064782,
+      1.4202816622064762,
+      1.4202816622064773,
+      1.4202816622064787,
+      1.4202816622064782,
+      1.4202816622064782,
+      1.4202816622064796,
+      1.4202816622064787,
+      1.4202816622064782,
+      1.4202816622064787,
+      1.420281662206478,
+      1.4202816622064791,
+      1.420281662206478
+    ],
+    "neighborCutoffAngstrom": 1.65,
+    "neighborCounts": [
+      3,
+      2,
+      3,
+      3,
+      3,
+      2,
+      2,
+      3,
+      3,
+      3,
+      2,
+      3,
+      3,
+      2,
+      3,
+      3,
+      3,
+      2,
+      2,
+      3,
+      3,
+      3,
+      2,
+      3
+    ],
+    "coincidentMatchesIncludingSelf": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "properties": {
+      "nanoribbon": {
+        "edge_type": "armchair",
+        "width": 3,
+        "length": 2
+      }
+    },
+    "parameters": {
+      "width": 3,
+      "length": 2,
+      "edgeType": "armchair",
+      "vacuum": 5,
+      "maximumAtoms": 500
+    },
+    "persistence": {
+      "JSONImported": true,
+      "JSONCoordinatesAndPBCPreserved": true,
+      "CIFImported": true,
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 2.8406712857087513E-5,
+      "CIFCheckToleranceAngstrom": 0.001
+    }
+  },
+  "tube": {
+    "sites": 32,
+    "composition": {
+      "C": 32
+    },
+    "pbc": [
+      false,
+      false,
+      true
+    ],
+    "lattice": [
+      [
+        15.132169280048501,
+        0,
+        0
+      ],
+      [
+        0,
+        15.132169280048501,
+        0
+      ],
+      [
+        0,
+        0,
+        8.5216899732388764
+      ]
+    ],
+    "lengths": [
+      15.132169280048501,
+      15.132169280048501,
+      8.5216899732388764
+    ],
+    "angles": [
+      90,
+      90,
+      90
+    ],
+    "volume": 1951.3182758395737,
+    "spans": [
+      3.132169280048501,
+      3.132169280048501,
+      8.5216899732388764
+    ],
+    "minimumCoordinates": [
+      6,
+      6,
+      0
+    ],
+    "maximumCoordinates": [
+      9.132169280048501,
+      9.132169280048501,
+      8.5216899732388764
+    ],
+    "minimumPeriodicDistance": 1.3932021306520783,
+    "nearestNeighborDistances": [
+      1.3932021306520792,
+      1.39320213065208,
+      1.3932021306520797,
+      1.3932021306520783,
+      1.3932021306520792,
+      1.3932021306520792,
+      1.393202130652079,
+      1.3932021306520794,
+      1.3932021306520785,
+      1.3932021306520803,
+      1.393202130652079,
+      1.3932021306520783,
+      1.3932021306520785,
+      1.393202130652079,
+      1.3932021306520797,
+      1.3932021306520797,
+      1.3932021306520792,
+      1.393202130652079,
+      1.3932021306520788,
+      1.3932021306520785,
+      1.3932021306520792,
+      1.39320213065208,
+      1.3932021306520785,
+      1.3932021306520785,
+      1.393202130652079,
+      1.393202130652079,
+      1.3932021306520792,
+      1.3932021306520792,
+      1.39320213065208,
+      1.3932021306520797,
+      1.3932021306520797,
+      1.39320213065208
+    ],
+    "neighborCutoffAngstrom": 1.65,
+    "neighborCounts": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "coincidentMatchesIncludingSelf": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "properties": {
+      "nanotube": {
+        "chiral_indices": [
+          4,
+          0
+        ],
+        "radius": 1.56608464002425,
+        "axial_translation": [
+          1,
+          -2
+        ],
+        "length": 2
+      }
+    },
+    "parameters": {
+      "chiralIndices": [
+        4,
+        0
+      ],
+      "length": 2,
+      "vacuum": 6,
+      "maximumAtoms": 500
+    },
+    "measuredRadiusRange": [
+      1.5660846400242494,
+      1.5660846400242507
+    ],
+    "axialTranslation": [
+      1,
+      -2
+    ],
+    "reportedRadius": 1.56608464002425,
+    "persistence": {
+      "JSONImported": true,
+      "JSONCoordinatesAndPBCPreserved": true,
+      "CIFImported": true,
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 2.8406712857975691E-5,
+      "CIFCheckToleranceAngstrom": 0.001
+    }
+  },
+  "copperInput": {
+    "sites": 4,
+    "composition": {
+      "Cu": 4
+    },
+    "pbc": [
+      true,
+      true,
+      true
+    ],
+    "lattice": [
+      [
+        3.61,
+        0,
+        0
+      ],
+      [
+        -2.2104874724609725E-16,
+        3.61,
+        0
+      ],
+      [
+        0,
+        0,
+        3.61
+      ]
+    ],
+    "lengths": [
+      3.61,
+      3.61,
+      3.61
+    ],
+    "angles": [
+      90,
+      90,
+      90.000000000000014
+    ],
+    "volume": 47.045880999999994,
+    "spans": [
+      1.805,
+      1.805,
+      1.805
+    ],
+    "minimumCoordinates": [
+      -1.1052437362304862E-16,
+      0,
+      0
+    ],
+    "maximumCoordinates": [
+      1.805,
+      1.805,
+      1.805
+    ],
+    "minimumPeriodicDistance": 2.5526554800834362,
+    "nearestNeighborDistances": [
+      2.5526554800834367,
+      2.5526554800834362,
+      2.5526554800834367,
+      2.5526554800834367
+    ],
+    "neighborCutoffAngstrom": 2.8,
+    "neighborCounts": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "coincidentMatchesIncludingSelf": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "properties": {},
+    "persistence": {
+      "JSONImported": true,
+      "JSONCoordinatesAndPBCPreserved": true,
+      "CIFImported": true,
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 0,
+      "CIFCheckToleranceAngstrom": 0.001
+    }
+  },
+  "copperWire": {
+    "commandId": "cut_nanowire",
+    "parameters": {
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "radius": 3,
+      "length": 2,
+      "vacuum": 4,
+      "maximumAtoms": 2000
+    },
+    "success": true,
+    "geometry": {
+      "sites": 24,
+      "composition": {
+        "Cu": 24
+      },
+      "pbc": [
+        false,
+        false,
+        true
+      ],
+      "lattice": [
+        [
+          13.415000000000001,
+          0,
+          0
+        ],
+        [
+          0,
+          13.415000000000001,
+          0
+        ],
+        [
+          0,
+          0,
+          7.22
+        ]
+      ],
+      "lengths": [
+        13.415000000000001,
+        13.415000000000001,
+        7.22
+      ],
+      "angles": [
+        90,
+        90,
+        90
+      ],
+      "volume": 1299.3272645000002,
+      "spans": [
+        5.4150000000000009,
+        5.4150000000000009,
+        5.415
+      ],
+      "minimumCoordinates": [
+        4,
+        4,
+        0
+      ],
+      "maximumCoordinates": [
+        9.4150000000000009,
+        9.4150000000000009,
+        5.415
+      ],
+      "minimumPeriodicDistance": 2.5526554800834362,
+      "nearestNeighborDistances": [
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362
+      ],
+      "neighborCutoffAngstrom": 2.8,
+      "neighborCounts": [
+        11,
+        11,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        11,
+        11,
+        6,
+        6,
+        6,
+        6,
+        11,
+        11,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        11,
+        11
+      ],
+      "coincidentMatchesIncludingSelf": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "properties": {
+        "nanowire": {
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "radius": 3,
+          "length": 2
+        }
+      }
+    },
+    "errorIdentifier": "",
+    "errorMessage": "",
+    "persistence": {
+      "JSONImported": true,
+      "JSONCoordinatesAndPBCPreserved": true,
+      "CIFImported": true,
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 1.1165216040609494E-7,
+      "CIFCheckToleranceAngstrom": 0.001
+    }
+  },
+  "copperDot": {
+    "commandId": "quantum_dot_void",
+    "parameters": {
+      "mode": "dot",
+      "radius": 3,
+      "vacuum": 4,
+      "maximumAtoms": 2000
+    },
+    "success": true,
+    "geometry": {
+      "sites": 13,
+      "composition": {
+        "Cu": 13
+      },
+      "pbc": [
+        false,
+        false,
+        false
+      ],
+      "lattice": [
+        [
+          11.610000000000001,
+          0,
+          0
+        ],
+        [
+          0,
+          11.61,
+          0
+        ],
+        [
+          0,
+          0,
+          11.61
+        ]
+      ],
+      "lengths": [
+        11.610000000000001,
+        11.61,
+        11.61
+      ],
+      "angles": [
+        90,
+        90,
+        90
+      ],
+      "volume": 1564.936281,
+      "spans": [
+        3.6100000000000012,
+        3.6100000000000003,
+        3.6100000000000003
+      ],
+      "minimumCoordinates": [
+        4,
+        4,
+        4
+      ],
+      "maximumCoordinates": [
+        7.6100000000000012,
+        7.61,
+        7.61
+      ],
+      "minimumPeriodicDistance": 2.5526554800834362,
+      "nearestNeighborDistances": [
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834367,
+        2.5526554800834362,
+        2.5526554800834367,
+        2.5526554800834362,
+        2.5526554800834367,
+        2.5526554800834362,
+        2.5526554800834367,
+        2.5526554800834362,
+        2.5526554800834367,
+        2.5526554800834362,
+        2.5526554800834362
+      ],
+      "neighborCutoffAngstrom": 2.8,
+      "neighborCounts": [
+        12,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "coincidentMatchesIncludingSelf": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "properties": {
+        "nano_region": {
+          "mode": "dot",
+          "radius": 3,
+          "source_center_cartesian": [
+            7.22,
+            7.22,
+            7.22
+          ],
+          "source_supercell_lattice": [
+            [
+              14.44,
+              0,
+              0
+            ],
+            [
+              -8.84194988984389E-16,
+              14.44,
+              0
+            ],
+            [
+              0,
+              0,
+              14.44
+            ]
+          ]
+        }
+      }
+    },
+    "errorIdentifier": "",
+    "errorMessage": "",
+    "persistence": {
+      "JSONImported": true,
+      "JSONCoordinatesAndPBCPreserved": true,
+      "CIFImported": true,
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 9.5600837468623467E-8,
+      "CIFCheckToleranceAngstrom": 0.001
+    }
+  },
+  "copperVoidHost": {
+    "sites": 32,
+    "composition": {
+      "Cu": 32
+    },
+    "pbc": [
+      true,
+      true,
+      true
+    ],
+    "lattice": [
+      [
+        7.22,
+        0,
+        0
+      ],
+      [
+        -4.4209749449219449E-16,
+        7.22,
+        0
+      ],
+      [
+        0,
+        0,
+        7.22
+      ]
+    ],
+    "lengths": [
+      7.22,
+      7.22,
+      7.22
+    ],
+    "angles": [
+      90,
+      90,
+      90.000000000000014
+    ],
+    "volume": 376.36704799999995,
+    "spans": [
+      5.415,
+      5.415,
+      5.415
+    ],
+    "minimumCoordinates": [
+      -3.3157312086914586E-16,
+      0,
+      0
+    ],
+    "maximumCoordinates": [
+      5.415,
+      5.415,
+      5.415
+    ],
+    "minimumPeriodicDistance": 2.5526554800834358,
+    "nearestNeighborDistances": [
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834367,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834367,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834358,
+      2.5526554800834358,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834367,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362,
+      2.5526554800834362
+    ],
+    "neighborCutoffAngstrom": 2.8,
+    "neighborCounts": [
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12
+    ],
+    "coincidentMatchesIncludingSelf": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "properties": {},
+    "persistence": {
+      "JSONImported": true,
+      "JSONCoordinatesAndPBCPreserved": true,
+      "CIFImported": true,
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 8.8817841970012523E-16,
+      "CIFCheckToleranceAngstrom": 0.001
+    }
+  },
+  "copperVoid": {
+    "commandId": "quantum_dot_void",
+    "parameters": {
+      "mode": "void",
+      "radius": 2.7,
+      "vacuum": 4,
+      "maximumAtoms": 2000
+    },
+    "success": true,
+    "geometry": {
+      "sites": 19,
+      "composition": {
+        "Cu": 19
+      },
+      "pbc": [
+        true,
+        true,
+        true
+      ],
+      "lattice": [
+        [
+          7.22,
+          0,
+          0
+        ],
+        [
+          -4.4209749449219449E-16,
+          7.22,
+          0
+        ],
+        [
+          0,
+          0,
+          7.22
+        ]
+      ],
+      "lengths": [
+        7.22,
+        7.22,
+        7.22
+      ],
+      "angles": [
+        90,
+        90,
+        90.000000000000014
+      ],
+      "volume": 376.36704799999995,
+      "spans": [
+        5.415,
+        5.415,
+        5.415
+      ],
+      "minimumCoordinates": [
+        -3.3157312086914586E-16,
+        0,
+        0
+      ],
+      "maximumCoordinates": [
+        5.415,
+        5.415,
+        5.415
+      ],
+      "minimumPeriodicDistance": 2.5526554800834362,
+      "nearestNeighborDistances": [
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834367,
+        2.5526554800834362,
+        2.5526554800834367,
+        2.5526554800834367,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362,
+        2.5526554800834362
+      ],
+      "neighborCutoffAngstrom": 2.8,
+      "neighborCounts": [
+        12,
+        8,
+        8,
+        4,
+        8,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "coincidentMatchesIncludingSelf": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "properties": {
+        "nano_region": {
+          "mode": "void",
+          "radius": 2.7,
+          "center_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    "errorIdentifier": "",
+    "errorMessage": "",
+    "removedSites": 13,
+    "minimumDistanceToVoidCenter": 3.61,
+    "persistence": {
+      "JSONImported": true,
+      "JSONCoordinatesAndPBCPreserved": true,
+      "CIFImported": true,
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 0,
+      "CIFCheckToleranceAngstrom": 0.001
+    }
+  }
+}

@@ -1,0 +1,11 @@
+新增真空的幾何關係為
+\begin{equation}
+  \mathbf c'=
+  \frac{\|\mathbf c\|+\Delta}{\|\mathbf c\|}\,\mathbf c,
+  \qquad
+  \Delta H=\Delta\,
+  \left|\frac{\mathbf c}{\|\mathbf c\|}\cdot\hat{\mathbf n}_{\mathrm{slab}}\right|.
+  \label{eq:vacuum-addition-projection}
+\end{equation}
+$\Delta$和$\Delta H$的單位都是\AA。前者是輸入的新增長度，後者是法向胞高的增加量；點積給出的比例介於0和1之間。例如，第三晶格向量沿全域性$z$，表面法向沿$(1,1,1)$時，輸入$2\,\text{\AA}$只會增加約$2/\sqrt{3}=1.155\,\text{\AA}$的法向胞高。圖\ref{fig:surface-vacuum-geometry}中的$\Delta\mathbf c=\mathbf c'-\mathbf c$是長度為$\Delta$的增量，$\Delta H$是它的法向投影長度；將$\mathbf c$先整理到法向後，長度與實際間隔便容易對應。
+

@@ -1,0 +1,48 @@
+笛卡爾座標直接表示原子在空間中的位置，建模介面通常以埃（\AA）為單位。分數座標則表示沿三條晶格向量的比例。若分數座標為 $(u,v,w)$，原子的位置就是 $u\mathbf a+v\mathbf b+w\mathbf c$。這三個數沒有長度單位；它們回答的是“沿每條晶格向量走多少”，而不是“沿全域性座標軸走多少埃”。
+
+為讀懂晶格輸入表格，可以把三條向量按行排成一個矩陣：
+\[
+ A=\begin{bmatrix}
+ a_x&a_y&a_z\\
+ b_x&b_y&b_z\\
+ c_x&c_y&c_z
+ \end{bmatrix},\qquad
+ \mathbf f=(u,v,w),\qquad \mathbf r=(x,y,z).
+\]
+矩陣的第一行是 $\mathbf a$，第二、三行依次是 $\mathbf b$、$\mathbf c$；每行中的三列才是全域性 $x,y,z$ 分量。本書將座標寫成行向量，因此兩種座標的轉換為
+\begin{equation}
+ \mathbf r=\mathbf f A,\qquad \mathbf f=\mathbf r A^{-1}.
+ \label{eq:row-lattice-coordinates}
+\end{equation}
+這裡 $A^{-1}$ 是整個晶格矩陣的逆矩陣，不能把表格中的每個數分別取倒數。晶格三行所定義的晶胞應有非零體積，才能由笛卡爾位置求回唯一的分數座標。
+
+以一組便於手算的晶格說明：令 $\mathbf a=(4,0,0)$、$\mathbf b=(1,3,0)$、$\mathbf c=(0,0,6)$，單位均為\AA。分數座標 $(0.5,0.5,0)$ 對應
+\[
+ \mathbf r=0.5(4,0,0)+0.5(1,3,0)
+          =(2.5,1.5,0)\,\text{\AA}.
+\]
+沿 $\mathbf b$ 走一半，同時包含全域性 $x$ 方向的 $0.5\,\text{\AA}$ 和 $y$ 方向的 $1.5\,\text{\AA}$。所以斜晶胞中的第二個分數分量，不能直接當作全域性 $y$ 座標。圖\ref{fig:round10-fractional-cartesian}將這一次相加畫成兩段相接的箭頭。
+
+\input{figures/round10-fractional-cartesian}
+
+在邊長為 $5\,\text{\AA}$ 的立方晶胞中，$(0.5,0,0)$ 則對應沿 $\mathbf a$ 前進 $2.5\,\text{\AA}$。兩種例子的區別來自晶格，而不是座標轉換規則不同。編輯時若保持 $\mathbf f$ 不變而改變 $A$，原子通常會隨晶胞移動；若希望原子在空間中的位置不動，則需保留 $\mathbf r$，並用新晶格重新求 $\mathbf f$。第\ref{ch:modeling-tools}章的\ref{sec:lattice-transform-reference}節介紹這兩個選項。
+
+\begin{table}[!htb]
+\centering\small
+\begin{tabularx}{\linewidth}{llX}
+\toprule
+符號 & 單位 & 在引數中的含義\\
+\midrule
+$A$ & \AA & 晶格矩陣，三行依次為 $\mathbf a,\mathbf b,\mathbf c$。\\
+$\mathbf f$ & 無量綱 & 沿三條晶格向量的比例，即分數座標。\\
+$\mathbf r,\mathbf p$ & \AA & 笛卡爾位置，以及旋轉錨點或鏡面上的點。\\
+$\mathbf n,\hat{\mathbf n}$ & 方向 & 非零方向向量及其單位向量；只看方向時不以\AA 填長度。\\
+$\theta$ & 度 & 對話方塊中的轉角，正角按右手定則。\\
+$S$ & 整數 & 定義新晶格的超胞變換矩陣。\\
+$N,V$ & 個、\AA$^3$ & 模型獨立位點數與晶胞體積。\\
+$\varepsilon_a,\varepsilon_b,\varepsilon_c$ & 無量綱 & 沿三條晶格向量的相對伸縮量。\\
+\bottomrule
+\end{tabularx}
+\caption{閱讀建模公式時常用的符號。座標和錨點使用長度，方向向量只指定朝向；兩者在對話方塊中有不同作用。}
+\label{tab:round10-modeling-symbols}
+\end{table}

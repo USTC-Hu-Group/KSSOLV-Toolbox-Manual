@@ -1,0 +1,20 @@
+{
+  "mode": "MATLAB-source-nojvm",
+  "JVM": false,
+  "MATLAB": "26.2.0.3386108 (R2026b)",
+  "spglibMex": "/Users/liu/Documents/GitHub/KSSOLV-Toolbox/+kssolv/+analysis/+spglib/symspg.mexmaca64",
+  "spglibVersion": "2.7.1.dev24+g88ec8b0",
+  "molecularJSONImports": 10,
+  "crystalCIFImports": 4,
+  "geometryTargetsRecheckedAfterImport": true,
+  "optimizationReportsChecked": 3,
+  "restoredPlatinumPeriodicGap": 13.579142538556685,
+  "platinumGapCIFRoundTripError": 0.00013579278331121714,
+  "platinumGapCIFRoundTripTolerance": 0.0002,
+  "MOLAromaticOrderBefore": 1.5,
+  "MOLAromaticOrderAfter": 2,
+  "rawPyridineElectrons": 42,
+  "rawPyridineSpinMultiplicity": 2,
+  "rawPyridineJSONError": "KSSOLV:Matgenlab:Serialization:ConstructionFailed",
+  "providedPyridineSpinMultiplicity": 1
+}

@@ -1,0 +1,316 @@
+\chapter{常用參考資料}\label{ch:reference}
+
+\chapterlead{本附錄彙集日常使用中經常需要查閱的格式、換算、快捷鍵和中英文術語，並說明隨書示例各自的用途。它是正文教程的索引；第一次操作某項功能時，仍建議先完成相應章節的完整例子。}
+
+\section{支援的檔案格式}
+\index{CIF@CIF}
+\index{XYZ@XYZ}
+
+\subsection{專案與工作流}
+
+\file{.ks} 是專案檔案，用於儲存結構、工作流及專案中的結果。它適合把一個練習整體帶到另一臺計算機，或在下次繼續工作。\file{.wf} 儲存工作流的組織與設定，適合複用計算過程。只拿到一個結構檔案，通常不能還原原專案中的所有節點、引數和結果。
+
+\Needspace{38mm}
+\subsection{原子結構}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.34\linewidth}>{\raggedright\arraybackslash}p{\dimexpr.66\linewidth-4\tabcolsep\relax}}
+\caption{常用結構格式的用途。}\\
+\toprule
+格式 & 適合儲存和交換的內容 \\
+\midrule
+\endfirsthead
+\caption[]{常用結構格式的用途（續）。}\\
+\toprule
+格式 & 適合儲存和交換的內容 \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+CIF、MCIF & 晶格、分數位置、元素與佔位等晶體資訊；磁結構資訊取決於檔案與相應讀取功能。\\
+POSCAR、CONTCAR、VASP & 晶格、元素與週期原子位置，適合交換顯式晶胞和超胞。\\
+XYZ & 元素與笛卡爾座標，適合小分子幾何；普通 XYZ 不完整儲存晶胞和顯式鍵級。\\
+MOL、SDF、MOL2 & 分子原子與連線資訊。MOL匯出不支援1.5芳香鍵，含芳香鍵的分子使用原生JSON儲存。\\
+JSON、MSON & 結構化儲存物件資訊；原生分子JSON可保留原子、顯式鍵、化學屬性與座標。\\
+XSF & 原子、晶格及可選網格；結構內容與體資料內容使用相應入口讀取。\\
+PDB、CML & 選擇器提供的分子交換格式。讀入後檢查元素、座標與連線；較複雜檔案的額外註釋不等於已經轉為計算引數。\\
+YAML、YML & 結構化文字物件；與原生JSON一樣，檔案需要包含相應模型的結構欄位，而不是任意同副檔名配置。\\
+CSSR、CONFIG、PWMAT & 特定程式使用的結構文字，用於匯入原子與晶胞；計算任務與控制引數需在工作流中配置。\\
+\end{longtable}
+
+選單還可能提供其他程式的輸入或輸出格式。格式名稱存在，不表示該程式的全部引數與結果都能轉換成同一種模型；選擇入口時應先看需要的是原子結構還是完整計算任務。重要模型匯出後，重新匯入並檢查元素計數、晶胞、位置和分子連線，可以及時發現格式表達範圍的差別。
+
+\subsection{體資料與影象}
+
+三維體資料入口支援 CHGCAR/CHG、Cube/CUB 和 XSF，常見壓縮副檔名包括 \file{.gz}、\file{.bz2}。壓縮檔名稱應保留原格式資訊，便於識別。Cube 和 XSF 的標量含義由生成任務決定，不能僅根據副檔名認定為電荷密度。
+
+影象匯出包括 PNG、JPEG、TIFF、SVG 和 PDF；等值面幾何包括 glTF、GLB、PLY、STL；切面還可匯出 CSV。影象適合展示，幾何適合後續三維處理，CSV適合數值整理。它們保留的資訊不同，不應把一張圖片當成可繼續計算的結構檔案。
+
+\section{常用單位與換算}
+\index{Danwei huansuan@單位換算}
+
+介面單位寫在相應欄位或座標軸旁。結構建模常用 \AA，電子結構計算輸入常用原子單位，能帶與 DOS 通常以 eV 表示。整理資料前，先核對各欄位和座標軸採用的單位。
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.20\linewidth}>{\raggedright\arraybackslash}p{\dimexpr.80\linewidth-4\tabcolsep\relax}}
+\caption{本書使用的常用換算，數值按常用有效位數列出。}\\
+\toprule
+量 & 換算 \\
+\midrule
+\endfirsthead
+\caption[]{本書使用的常用換算，數值按常用有效位數列出（續）。}\\
+\toprule
+量 & 換算 \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+長度 & $1\,\mathrm{Bohr}\approx0.529177210544\,\text{\AA}$；$1\,\text{\AA}\approx1.8897261259\,\mathrm{Bohr}$。\\
+能量 & $1\,\mathrm{Ha}=2\,\mathrm{Ry}\approx27.211386246\,\mathrm{eV}$。\\
+原子力 & $1\,\mathrm{Ha/Bohr}\approx51.4221\,\mathrm{eV/\text{\AA}}$。\\
+溫度與能量 & $k_{\mathrm B}\approx8.617333262\times10^{-5}\,\mathrm{eV/K}$；電子溫度不等於原子溫度。\\
+密度 & $1\,\text{\AA}^{-3}\approx0.148184711\,\mathrm{Bohr}^{-3}$，比較時應連同單位一起換算。\\
+角度 & 建模旋轉、鍵角與二面角以度輸入；$180^\circ=\pi$ 弧度。\\
+質量密度 & 分子裝填的目標密度常用 $\mathrm{g/cm^3}$，不是電子密度單位。\\
+\end{longtable}
+
+例如，在 \ui{Ecut (Hartree)} 輸入 20，相當於約 $544.23\,\mathrm{eV}$；讀到其他軟體使用 $400\,\mathrm{eV}$ 時，不能在這個欄位原樣輸入 400。類似地，應變 0.01 表示 1\%，並不是長度增加 $0.01\,\text{\AA}$。
+
+CHGCAR 的密度按晶胞體積歸一化後使用 $\text{\AA}^{-3}$。檢視器中的單位切換隻改變顯示錶示。切面 CSV 的座標列標為 \file{x_angstrom} 等，數值列保留通道內部單位；具體說明見第\ref{ch:volume}章。不同來源的任意標量不要套用這一密度換算。
+
+比較每原子能量時，還需要處理歸一化。例如，一個含 8 個原子的晶胞總能量記為 $E_8$，每原子能量就是 $E_8/8$。把相同結構擴大成 64 原子超胞後，應比較 $E_{64}/64$ 與 $E_8/8$，而不是直接比較兩個總量。存在缺陷、不同元素或不同電荷時，還需按照研究問題建立參考態，單純除以原子數未必得到所需形成能。
+
+\section{快捷鍵速查}
+\index{Kuaijiejian@快捷鍵}
+
+以下快捷鍵主要用於三維結構檢視。使用前先讓檢視獲得焦點；正在編輯文字或數值時，按鍵可能先由輸入框處理。Cmd/Ctrl 表示 macOS 的 Command 或 Windows/Linux 的 Ctrl。
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.37\linewidth}>{\raggedright\arraybackslash}p{\dimexpr.63\linewidth-4\tabcolsep\relax}}
+\caption{觀察與選擇。}\\
+\toprule
+按鍵或滑鼠 & 操作 \\
+\midrule
+\endfirsthead
+\caption[]{觀察與選擇（續）。}\\
+\toprule
+按鍵或滑鼠 & 操作 \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+左鍵拖動 & 旋轉觀察視角。\\
+右鍵拖動 & 平移觀察視角。\\
+滾輪或中鍵拖動 & 縮放檢視。\\
+Space & 居中並適配縮放。\\
+單擊 & 選擇原子或物件。\\
+Shift/Ctrl+單擊 & 向當前選擇中加入或移出原子。\\
+雙擊 & 在結構建模中選擇相連結構；體資料中用於點取樣。\\
+B，隨後拖動 & 框選原子。\\
+L，隨後拖動 & 套索選擇原子。\\
+Cmd/Ctrl+A & 全選原子。\\
+I & 切換簡潔檢視。\\
+? 或 / & 開啟結構檢視快捷鍵幫助。\\
+\end{longtable}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.37\linewidth}>{\raggedright\arraybackslash}p{\dimexpr.63\linewidth-4\tabcolsep\relax}}
+\caption{建模與歷史。}\\
+\toprule
+按鍵或滑鼠 & 操作 \\
+\midrule
+\endfirsthead
+\caption[]{建模與歷史（續）。}\\
+\toprule
+按鍵或滑鼠 & 操作 \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+G，隨後拖動 & 移動當前選擇。\\
+R，隨後拖動 & 旋轉當前選擇。\\
+X、Y、Z & 在變換過程中約束相應軸。\\
+Shift+中鍵拖動 & 直接移動選擇。\\
+Shift+右鍵拖動 & 直接旋轉選擇。\\
+S & 進入分子三維草繪。\\
+O & 進入表面吸附物互動放置。\\
+Enter & 接受可用的當前互動放置。\\
+Delete 或 Backspace & 刪除選擇。\\
+Cmd/Ctrl+Z & 撤銷一次已應用的編輯。\\
+Shift+Cmd/Ctrl+Z & 重做。\\
+Esc & 退出當前工具或清除選擇。\\
+\end{longtable}
+
+吸附物放置中的滑鼠動作另有用途：左拖改變取向，Alt+左拖調錨定距離，右拖繞錨定方向旋轉。與普通觀察視角的動作不同，開始操作時留意當前工具。儲存專案使用 Cmd/Ctrl+S；線上版中，儲存雲端專案後還需下載才能取得本機副本。
+
+\Needspace{145mm}
+\section{中英文術語}
+
+\begin{table}[H]
+\centering
+\caption{工作區、結構與計算常用術語。}
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+英文 & 中文與含義 \\
+\midrule
+Project & 專案，組織結構、工作流和結果的容器。\\
+Workflow / Node & 工作流／節點，描述任務及其資料傳遞。\\
+Dataset / Plot & 數值資料／圖形。\\
+Site / Image atom & 位點／映像原子，分別指模型位置與週期顯示副本。\\
+Lattice / Unit cell & 晶格／晶胞，描述週期幾何。\\
+Primitive / Conventional cell & 原胞／慣用胞，同一晶體的不同表示。\\
+Supercell & 超胞，包含基本晶胞整數倍原子的週期模型。\\
+Fractional / Cartesian & 分數座標／笛卡爾座標。\\
+SCF / NSCF & 自洽場／非自洽計算。\\
+Pseudopotential & 贗勢，用於描述原子實與價電子的相互作用。\\
+Cutoff energy & 截斷能，限制平面波基組的範圍。\\
+Smearing / Occupation & 展寬／電子佔據。\\
+Fermi energy & 費米能，能帶和 DOS 中常用的能量參考。\\
+Relaxation & 弛豫，按力或相應條件調整幾何。\\
+DOS / PDOS & 態密度／投影態密度，後者還要明確投影物件。\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+表面中的 slab 表示薄片模型，termination 表示終止面，adsorbate 表示吸附物，anchor 表示錨點。ontop、bridge、hollow 分別表示頂位、橋位和空位型吸附位置；這裡的 hollow 與從晶格移去原子的 vacancy 是不同概念。
+
+體資料中的 channel 是通道，isosurface 是等值面，Miller plane slice 是 Miller 平面切面，direct volume 是直接體渲染。threshold 決定等值面取值，color range 決定顏色對映區間，opacity 決定透明程度。理解這些名稱後，即使部分圖形介面仍顯示英文，也可以據此找到對應設定。
+
+\subsection{容易混淆的幾個名稱}
+
+\ui{預覽}是檢查尚未提交的幾何效果，\ui{應用}接受當前編輯，\ui{儲存}將工作寫入檔案。\ui{重置}結構恢復編輯基準，\ui{Reset camera}只是重新取景。\ui{Repeat cell}擴大顯示範圍，\ui{構建超胞}擴大模型。這些命令的差別不在畫面是否發生變化，而在模型或檔案中的哪些資訊被改變。
+
+在線上版中，上傳、匯入、儲存和下載也各有位置：上傳把本機檔案放入雲端目錄，匯入把檔案內容加入當前專案，儲存把專案寫入雲端檔案，下載取得本機副本。記住這一組對應關係，就容易判斷下一步應到專案瀏覽器還是\ui{檔案}面板操作。
+
+\section{工作流任務速查}
+
+工作流節點按四個模組組織。需要知道任務怎樣連線、怎樣填寫引數時，先看第\ref{ch:workflows}章表\ref{tab:task-catalog}及對應練習；這裡按希望得到的結果提供查詢順序。
+
+\begin{table}[htbp]
+\centering
+\caption{從學習目標找到相應任務。}
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+目標 & 任務與正文位置 \\
+\midrule
+基態總能量 & Build Molecule、SCF、Energy Curve；第\ref{ch:first}章。 \\
+路徑能帶 & Symmetry \& K-Path、NSCF、Band Calculation、Band Structure；第\ref{ch:workflows}章矽原胞例。 \\
+總態密度 & SCF、NSCF、DOS；第\ref{ch:workflows}章DOS例。 \\
+原子結構最佳化 & Build Molecule、Geometry Optimization；第\ref{ch:workflows}章氫分子最佳化。 \\
+倒空間幾何 & Symmetry \& K-Path、Brillouin Zone 2D或3D；\ref{sec:bz-workflow}節。 \\
+帶邊曲面 & SCF、NSCF、Band Calculation 3D、Band Structure 3D；\ref{sec:band-surface}節。 \\
+激發態輸入 & SCF基態和額外空軌道、TDDFT；\ref{sec:tddft-workflow}節，求解方式見該節說明。 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+任務名稱含有3D不代表輸入模型一定是三維體相；能帶曲面的兩個橫座標屬於倒空間，體資料圖則屬於實空間。選擇任務時先明確希望得到的量，再決定模型維度和數值取樣。
+
+
+\FloatBarrier
+\section{隨書示例檔案}
+
+示例位於 \file{examples}，原始輸入與可繼續工作的專案各有用途。複製到自己的學習目錄後再練習，可保留隨書版本作為對照。下表列出本版正文使用的檔案；執行指令碼後產生的日誌、報告和數值結果另按指令碼實際輸出儲存。
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.44\linewidth}>{\raggedright\arraybackslash}p{\dimexpr.56\linewidth-4\tabcolsep\relax}}
+\caption{示例檔案及其用途。}\\
+\toprule
+檔案 & 用途 \\
+\midrule
+\endfirsthead
+\caption[]{示例檔案及其用途（續）。}\\
+\toprule
+檔案 & 用途 \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+\file{h2.cif} & 第一次計算的氫分子模擬盒，初始鍵長約 $0.793766\,\text{\AA}$。\\
+\file{h2_optimized.cif} & 參考執行最佳化後的氫分子，鍵長約 $0.757292\,\text{\AA}$，用於檢視最終幾何。\\
+\file{hydrogen.xyz} & 氫分子座標匯入練習，鍵長約 $0.740848\,\text{\AA}$，與前一計算輸入不同。\\
+\file{water.xyz} & 水分子幾何與座標匯入練習。\\
+\file{silicon.cif} & 8 位點矽常規晶胞，邊長約 $5.44370\,\text{\AA}$，用於工作區與矽計算教程。\\
+\file{Si.poscar} & 8 位點矽晶胞，邊長約 $5.46873\,\text{\AA}$，用於超胞與空位建模練習。\\
+\file{Si-ground-state.ks} & 第\ref{ch:online}章的矽結構專案，包含結構，尚未執行SCF。\\
+\file{Si-introduction.ks} & 第\ref{ch:workspace}章的矽匯入專案，作為第7章繼續建模的起點。\\
+\file{Si-vacancy-tutorial.ks} & 第7章的空位專案，含對照矽結構與63位點空位模型。\\
+\file{Si-primitive-BZ-Online-050.pdf} & 二位點矽原胞的三維布里淵區與路徑向量圖，由\ui{Symmetry}模板生成。\\
+\file{benzene-ring.json} & 六碳芳香環骨架，邊長 $1.4\,\text{\AA}$，尚未補氫。\\
+\file{benzene.json}\newline\file{benzene-optimized.json} & 苯補氫後的初始結構，以及通用分子模型最佳化後的參考結構。\\
+\file{pyridine.json}\newline\file{pyridine-optimized.json} & 中性單重態吡啶的初始與通用分子模型最佳化結構，保留六條芳香鍵。\\
+\file{ethanol-backbone.json}\newline\file{ethanol-initial.json} & 乙醇共線重原子骨架，以及補氫後的初始結構。\\
+\file{ethanol-edited.json}\newline\file{ethanol-cleaned.json}\newline\file{ethanol-optimized.json} & 乙醇幾何編輯、規則整理與通用分子模型最佳化的三個狀態，便於比較。\\
+\file{ethanol-angle1095.json} & 中性單重態乙醇，9個原子、8條顯式鍵，C1--C2--O3鍵角為$109.5^\circ$。\\
+\file{ethanol-angle1095.png} & 同一乙醇從原子檢視器PNG選單匯出的影象，4032\,$\times$\,1964畫素。\\
+\file{ethanol-angle1095-scene.json} & 同一模型的原子場景JSON，保留顯示位點與連線記錄；與用於繼續編輯的結構JSON分別儲存。\\
+\file{Cu-fcc.cif}\newline\file{Cu-vacancy.cif} & $a=3.61\,\text{\AA}$ 的四位點銅晶胞，以及三位點空位候選。\\
+\file{Pt-fcc.cif}\newline\file{Pt111-slab.cif} & $a=3.92\,\text{\AA}$ 的鉑體相晶胞及按第8章引數生成的四層 (111) 薄片。\\
+\file{Pt111-normal-c.json}\newline\file{oh-fragment.mol}\newline\file{Pt111-OH-outward.cif} & 法向晶胞、含單鍵的 O--H 輸入，以及按引數向外放置後的六位點吸附幾何。\\
+\file{Pt111-OH-Online-050.json} & 放置O--H並歸胞後的六位點結構；O/H法向高度為2.00/2.96\,\AA，O--H長0.96\,\AA。\\
+\file{Pt111-OH-candidate-1.json} & 144項參考幾何候選中評分第一的結構，供比較錨點、高度和轉角。\\
+\file{modeling_examples.m}\newline\file{verify_modeling_examples.m} & 建模案例的生成與重新匯入核對指令碼，附 JSON 報告；具體檔案說明見\file{MODELING-CASES.zh-CN.md}。\\
+\file{PEO3-PPO4-PEO3.json}\newline\file{PE6-PP14-seed91.json} & 嵌段鏈與精確組成無規鏈，分別為84與164個原子的初始結構。\\
+\file{neb-exchange/initial.json}\newline\file{neb-exchange/final.json} & 兩個位點交換位置的幾何路徑端點，保持原子對應。\\
+\file{neb-exchange/image-00.json}\newline 至\file{image-06.json} & IDPP生成的7幅完整路徑，包含兩端和5箇中間構型。\\
+\file{polymer_neb_examples.m} & 兩條高分子鏈和路徑的構建、重新匯入及幾何檢查；見\file{POLYMER-NEB-CASES.zh-CN.md}。\\
+\file{graphene-layer.json}\newline\file{graphene-inserted.json}\newline\file{graphene-stacked.json} & 兩位點石墨烯層、直接插入的雙層與按層匹配構建的雙層。\\
+\file{hBN-layer.json}\newline\file{graphene-hBN-stacked.json} & 理想 h-BN 單層與石墨烯/h-BN 匹配結果，面內應變為1.6\%。\\
+\file{twist-graphene-bottom.json}\newline\file{twist-graphene-top.json} & 扭轉教程的兩份原始石墨烯單層，各含兩個位點。\\
+\file{graphene-twist-21p786789.json}\newline\file{graphene-twist-target22.json}\newline\file{graphene-hBN-twist-21p786789.json} & 兩組目標角及異材扭轉的參考結構，均為28位點；同名CIF用於幾何交換。\\
+\file{twist_examples.m}\newline\file{verify_twist_examples.m} & 扭轉結構生成與重新匯入核驗；見\file{TWIST-CASES.zh-CN.md}。\\
+\file{nano-graphene-60.json}\newline\file{graphene-armchair-w3-l2.json}\newline\file{graphene-tube-4-0-l2.json} & 六十度基底的石墨烯輸入，以及24位點奈米帶和32位點奈米管。\\
+\file{Cu-wire-001-r3-l2.json}\newline\file{Cu-dot-r3.json}\newline\file{Cu-void-r2p7.json} & 銅奈米線、有限團簇和球形空洞參考結構；各項引數見\file{NANO-CASES.zh-CN.md}。\\
+\file{user-repeat-ethane-input.json}\newline\file{user-repeat-CC-dimer.json}\newline\file{user-repeat-unit-library.json} & 自定義二碳重複單元的乙烷輸入、14原子二聚體及示例單元庫。\\
+\file{user_repeat_unit_example.m}\newline\file{verify_user_repeat_unit_example.m} & 自定義單元生成與獨立讀回核對；見\file{USER-REPEAT-UNIT-CASE.zh-CN.md}。\\
+\file{nano_examples.m}\newline\file{verify_nano_examples.m} & 五類奈米結構的生成、週期、配位及交換檔案核對。\\
+\file{sqs-cu-ni-input.json}\newline\file{sqs-cu-ni-ordered.json}\newline\file{sqs_example.m} & 銅鎳混合佔位輸入、四位點有序SQS結果和生成指令碼；見\file{SQS-CASE.zh-CN.md}。\\
+\file{adsorption_bn_examples.m}\newline\file{orient_oh_example.m}\newline\file{export_oh_cif.m} & 吸附候選、向外定向及異材匹配的生成與核對；見\file{ADSORPTION-BN-CASES.zh-CN.md}。\\
+\file{water-packing.json}\newline\file{water10-ethanol10-packed.json} & 有顯式連線的水分子輸入，以及10水/10乙醇的低密度初始裝填。\\
+\file{interface_packing_examples.m} & 雙層候選、混合物裝填與獨立幾何檢查；見\file{INTERFACE-PACKING-CASES.zh-CN.md}。\\
+\file{h2-tutorial.ks} & 氫分子教程專案，供檢視結構與工作流。\\
+\file{H2-Online-SCF-050.ks} & 氫分子SCF專案，含7步收斂記錄。\\
+\file{silicon-tutorial.ks} & 矽教程專案，供檢視相應工作流。\\
+\file{h2_scf_and_relax.m} & 完整 MATLAB\regmark{} 中的氫分子 SCF 與幾何最佳化復算指令碼。\\
+\file{silicon_example.m} & 完整 MATLAB\regmark{} 中的八原子矽 SCF 與 DOS 復算指令碼。\\
+\file{silicon_primitive_example.m} & 二原子標準矽原胞能帶復算指令碼。\\
+\file{silicon-band-primitive.ks} & 二原子矽原胞的能帶與對稱性示例專案。\\
+\file{CHGCAR-teaching} & 體資料匯入與檢視示例。\\
+\file{CHGCAR.nospin.gz} & 非自旋 CHGCAR，用於總密度觀察。\\*
+\file{CHGCAR.spin.gz} & 自旋 CHGCAR，用於通道與正負面比較。\\*
+\file{elec.cube.gz} & Cube 體資料，用於切面與匯出練習。\\*
+\file{elec.total.slice-1_1_0.csv} & (110)切面數值，1568行資料；座標為\AA，數值保留通道內部單位。\\
+\file{elec.total.slice-1_1_0.png} & 同一切面的RGBA影象，384\,$\times$\,768畫素，用於核對配色和切面形狀。\\
+\file{datagrid_3d.xsf} & XSF 標量網格，用於格式與切面觀察。\\
+\end{longtable}
+
+隨書矽結構與氫分子幾何的引數有所不同，數值比較時應選擇對應檔案。指令碼需要完整 MATLAB\regmark{}及配套工具箱，配置好軟體路徑後從本手冊倉庫根目錄執行，所需產品與呼叫方式見計算章節和隨書案例說明。三種使用方式均可按正文完成相應的圖形教程。
+
+\subsection{為自己的例子保留說明}
+
+更換材料後，可以為目錄增加一份簡短說明，記錄原始結構來源、做過的超胞或表面操作、最終模型名稱、工作流用途和結果位置。對於隨機構建，再註明種子和組成；對於圖形，再註明能量參考、通道或閾值。這樣，即使數週後重新開啟，也能把結構、計算和展示聯絡起來。
+
+隨書壓縮CHGCAR、Cube與XSF示例選自\file{pymatgen-core}的測試資料，來源說明隨檔案提供。
+
+\section{參考文獻}
+
+以下列出與本書基礎內容直接相關的文獻資料供讀者進一步參考。
+
+\begingroup
+\small
+\RaggedRight
+\begin{enumerate}[itemsep=4pt]
+\item Liu Yang, Jinlong Yang, and Wei Hu. \textit{KSSOLV Toolbox: A MATLAB\regmark{} Graphical User Interface for Plane-Wave Density Functional Theory Calculations}. Journal of Chemical Theory and Computation, 2026. \href{https://doi.org/10.1021/acs.jctc.6c00523}{doi:10.1021/acs.jctc.6c00523}.
+\item Shizhe Jiao et al. \textit{KSSOLV 2.0: An efficient MATLAB\regmark{} toolbox for solving the Kohn--Sham equations with plane-wave basis set}. Computer Physics Communications, 279, 108424, 2022. \href{https://doi.org/10.1016/j.cpc.2022.108424}{doi:10.1016/j.cpc.2022.108424}。
+\item P. Hohenberg and W. Kohn. \textit{Inhomogeneous Electron Gas}. Physical Review, 136, B864--B871, 1964. \href{https://doi.org/10.1103/PhysRev.136.B864}{doi:10.1103/PhysRev.136.B864}。
+\item W. Kohn and L. J. Sham. \textit{Self-Consistent Equations Including Exchange and Correlation Effects}. Physical Review, 140, A1133--A1138, 1965. \href{https://doi.org/10.1103/PhysRev.140.A1133}{doi:10.1103/PhysRev.140.A1133}。
+\item John P. Perdew, Kieron Burke, and Matthias Ernzerhof. \textit{Generalized Gradient Approximation Made Simple}. Physical Review Letters, 77, 3865--3868, 1996. \href{https://doi.org/10.1103/PhysRevLett.77.3865}{doi:10.1103/PhysRevLett.77.3865}。
+\item D. R. Hamann. \textit{Optimized norm-conserving Vanderbilt pseudopotentials}. Physical Review B, 88, 085117, 2013. \href{https://doi.org/10.1103/PhysRevB.88.085117}{doi:10.1103/PhysRevB.88.085117}。
+\end{enumerate}
+
+\endgroup

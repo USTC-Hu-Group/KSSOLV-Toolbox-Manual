@@ -44,7 +44,7 @@ htmlcov/
 # Local build, preview, and verification output
 # dist/ contains approved releases and must remain tracked.
 /output/
-/docs/manual-zh/build/
+/docs/manual-*/build/
 /tmp/
 /temp/
 *.log
@@ -73,9 +73,9 @@ htmlcov/
 *.toc
 *.vrb
 *.xdv
-/docs/manual-zh/main.pdf
-/docs/manual-zh/main.dvi
-/docs/manual-zh/main.ps
+/docs/manual-*/main.pdf
+/docs/manual-*/main.dvi
+/docs/manual-*/main.ps
 
 # MATLAB editor recovery and crash files (keep example data)
 *.asv

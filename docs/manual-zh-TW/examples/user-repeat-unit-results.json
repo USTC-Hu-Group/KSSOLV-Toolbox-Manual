@@ -1,0 +1,239 @@
+{
+  "MATLAB": "26.2.0.3386108 (R2026b)",
+  "architecture": "maca64",
+  "JVM": false,
+  "GUIOperated": false,
+  "DFTCalculation": false,
+  "saveParameters": {
+    "repeatUnitName": "MANUAL_CC",
+    "headIndex": 1,
+    "tailIndex": 2,
+    "leavingIndices": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "storePath": "/Users/liu/Documents/GitHub/KSSOLV-Toolbox/docs/manual-zh/examples/user-repeat-unit-library.json",
+    "overwrite": true
+  },
+  "buildParameters": {
+    "repeatUnit": "MANUAL_CC",
+    "repeatCount": 2,
+    "seed": 7,
+    "chainCount": 1,
+    "headGroup": "none",
+    "tailGroup": "none",
+    "conformation": "extended",
+    "headTailMode": "regular",
+    "tacticity": "atactic",
+    "atomLimit": 1000,
+    "storePath": "/Users/liu/Documents/GitHub/KSSOLV-Toolbox/docs/manual-zh/examples/user-repeat-unit-library.json"
+  },
+  "sourceAtoms": 8,
+  "sourceBonds": 7,
+  "activeUnitAtoms": 2,
+  "activeUnitSpecies": [
+    "C",
+    "C"
+  ],
+  "head": 1,
+  "tail": 2,
+  "resultAtoms": 14,
+  "resultBonds": 13,
+  "elementCounts": {
+    "C": 4,
+    "H": 10
+  },
+  "coordinates": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1.52,
+      0,
+      0
+    ],
+    [
+      2.9699999999999998,
+      0,
+      0
+    ],
+    [
+      4.49,
+      0,
+      0
+    ],
+    [
+      0.62353829072479594,
+      0.62353829072479594,
+      0.62353829072479594
+    ],
+    [
+      0.62353829072479594,
+      -0.62353829072479594,
+      -0.62353829072479594
+    ],
+    [
+      -0.62353829072479594,
+      0.62353829072479594,
+      -0.62353829072479594
+    ],
+    [
+      2.1435382907247957,
+      0.62353829072479594,
+      0.62353829072479594
+    ],
+    [
+      2.1435382907247957,
+      -0.62353829072479594,
+      -0.62353829072479594
+    ],
+    [
+      3.5935382907247959,
+      0.62353829072479594,
+      0.62353829072479594
+    ],
+    [
+      3.5935382907247959,
+      -0.62353829072479594,
+      -0.62353829072479594
+    ],
+    [
+      5.1135382907247964,
+      0.62353829072479594,
+      0.62353829072479594
+    ],
+    [
+      5.1135382907247964,
+      -0.62353829072479594,
+      -0.62353829072479594
+    ],
+    [
+      3.8664617092752041,
+      0.62353829072479594,
+      -0.62353829072479594
+    ]
+  ],
+  "bonds": [
+    [
+      1,
+      2,
+      1
+    ],
+    [
+      3,
+      4,
+      1
+    ],
+    [
+      2,
+      3,
+      1
+    ],
+    [
+      1,
+      5,
+      1
+    ],
+    [
+      1,
+      6,
+      1
+    ],
+    [
+      1,
+      7,
+      1
+    ],
+    [
+      2,
+      8,
+      1
+    ],
+    [
+      2,
+      9,
+      1
+    ],
+    [
+      3,
+      10,
+      1
+    ],
+    [
+      3,
+      11,
+      1
+    ],
+    [
+      4,
+      12,
+      1
+    ],
+    [
+      4,
+      13,
+      1
+    ],
+    [
+      4,
+      14,
+      1
+    ]
+  ],
+  "analysis": {
+    "schemaVersion": 1,
+    "sequence": [
+      "MANUAL_CC",
+      "MANUAL_CC"
+    ],
+    "seed": 7,
+    "tacticity": "atactic",
+    "repeatUnits": 2,
+    "actualKinds": "MANUAL_CC",
+    "actualCounts": 2,
+    "estimatedAtoms": 12,
+    "atomCount": 14,
+    "chainCount": 1,
+    "headGroup": "none",
+    "tailGroup": "none",
+    "conformation": "extended",
+    "headTailMode": "regular",
+    "headTailFlipped": [
+      false,
+      false
+    ],
+    "state": "constructed_not_equilibrated"
+  },
+  "diagnostics": {
+    "atomIssues": [],
+    "collisions": [],
+    "abnormalBonds": [],
+    "bondOrderSums": [
+      4,
+      4,
+      4,
+      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "hasErrors": false,
+    "method": "rule-based-valence-and-geometry",
+    "isEnergyMinimization": false
+  },
+  "readbackCoordinatesAndBondsMatch": true,
+  "singleConnectedComponent": true
+}

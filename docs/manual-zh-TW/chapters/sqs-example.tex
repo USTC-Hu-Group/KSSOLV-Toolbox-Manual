@@ -1,0 +1,49 @@
+\subsection{示例：建立四位點銅鎳\headinglatin{SQS}}\label{sec:sqs-cu-ni-example}
+\index{SQS@SQS 模型}
+
+隨書\file{sqs-cu-ni-input.json}提供一個可以直接開始的輸入：邊長為 $3.61\,\text{\AA}$ 的面心立方晶胞，含4個獨立位點。每個位點均記錄Cu佔位0.5、Ni佔位0.5，總組成相當於Cu$_2$Ni$_2$。這裡的混合佔位描述統計上的組分分佈，並不是在同一位置放置兩個實際原子。SQS將這些比例轉成明確的原子種類，使每個位點由一種元素完整佔據。
+
+本例採用示例晶格常數和較小晶胞，便於觀察混合佔位如何轉為顯式排列。研究合金性質時，可進一步擴大模型，並檢查關聯函式與晶格引數的收斂。
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+專案 & 本例設定與檢查 \\
+\midrule
+輸入檔案 & \file{sqs-cu-ni-input.json}；另附同名CIF。\\
+晶格 & $a=b=c=3.61\,\text{\AA}$，三個夾角均為 $90^\circ$。\\
+獨立位點 & 4；分數座標為 $(0,0,0)$、$(0,\frac12,\frac12)$、$(\frac12,0,\frac12)$、$(\frac12,\frac12,0)$。\\
+位點佔位 & 每個位點Cu 0.5、Ni 0.5；兩種佔位之和為1。\\
+SQS 超胞倍率 & 在文字框中輸入\literalinput{1}，保持本例四位點晶胞。\\
+SQS 搜尋時限 & 輸入1秒；本例進入小規模精確列舉。\\
+預期結果 & Cu 2個、Ni 2個，共4個位點，每個位點佔位為1。\\
+\bottomrule
+\end{tabularx}
+\caption{四位點銅鎳SQS練習。}
+\end{table}
+
+\begin{steps}
+  \item 將\file{sqs-cu-ni-input.json}匯入專案，開啟其三維文件。線上版中先上傳檔案，再從雲端位置匯入。將文件命名為\file{CuNi-mixed}，儲存起始專案，以便隨時回到混合佔位輸入。
+  \item 檢視獨立位點數、晶胞和原子資訊。位點數應為4，位點組分應同時包含Cu和Ni，各為0.5。若檢視輸入JSON，每個\file{sites}條目中的\file{species}都有兩個元素及各自的\file{occu}值；這比僅憑顯示顏色判斷組成更可靠。
+  \item 保持該晶體文件啟用，從\ui{晶體建模}\,$\rightarrow$\,\ui{缺陷與合金}開啟\ui{生成 SQS 模型}。在\ui{SQS 超胞倍率}中輸入\literalinput{1}，在\ui{SQS 搜尋時限（秒）}中輸入1。
+  \item 單擊\ui{預覽}，檢視四個位點是否已分配成兩種明確的元素，確認晶胞大小和位點數沒有增加，再\ui{應用}。本例保留原有晶格和位置，改變的是各個位點的物種佔據。
+  \item 檢查結果組成：應為Cu$_2$Ni$_2$，位點數仍為4，每個位點只含一種元素、佔位為1。測量最近鄰距離，應約為 $3.61/\sqrt{2}=2.552655\,\text{\AA}$。元素分配可以透過晶胞對稱操作得到等價表達，檢查時以組成、佔位和週期幾何為準。
+  \item 按前述結構匯出方法匯出原生JSON，命名為\file{sqs-cu-ni-ordered.json}，保留搜尋記錄。檔名中的\file{ordered}表示每個位點已有明確元素，不表示生成了化學長程有序相。
+  \item 將結果文件命名為\file{CuNi-SQS-4}並儲存專案；再匯出CIF，便於交換晶胞和明確的元素佔位。線上版中下載匯出檔案，並保留輸入JSON、結果JSON和專案副本。CIF用於結構交換，SQS搜尋記錄以原生JSON為準。
+\end{steps}
+
+\subsubsection*{檢視詳細搜尋記錄}
+
+用文字編輯器開啟匯出的JSON，只檢視\file{properties.sqs}中的記錄，無需修改檔案。\file{search_mode}表示搜尋方式，\file{configuration_count}表示候選排列數，\file{objective_function}是關聯匹配的目標值。
+
+參考結果中的\file{search_mode}為\literalinput{exact-enumeration}，\file{configuration_count}為6，\file{objective_function}約為0.1666667。六種排列來自四個位點中選擇兩個放Cu，其餘放Ni。本例六對不同位點的週期最短距離相同；Cu--Cu與Ni--Ni各佔其中一對，有限晶胞不能完全再現獨立隨機佔位的配對比例，因此目標值並不為零。這個無量綱目標值衡量當前關聯函式與隨機佔位目標的差別，不是吸附能、總能量或缺陷形成能。
+
+搜尋時限控制候選搜尋階段；完整操作還包括精確列舉、等價結構比較及結果整理，因此總耗時可能超過設定值。擴大模型時，同時考慮位點數與候選規模。
+
+\Needspace{10\baselineskip}
+\begin{notebox}{倍率與混合佔位}
+本命令的單個整數倍率表示晶胞體積倍數，不是三個方向各乘同一個數。要明確三個方向的重複數，在同一倍率文字框中輸入例如\literalinput{2 2 2}；它會把本例擴為32個位點。比較模型前應記錄實際晶胞、組成和搜尋條件。混合佔位輸入用於建模；電子結構計算應使用生成並檢查過的顯式佔位結果。匯入混合佔位時，計算物件可能給出分數佔位不能直接表示的提示，不能把轉換出的單一元素顯示當成SQS已經完成。
+\end{notebox}
+
+隨書\file{sqs-cu-ni-ordered.json}和\file{sqs-cu-ni-ordered.cif}提供對應結果；\file{sqs_example.m}可在以\file{-nojvm}啟動的MATLAB\regmark{}工具箱環境中重新生成輸入和結果。生成顯式佔位模型後，可繼續建立電子結構計算。

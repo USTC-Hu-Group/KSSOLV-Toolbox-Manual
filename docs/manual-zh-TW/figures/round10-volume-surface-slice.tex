@@ -1,0 +1,38 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1mm,y=1mm,font=\sffamily\small]
+  \node[text=brand] at (25,45) {等值面：固定数值};
+  \node[text=brand] at (89,45) {切面：固定位置};
+  \foreach \dx in {0,64} {
+    \draw[draw=muted!55,line width=.4pt]
+      ({5+\dx},4) rectangle ({39+\dx},30);
+    \draw[draw=muted!55,line width=.4pt]
+      ({5+\dx},30) -- ({14+\dx},38) -- ({48+\dx},38)
+      -- ({48+\dx},12) -- ({39+\dx},4);
+    \draw[draw=muted!55,line width=.4pt] ({39+\dx},30) -- ({48+\dx},38);
+    \draw[dashed,draw=muted!40,line width=.4pt]
+      ({5+\dx},4) -- ({14+\dx},12) -- ({48+\dx},12);
+    \draw[dashed,draw=muted!40,line width=.4pt]
+      ({14+\dx},12) -- ({14+\dx},38);
+  }
+  \filldraw[fill=teal!25,draw=teal,line width=.7pt]
+    (26,21) ellipse (13 and 10);
+  \draw[draw=teal!65,dashed,line width=.5pt] (13,21) arc (180:0:13 and 3.2);
+  \draw[draw=teal!65,line width=.5pt] (13,21) arc (180:360:13 and 3.2);
+  \node[text=brand] at (26,25) {$s=\tau$};
+  \filldraw[fill=paleblue,draw=brand,line width=.7pt]
+    (69,17) -- (103,8) -- (112,25) -- (78,34) -- cycle;
+  \begin{scope}
+    \clip (69,17) -- (103,8) -- (112,25) -- (78,34) -- cycle;
+    \fill[teal!25] (88,21) ellipse (14 and 11);
+    \fill[teal!50] (88,21) ellipse (9 and 7);
+    \fill[brand!65] (88,21) ellipse (4 and 3.2);
+  \end{scope}
+  \draw[draw=brand,line width=.7pt]
+    (69,17) -- (103,8) -- (112,25) -- (78,34) -- cycle;
+  \node[text=ink] at (25,-4) {形状随场与阈值改变};
+  \node[text=ink] at (89,-4) {颜色表示平面上的场值};
+\end{tikzpicture}
+\caption{同一标量场的两种观察方式（概念示意）。等值面连接相同数值的位置；切面取一个平面，用色彩显示其内部变化。图中几何与色阶仅作概念示意。}
+\label{fig:volume-surface-slice-concept}
+\end{figure}

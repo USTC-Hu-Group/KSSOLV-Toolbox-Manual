@@ -1,0 +1,31 @@
+\begin{figure}[!htb]
+\centering
+\begin{tikzpicture}[x=1mm,y=1mm,font=\sffamily\small]
+ \node[text=brand] at (24,47) {绕锚点旋转};
+ \draw[teal,dashed] (10,15)--(33,15);
+ \draw[teal,dashed] (10,15)--(10,38);
+ \draw[->,>=stealth,brand,line width=.85pt] (33,15) arc[start angle=0,end angle=90,radius=23];
+ \fill[ink] (10,15) circle (1.1);
+ \fill[teal] (33,15) circle (1.4);
+ \fill[brand] (10,38) circle (1.4);
+ \node[anchor=north] at (10,13) {$\mathbf p$};
+ \node[anchor=west,text=teal] at (35,15) {$\mathbf r$};
+ \node[anchor=east,text=brand] at (8,38) {$\mathbf r'$};
+ \node[text=brand] at (30,35) {$+90^\circ$};
+ \node[text=muted,font=\sffamily\footnotesize] at (24,3) {到锚点的距离保持不变};
+ \node[text=brand] at (86,47) {关于平面镜像};
+ \fill[paleblue] (83,8) rectangle (87,40);
+ \draw[teal,line width=.8pt] (85,8)--(85,40);
+ \draw[dashed,muted] (68,29)--(102,29);
+ \draw[->,>=stealth,brand,line width=.7pt] (85,12)--(105,12) node[above] {$\hat{\mathbf n}$};
+ \fill[ink] (85,18) circle (1.1);
+ \fill[teal] (102,29) circle (1.4);
+ \fill[brand] (68,29) circle (1.4);
+ \node[anchor=south,text=teal] at (102,31) {$\mathbf r$};
+ \node[anchor=south,text=brand] at (68,31) {$\mathbf r'$};
+ \node[anchor=east] at (83,18) {$\mathbf p$};
+ \node[text=muted,font=\sffamily\footnotesize] at (86,3) {到镜面的距离两侧相等};
+\end{tikzpicture}
+\caption{锚点旋转与平面镜像（截面示意）。左图中的点绕 $\mathbf p$ 旋转；右图中的点跨过镜面，沿法向到镜面的距离大小不变。}
+\label{fig:round10-anchor-mirror}
+\end{figure}
