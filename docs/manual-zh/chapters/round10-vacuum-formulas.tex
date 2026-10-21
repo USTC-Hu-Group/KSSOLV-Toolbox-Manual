@@ -1,0 +1,11 @@
+\ui{帮助信息}中的关系可写为
+\begin{equation}
+  \mathbf c'=
+  \frac{\|\mathbf c\|+\Delta}{\|\mathbf c\|}\,\mathbf c,
+  \qquad
+  \Delta H=\Delta\,
+  \left|\frac{\mathbf c}{\|\mathbf c\|}\cdot\hat{\mathbf n}_{\mathrm{slab}}\right|.
+  \label{eq:vacuum-addition-projection}
+\end{equation}
+$\Delta$和$\Delta H$的单位都是\AA。前者是输入的新增长度，后者是法向胞高的增加量；点积给出的比例介于0和1之间。例如，第三晶格矢量沿全局$z$，表面法向沿$(1,1,1)$时，输入$2\,\text{\AA}$只会增加约$2/\sqrt{3}=1.155\,\text{\AA}$的法向胞高。图\ref{fig:surface-vacuum-geometry}中的$\Delta\mathbf c=\mathbf c'-\mathbf c$是长度为$\Delta$的增量，$\Delta H$是它的法向投影长度；将$\mathbf c$先整理到法向后，长度与实际间隔便容易对应。
+

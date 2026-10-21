@@ -1,0 +1,1989 @@
+{
+  "schemaVersion": "2.0",
+  "kind": "molecule",
+  "requestId": "4-ccb934bb-c14b-4830-aeab-c936548463e0",
+  "molecule": {
+    "formula": "H6C2O",
+    "atomCount": 9,
+    "isOrdered": true,
+    "charge": 0,
+    "spinMultiplicity": 1,
+    "inputFormat": "json",
+    "frameIndex": 1,
+    "frameCount": 1
+  },
+  "sites": [
+    {
+      "id": "site-0",
+      "siteIndex": 0,
+      "label": "C",
+      "species": [
+        {
+          "symbol": "C",
+          "occupancy": 1,
+          "atomicNumber": 6,
+          "colorVesta": [
+            129,
+            73,
+            41
+          ],
+          "colorJmol": [
+            144,
+            144,
+            144
+          ],
+          "atomicRadius": 0.7
+        }
+      ],
+      "cartesian": [
+        0.12621610721343318,
+        0.21369743798582166,
+        0.21100386045506495
+      ]
+    },
+    {
+      "id": "site-1",
+      "siteIndex": 1,
+      "label": "C",
+      "species": [
+        {
+          "symbol": "C",
+          "occupancy": 1,
+          "atomicNumber": 6,
+          "colorVesta": [
+            129,
+            73,
+            41
+          ],
+          "colorJmol": [
+            144,
+            144,
+            144
+          ],
+          "atomicRadius": 0.7
+        }
+      ],
+      "cartesian": [
+        1.655133024803766,
+        0.18778051902845858,
+        0.02840548816027226
+      ]
+    },
+    {
+      "id": "site-2",
+      "siteIndex": 2,
+      "label": "O",
+      "species": [
+        {
+          "symbol": "O",
+          "occupancy": 1,
+          "atomicNumber": 8,
+          "colorVesta": [
+            255,
+            3,
+            0
+          ],
+          "colorJmol": [
+            255,
+            13,
+            13
+          ],
+          "atomicRadius": 0.6
+        }
+      ],
+      "cartesian": [
+        2.117248323126806,
+        1.4970446043044157,
+        -0.31391084091954224
+      ]
+    },
+    {
+      "id": "site-3",
+      "siteIndex": 3,
+      "label": "H",
+      "species": [
+        {
+          "symbol": "H",
+          "occupancy": 1,
+          "atomicNumber": 1,
+          "colorVesta": [
+            255,
+            204,
+            204
+          ],
+          "colorJmol": [
+            255,
+            255,
+            255
+          ],
+          "atomicRadius": 0.25
+        }
+      ],
+      "cartesian": [
+        -0.34096691562610554,
+        0.5308072764182813,
+        -0.7096358896316406
+      ]
+    },
+    {
+      "id": "site-4",
+      "siteIndex": 4,
+      "label": "H",
+      "species": [
+        {
+          "symbol": "H",
+          "occupancy": 1,
+          "atomicNumber": 1,
+          "colorVesta": [
+            255,
+            204,
+            204
+          ],
+          "colorJmol": [
+            255,
+            255,
+            255
+          ],
+          "atomicRadius": 0.25
+        }
+      ],
+      "cartesian": [
+        -0.22228589076086228,
+        -0.775302169241728,
+        0.4695098563881368
+      ]
+    },
+    {
+      "id": "site-5",
+      "siteIndex": 5,
+      "label": "H",
+      "species": [
+        {
+          "symbol": "H",
+          "occupancy": 1,
+          "atomicNumber": 1,
+          "colorVesta": [
+            255,
+            204,
+            204
+          ],
+          "colorJmol": [
+            255,
+            255,
+            255
+          ],
+          "atomicRadius": 0.25
+        }
+      ],
+      "cartesian": [
+        -0.13032891309307942,
+        0.903759628514148,
+        1.0011930226044632
+      ]
+    },
+    {
+      "id": "site-6",
+      "siteIndex": 6,
+      "label": "H",
+      "species": [
+        {
+          "symbol": "H",
+          "occupancy": 1,
+          "atomicNumber": 1,
+          "colorVesta": [
+            255,
+            204,
+            204
+          ],
+          "colorJmol": [
+            255,
+            255,
+            255
+          ],
+          "atomicRadius": 0.25
+        }
+      ],
+      "cartesian": [
+        2.1223158364796753,
+        -0.12933046048860486,
+        0.9490461230843986
+      ]
+    },
+    {
+      "id": "site-7",
+      "siteIndex": 7,
+      "label": "H",
+      "species": [
+        {
+          "symbol": "H",
+          "occupancy": 1,
+          "atomicNumber": 1,
+          "colorVesta": [
+            255,
+            204,
+            204
+          ],
+          "colorJmol": [
+            255,
+            255,
+            255
+          ],
+          "atomicRadius": 0.25
+        }
+      ],
+      "cartesian": [
+        1.911672807845364,
+        -0.5022846885431813,
+        -0.7617811374842528
+      ]
+    },
+    {
+      "id": "site-8",
+      "siteIndex": 8,
+      "label": "H",
+      "species": [
+        {
+          "symbol": "H",
+          "occupancy": 1,
+          "atomicNumber": 1,
+          "colorVesta": [
+            255,
+            204,
+            204
+          ],
+          "colorJmol": [
+            255,
+            255,
+            255
+          ],
+          "atomicRadius": 0.25
+        }
+      ],
+      "cartesian": [
+        1.854807119149854,
+        2.0462978151000986,
+        0.42841260472649373
+      ]
+    }
+  ],
+  "atomInstances": [
+    {
+      "id": "site-0@0,0,0",
+      "siteId": "site-0",
+      "siteIndex": 0,
+      "imageOffset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.12621610721343318,
+        0.21369743798582166,
+        0.21100386045506495
+      ],
+      "visibility": "base"
+    },
+    {
+      "id": "site-1@0,0,0",
+      "siteId": "site-1",
+      "siteIndex": 1,
+      "imageOffset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        1.655133024803766,
+        0.18778051902845858,
+        0.02840548816027226
+      ],
+      "visibility": "base"
+    },
+    {
+      "id": "site-2@0,0,0",
+      "siteId": "site-2",
+      "siteIndex": 2,
+      "imageOffset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        2.117248323126806,
+        1.4970446043044157,
+        -0.31391084091954224
+      ],
+      "visibility": "base"
+    },
+    {
+      "id": "site-3@0,0,0",
+      "siteId": "site-3",
+      "siteIndex": 3,
+      "imageOffset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.34096691562610554,
+        0.5308072764182813,
+        -0.7096358896316406
+      ],
+      "visibility": "base"
+    },
+    {
+      "id": "site-4@0,0,0",
+      "siteId": "site-4",
+      "siteIndex": 4,
+      "imageOffset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.22228589076086228,
+        -0.775302169241728,
+        0.4695098563881368
+      ],
+      "visibility": "base"
+    },
+    {
+      "id": "site-5@0,0,0",
+      "siteId": "site-5",
+      "siteIndex": 5,
+      "imageOffset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.13032891309307942,
+        0.903759628514148,
+        1.0011930226044632
+      ],
+      "visibility": "base"
+    },
+    {
+      "id": "site-6@0,0,0",
+      "siteId": "site-6",
+      "siteIndex": 6,
+      "imageOffset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        2.1223158364796753,
+        -0.12933046048860486,
+        0.9490461230843986
+      ],
+      "visibility": "base"
+    },
+    {
+      "id": "site-7@0,0,0",
+      "siteId": "site-7",
+      "siteIndex": 7,
+      "imageOffset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        1.911672807845364,
+        -0.5022846885431813,
+        -0.7617811374842528
+      ],
+      "visibility": "base"
+    },
+    {
+      "id": "site-8@0,0,0",
+      "siteId": "site-8",
+      "siteIndex": 8,
+      "imageOffset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        1.854807119149854,
+        2.0462978151000986,
+        0.42841260472649373
+      ],
+      "visibility": "base"
+    }
+  ],
+  "bondRelations": [
+    {
+      "id": "bond-relation-0",
+      "fromSiteIndex": 0,
+      "toSiteIndex": 1,
+      "relativeImage": [
+        0,
+        0,
+        0
+      ],
+      "distance": 1.5400002575151974,
+      "weight": 1,
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-relation-1",
+      "fromSiteIndex": 0,
+      "toSiteIndex": 3,
+      "relativeImage": [
+        0,
+        0,
+        0
+      ],
+      "distance": 1.079998229581818,
+      "weight": 1,
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-relation-2",
+      "fromSiteIndex": 0,
+      "toSiteIndex": 4,
+      "relativeImage": [
+        0,
+        0,
+        0
+      ],
+      "distance": 1.0799996368618245,
+      "weight": 1,
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-relation-3",
+      "fromSiteIndex": 0,
+      "toSiteIndex": 5,
+      "relativeImage": [
+        0,
+        0,
+        0
+      ],
+      "distance": 1.0800000399162906,
+      "weight": 1,
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-relation-4",
+      "fromSiteIndex": 1,
+      "toSiteIndex": 2,
+      "relativeImage": [
+        0,
+        0,
+        0
+      ],
+      "distance": 1.4300012108709423,
+      "weight": 1,
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-relation-5",
+      "fromSiteIndex": 1,
+      "toSiteIndex": 6,
+      "relativeImage": [
+        0,
+        0,
+        0
+      ],
+      "distance": 1.0799992275595285,
+      "weight": 1,
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-relation-6",
+      "fromSiteIndex": 1,
+      "toSiteIndex": 7,
+      "relativeImage": [
+        0,
+        0,
+        0
+      ],
+      "distance": 1.0799988677454258,
+      "weight": 1,
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-relation-7",
+      "fromSiteIndex": 2,
+      "toSiteIndex": 8,
+      "relativeImage": [
+        0,
+        0,
+        0
+      ],
+      "distance": 0.959999256807026,
+      "weight": 1,
+      "order": 1,
+      "origin": "source"
+    }
+  ],
+  "bondInstances": [
+    {
+      "id": "bond-0",
+      "relationId": "bond-relation-0",
+      "fromSiteIndex": 0,
+      "toSiteIndex": 1,
+      "fromImage": [
+        0,
+        0,
+        0
+      ],
+      "toImage": [
+        0,
+        0,
+        0
+      ],
+      "start": [
+        0.12621610721343318,
+        0.21369743798582166,
+        0.21100386045506495
+      ],
+      "end": [
+        1.655133024803766,
+        0.18778051902845858,
+        0.02840548816027226
+      ],
+      "distance": 1.5400002575151974,
+      "visibility": "base",
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-1",
+      "relationId": "bond-relation-1",
+      "fromSiteIndex": 0,
+      "toSiteIndex": 3,
+      "fromImage": [
+        0,
+        0,
+        0
+      ],
+      "toImage": [
+        0,
+        0,
+        0
+      ],
+      "start": [
+        0.12621610721343318,
+        0.21369743798582166,
+        0.21100386045506495
+      ],
+      "end": [
+        -0.34096691562610554,
+        0.5308072764182813,
+        -0.7096358896316406
+      ],
+      "distance": 1.079998229581818,
+      "visibility": "base",
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-2",
+      "relationId": "bond-relation-2",
+      "fromSiteIndex": 0,
+      "toSiteIndex": 4,
+      "fromImage": [
+        0,
+        0,
+        0
+      ],
+      "toImage": [
+        0,
+        0,
+        0
+      ],
+      "start": [
+        0.12621610721343318,
+        0.21369743798582166,
+        0.21100386045506495
+      ],
+      "end": [
+        -0.22228589076086228,
+        -0.775302169241728,
+        0.4695098563881368
+      ],
+      "distance": 1.0799996368618245,
+      "visibility": "base",
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-3",
+      "relationId": "bond-relation-3",
+      "fromSiteIndex": 0,
+      "toSiteIndex": 5,
+      "fromImage": [
+        0,
+        0,
+        0
+      ],
+      "toImage": [
+        0,
+        0,
+        0
+      ],
+      "start": [
+        0.12621610721343318,
+        0.21369743798582166,
+        0.21100386045506495
+      ],
+      "end": [
+        -0.13032891309307942,
+        0.903759628514148,
+        1.0011930226044632
+      ],
+      "distance": 1.0800000399162906,
+      "visibility": "base",
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-4",
+      "relationId": "bond-relation-4",
+      "fromSiteIndex": 1,
+      "toSiteIndex": 2,
+      "fromImage": [
+        0,
+        0,
+        0
+      ],
+      "toImage": [
+        0,
+        0,
+        0
+      ],
+      "start": [
+        1.655133024803766,
+        0.18778051902845858,
+        0.02840548816027226
+      ],
+      "end": [
+        2.117248323126806,
+        1.4970446043044157,
+        -0.31391084091954224
+      ],
+      "distance": 1.4300012108709423,
+      "visibility": "base",
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-5",
+      "relationId": "bond-relation-5",
+      "fromSiteIndex": 1,
+      "toSiteIndex": 6,
+      "fromImage": [
+        0,
+        0,
+        0
+      ],
+      "toImage": [
+        0,
+        0,
+        0
+      ],
+      "start": [
+        1.655133024803766,
+        0.18778051902845858,
+        0.02840548816027226
+      ],
+      "end": [
+        2.1223158364796753,
+        -0.12933046048860486,
+        0.9490461230843986
+      ],
+      "distance": 1.0799992275595285,
+      "visibility": "base",
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-6",
+      "relationId": "bond-relation-6",
+      "fromSiteIndex": 1,
+      "toSiteIndex": 7,
+      "fromImage": [
+        0,
+        0,
+        0
+      ],
+      "toImage": [
+        0,
+        0,
+        0
+      ],
+      "start": [
+        1.655133024803766,
+        0.18778051902845858,
+        0.02840548816027226
+      ],
+      "end": [
+        1.911672807845364,
+        -0.5022846885431813,
+        -0.7617811374842528
+      ],
+      "distance": 1.0799988677454258,
+      "visibility": "base",
+      "order": 1,
+      "origin": "source"
+    },
+    {
+      "id": "bond-7",
+      "relationId": "bond-relation-7",
+      "fromSiteIndex": 2,
+      "toSiteIndex": 8,
+      "fromImage": [
+        0,
+        0,
+        0
+      ],
+      "toImage": [
+        0,
+        0,
+        0
+      ],
+      "start": [
+        2.117248323126806,
+        1.4970446043044157,
+        -0.31391084091954224
+      ],
+      "end": [
+        1.854807119149854,
+        2.0462978151000986,
+        0.42841260472649373
+      ],
+      "distance": 0.959999256807026,
+      "visibility": "base",
+      "order": 1,
+      "origin": "source"
+    }
+  ],
+  "polyhedra": [],
+  "analysis": {
+    "algorithm": "Source",
+    "parameters": {
+      "requestedAlgorithm": "Auto",
+      "includeConnectivity": true,
+      "cacheHit": true
+    },
+    "source": "matgenlab",
+    "sourceVersion": "matgenlab-0.1.0/pymatgen-2026.5.4",
+    "elapsedMilliseconds": 0.204
+  },
+  "warnings": [],
+  "modeling": {
+    "adsorbateFragments": [],
+    "constructionBonds": [
+      {
+        "firstElement": "C",
+        "secondElement": "H",
+        "bondOrder": 1,
+        "value": 1.08,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "H",
+        "bondOrder": 1.5,
+        "value": 0.8899999999999999,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "H",
+        "bondOrder": 2,
+        "value": 0.83,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "H",
+        "bondOrder": 3,
+        "value": 0.71,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "C",
+        "bondOrder": 1,
+        "value": 1.66,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "C",
+        "bondOrder": 1.5,
+        "value": 1.4899999999999998,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "C",
+        "bondOrder": 2,
+        "value": 1.4299999999999997,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "C",
+        "bondOrder": 3,
+        "value": 1.3099999999999998,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "C",
+        "bondOrder": 1,
+        "value": 1.54,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "C",
+        "bondOrder": 1.5,
+        "value": 1.397,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "kssolv-aromatic-bond-parameters-v1",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "C",
+        "bondOrder": 2,
+        "value": 1.34,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "C",
+        "bondOrder": 3,
+        "value": 1.2,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "N",
+        "bondOrder": 1,
+        "value": 1.47,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "N",
+        "bondOrder": 1.5,
+        "value": 1.34,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "kssolv-aromatic-bond-parameters-v1",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "N",
+        "bondOrder": 2,
+        "value": 1.3,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "N",
+        "bondOrder": 3,
+        "value": 1.16,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "O",
+        "bondOrder": 1,
+        "value": 1.43,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "O",
+        "bondOrder": 1.5,
+        "value": 1.36,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "kssolv-aromatic-bond-parameters-v1",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "O",
+        "bondOrder": 2,
+        "value": 1.23,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "O",
+        "bondOrder": 3,
+        "value": 1.0599999999999998,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "F",
+        "bondOrder": 1,
+        "value": 1.35,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "F",
+        "bondOrder": 1.5,
+        "value": 1.14,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "F",
+        "bondOrder": 2,
+        "value": 1.08,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "F",
+        "bondOrder": 3,
+        "value": 0.96,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "P",
+        "bondOrder": 1,
+        "value": 1.84,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "P",
+        "bondOrder": 1.5,
+        "value": 1.64,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "P",
+        "bondOrder": 2,
+        "value": 1.58,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "P",
+        "bondOrder": 3,
+        "value": 1.46,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "S",
+        "bondOrder": 1,
+        "value": 1.82,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "S",
+        "bondOrder": 1.5,
+        "value": 1.64,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "S",
+        "bondOrder": 2,
+        "value": 1.58,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "S",
+        "bondOrder": 3,
+        "value": 1.46,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "Cl",
+        "bondOrder": 1,
+        "value": 1.76,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "Cl",
+        "bondOrder": 1.5,
+        "value": 1.64,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "Cl",
+        "bondOrder": 2,
+        "value": 1.58,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "Cl",
+        "bondOrder": 3,
+        "value": 1.46,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "C",
+        "bondOrder": 1,
+        "value": 1.8499999999999999,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "C",
+        "bondOrder": 1.5,
+        "value": 1.7899999999999998,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "C",
+        "bondOrder": 2,
+        "value": 1.73,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "C",
+        "bondOrder": 3,
+        "value": 1.6099999999999999,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "I",
+        "bondOrder": 1,
+        "value": 2.0999999999999996,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "I",
+        "bondOrder": 1.5,
+        "value": 2.0399999999999996,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "I",
+        "bondOrder": 2,
+        "value": 1.9799999999999995,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "C",
+        "secondElement": "I",
+        "bondOrder": 3,
+        "value": 1.8599999999999997,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "O",
+        "bondOrder": 1,
+        "value": 0.96,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "O",
+        "bondOrder": 1.5,
+        "value": 0.79,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "O",
+        "bondOrder": 2,
+        "value": 0.73,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "O",
+        "bondOrder": 3,
+        "value": 0.61,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "O",
+        "bondOrder": 1,
+        "value": 1.25,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "O",
+        "bondOrder": 1.5,
+        "value": 1.39,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "O",
+        "bondOrder": 2,
+        "value": 1.33,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "O",
+        "bondOrder": 3,
+        "value": 1.21,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "N",
+        "secondElement": "O",
+        "bondOrder": 1,
+        "value": 1.51,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "N",
+        "secondElement": "O",
+        "bondOrder": 1.5,
+        "value": 1.19,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "N",
+        "secondElement": "O",
+        "bondOrder": 2,
+        "value": 1.13,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "N",
+        "secondElement": "O",
+        "bondOrder": 3,
+        "value": 1.01,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "O",
+        "bondOrder": 1,
+        "value": 1.48,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "O",
+        "bondOrder": 1.5,
+        "value": 1.14,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "O",
+        "bondOrder": 2,
+        "value": 1.08,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "O",
+        "bondOrder": 3,
+        "value": 0.96,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "F",
+        "secondElement": "O",
+        "bondOrder": 1,
+        "value": 1.45,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "F",
+        "secondElement": "O",
+        "bondOrder": 1.5,
+        "value": 1.04,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "F",
+        "secondElement": "O",
+        "bondOrder": 2,
+        "value": 0.9800000000000001,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "F",
+        "secondElement": "O",
+        "bondOrder": 3,
+        "value": 0.8600000000000001,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "P",
+        "bondOrder": 1,
+        "value": 1.51,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "P",
+        "bondOrder": 1.5,
+        "value": 1.54,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "P",
+        "bondOrder": 2,
+        "value": 1.48,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "P",
+        "bondOrder": 3,
+        "value": 1.36,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "S",
+        "bondOrder": 1,
+        "value": 1.57,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "S",
+        "bondOrder": 1.5,
+        "value": 1.54,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "S",
+        "bondOrder": 2,
+        "value": 1.48,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "O",
+        "secondElement": "S",
+        "bondOrder": 3,
+        "value": 1.36,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Cl",
+        "secondElement": "O",
+        "bondOrder": 1,
+        "value": 1.6,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Cl",
+        "secondElement": "O",
+        "bondOrder": 1.5,
+        "value": 1.54,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Cl",
+        "secondElement": "O",
+        "bondOrder": 2,
+        "value": 1.48,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Cl",
+        "secondElement": "O",
+        "bondOrder": 3,
+        "value": 1.36,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "O",
+        "bondOrder": 1,
+        "value": 1.75,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "O",
+        "bondOrder": 1.5,
+        "value": 1.69,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "O",
+        "bondOrder": 2,
+        "value": 1.63,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "O",
+        "bondOrder": 3,
+        "value": 1.51,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "I",
+        "secondElement": "O",
+        "bondOrder": 1,
+        "value": 2,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "I",
+        "secondElement": "O",
+        "bondOrder": 1.5,
+        "value": 1.94,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "I",
+        "secondElement": "O",
+        "bondOrder": 2,
+        "value": 1.88,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "I",
+        "secondElement": "O",
+        "bondOrder": 3,
+        "value": 1.76,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "H",
+        "bondOrder": 1,
+        "value": 1.07,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "H",
+        "bondOrder": 1.5,
+        "value": 0.44,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "H",
+        "bondOrder": 2,
+        "value": 0.38,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "H",
+        "bondOrder": 3,
+        "value": 0.26,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "H",
+        "bondOrder": 1,
+        "value": 1.232,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "H",
+        "bondOrder": 1.5,
+        "value": 1.04,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "H",
+        "bondOrder": 2,
+        "value": 0.9800000000000001,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "B",
+        "secondElement": "H",
+        "bondOrder": 3,
+        "value": 0.8600000000000001,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "N",
+        "bondOrder": 1,
+        "value": 1.01,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "N",
+        "bondOrder": 1.5,
+        "value": 0.8400000000000001,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "N",
+        "bondOrder": 2,
+        "value": 0.78,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "N",
+        "bondOrder": 3,
+        "value": 0.66,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "F",
+        "secondElement": "H",
+        "bondOrder": 1,
+        "value": 0.92,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "F",
+        "secondElement": "H",
+        "bondOrder": 1.5,
+        "value": 0.69,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "F",
+        "secondElement": "H",
+        "bondOrder": 2,
+        "value": 0.63,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "F",
+        "secondElement": "H",
+        "bondOrder": 3,
+        "value": 0.51,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "P",
+        "bondOrder": 1,
+        "value": 1.4,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "P",
+        "bondOrder": 1.5,
+        "value": 1.19,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "P",
+        "bondOrder": 2,
+        "value": 1.13,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "P",
+        "bondOrder": 3,
+        "value": 1.01,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "S",
+        "bondOrder": 1,
+        "value": 1.35,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "S",
+        "bondOrder": 1.5,
+        "value": 1.19,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "S",
+        "bondOrder": 2,
+        "value": 1.13,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "S",
+        "bondOrder": 3,
+        "value": 1.01,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Cl",
+        "secondElement": "H",
+        "bondOrder": 1,
+        "value": 1.27,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "frozen-pymatgen-bond-lengths",
+        "fallback": false
+      },
+      {
+        "firstElement": "Cl",
+        "secondElement": "H",
+        "bondOrder": 1.5,
+        "value": 1.19,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Cl",
+        "secondElement": "H",
+        "bondOrder": 2,
+        "value": 1.13,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Cl",
+        "secondElement": "H",
+        "bondOrder": 3,
+        "value": 1.01,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "H",
+        "bondOrder": 1,
+        "value": 1.4,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "H",
+        "bondOrder": 1.5,
+        "value": 1.3399999999999999,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "H",
+        "bondOrder": 2,
+        "value": 1.2799999999999998,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "Br",
+        "secondElement": "H",
+        "bondOrder": 3,
+        "value": 1.16,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "I",
+        "bondOrder": 1,
+        "value": 1.65,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "I",
+        "bondOrder": 1.5,
+        "value": 1.5899999999999999,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "I",
+        "bondOrder": 2,
+        "value": 1.5299999999999998,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      },
+      {
+        "firstElement": "H",
+        "secondElement": "I",
+        "bondOrder": 3,
+        "value": 1.41,
+        "unit": "angstrom",
+        "parameterSet": "kssolv-generic-mm-parameters-v2",
+        "source": "atomic-radius-fallback",
+        "fallback": true
+      }
+    ]
+  }
+}

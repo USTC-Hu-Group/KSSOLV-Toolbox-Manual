@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "date": "2026-10-21",
+  "manualVersion": "0.5.0",
+  "sourceArchiveSHA256": "f074186569166664abd63b5859a22c1bff3776d55333fe3c15cdde75f54fdd1e",
+  "baseline": {
+    "sourceFilesChecked": 269,
+    "missingFiles": [],
+    "modifiedFiles": [
+      "docs/manual-zh/README.md",
+      "docs/manual-zh/examples/ADSORPTION-BN-CASES.zh-CN.md",
+      "docs/manual-zh/examples/INTERFACE-PACKING-CASES.zh-CN.md",
+      "docs/manual-zh/examples/MODELING-CASES.zh-CN.md",
+      "docs/manual-zh/examples/NANO-CASES.zh-CN.md",
+      "docs/manual-zh/examples/POLYMER-NEB-CASES.zh-CN.md",
+      "docs/manual-zh/examples/README.zh-CN.md",
+      "docs/manual-zh/examples/SQS-CASE.zh-CN.md",
+      "docs/manual-zh/examples/TWIST-CASES.zh-CN.md",
+      "docs/manual-zh/examples/USER-REPEAT-UNIT-CASE.zh-CN.md",
+      "docs/manual-zh/examples/VOLUME-SOURCES.md",
+      "docs/manual-zh/examples/adsorption_bn_examples.m",
+      "docs/manual-zh/examples/export_oh_cif.m",
+      "docs/manual-zh/examples/h2_scf_and_relax.m",
+      "docs/manual-zh/examples/interface_packing_examples.m",
+      "docs/manual-zh/examples/modeling_examples.m",
+      "docs/manual-zh/examples/nano_examples.m",
+      "docs/manual-zh/examples/orient_oh_example.m",
+      "docs/manual-zh/examples/polymer_neb_examples.m",
+      "docs/manual-zh/examples/silicon_example.m",
+      "docs/manual-zh/examples/silicon_primitive_example.m",
+      "docs/manual-zh/examples/sqs_example.m",
+      "docs/manual-zh/examples/twist_examples.m",
+      "docs/manual-zh/examples/user_repeat_unit_example.m",
+      "docs/manual-zh/examples/verify_adsorption_bn_examples.m",
+      "docs/manual-zh/examples/verify_modeling_examples.m",
+      "docs/manual-zh/examples/verify_nano_examples.m",
+      "docs/manual-zh/examples/verify_twist_examples.m",
+      "docs/manual-zh/examples/verify_user_repeat_unit_example.m",
+      "docs/manual-zh/figures/plot_neb_idpp.py"
+    ],
+    "frozenCaseDataFiles": 115,
+    "frozenCaseDataAllUnchanged": true,
+    "publicationAssetFiles": 71,
+    "publicationAssetsAllUnchanged": true,
+    "texAndStyleFilesUnchanged": true
+  },
+  "pdfRebuild": {
+    "toolchain": "TeX Live 2026, pypdf 6.10.0",
+    "rootBuildCommand": "python build.py",
+    "comparisonCommand": "python tools/verify_pdf.py",
+    "pages": 296,
+    "pageTextEqual": true,
+    "pageGeometryEqual": true,
+    "decodedPageContentEqual": true,
+    "embeddedFontAndUnicodeStreamsEqual": true,
+    "fontStreamPairs": 39,
+    "approvedSHA256": "0616013215770dfd0993c0bf1cd764d81f144be3b6dfc1e192eef1c53fc25d95",
+    "rebuiltSHA256": "18dfe6d6a3909d6fea60be3edf60b9b0f26b09693e8aef8b4dbe44a36a224bf4",
+    "oldSoftwareRepositoryInputDependencies": 0
+  },
+  "matlabBootstrap": {
+    "runtime": "MATLAB R2026b",
+    "flags": [
+      "-nojvm",
+      "-nodesktop",
+      "-batch"
+    ],
+    "configuredExternalToolboxRoot": "pass",
+    "installedEntryPathFallback": "pass",
+    "invalidExplicitRootRejected": "pass",
+    "createOutputDirectory": false,
+    "startupExecuted": false,
+    "scientificExamplesExecuted": false,
+    "scriptAlgorithmBodiesUnchangedExceptOutputPaths": true,
+    "migratedExampleScripts": 18
+  },
+  "pythonSyntax": {
+    "files": [
+      "build.py",
+      "tools/verify_pdf.py",
+      "docs/manual-zh/build.py",
+      "docs/manual-zh/figures/plot_neb_idpp.py"
+    ],
+    "passed": true,
+    "optionalFigureGeneratorExecuted": false
+  },
+  "reviews": [
+    "MATLAB path and output migration",
+    "Documentation and optional plotting paths",
+    "Independent completeness, privacy, licence and path review"
+  ],
+  "privacy": {
+    "byteScanEncodings": [
+      "UTF-8",
+      "UTF-16LE",
+      "UTF-16BE",
+      "UTF-32LE",
+      "UTF-32BE"
+    ],
+    "privateTestAddressHits": [],
+    "compressedCaseData": "Unchanged from the approved import baseline; not decoded again during this migration.",
+    "filesScanned": 287
+  },
+  "symlinks": []
+}

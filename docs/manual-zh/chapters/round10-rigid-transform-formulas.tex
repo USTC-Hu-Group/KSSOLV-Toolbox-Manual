@@ -1,0 +1,57 @@
+\subsubsection{把一组原子移到目标中心}
+
+居中时，同一组中的所有原子使用同一个位移。设选择中有 $N$ 个原子，分子用笛卡尔位置 $\mathbf r_i$，晶体用分数坐标 $\mathbf f_i$，两种情况分别为
+\begin{equation}
+ \begin{aligned}
+ \Delta\mathbf r&=\mathbf r_{\mathrm{target}}-
+        \frac1N\sum_{i=1}^{N}\mathbf r_i,
+ &\mathbf r_i'&=\mathbf r_i+\Delta\mathbf r,\\
+ \Delta\mathbf f&=\mathbf f_{\mathrm{target}}-
+        \frac1N\sum_{i=1}^{N}\mathbf f_i,
+ &\mathbf f_i'&=\mathbf f_i+\Delta\mathbf f.
+ \end{aligned}
+ \label{eq:center-selected-atoms}
+\end{equation}
+第一行用于分子，位置与位移的单位都是\AA；第二行用于晶体，各量均为无量纲分数坐标。分子常用目标 $(0,0,0)$，晶体常用 $(0.5,0.5,0.5)$。每个原子在平均值中占相同权重，因此居中不使用原子质量，也不改变所选原子之间的距离。
+
+例如，分子中两个原子的 $x$ 坐标为1和3\,\AA，要把它们的平均位置移到原点，共同位移就是 $-2\,\text{\AA}$；处理后为 $-1$ 和1\,\AA，间距仍为2\,\AA。晶体中若两个位点的第一分数分量为0.1和0.3，目标为0.5，则都加0.3，得到0.4和0.6。这里只取一个分量说明计算，其余两个分量同样处理。
+
+周期边界附近要先看清使用的是哪一个映像。0.99与0.01的普通平均为0.5，但两个位点可能实际聚集在边界两侧；若要以这段连续结构的中心为准，应先整理为相邻的连续映像再居中。应用后坐标可能被归回晶胞，因此还应从周期连接看整体，而不只比较某个坐标的正负。
+
+\subsubsection{绕指定锚点旋转}
+
+旋转先从每个位置中减去锚点，再转动这个相对向量，最后加回锚点。这样，锚点本身不动，离锚点的距离也不变。沿用行向量表示，有
+\begin{equation}
+ \mathbf r'=\mathbf p+(\mathbf r-\mathbf p)
+              R(\hat{\mathbf n},\theta)^{\mathsf T}.
+ \label{eq:rotate-row-position}
+\end{equation}
+$\mathbf p$ 是以\AA 为单位的锚点，$\hat{\mathbf n}$ 是旋转轴的单位方向，$\theta$ 是转角；上标 $\mathsf T$ 表示转置。对话框中填写度数，正角遵循右手定则：右手拇指沿输入轴的正向，四指弯曲的方向为正转向。轴向量只决定方向，例如\literalinput{0 0 1}和\literalinput{0 0 2}表示同一根正向转轴。
+
+绕全局 $z$ 轴旋转时，常用的矩阵为
+\[
+ R_z(\theta)=\begin{bmatrix}
+ \cos\theta&-\sin\theta&0\\
+ \sin\theta&\cos\theta&0\\
+ 0&0&1
+ \end{bmatrix}.
+\]
+取锚点 $\mathbf p=(1,1,0)\,\text{\AA}$，位置 $\mathbf r=(2,1,0)\,\text{\AA}$，绕 $z$ 轴正转 $90^\circ$，得到 $\mathbf r'=(1,2,0)\,\text{\AA}$。这个小例子可用来辨认旋转方向；旋转后原子到锚点仍相距1\,\AA。晶体中原子的等价位置还会归回晶胞，预览时应连同边界映像一起观察。
+
+\subsubsection{关于一个平面作镜像}
+
+镜像需要一个平面上的点 $\mathbf p$ 和非零笛卡尔法向 $\mathbf n$。先把法向归一化，再减去两倍的有向投影：
+\begin{equation}
+ \begin{aligned}
+ \hat{\mathbf n}&=\frac{\mathbf n}{\|\mathbf n\|},\\
+ \mathbf r'&=\mathbf r-
+ 2\bigl[(\mathbf r-\mathbf p)\cdot\hat{\mathbf n}\bigr]
+       \hat{\mathbf n}.
+ \end{aligned}
+ \label{eq:mirror-cartesian-plane}
+\end{equation}
+点积 $(\mathbf r-\mathbf p)\cdot\hat{\mathbf n}$ 是原子到平面的有向距离，单位为\AA。镜像后它的符号反转，大小相同；位于平面上的原子保持不动。法向填\literalinput{1 0 0}，平面点取 $(1,0,0)\,\text{\AA}$，就是 $x=1\,\text{\AA}$ 的平面。位置 $(1.5,2,0)\,\text{\AA}$ 镜像后变为 $(0.5,2,0)\,\text{\AA}$，两侧到平面均为0.5\,\AA。
+
+\input{figures/round10-anchor-mirror}
+
+上述三个例子只说明参数的几何关系，不代表一次能量优化。实际处理分子时，先确认所选原子构成需要整体移动的部分，再按下面的步骤选择一种操作；不要把相机转动当作结构已经旋转。

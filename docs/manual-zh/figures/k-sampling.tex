@@ -1,0 +1,30 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1mm,y=1mm,font=\sffamily\small]
+  \node[text=brand] at (21,43) {SCF 与 DOS 网格};
+  \node[text=brand] at (85,43) {能带路径};
+  \fill[paleblue] (3,0) rectangle (39,36);
+  \fill[paleblue] (67,0) rectangle (103,36);
+  \foreach \x in {3,12,21,30,39}
+    \draw[teal!30,line width=.3pt] (\x,0) -- (\x,36);
+  \foreach \y in {0,9,18,27,36}
+    \draw[teal!30,line width=.3pt] (3,\y) -- (39,\y);
+  \draw[teal,line width=.65pt] (3,0) rectangle (39,36);
+  \draw[teal,line width=.65pt] (67,0) rectangle (103,36);
+  \foreach \x in {7.5,16.5,25.5,34.5}
+    \foreach \y in {4.5,13.5,22.5,31.5}
+      \fill[brand] (\x,\y) circle (1.1);
+  \draw[brand,line width=1pt] (85,18) -- (103,18) -- (103,36) -- cycle;
+  \foreach \x/\y in {85/18,88/18,91/18,94/18,97/18,100/18,103/18,
+    103/21,103/24,103/27,103/30,103/33,103/36,
+    100/33,97/30,94/27,91/24,88/21}
+      \fill[brand] (\x,\y) circle (.85);
+  \node[fill=paleblue,inner sep=1pt,text=brand,anchor=north east] at (84,17) {$\Gamma$};
+  \node[text=brand,anchor=west] at (105,18) {X};
+  \node[text=brand,anchor=south west] at (104,35) {M};
+  \node[text=ink] at (21,-7) {覆盖整个区域};
+  \node[text=ink] at (85,-7) {沿选定方向采样};
+\end{tikzpicture}
+\caption{$k$ 点网格与能带路径的区别（二维示意）。前者为区域积分或统计取样，后者展示选定路径上的变化；右图不代表本书硅晶体的具体推荐路径。}
+\label{fig:k-sampling}
+\end{figure}

@@ -1,0 +1,30 @@
+设编辑前后的晶格分别为 $A$、$A'$。\ui{保持笛卡尔坐标不变}决定了原子怎样适应新外框，其关系可直接从式\eqref{eq:row-lattice-coordinates}读出：
+\begin{equation}
+ \begin{aligned}
+ \text{保留分数坐标：}\quad&\mathbf f'=\mathbf f,
+       &\mathbf r'&=\mathbf f A',\\
+ \text{保留笛卡尔位置：}\quad&\mathbf r'=\mathbf r,
+       &\mathbf f'&=\mathbf r(A')^{-1}.
+ \end{aligned}
+ \label{eq:lattice-preservation-options}
+\end{equation}
+例如，立方晶胞边长由4改为8\,\AA，一个原子的原分数坐标为 $(0.5,0,0)$，原位置为 $(2,0,0)\,\text{\AA}$。不勾选保持笛卡尔位置时，它仍在晶胞的一半处，位置变为 $(4,0,0)\,\text{\AA}$；勾选时，位置保留为 $(2,0,0)\,\text{\AA}$，分数坐标改为 $(0.25,0,0)$。两种选择都可能有用，先决定要保留哪一种几何关系，再改表格。
+
+\begin{table}[!htb]
+\centering\small
+\begin{tabularx}{\linewidth}{p{30mm}XX}
+\toprule
+操作 & 保留什么 & 重点检查什么\\
+\midrule
+编辑晶格，保留分数坐标 & $\mathbf f$和位点数 & 胞长、夹角及改变后的原子间距。\\
+编辑晶格，保留笛卡尔位置 & $\mathbf r$和位点数 & 新分数坐标与周期边界接触。\\
+构建超胞 & 原材料的周期排列 & $|\det S|$倍的体积和独立位点数。\\
+旋转晶格 & 整体内部几何、位点数 & 晶格与原子是否一起转动。\\
+交换坐标轴 & 笛卡尔几何、位点数 & 新基矢顺序与对应分数坐标。\\
+镜像晶格 & 分数坐标、位点数 & 所选基矢取反及晶胞手性。\\
+施加应变 & 分数坐标、位点数 & 三条基矢的长度及受影响的距离。\\
+\bottomrule
+\end{tabularx}
+\caption{按希望保留的量选择晶格操作。表中的内部几何指原子间距离与角度；改变周期边界时，还需结合新晶胞检查邻近映像。}
+\label{tab:round10-lattice-invariants}
+\end{table}

@@ -1,0 +1,40 @@
+{
+  "MATLAB": "26.2.0.3386108 (R2026b)",
+  "JVM": false,
+  "GUIOperated": false,
+  "sourceAtoms": 8,
+  "dimerAtoms": 14,
+  "dimerBonds": 13,
+  "carbon": 4,
+  "hydrogen": 10,
+  "singleConnectedComponent": true,
+  "diagnostics": {
+    "atomIssues": [],
+    "collisions": [],
+    "abnormalBonds": [],
+    "bondOrderSums": [
+      4,
+      4,
+      4,
+      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "hasErrors": false,
+    "method": "rule-based-valence-and-geometry",
+    "isEnergyMinimization": false
+  },
+  "activeUnitSpecies": [
+    "C",
+    "C"
+  ],
+  "pass": true
+}

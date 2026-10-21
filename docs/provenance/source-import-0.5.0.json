@@ -1,0 +1,1372 @@
+{
+  "metadata": {
+    "manualVersion": "0.5.0",
+    "softwareRelease": "upcoming 0.5.0",
+    "testOnly": false,
+    "pdf": {
+      "sha256": "0616013215770dfd0993c0bf1cd764d81f144be3b6dfc1e192eef1c53fc25d95",
+      "pages": 296,
+      "bytes": 13755173
+    },
+    "proofSHA256": "127b3d18450591c24f90035a0f44e1e594f5f8b97c80d6f5f6f1d4ca3bd25326",
+    "assetManifestSHA256": "79c9e244d4c7f0a1f03e045a0eb3b33734bed1ffa79c8680213ae8cc4e51de3c",
+    "planIncluded": true
+  },
+  "files": [
+    {
+      "file": "ASSET-PROVENANCE.json",
+      "bytes": 41397,
+      "sha256": "b8403a2903e539a5b97303b749963053dc31c95fad597ce2dd8513c13d298240"
+    },
+    {
+      "file": "README-SOURCE.md",
+      "bytes": 4315,
+      "sha256": "b651252093f0b688fef461493c25315b4d2aa8f37c31231c23ff0c598f951808"
+    },
+    {
+      "file": "docs/manual-plan.zh-CN.md",
+      "bytes": 29103,
+      "sha256": "26178a796fc338bcc8eb5fce338caddcda953a54bc941996c05a64ea61e604d7"
+    },
+    {
+      "file": "docs/manual-zh/.latexmkrc",
+      "bytes": 148,
+      "sha256": "d94af37766435ca394a75af388bf659284bf1f942c4291b27c23b91693fc2cbf"
+    },
+    {
+      "file": "docs/manual-zh/README.md",
+      "bytes": 4315,
+      "sha256": "b651252093f0b688fef461493c25315b4d2aa8f37c31231c23ff0c598f951808"
+    },
+    {
+      "file": "docs/manual-zh/THIRD-PARTY-NOTICES.md",
+      "bytes": 2512,
+      "sha256": "bda3ea49f44e5b6c843c5c2e3f9e56aeb3bbaaa191ef598a995d9231d2a6dcfb"
+    },
+    {
+      "file": "docs/manual-zh/build.py",
+      "bytes": 5846,
+      "sha256": "6a69ee7e3131d7c8b844f8ab2ee6be5f3c49303c026a57d2497175bb2db319fb"
+    },
+    {
+      "file": "docs/manual-zh/chapters/00-frontmatter.tex",
+      "bytes": 2934,
+      "sha256": "0ef754f0b44cf74b2220cd9f34fd1a677b5df7ab1f395074325d280e7c7c6281"
+    },
+    {
+      "file": "docs/manual-zh/chapters/01-introduction.tex",
+      "bytes": 8732,
+      "sha256": "7bdf61ad75f956d67b8c83b11d849a5a28c6c468dec0394964f68ef613e13249"
+    },
+    {
+      "file": "docs/manual-zh/chapters/02-install.tex",
+      "bytes": 17065,
+      "sha256": "fff8340e9c2a81a927740b14b71f6f75950410b81ed1b75b2ac8ebf9c6a2280b"
+    },
+    {
+      "file": "docs/manual-zh/chapters/03-online.tex",
+      "bytes": 21709,
+      "sha256": "86ab09bf62276030a4ee6864748bc356b6ee4331f2622a3ab5797e639797cfc8"
+    },
+    {
+      "file": "docs/manual-zh/chapters/04-workspace.tex",
+      "bytes": 25272,
+      "sha256": "fc9bc46467c12a55f4726d47a174cffc64e72a57a6ca65e2a0078423e45bdc7a"
+    },
+    {
+      "file": "docs/manual-zh/chapters/05-first-calculation.tex",
+      "bytes": 21243,
+      "sha256": "4cd8046d0ed5ffe2f555b2f819924eb30527de7e46c1ea80c05f776f4440ba97"
+    },
+    {
+      "file": "docs/manual-zh/chapters/06-theory-parameters.tex",
+      "bytes": 28052,
+      "sha256": "a6806531408fec3779fc24271e440af46e40fe18582478963becab452e7fc1f1"
+    },
+    {
+      "file": "docs/manual-zh/chapters/07-modeling.tex",
+      "bytes": 28507,
+      "sha256": "16ac7e6b95c24b9aa9b5c5af6bb7f94859ff23625883e91f955350db592a5d40"
+    },
+    {
+      "file": "docs/manual-zh/chapters/08-advanced-modeling.tex",
+      "bytes": 36354,
+      "sha256": "617a6ba22a2a33fb6165dd5ed3da8e1ab791a441067f1d19366b3d26eec4197a"
+    },
+    {
+      "file": "docs/manual-zh/chapters/09-workflows.tex",
+      "bytes": 37256,
+      "sha256": "824b0571c4d0d567845a9369c6e9555606872c70cd592fb152ccaaedc4ab93ec"
+    },
+    {
+      "file": "docs/manual-zh/chapters/10-volume.tex",
+      "bytes": 28569,
+      "sha256": "2b58de2b907c34c671608a94fd80e3cdc7976a4d0e54db6f498bea715933141f"
+    },
+    {
+      "file": "docs/manual-zh/chapters/11-results.tex",
+      "bytes": 33368,
+      "sha256": "b4350fb7a94d57aada64c2317777d382d38057cc4961aa0be4db63649bf6b68f"
+    },
+    {
+      "file": "docs/manual-zh/chapters/12-settings-remote.tex",
+      "bytes": 21714,
+      "sha256": "d10dacf87b084723a4960622e8baedce39310d5d6a1cb67eb2c646f4c26df596"
+    },
+    {
+      "file": "docs/manual-zh/chapters/13-troubleshooting.tex",
+      "bytes": 11546,
+      "sha256": "937a806cc9058eac29191c38bd56d879fb516a3d21b6b0eaca2472c503d89123"
+    },
+    {
+      "file": "docs/manual-zh/chapters/14-reference.tex",
+      "bytes": 24285,
+      "sha256": "0107274a8bdc5a7ec9ea2e4a1437bc360a3dfdcb11959ca7ca078de5a60b0030"
+    },
+    {
+      "file": "docs/manual-zh/chapters/atomic-viewer-export-menus.tex",
+      "bytes": 958,
+      "sha256": "26f07bc97cd114f4d5efb90bea1988b5375396e7af28bca6431a9bb6ba193858"
+    },
+    {
+      "file": "docs/manual-zh/chapters/modeling-reference-supplement.tex",
+      "bytes": 41388,
+      "sha256": "3579f2cc3d5668f9f37c6e4557f18f6d3ce61587b2f4048d03cd9f72c7e7b896"
+    },
+    {
+      "file": "docs/manual-zh/chapters/nanostructure-examples.tex",
+      "bytes": 15620,
+      "sha256": "e5a4755efe4de195ce1dc064e09bb238ca6ab93344501f9dcdd2ebd605542372"
+    },
+    {
+      "file": "docs/manual-zh/chapters/round10-coordinates.tex",
+      "bytes": 3206,
+      "sha256": "a61fcde49716596bb759135699b3ffdd8980034c53c8e0623ae3faebd420e223"
+    },
+    {
+      "file": "docs/manual-zh/chapters/round10-lattice-mirror-strain.tex",
+      "bytes": 3029,
+      "sha256": "d91f3283205fb7fc03e530df62eccf1d321713df298c96ca0d03a8d4f5bbafe5"
+    },
+    {
+      "file": "docs/manual-zh/chapters/round10-lattice-preservation.tex",
+      "bytes": 1934,
+      "sha256": "0c64a52176c53bc3726b134e16d23135b5b641de06d98ec6467250de92411dd7"
+    },
+    {
+      "file": "docs/manual-zh/chapters/round10-neb-formulas.tex",
+      "bytes": 1774,
+      "sha256": "643276e7102e2370d5324de621be4f689e19454a1df0dd3bd35eaa7ef7a68884"
+    },
+    {
+      "file": "docs/manual-zh/chapters/round10-rigid-transform-formulas.tex",
+      "bytes": 4053,
+      "sha256": "6c84f3056343431ccc7a32929a820cea7134db88bfa464b8fdddc380b3f40325"
+    },
+    {
+      "file": "docs/manual-zh/chapters/round10-supercell-formulas.tex",
+      "bytes": 1858,
+      "sha256": "409274130bb39b6d685183edfc723ffe610b9bdbd2ff3790dcd15d5d8702e47f"
+    },
+    {
+      "file": "docs/manual-zh/chapters/round10-surface-formulas.tex",
+      "bytes": 2361,
+      "sha256": "bcef0a971d6cf56dd03a69f2f83edfed13172e13eb99a920056d53002aef24c1"
+    },
+    {
+      "file": "docs/manual-zh/chapters/round10-vacuum-formulas.tex",
+      "bytes": 834,
+      "sha256": "fc51a8238079139bb5e6299e813cc1df0d0032e91f63417dec3370ea7bc0c230"
+    },
+    {
+      "file": "docs/manual-zh/chapters/sqs-example.tex",
+      "bytes": 5543,
+      "sha256": "7296be89b0bd1a9da309852a6151333d02483e29c88eea3446788b2bacdc0f11"
+    },
+    {
+      "file": "docs/manual-zh/chapters/twisted-structures.tex",
+      "bytes": 16048,
+      "sha256": "b4601e364657b79e2be9efe833109cdbea8008db5e489817035258cf8290b141"
+    },
+    {
+      "file": "docs/manual-zh/examples/ADSORPTION-BN-CASES.zh-CN.md",
+      "bytes": 5249,
+      "sha256": "2559899562d679a591bbded07e6460e6f638abebdcdacc8c61f6e24f4a7ca1ed"
+    },
+    {
+      "file": "docs/manual-zh/examples/CHGCAR-teaching",
+      "bytes": 3935957,
+      "sha256": "6193b92c72a319a50a89754ec89255c1958974bd4d374c7933ac5be25620f7af"
+    },
+    {
+      "file": "docs/manual-zh/examples/CHGCAR.nospin.gz",
+      "bytes": 187620,
+      "sha256": "1d0f7cab991845fb6b5576839727948d189d339e908c5908ea8ffd935337a715"
+    },
+    {
+      "file": "docs/manual-zh/examples/CHGCAR.spin.gz",
+      "bytes": 1313971,
+      "sha256": "43c3b6db491b08868f8e49b3114396c88090dd47aa7837eac27729865756253e"
+    },
+    {
+      "file": "docs/manual-zh/examples/Cu-dot-r3.cif",
+      "bytes": 1329,
+      "sha256": "700bbc2e37d4ea5151623853122697c645f7d7d25e67aa94394d87385a2a8d53"
+    },
+    {
+      "file": "docs/manual-zh/examples/Cu-dot-r3.json",
+      "bytes": 6478,
+      "sha256": "4638e6f21775babdea39053651c7b0f8ca03a30465afe7fb594ea7afc9e18fc8"
+    },
+    {
+      "file": "docs/manual-zh/examples/Cu-fcc.cif",
+      "bytes": 850,
+      "sha256": "ad2a99d6f199d02a3b7e822c0b9711ad7ba252ecfc3c886018c5e1301f078908"
+    },
+    {
+      "file": "docs/manual-zh/examples/Cu-vacancy.cif",
+      "bytes": 798,
+      "sha256": "ec9b758a42beded77935fed310606e2033f899cb56a5705fbe1e6a5c4c5640a9"
+    },
+    {
+      "file": "docs/manual-zh/examples/Cu-void-host-2x2x2.cif",
+      "bytes": 2332,
+      "sha256": "cb822e0896739133ec39e78546046757ea2f355a9d39f89a68305757f079f37a"
+    },
+    {
+      "file": "docs/manual-zh/examples/Cu-void-host-2x2x2.json",
+      "bytes": 14230,
+      "sha256": "0004a81ea82143a057571a4428d3e63c4f2c5c931f202534a9f451fb5aaad4db"
+    },
+    {
+      "file": "docs/manual-zh/examples/Cu-void-r2p7.cif",
+      "bytes": 1643,
+      "sha256": "2e58d4276830816c565e61884421ed4dcbc3ed3b6013c46a75e66e1bdb75ddcc"
+    },
+    {
+      "file": "docs/manual-zh/examples/Cu-void-r2p7.json",
+      "bytes": 8609,
+      "sha256": "40f2256e67d25bc1496efb00abd2bfc15b4e792d41d132ed3e051a27741850ba"
+    },
+    {
+      "file": "docs/manual-zh/examples/Cu-wire-001-r3-l2.cif",
+      "bytes": 1911,
+      "sha256": "10467ec6fee7c565ad43c8f44770026405b77f2071d27672badb2e09a6aaf756"
+    },
+    {
+      "file": "docs/manual-zh/examples/Cu-wire-001-r3-l2.json",
+      "bytes": 12314,
+      "sha256": "2e8327107483ad8ec049644cc6a8ea0b0ef07647e2b7cb1d9cdd5344abae6588"
+    },
+    {
+      "file": "docs/manual-zh/examples/H2-Online-SCF-050.ks",
+      "bytes": 3544680,
+      "sha256": "78f1a2d2f742b05c9a7c7391ba2006e879529e85d716fc58e19e8df236ad90ed"
+    },
+    {
+      "file": "docs/manual-zh/examples/INTERFACE-PACKING-CASES.zh-CN.md",
+      "bytes": 4241,
+      "sha256": "dd84a78001664f4a1b9fa16ffd580cc4dd839bbcf0f17c36b7471d1d731ae6af"
+    },
+    {
+      "file": "docs/manual-zh/examples/MODELING-CASES.zh-CN.md",
+      "bytes": 5454,
+      "sha256": "493f4a07b3664050f00e5d800217bf6f93d69990cc30778d3b9734d33bb4084b"
+    },
+    {
+      "file": "docs/manual-zh/examples/NANO-CASES.zh-CN.md",
+      "bytes": 4047,
+      "sha256": "dd91ede79a8bc734cc12c658ee8a4f6db64b6fb426ece2c47d38fbedccf4c40c"
+    },
+    {
+      "file": "docs/manual-zh/examples/PE6-PP14-seed91.json",
+      "bytes": 47620,
+      "sha256": "a67dbb2121740e64cfec4ddea5c18f4749405e6eac1560175ced6384b201bf9c"
+    },
+    {
+      "file": "docs/manual-zh/examples/PEO3-PPO4-PEO3.json",
+      "bytes": 24126,
+      "sha256": "1166bc53a64eaa03f0f63646f933b93779c16121b17610dc87f42e9f63bdd186"
+    },
+    {
+      "file": "docs/manual-zh/examples/POLYMER-NEB-CASES.zh-CN.md",
+      "bytes": 4214,
+      "sha256": "f8b7c5802f3070e10811ad20dff49ccb4d94b5b2cdfa414ed263b58c532b8a84"
+    },
+    {
+      "file": "docs/manual-zh/examples/PYMATGEN-MIT-LICENSE.txt",
+      "bytes": 1168,
+      "sha256": "0e7e49eab3e29227ed4b7ee78d80627652690832fbb6067741710e631a0e1968"
+    },
+    {
+      "file": "docs/manual-zh/examples/Pt-fcc.cif",
+      "bytes": 850,
+      "sha256": "ccbee6a3bc37ab21a1a96fbd968cfed726534f535723e2af051d084ca7dec0a8"
+    },
+    {
+      "file": "docs/manual-zh/examples/Pt111-OH-Online-050.json",
+      "bytes": 5367,
+      "sha256": "a5e46a0dc308837f4fb148febd2f14c445ca52e9543e69890759935916667ad0"
+    },
+    {
+      "file": "docs/manual-zh/examples/Pt111-OH-c-offset.json",
+      "bytes": 4658,
+      "sha256": "5c4397b064d33d1124500dc02ea677674f84155321ec7248b6591b266e0fb68c"
+    },
+    {
+      "file": "docs/manual-zh/examples/Pt111-OH-candidate-1.json",
+      "bytes": 5973,
+      "sha256": "e6f0e0dccbbf43a3b68c8f1de5263245dcfc01b039e6d9fb360929c25c668f62"
+    },
+    {
+      "file": "docs/manual-zh/examples/Pt111-OH-outward.cif",
+      "bytes": 974,
+      "sha256": "f8fd5708b6990626e035f35fce0e084dc4893514ff9950b73b27cf823de2ef43"
+    },
+    {
+      "file": "docs/manual-zh/examples/Pt111-normal-c-OH-ontop.json",
+      "bytes": 5427,
+      "sha256": "a8d2e005d70adb5c6901f25b3423fd4d0882e9c006d9ef4cf0db963fd48bd1c7"
+    },
+    {
+      "file": "docs/manual-zh/examples/Pt111-normal-c-OH-outward.json",
+      "bytes": 5148,
+      "sha256": "1f59fbc0167e1ee5d1cb0f5e9a01fa4df3d46d95c9f67205bbf03ab1ecb0ed75"
+    },
+    {
+      "file": "docs/manual-zh/examples/Pt111-normal-c.json",
+      "bytes": 3023,
+      "sha256": "1f5a75d164d8ea576f02add0a19ae7340c376abe672df2326d39e1859eac0d92"
+    },
+    {
+      "file": "docs/manual-zh/examples/Pt111-slab.cif",
+      "bytes": 854,
+      "sha256": "cb262281adec6b577fc6c11bf2cc042aff8923219efccff2cb17e99ad996c57c"
+    },
+    {
+      "file": "docs/manual-zh/examples/README.zh-CN.md",
+      "bytes": 11897,
+      "sha256": "f7098f7ecc3516ca0cb9b7b134b2f341f938f8bfe47c9658e231847fa4a49bf5"
+    },
+    {
+      "file": "docs/manual-zh/examples/SQS-CASE.zh-CN.md",
+      "bytes": 3475,
+      "sha256": "b9e0e84a277d7aeff7bd055d2cb5d3bb633b6ef2433813c36d737da20da7930f"
+    },
+    {
+      "file": "docs/manual-zh/examples/Si-ground-state.ks",
+      "bytes": 433624,
+      "sha256": "45f784a4a627764ec1a630f2a484b9b396f1719deed5dd6cc1dce2b10dc7a230"
+    },
+    {
+      "file": "docs/manual-zh/examples/Si-introduction.ks",
+      "bytes": 433720,
+      "sha256": "6a4af055310201fe882be7ebecf5e4400f9962bee60229870c58c14d33104968"
+    },
+    {
+      "file": "docs/manual-zh/examples/Si-primitive-BZ-Online-050.pdf",
+      "bytes": 14714,
+      "sha256": "cc7185e6fa1fba4c8c3434e06f1c98e1f2d9a3ea920208d2aafdf1226947f2ed"
+    },
+    {
+      "file": "docs/manual-zh/examples/Si-vacancy-tutorial.ks",
+      "bytes": 2821482,
+      "sha256": "ca8dce5f45742901fa675a5d31e5cfddbf87d2f90d655f564ae20acaaf0dd488"
+    },
+    {
+      "file": "docs/manual-zh/examples/Si.poscar",
+      "bytes": 770,
+      "sha256": "eb9bdf5f7a6a2ecdb245bf2e705f02badd2852337775eea576b5db4b1c2c7198"
+    },
+    {
+      "file": "docs/manual-zh/examples/TWIST-CASES.zh-CN.md",
+      "bytes": 4744,
+      "sha256": "f2c7e382e49552f82854067ce905a2bf8e8cffe94ede3f08a0f323023679bdcb"
+    },
+    {
+      "file": "docs/manual-zh/examples/USER-REPEAT-UNIT-CASE.zh-CN.md",
+      "bytes": 2734,
+      "sha256": "3a864fd8ce34e3099b81382844666a5dd262e4c6f40c8eae4665f2e6f96f26f9"
+    },
+    {
+      "file": "docs/manual-zh/examples/VOLUME-SOURCES.md",
+      "bytes": 1994,
+      "sha256": "2787a36680f869ac8c5846568f27dea453e0ce5d026019b4f76d6f84ec55aa6d"
+    },
+    {
+      "file": "docs/manual-zh/examples/adsorption-bn-examples-results.json",
+      "bytes": 232891,
+      "sha256": "31c408e63e3bc8f3d81480edeb710f8d0b787718f69e7d70bc4e42f6686c7e93"
+    },
+    {
+      "file": "docs/manual-zh/examples/adsorption-bn-persistence-results.json",
+      "bytes": 834,
+      "sha256": "ba52e3ca747f666dcf218284548b58960e396f3c370affe730635f76052634f0"
+    },
+    {
+      "file": "docs/manual-zh/examples/adsorption_bn_examples.m",
+      "bytes": 14133,
+      "sha256": "2c53317552d6432b9f7bb04123ca63fe6bc40cfbcef17b6d8b30f80acd99ce77"
+    },
+    {
+      "file": "docs/manual-zh/examples/benzene-optimized.json",
+      "bytes": 3290,
+      "sha256": "30b2dcf2d5c5eef6bfb6a9fe407cc88cf11af33418a3d1dd0456caf6c95f5a47"
+    },
+    {
+      "file": "docs/manual-zh/examples/benzene-ring.json",
+      "bytes": 1623,
+      "sha256": "d4e062475f4cc2923d230de460575ef871bb9d2370194abe664f3967abf64c44"
+    },
+    {
+      "file": "docs/manual-zh/examples/benzene.json",
+      "bytes": 3174,
+      "sha256": "bad11ff0168f6d8c0e1521b9436fb6fabc74b456318d3a258d2f8563a89110ce"
+    },
+    {
+      "file": "docs/manual-zh/examples/datagrid_3d.xsf",
+      "bytes": 437,
+      "sha256": "c0a8ec512661c1ffa4c20fb922f52972ee825c01078976e2ee076729b60972c5"
+    },
+    {
+      "file": "docs/manual-zh/examples/elec.cube.gz",
+      "bytes": 46531,
+      "sha256": "4d3e32d374920e2a1210ebc718ad2f358751ea1861190281fce2ad4d2a0fb8df"
+    },
+    {
+      "file": "docs/manual-zh/examples/elec.total.slice-1_1_0.csv",
+      "bytes": 195163,
+      "sha256": "948bcd17ff80665543a5f5905f7c6c52476abb53ba67d2270db1bb156e029897"
+    },
+    {
+      "file": "docs/manual-zh/examples/elec.total.slice-1_1_0.png",
+      "bytes": 12963,
+      "sha256": "1b262b0e8354246f7b161fc03a5392636c5d25fac28a37d76b3e601f4101eb4a"
+    },
+    {
+      "file": "docs/manual-zh/examples/ethanol-angle1095-scene.json",
+      "bytes": 48932,
+      "sha256": "6d0f3638ad775ea8b95cf6d86ef7edcb6fe9b7b8636663536bac6ceb8aafa606"
+    },
+    {
+      "file": "docs/manual-zh/examples/ethanol-angle1095.json",
+      "bytes": 2583,
+      "sha256": "4577d6b6a46493659a558a20c0cf888c14d4143d5e82fe25e0b34e5b439f6493"
+    },
+    {
+      "file": "docs/manual-zh/examples/ethanol-angle1095.png",
+      "bytes": 749475,
+      "sha256": "2965cb5e685bdbcf2564cc62a085e72f241807ff572264a39c238a5aa68e7554"
+    },
+    {
+      "file": "docs/manual-zh/examples/ethanol-backbone.json",
+      "bytes": 796,
+      "sha256": "75a43ba80c6035998d1af62cfaf9e335e37e96787b497dad8b7b1c5ffd78792c"
+    },
+    {
+      "file": "docs/manual-zh/examples/ethanol-cleaned.json",
+      "bytes": 2417,
+      "sha256": "e9142289874048fb0226d7110f0bcd11656c748d7d251970793b77a1675130a5"
+    },
+    {
+      "file": "docs/manual-zh/examples/ethanol-edited.json",
+      "bytes": 2404,
+      "sha256": "32da550bb52e9bde702e3b780b81db8e25c585000a4a9b1983b7a91ff2a36f31"
+    },
+    {
+      "file": "docs/manual-zh/examples/ethanol-initial.json",
+      "bytes": 2353,
+      "sha256": "03e647122fad571b5355329a7239db2008939795e864a85ce9620624c05a710c"
+    },
+    {
+      "file": "docs/manual-zh/examples/ethanol-optimized.json",
+      "bytes": 2500,
+      "sha256": "1e4fb7cb6f3acb1a2a13ecd420a8d5ec102d4d8346042a6b2532d74afe8390c4"
+    },
+    {
+      "file": "docs/manual-zh/examples/export_oh_cif.m",
+      "bytes": 2492,
+      "sha256": "d5ae94dae761118870934ec457b69fa5234b72c939e8cd81d54f862bf6084de1"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-armchair-w3-l2.cif",
+      "bytes": 1860,
+      "sha256": "4a0c89783862408d90e212a1d109ae0355255f215ddee59e774c15fc4619bc4a"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-armchair-w3-l2.json",
+      "bytes": 12057,
+      "sha256": "d2926ab4dd571c3712c0e2d66ccec0b0b621ab34bfe947685c04bc736900526c"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-hBN-stacked.json",
+      "bytes": 2508,
+      "sha256": "c12cf938c89a6e3a1a860811b09a6aecac1a76ea35fdd4b1ab7e71c54c93c3c6"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-hBN-twist-21p786789.cif",
+      "bytes": 2061,
+      "sha256": "ebef16b85a14716615563733b15abdb5c876fe423914e5c415780234edef2510"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-hBN-twist-21p786789.json",
+      "bytes": 17275,
+      "sha256": "f5d9050be9e11545554cf7cbc79d9ce9568376c6c30b295774174b0c6e147fb1"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-inserted.json",
+      "bytes": 2396,
+      "sha256": "9c59685a77c7271bbba281c78efe7d03c82d4cc5110fabfdd781011d14d4cb66"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-layer.json",
+      "bytes": 1278,
+      "sha256": "1379fec5ae32b5052ef69fc246ad543da52da423dd442826df465f185bb0aca0"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-stacked.json",
+      "bytes": 2467,
+      "sha256": "ccea385b035d6ec543cfa41508ead45ab08deeb2b60d3c4869a3fe6da3fe1955"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-tube-4-0-l2.cif",
+      "bytes": 2268,
+      "sha256": "9b917486d9670e79691bb670c0f1cafa6febef34ad885909cc34ce6b96c9a2d2"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-tube-4-0-l2.json",
+      "bytes": 18675,
+      "sha256": "034700a7904f5203355f3380c70c8050b395d53860db6d71330377f8668f9101"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-twist-21p786789.cif",
+      "bytes": 2062,
+      "sha256": "79dbac57a50e9c26598eadc513f417c1826870328f8265ac443650a278f529a8"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-twist-21p786789.json",
+      "bytes": 17218,
+      "sha256": "3f34e391c77385fbceabddeabdf69cf0ceaeb3352a31bcd78d20aae4d8a07d4f"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-twist-target22.cif",
+      "bytes": 2062,
+      "sha256": "79dbac57a50e9c26598eadc513f417c1826870328f8265ac443650a278f529a8"
+    },
+    {
+      "file": "docs/manual-zh/examples/graphene-twist-target22.json",
+      "bytes": 17209,
+      "sha256": "660dc0797030de3b693411e053ec2455793aedd7986f3b86c297953c8afc6f48"
+    },
+    {
+      "file": "docs/manual-zh/examples/h2-tutorial.ks",
+      "bytes": 8590891,
+      "sha256": "20fae153d2f0182aa9e3f9092fab9b613db77f9e88ac6cb005bf8ed21a1db300"
+    },
+    {
+      "file": "docs/manual-zh/examples/h2.cif",
+      "bytes": 404,
+      "sha256": "cfc85dc5fd1b7d72451f44c9e0f29ebd6a659df78807b9f9d87c1587320be652"
+    },
+    {
+      "file": "docs/manual-zh/examples/h2_optimized.cif",
+      "bytes": 480,
+      "sha256": "54df2a3da777ed7ec5dd8bba9f4b77b3da5d89e76d6b56dd707278dfa86c6499"
+    },
+    {
+      "file": "docs/manual-zh/examples/h2_scf_and_relax.m",
+      "bytes": 2918,
+      "sha256": "c8f3c4cf3a4c7c0cb3aba189276a144dc5836c5adeaea159e9429d1b1fc81abf"
+    },
+    {
+      "file": "docs/manual-zh/examples/hBN-layer.json",
+      "bytes": 1264,
+      "sha256": "a92d9a4af2b079c899c8b92f070a88954f0086f3c73ebe4c36db4ead16674b8a"
+    },
+    {
+      "file": "docs/manual-zh/examples/hydrogen.xyz",
+      "bytes": 131,
+      "sha256": "8f9b13091c2b012f47b20c0eb3bb74d0b0f87e8b98ddac4c5fbe905c26b29b37"
+    },
+    {
+      "file": "docs/manual-zh/examples/interface-packing-examples-results.json",
+      "bytes": 13595,
+      "sha256": "049cfbcb6e9cdaf9a68859ecff435dc3bd349b66d80dcfc256defae3d9ae4b8d"
+    },
+    {
+      "file": "docs/manual-zh/examples/interface_packing_examples.m",
+      "bytes": 11776,
+      "sha256": "e254af8d0a41df8cc08a73989e3a335a4bd9c4e3a9781938090718652b03e969"
+    },
+    {
+      "file": "docs/manual-zh/examples/modeling-examples-results.json",
+      "bytes": 27069,
+      "sha256": "e7287647a26b486c90862222b72d308811ec994c2d6ade3521858f33a7d8e5b8"
+    },
+    {
+      "file": "docs/manual-zh/examples/modeling-examples-verification.json",
+      "bytes": 782,
+      "sha256": "7f536963a023a625e3be79a22e6ec3b8512bf92bf0d85eca2e4c487026264890"
+    },
+    {
+      "file": "docs/manual-zh/examples/modeling_examples.m",
+      "bytes": 13129,
+      "sha256": "1e2d5618752946fac81a25e5bf39fd3ae01849cdd220d8f00edb5bf7c5e32899"
+    },
+    {
+      "file": "docs/manual-zh/examples/nano-Cu-fcc-input.cif",
+      "bytes": 850,
+      "sha256": "c824c623b1eba5e213e110a915911019c88dda09d8ee9de21abd49c865d38d26"
+    },
+    {
+      "file": "docs/manual-zh/examples/nano-Cu-fcc-input.json",
+      "bytes": 2057,
+      "sha256": "0978a7cd5db1a835972f608f9482fd4e301d72d1cfdd10dd78699dc8893b02b0"
+    },
+    {
+      "file": "docs/manual-zh/examples/nano-examples-results.json",
+      "bytes": 27943,
+      "sha256": "0f2a5d367a1831c949ec4b528d79c42dd7d486ca79f5c9f5ff881646fdd425b0"
+    },
+    {
+      "file": "docs/manual-zh/examples/nano-examples-verification.json",
+      "bytes": 3247,
+      "sha256": "e83f885f72f7374485b4e1bc514d8fdd4bef017cb27d3c05de456ed91985b859"
+    },
+    {
+      "file": "docs/manual-zh/examples/nano-graphene-60.cif",
+      "bytes": 740,
+      "sha256": "395192b716ccb82cc4b7a57c7858ba6e9d4e6a5e1d74dccc07b624e25c7f5888"
+    },
+    {
+      "file": "docs/manual-zh/examples/nano-graphene-60.json",
+      "bytes": 1255,
+      "sha256": "f05ec961a90ce471411d9ae82213f4a497df6079cbb7b3d22b1fb5f899c4717f"
+    },
+    {
+      "file": "docs/manual-zh/examples/nano_examples.m",
+      "bytes": 10742,
+      "sha256": "550c361b482eb85f7322042c2e040fe403f73073b70ac172d91a61609625276e"
+    },
+    {
+      "file": "docs/manual-zh/examples/neb-exchange/final.json",
+      "bytes": 1038,
+      "sha256": "52165255ff52317f1ccec34060359d52c17e1a66a7a78b734f106bc500a94f34"
+    },
+    {
+      "file": "docs/manual-zh/examples/neb-exchange/image-00.json",
+      "bytes": 1038,
+      "sha256": "e4090fe6baa17d5ddf28c3ead929d3920b8bd900bb420d9e089ee5a0250c07bb"
+    },
+    {
+      "file": "docs/manual-zh/examples/neb-exchange/image-01.json",
+      "bytes": 1235,
+      "sha256": "da306f33da44d001a93a040f4f158879b14a6d0866aeb803cad26e73b0e4bdef"
+    },
+    {
+      "file": "docs/manual-zh/examples/neb-exchange/image-02.json",
+      "bytes": 1238,
+      "sha256": "e033d0665474d64b1cb1527122e275bd31a169f5a1dc87c499d1ea9379ea2f0b"
+    },
+    {
+      "file": "docs/manual-zh/examples/neb-exchange/image-03.json",
+      "bytes": 1156,
+      "sha256": "6984a96b088fc39aa80194fa315f2b0b0c5d733a209514b11feeb5ad52a84876"
+    },
+    {
+      "file": "docs/manual-zh/examples/neb-exchange/image-04.json",
+      "bytes": 1238,
+      "sha256": "38b022b9dd34b0e45c17728ab4978b3d5e8ac632a77cb7974aaf0dfe416bead0"
+    },
+    {
+      "file": "docs/manual-zh/examples/neb-exchange/image-05.json",
+      "bytes": 1235,
+      "sha256": "4703b5c475a1568b36d982e247f07ceeee6c16bb5a765c97a13c8c0fd3e5158d"
+    },
+    {
+      "file": "docs/manual-zh/examples/neb-exchange/image-06.json",
+      "bytes": 1038,
+      "sha256": "52165255ff52317f1ccec34060359d52c17e1a66a7a78b734f106bc500a94f34"
+    },
+    {
+      "file": "docs/manual-zh/examples/neb-exchange/initial.json",
+      "bytes": 1038,
+      "sha256": "e4090fe6baa17d5ddf28c3ead929d3920b8bd900bb420d9e089ee5a0250c07bb"
+    },
+    {
+      "file": "docs/manual-zh/examples/oh-fragment.mol",
+      "bytes": 227,
+      "sha256": "745d575cc38d113206a45ef0959e975e152e38ca73bed41cb958c85f473a637c"
+    },
+    {
+      "file": "docs/manual-zh/examples/oh-outward-cif-results.json",
+      "bytes": 620,
+      "sha256": "bac6d348c2074adec02b8c8d64ddd19c1f467034394eaa6d27e21c99cc13a431"
+    },
+    {
+      "file": "docs/manual-zh/examples/oh-outward-placement-results.json",
+      "bytes": 1188,
+      "sha256": "5db98d0ead3c5f8f350d07136cc902ecd3d2a8e052ac961dfd88dbbdd9780b13"
+    },
+    {
+      "file": "docs/manual-zh/examples/orient_oh_example.m",
+      "bytes": 3420,
+      "sha256": "1fd07d8ddd3418aadb20d784efaba806bf48a87630e384f8607d4eab57c8de70"
+    },
+    {
+      "file": "docs/manual-zh/examples/polymer-neb-examples-results.json",
+      "bytes": 11299,
+      "sha256": "5ea68edd154e3accde2848af61ef66b4a69f365086ac986082cc8896cd5c5e77"
+    },
+    {
+      "file": "docs/manual-zh/examples/polymer_neb_examples.m",
+      "bytes": 11283,
+      "sha256": "92ab3fa3891c2ddac2054be4ad708423d1e9dfe94b76fe1510c053143e422123"
+    },
+    {
+      "file": "docs/manual-zh/examples/pyridine-optimized.json",
+      "bytes": 3046,
+      "sha256": "2d3e5812935ac50b296a03a270f3db5627fc22da163dc1d8dfc255244e51175a"
+    },
+    {
+      "file": "docs/manual-zh/examples/pyridine.json",
+      "bytes": 2915,
+      "sha256": "83c619201a02e8f850b30bc1cf5bd547c288a3570074588736fd2c9aab47216f"
+    },
+    {
+      "file": "docs/manual-zh/examples/silicon-band-primitive.ks",
+      "bytes": 861525,
+      "sha256": "5e0d48dbdabda6a0fde2dee00de03c44e328764373eacc0ff38d1f82b0ca3319"
+    },
+    {
+      "file": "docs/manual-zh/examples/silicon-tutorial.ks",
+      "bytes": 936095,
+      "sha256": "d45a2d64e46e1556f522bf9302fc81c9b0bd2d36886ebf40bd482004a4dd4ef1"
+    },
+    {
+      "file": "docs/manual-zh/examples/silicon.cif",
+      "bytes": 522,
+      "sha256": "a8802ed065d2ed08a80e9b54913c80d69fca135381c31d03533ec9f06f3d4ae7"
+    },
+    {
+      "file": "docs/manual-zh/examples/silicon_example.m",
+      "bytes": 2470,
+      "sha256": "e7212360c2beac2c60939afd47b31fcb7d4ba76fddc9c107475d92d6d87c7923"
+    },
+    {
+      "file": "docs/manual-zh/examples/silicon_primitive.cif",
+      "bytes": 398,
+      "sha256": "9648e33773c3adc8d1e901e42dee6c73b57f3c5b6cdf52113a1569d99940cef3"
+    },
+    {
+      "file": "docs/manual-zh/examples/silicon_primitive_example.m",
+      "bytes": 4099,
+      "sha256": "d8069a3257d051448dee9d31a7ace66ac02e7e75d8f55fe9e560cb54beeea403"
+    },
+    {
+      "file": "docs/manual-zh/examples/sqs-cu-ni-input.cif",
+      "bytes": 1084,
+      "sha256": "3bff0bf185ee97235925dd8e6edd741aa148542b2d749f1943dc8ea9662ea265"
+    },
+    {
+      "file": "docs/manual-zh/examples/sqs-cu-ni-input.json",
+      "bytes": 2141,
+      "sha256": "9dc0300d20b7753ce998f042a5546d98c4ec2c634470b3876178dae3b934c8da"
+    },
+    {
+      "file": "docs/manual-zh/examples/sqs-cu-ni-ordered.cif",
+      "bytes": 860,
+      "sha256": "b6edcbc0b18b2e3d5689b7b20578c40b55e761d96a8fcdc3273eec0fe91bfd35"
+    },
+    {
+      "file": "docs/manual-zh/examples/sqs-cu-ni-ordered.json",
+      "bytes": 1989,
+      "sha256": "16a6bb8141137db3c88a32043fbc9927e12e8bc778e31e80009b93c8593b8a7b"
+    },
+    {
+      "file": "docs/manual-zh/examples/sqs-example-results.json",
+      "bytes": 3658,
+      "sha256": "33d20d547285187ab030313dbcdbc24869a0448274ede8e22f5777e76f1973c9"
+    },
+    {
+      "file": "docs/manual-zh/examples/sqs-independent-verification.json",
+      "bytes": 1025,
+      "sha256": "0d5cc7ad83b66763b2d5112a8aa3a425012f42468478e4dbf1c37adba0a03af9"
+    },
+    {
+      "file": "docs/manual-zh/examples/sqs_example.m",
+      "bytes": 7630,
+      "sha256": "f69b0057fead81921e079493b1b87d07c39f64f427173ddaf6c2ac6d82bca9a3"
+    },
+    {
+      "file": "docs/manual-zh/examples/twist-examples-results.json",
+      "bytes": 8528,
+      "sha256": "75570733f78076f1283d0d18bedd27e0e66d29691dbaeb2a71615cf3bdcd5dce"
+    },
+    {
+      "file": "docs/manual-zh/examples/twist-examples-verification.json",
+      "bytes": 3818,
+      "sha256": "b24546db295b4a7b80d500f4d230a12d12a535bde51652130a810486333bcd07"
+    },
+    {
+      "file": "docs/manual-zh/examples/twist-graphene-bottom.cif",
+      "bytes": 741,
+      "sha256": "e7251318c8b5c6f2b41da5531dc5966cc5f7f9ab778a55e1fd5666d2d6725dca"
+    },
+    {
+      "file": "docs/manual-zh/examples/twist-graphene-bottom.json",
+      "bytes": 1278,
+      "sha256": "1379fec5ae32b5052ef69fc246ad543da52da423dd442826df465f185bb0aca0"
+    },
+    {
+      "file": "docs/manual-zh/examples/twist-graphene-top.cif",
+      "bytes": 741,
+      "sha256": "e7251318c8b5c6f2b41da5531dc5966cc5f7f9ab778a55e1fd5666d2d6725dca"
+    },
+    {
+      "file": "docs/manual-zh/examples/twist-graphene-top.json",
+      "bytes": 1278,
+      "sha256": "1379fec5ae32b5052ef69fc246ad543da52da423dd442826df465f185bb0aca0"
+    },
+    {
+      "file": "docs/manual-zh/examples/twist_examples.m",
+      "bytes": 8251,
+      "sha256": "5d4d1bc0786352a39c4508d9597f7a85733dbfd959eaea69e0577334c0344d68"
+    },
+    {
+      "file": "docs/manual-zh/examples/user-repeat-CC-dimer.json",
+      "bytes": 4315,
+      "sha256": "8689329081869e32f2917dec44bdae7eeb48d746b9c5e8ba96c58c3360beff81"
+    },
+    {
+      "file": "docs/manual-zh/examples/user-repeat-ethane-input.json",
+      "bytes": 1437,
+      "sha256": "7a6dd1bd958cc17a2b042f8b11c29aef929631e8c0765f5035bac98240acd197"
+    },
+    {
+      "file": "docs/manual-zh/examples/user-repeat-unit-library.json",
+      "bytes": 1289,
+      "sha256": "417d1401adc78f35bca46259ecbe9e1f88d8ea71f816bb7651d834779655f2d6"
+    },
+    {
+      "file": "docs/manual-zh/examples/user-repeat-unit-results.json",
+      "bytes": 3697,
+      "sha256": "55110e9cca0fdf58efeb9c796bed8ed46dcbef5a024934f9b0cffac4eb36a0c2"
+    },
+    {
+      "file": "docs/manual-zh/examples/user-repeat-unit-verification.json",
+      "bytes": 629,
+      "sha256": "b95346b30b79fa7fd79cd4ef926d0534edd2e80a398362dcbd01041396008236"
+    },
+    {
+      "file": "docs/manual-zh/examples/user_repeat_unit_example.m",
+      "bytes": 4657,
+      "sha256": "18d7d3aa7e2fa123aaf6204e3e0c2efc1d8515463f439703a0ff17a8ebbaff7b"
+    },
+    {
+      "file": "docs/manual-zh/examples/verify_adsorption_bn_examples.m",
+      "bytes": 2571,
+      "sha256": "fc3e5d510cf8c38cf45014fcdf70585c0f3cc34b8909ad80917291bad4482a36"
+    },
+    {
+      "file": "docs/manual-zh/examples/verify_modeling_examples.m",
+      "bytes": 5496,
+      "sha256": "8339e358d6899d7ad57424aed732f054b01855e96abed13b4ac490d901706fd8"
+    },
+    {
+      "file": "docs/manual-zh/examples/verify_nano_examples.m",
+      "bytes": 2201,
+      "sha256": "b692e14ba1e0882743fa44e0d90cea29d254987a027d8855d99f7a22bf679865"
+    },
+    {
+      "file": "docs/manual-zh/examples/verify_twist_examples.m",
+      "bytes": 2567,
+      "sha256": "d0682a1fca385e95835cd2399e35a546b462658f4a43c5fc517e41a06c97c5d6"
+    },
+    {
+      "file": "docs/manual-zh/examples/verify_user_repeat_unit_example.m",
+      "bytes": 2039,
+      "sha256": "a3de2a88c025e84f1c5ba3e802e49d1b10c769e724e1cbf927426db28744ba01"
+    },
+    {
+      "file": "docs/manual-zh/examples/water-packing.json",
+      "bytes": 776,
+      "sha256": "066cf79179ae8d3dd90ef4846198a5463fa6268b19946eb39494b082217d67c0"
+    },
+    {
+      "file": "docs/manual-zh/examples/water.xyz",
+      "bytes": 162,
+      "sha256": "d49333df2b7b08e8ebadb9b8c46ab0ee6ab66bd4d66523176d46cf6f747e44a4"
+    },
+    {
+      "file": "docs/manual-zh/examples/water10-ethanol10-packed.json",
+      "bytes": 76563,
+      "sha256": "3d4f4c92114f54fbc2a3405b0fff657c453c208339f7dd618a6bb79783edda15"
+    },
+    {
+      "file": "docs/manual-zh/figures/ethanol-geometry.tex",
+      "bytes": 728,
+      "sha256": "c7f1110b4b258c669df451bd973a802963221f98deec3a0a7484f6926b8e8569"
+    },
+    {
+      "file": "docs/manual-zh/figures/ethanol-measurement.tex",
+      "bytes": 900,
+      "sha256": "8bea328f15d6062a04b39bb1797dd7c285611a8505cfeb797144120f1918ebdc"
+    },
+    {
+      "file": "docs/manual-zh/figures/k-sampling.tex",
+      "bytes": 1495,
+      "sha256": "d438abcc44d707365e5045e40c38409735db51c1f04149785625499fe8e7a2a7"
+    },
+    {
+      "file": "docs/manual-zh/figures/periodic-sites.tex",
+      "bytes": 1557,
+      "sha256": "071eea997f93c73548c8b41cee7433c400c4195bf3f5794d8f25e5668a206088"
+    },
+    {
+      "file": "docs/manual-zh/figures/plot_neb_idpp.py",
+      "bytes": 8201,
+      "sha256": "f8ca0e41c97a53a84fafaf1aa0b79fa99f39c6c91b1a18ad0191043b85a03e1f"
+    },
+    {
+      "file": "docs/manual-zh/figures/polymer-block.tex",
+      "bytes": 1940,
+      "sha256": "2afe7b709e3a573925bad0e85f7f8e96757360688fb670adc1b4cb738b8d3f20"
+    },
+    {
+      "file": "docs/manual-zh/figures/pt111-oh.tex",
+      "bytes": 1409,
+      "sha256": "543fed362ef1bad1495b92a7f71bff110aebce1487577430c957efc73afcf7e5"
+    },
+    {
+      "file": "docs/manual-zh/figures/pt111-parameters.tex",
+      "bytes": 911,
+      "sha256": "bbd3068fb43a688371fb40fcf2a522abe0e220e22d8cb351b08361f901322598"
+    },
+    {
+      "file": "docs/manual-zh/figures/pyridine-example.tex",
+      "bytes": 796,
+      "sha256": "820a4f3c72bc3643ac3a42ae1480c8ba0dd5eaec178f1ca594007a0708a0f09d"
+    },
+    {
+      "file": "docs/manual-zh/figures/pyridine-model.tex",
+      "bytes": 683,
+      "sha256": "28f95590a2fbb6c2c7a3524fe5f4b30ddc6b4e37ec5291cd005ce0facc258ebc"
+    },
+    {
+      "file": "docs/manual-zh/figures/round10-anchor-mirror.tex",
+      "bytes": 1578,
+      "sha256": "b5129416d2c0c35e3793f7598d102d47c78e28416807e46770b01165caca7376"
+    },
+    {
+      "file": "docs/manual-zh/figures/round10-fractional-cartesian.tex",
+      "bytes": 1447,
+      "sha256": "e183a3b72a74f8f699420d5bf218be92c377af105e573c81346d127ddfddfa2c"
+    },
+    {
+      "file": "docs/manual-zh/figures/round10-nanotube-geometry.tex",
+      "bytes": 1776,
+      "sha256": "ca043cebeece7ad0a2e7e0842d6aa2d7463cc13dbc8edeb5f20ca73e7a35d7ec"
+    },
+    {
+      "file": "docs/manual-zh/figures/round10-plane-wave-cutoff.tex",
+      "bytes": 1698,
+      "sha256": "4a5e251786813df641c3c78b98182b01fcfc6df24a52918166beeb28111a5a52"
+    },
+    {
+      "file": "docs/manual-zh/figures/round10-surface-geometry.tex",
+      "bytes": 1953,
+      "sha256": "355ba1569dc23a0995b38b0422dcaa3871795de44639204400cfb43a3e23f3a6"
+    },
+    {
+      "file": "docs/manual-zh/figures/round10-volume-surface-slice.tex",
+      "bytes": 1825,
+      "sha256": "89f19ed3de0a1e8ebd81a8013dde400b2158a0d8651c86e74d7950c99287d688"
+    },
+    {
+      "file": "docs/manual-zh/figures/scf-cycle.tex",
+      "bytes": 1222,
+      "sha256": "3bce6fe54f884b22fa5074786130547747724e3ffc38cf502251d56efd5ff5e1"
+    },
+    {
+      "file": "docs/manual-zh/figures/si-bz-online.tex",
+      "bytes": 518,
+      "sha256": "90fd4d76c640c8a26cec07585d1754a1b12132fb08930a6a358a4bb8010a984f"
+    },
+    {
+      "file": "docs/manual-zh/figures/si-symmetry-online.tex",
+      "bytes": 431,
+      "sha256": "97afff0da82012b0610ba7d59ebdcb1fb8b911eee3ea98ca8e2a0240d3e316bd"
+    },
+    {
+      "file": "docs/manual-zh/main.tex",
+      "bytes": 987,
+      "sha256": "5c08d282f5293d0df0281781f8598d75d42a2d8e1973663f28ded6e6db48da25"
+    },
+    {
+      "file": "docs/manual-zh/manual-index.ist",
+      "bytes": 69,
+      "sha256": "4be3ce72802efdb07e52ee21596f6b18eb58eb35a60b9479401768bd73b3bf3c"
+    },
+    {
+      "file": "docs/manual-zh/manual-style.sty",
+      "bytes": 7881,
+      "sha256": "c167700785b6d5524698583507452570d2e27f0114c8c92fa8ccec4a2ff8df71"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-0469f894473f746988e3.png",
+      "bytes": 846550,
+      "sha256": "0469f894473f746988e3ff3bebaa5204992ee1d2daf80aef5246f1074250e65d"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-0483f84ce4963946e315.png",
+      "bytes": 53564,
+      "sha256": "0483f84ce4963946e3151dd2a0c57b1490327b0a71c4f8e64712e76bd265ca80"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-0ff9d4164c5629316893.png",
+      "bytes": 222400,
+      "sha256": "0ff9d4164c56293168933a23eb08423acbf1339d9fef6fd16c38ff2a04705a94"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-11fbbbc4e8e9d6f1929d.png",
+      "bytes": 647264,
+      "sha256": "11fbbbc4e8e9d6f1929d6abd71b9595cf514fc8ac60b2a0398878ee856af17d4"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-1252e2f6c064962fc6d9.png",
+      "bytes": 91656,
+      "sha256": "1252e2f6c064962fc6d9f7497a9e7ddd26ee54a3769dae30d2a245dd853796ea"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-14436d05d0623e7cdc6f.png",
+      "bytes": 89727,
+      "sha256": "14436d05d0623e7cdc6fcdc1ff186fee07ee02ade9826806960fe2994f6f2cc8"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-1581def0867bec552a40.png",
+      "bytes": 45525,
+      "sha256": "1581def0867bec552a40cc24578ef645c7569e99857195f89cb29c70030d1ef7"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-172fba0260bf90759552.png",
+      "bytes": 97192,
+      "sha256": "172fba0260bf907595523ffe8993785b5444d350f578af62e9ea1d3a6eaa7c15"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-17309e4ada4dd6ce532b.png",
+      "bytes": 49611,
+      "sha256": "17309e4ada4dd6ce532bd267980355b8c304e3c9e97a4c42b75ab4dbe6c4b823"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-1d148adc90da2955994e.png",
+      "bytes": 106459,
+      "sha256": "1d148adc90da2955994e30a71fb9689b7b977deb14d32c58ce7a599247751830"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-1dadf5469e77f06dffe5.png",
+      "bytes": 49629,
+      "sha256": "1dadf5469e77f06dffe50815aeecf3b98195c79a890cdbc03b3a217554115101"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-1de9d3c6e62d7816cea2.png",
+      "bytes": 20617,
+      "sha256": "1de9d3c6e62d7816cea2dec927ef8a80ace26d6e2e385fc1154fba15e98fed51"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-209a06fc6024f4d5e0ba.png",
+      "bytes": 124659,
+      "sha256": "209a06fc6024f4d5e0baf7cf4d90c3a2f335edd1a245b60458deaef23a61937a"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-273037e846506daab173.png",
+      "bytes": 111581,
+      "sha256": "273037e846506daab17352d5372080d1e6a2dbef94c8f869764043c6addd70e9"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-290321d16b2310a99270.png",
+      "bytes": 50601,
+      "sha256": "290321d16b2310a99270a76cb58d261898e71ea05f473f2ee7e223fc0970561a"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-2984400ea30d3f4eb1f5.png",
+      "bytes": 99711,
+      "sha256": "2984400ea30d3f4eb1f5d1c16684cc732f765aba4982793859ed3d51f0b628df"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-348b0d07fb6f4cdab9d3.png",
+      "bytes": 65056,
+      "sha256": "348b0d07fb6f4cdab9d3139b14c055ae00463c9b710266c01c2fe25d2e7eef14"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-3b2d9027085c84d05818.png",
+      "bytes": 159355,
+      "sha256": "3b2d9027085c84d05818c18077e6e3e7b29599770becc3583e16568bb229da11"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-3d7aab6f859860340b2f.png",
+      "bytes": 45576,
+      "sha256": "3d7aab6f859860340b2f287d794a1f7ca06db628145962b8d075f67e3a0ce4a4"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-4185f48c89b2b877f7b1.png",
+      "bytes": 308571,
+      "sha256": "4185f48c89b2b877f7b1d1ae059c43a21d6840612e93076008b72be53325033e"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-432edbee8ecb03b7c537.png",
+      "bytes": 119119,
+      "sha256": "432edbee8ecb03b7c537722dd5d95efe77ee210fcf2d6185844ca7c52cb344e0"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-434fe0ac4d3f46cfaf46.png",
+      "bytes": 151469,
+      "sha256": "434fe0ac4d3f46cfaf4658e50f2f440a420a9fab651ad4c433a9dabf75c15051"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-496bc1fbfb3e99bfc4e7.png",
+      "bytes": 155579,
+      "sha256": "496bc1fbfb3e99bfc4e71c713634e167ab604a4d8e1207e8a2e98027d266f9a4"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-4ce96785f91c44d963be.png",
+      "bytes": 82370,
+      "sha256": "4ce96785f91c44d963be47960706a4b07aa2066b044cd6338192aae451b3a3e3"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-50f2208998010f44014c.png",
+      "bytes": 95173,
+      "sha256": "50f2208998010f44014c3572d689661d1ebe76a79dfd4d41fc84ef69d25a8384"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-53085697480f4dfda16f.png",
+      "bytes": 360016,
+      "sha256": "53085697480f4dfda16f64b1e191aa75129ecadfeda04e1b81908b8b70b1f3ec"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-5caa5064e4762ffc4974.png",
+      "bytes": 49350,
+      "sha256": "5caa5064e4762ffc4974afd25796289c7cb34581abd905060625a75906424fde"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-5eed673aca0b27c69288.png",
+      "bytes": 71802,
+      "sha256": "5eed673aca0b27c69288ffc6d890929ccf32f57d4a43b8a29831055f21f946b8"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-601f9ce2a238baeb7b2e.png",
+      "bytes": 107282,
+      "sha256": "601f9ce2a238baeb7b2e87f5b4634900dd0cc165322d463595216765cb41b5bc"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-60c8057a2bb7c31f0fd8.png",
+      "bytes": 366652,
+      "sha256": "60c8057a2bb7c31f0fd8da6e9163405bad367eee23bb867eb011a6175810559e"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-68b4df9ea7d48ce9da1e.png",
+      "bytes": 67220,
+      "sha256": "68b4df9ea7d48ce9da1e622f84f615391b35e0dc46f0d3f509162be1c22985a4"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-68bb0517e51ea1057170.png",
+      "bytes": 600430,
+      "sha256": "68bb0517e51ea1057170fc08652821303ba3786f3abf0e44e1857239bf59f24c"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-693a9be4f512a9a0e125.png",
+      "bytes": 838771,
+      "sha256": "693a9be4f512a9a0e1257aa859c0dc227a2d7f31f0e4b0497b0a3488e06c4214"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-6bd0b3f7b04c691f91a8.png",
+      "bytes": 40277,
+      "sha256": "6bd0b3f7b04c691f91a8e010a5733cb9da92812e46fffb0d7aa8d3cf031cb8ae"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-6bf7d3c41caf0892911f.png",
+      "bytes": 1061087,
+      "sha256": "6bf7d3c41caf0892911f42d42596f4b2fffaf5bcfda438c80be2d5ef4d9f3d05"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-6e54a4267b5bd8c4b3c0.png",
+      "bytes": 133634,
+      "sha256": "6e54a4267b5bd8c4b3c061d8754ecf0b6f1924678778baae0ff07e01f2bd62e1"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-71a6b6056b817444ef97.png",
+      "bytes": 111290,
+      "sha256": "71a6b6056b817444ef975fc954e2a17f0fbf80d2ff6b1f59dbd84520541273d6"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-7567d94dfd7d877833b9.png",
+      "bytes": 149293,
+      "sha256": "7567d94dfd7d877833b9dbd6ad4936e606f086dcfb763ea949f17fae6120db42"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-7684a8a790954b6a1954.png",
+      "bytes": 226893,
+      "sha256": "7684a8a790954b6a1954889a5fa84558d1b416c9132120ecf11981b258d82d9e"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-7a61cf8df5b1fcc967e4.png",
+      "bytes": 107454,
+      "sha256": "7a61cf8df5b1fcc967e4b069388aabd403e0fa40288850ece4ef3cce96f71e35"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-7c221ceb9a35fdad53a3.png",
+      "bytes": 133105,
+      "sha256": "7c221ceb9a35fdad53a3d715e000d171df43d1e35f3fae9a120cc45d826a410a"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-817224ae41bbaff8bca4.png",
+      "bytes": 89089,
+      "sha256": "817224ae41bbaff8bca4aeb3bb1434ebb385d1204fb8fe04f08a618afbb3c86c"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-89eb072a4598add87b05.png",
+      "bytes": 413614,
+      "sha256": "89eb072a4598add87b052c69f828820f112662cf86daa1927fc037ed81555851"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-8ce96edd826deccee006.png",
+      "bytes": 55396,
+      "sha256": "8ce96edd826deccee0068723eed1242c5a88b7b74e7c1bab8af1f1def639a222"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-a8d161a93e2745b16ef3.png",
+      "bytes": 95459,
+      "sha256": "a8d161a93e2745b16ef3e5389079663438db58d3d10ba947afbed1a4980ccf9a"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-aa00ad998951381ace74.png",
+      "bytes": 368793,
+      "sha256": "aa00ad998951381ace74b91029e76b12b342b0c37ddd2f015806d8ba04c32085"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-ab9df592529bd047787b.png",
+      "bytes": 70770,
+      "sha256": "ab9df592529bd047787b712d7256403714f5424e69cce91b0496a1dc3a69fd88"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-b9b8c6192e335985ecb0.png",
+      "bytes": 280516,
+      "sha256": "b9b8c6192e335985ecb090b03cefd21af66f922e549e65f642fee18ce6892e85"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-bbefd67b7ee5e6206f70.png",
+      "bytes": 16860,
+      "sha256": "bbefd67b7ee5e6206f704e421fe87f17be1ebf0ba9c505a4ec9649bfa1e85751"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-c0154093dad09f77a9a2.png",
+      "bytes": 43741,
+      "sha256": "c0154093dad09f77a9a245d70ffaa439d66a740072abb2cc1dade41500c5c25c"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-c02e14aa8762e8947bbe.png",
+      "bytes": 96954,
+      "sha256": "c02e14aa8762e8947bbe758097b0e721b8f1add320343e42fbea6bfa10047ab1"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-c201c0495d5d847c2fd3.png",
+      "bytes": 122184,
+      "sha256": "c201c0495d5d847c2fd3393a547628be39ee5f351328118d27e11c324046460f"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-c36a9eee3be02622a4d7.png",
+      "bytes": 145764,
+      "sha256": "c36a9eee3be02622a4d7db45912b95ab09219507539a07add494c2bc2e44aab4"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-c77f26280735587ce6a4.png",
+      "bytes": 56100,
+      "sha256": "c77f26280735587ce6a42d0089c1672548886d81192cd548f1e39c2a77864bc4"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-c885d8ed3b1bcd221501.png",
+      "bytes": 492590,
+      "sha256": "c885d8ed3b1bcd22150155756054e8822c0b8208fbbc4dd9836d337e54dc7d60"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-cdb0f92bdcdbb307f144.png",
+      "bytes": 203362,
+      "sha256": "cdb0f92bdcdbb307f1445503e216c098daac7b3b72a2eab72078ef920aa7b6ce"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-e2fa9f70b6bcca245a04.png",
+      "bytes": 66135,
+      "sha256": "e2fa9f70b6bcca245a04aef7bc0f484cdbf19148e6ad5eda5813563cd7a0780f"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-e572efea8aa253089edc.png",
+      "bytes": 97735,
+      "sha256": "e572efea8aa253089edc730625749447f63d3b32423428d361f1f306229f6a95"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-eb25a0cdb09d3f78fdbd.png",
+      "bytes": 339627,
+      "sha256": "eb25a0cdb09d3f78fdbdc3d77037150b9662350deecf4ac4c59c0aa5b1ea264a"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-eb58a23d11fe997c90a4.png",
+      "bytes": 194590,
+      "sha256": "eb58a23d11fe997c90a45ccecefaad5d3b25fad0143506a9714c5a6541902b95"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-f2ece60af591133fac37.png",
+      "bytes": 27493,
+      "sha256": "f2ece60af591133fac377ac5785e47c7bb194bfb6173f96631c334301340eb8b"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-f580c4c4a5007b46634f.png",
+      "bytes": 130330,
+      "sha256": "f580c4c4a5007b46634f3c8a13dc81f0088561623fa51f1c0f0cf824bfcd5d1c"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-f7556efd0d7de78b7cf1.png",
+      "bytes": 74052,
+      "sha256": "f7556efd0d7de78b7cf11d91600a4616e62b34227870257cf721882b65ad8537"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-f99354db0f163eccfd81.png",
+      "bytes": 67476,
+      "sha256": "f99354db0f163eccfd81453bc98627cca5f89ebeb621f89190623062499997f8"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/crop-faecdf5879e359505e34.png",
+      "bytes": 28846,
+      "sha256": "faecdf5879e359505e348e8667a4af8f458404948a66eafa2a4de0c8a21980e6"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/vector-02b7a0240bc7f99a0fc6.pdf",
+      "bytes": 21346,
+      "sha256": "02b7a0240bc7f99a0fc68b8c638601d2eac318afb40b375964259102cb2640c5"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/vector-1d3af63f1336e902c5cd.pdf",
+      "bytes": 35611,
+      "sha256": "1d3af63f1336e902c5cdb5d78f3a5c340b6e67f27e730582d3c8071f7bf9d622"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/vector-2e572f3c8654292658e8.pdf",
+      "bytes": 18760,
+      "sha256": "2e572f3c8654292658e80e74336f20489083054c2c13c1316678374b32553111"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/vector-79e6f35b7afec0271551.pdf",
+      "bytes": 22968,
+      "sha256": "79e6f35b7afec02715512dc62dcae50551faa3a39f5ce43d13b4fcfde2ba7daf"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/vector-a7002e532f8546105cf1.pdf",
+      "bytes": 18975,
+      "sha256": "a7002e532f8546105cf100db31077873afa99ae2335833cfb22d46f0deaf74ff"
+    },
+    {
+      "file": "docs/manual-zh/publication-assets/vector-cc7185e6fa1fba4c8c34.pdf",
+      "bytes": 14714,
+      "sha256": "cc7185e6fa1fba4c8c3434e06f1c98e1f2d9a3ea920208d2aafdf1226947f2ed"
+    }
+  ]
+}

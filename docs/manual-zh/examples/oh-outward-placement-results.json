@@ -1,0 +1,57 @@
+{
+  "mode": "MATLAB-source-nojvm",
+  "MATLAB": "26.2.0.3386108 (R2026b)",
+  "JVM": false,
+  "inputHost": "Pt111-normal-c.json",
+  "inputFragment": "oh-fragment.mol",
+  "input": {
+    "siteType": "ontop",
+    "siteIndex": 1,
+    "height": 2,
+    "anchorAtom": 1,
+    "orientationAtom": 2,
+    "direction": [
+      1,
+      1,
+      1
+    ],
+    "minimumDistance": 0.5
+  },
+  "GUIOperated": false,
+  "candidateSearchRerun": false,
+  "surfaceNormal": [
+    0.57735026918962573,
+    0.57735026918962584,
+    0.57735026918962573
+  ],
+  "oxygenNormalHeight": 2,
+  "hydrogenNormalHeight": 2.9599999999999991,
+  "oxygenLateralOffset": 2.2972100390066735E-9,
+  "hydrogenLateralOffset": 2.2972108548506628E-9,
+  "OHLength": 0.959999999999999,
+  "OHDirectionDotNormal": 1,
+  "coordinates": [
+    [
+      10.954700529481986,
+      10.95470052948199,
+      5.0748181561737713
+    ],
+    [
+      11.508956787904026,
+      11.50895678790403,
+      5.629074414595812
+    ]
+  ],
+  "sites": 6,
+  "minimumHostGuestPeriodicContact": 1.9999999999999976,
+  "nativeJSONGeometryReimported": true,
+  "reimportedMetadataBondShape": [
+    3,
+    1
+  ],
+  "reimportedMetadataBondValues": [
+    1,
+    2,
+    1
+  ]
+}

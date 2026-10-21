@@ -1,0 +1,32 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1mm,y=1mm,font=\sffamily\small,>=stealth]
+  \node[text=brand] at (26,54) {平面中的卷曲方向};
+  \foreach \j in {0,1,2,3} {
+    \draw[teal!55] ({6+4*\j},{10+7*\j}) -- ({38+4*\j},{10+7*\j});
+    \foreach \i in {0,1,2,3,4} {
+      \fill[brand] ({6+8*\i+4*\j},{10+7*\j}) circle (.8);
+    }
+  }
+  \foreach \i in {0,1,2,3,4}
+    \draw[teal!55] ({6+8*\i},10) -- ({18+8*\i},31);
+  \draw[->,brand,line width=.9pt] (6,10) -- (38,10)
+    node[midway,below=3pt] {$\mathbf C_h=4\mathbf a_1$};
+  \draw[->,muted] (6,10) -- (14,10) node[above] {$\mathbf a_1$};
+  \draw[->,muted] (6,10) -- (10,17) node[left] {$\mathbf a_2$};
+  \draw[->,teal,line width=.8pt] (57,24) -- (69,24);
+  \node[text=muted,font=\sffamily\footnotesize] at (63,32) {卷合};
+  \node[text=brand] at (95,54) {圆周长度不变};
+  \fill[paleblue] (81,10) rectangle (109,39);
+  \draw[brand,line width=.8pt] (81,10) -- (81,39);
+  \draw[brand,line width=.8pt] (109,10) -- (109,39);
+  \draw[brand,fill=paleblue,line width=.8pt] (95,39) ellipse (14 and 5);
+  \draw[brand,line width=.8pt] (81,10) arc[start angle=180,end angle=360,x radius=14mm,y radius=5mm];
+  \draw[brand,densely dashed] (109,10) arc[start angle=0,end angle=180,x radius=14mm,y radius=5mm];
+  \draw[->,muted] (95,39) -- (109,39) node[midway,above] {$R$};
+  \draw[->,teal] (115,10) -- (115,43) node[above] {管轴};
+  \node[align=center,font=\sffamily\footnotesize] at (95,-1) {$\|\mathbf C_h\|=2\pi R$};
+\end{tikzpicture}
+\caption{手性矢量与管半径的关系（示意）。左图的点表示晶格平移点，以$(4,0)$标出卷成一周的平面方向，右图只说明圆周与半径的几何关系，不代表原子弛豫后的管形。}
+\label{fig:nanotube-chiral-geometry}
+\end{figure}

@@ -1,0 +1,22 @@
+{
+  "mode": "MATLAB-source-nojvm",
+  "MATLAB": "26.2.0.3386108 (R2026b)",
+  "JVM": false,
+  "sourceFile": "Pt111-normal-c-OH-outward.json",
+  "outputFile": "Pt111-OH-outward.cif",
+  "placementOrSearchRerun": false,
+  "GUIOperated": false,
+  "sites": 6,
+  "composition": {
+    "Pt": 4,
+    "O": 1,
+    "H": 1
+  },
+  "oxygenNormalHeight": 1.9999999740023515,
+  "hydrogenNormalHeight": 2.960000091884547,
+  "OHPeriodicDistance": 0.9600001178822,
+  "minimumPtAdsorbatePeriodicContact": 1.9999999740023511,
+  "geometryToleranceAngstrom": 1E-5,
+  "explicitMolecularTopologyPreserved": false,
+  "CIFGeometryReimported": true
+}

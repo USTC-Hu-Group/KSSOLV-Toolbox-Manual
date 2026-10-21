@@ -1,0 +1,1710 @@
+{
+  "schema": 1,
+  "recipeSHA256": "710cefa1788e7045da27433fd1c49d17e5bff7b340426b2fc36207fa5ccaa770",
+  "assets": [
+    {
+      "raw": "images/round11-desktop-startup-050.jpg",
+      "rawSHA256": "b774ab3bfab98625c7a674566d83f20af850599d870c7d5f11079228e808edd9",
+      "nativePixels": [
+        1600,
+        988
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        1600,
+        988
+      ],
+      "outputPixels": [
+        1600,
+        988
+      ],
+      "asset": "publication-assets/crop-6bf7d3c41caf0892911f.png",
+      "assetSHA256": "6bf7d3c41caf0892911f42d42596f4b2fffaf5bcfda438c80be2d5ef4d9f3d05",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/round11-install-license-light.jpg",
+      "rawSHA256": "ea505dd2ee6ec24a5bf016dd1095eeba91b7b5645011051ee23b86d68c3db9f0",
+      "nativePixels": [
+        1240,
+        896
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        1240,
+        896
+      ],
+      "outputPixels": [
+        1240,
+        896
+      ],
+      "asset": "publication-assets/crop-b9b8c6192e335985ecb0.png",
+      "assetSHA256": "b9b8c6192e335985ecb090b03cefd21af66f922e549e65f642fee18ce6892e85",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-save-silicon150.jpg",
+      "rawSHA256": "1b7fe116f71fd6bf74520239e465629dcd97d17cc0a6b606e612489e64ad4890",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        670,
+        740,
+        2355,
+        1305
+      ],
+      "outputPixels": [
+        1685,
+        565
+      ],
+      "asset": "publication-assets/crop-5eed673aca0b27c69288.png",
+      "assetSHA256": "5eed673aca0b27c69288ffc6d890929ccf32f57d4a43b8a29831055f21f946b8",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-silicon-files150.jpg",
+      "rawSHA256": "0b7b74c5c1b26e204e2eed01ebd0e6949dbc8e1040ff3be1fc9629b9107c1e52",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        100,
+        650,
+        2890,
+        1655
+      ],
+      "outputPixels": [
+        2790,
+        1005
+      ],
+      "asset": "publication-assets/crop-11fbbbc4e8e9d6f1929d.png",
+      "assetSHA256": "11fbbbc4e8e9d6f1929d6abd71b9595cf514fc8ac60b2a0398878ee856af17d4",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/round11-browser-save-light.jpg",
+      "rawSHA256": "849c7649d6066f013d1a4e03f57963bcd390fac15a91d52b77645dcba683ceeb",
+      "nativePixels": [
+        728,
+        364
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        728,
+        364
+      ],
+      "outputPixels": [
+        728,
+        364
+      ],
+      "asset": "publication-assets/crop-348b0d07fb6f4cdab9d3.png",
+      "assetSHA256": "348b0d07fb6f4cdab9d3139b14c055ae00463c9b710266c01c2fe25d2e7eef14",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-reconnect150.jpg",
+      "rawSHA256": "6707d2f8cb5b76a7f538a4b0420296da28548b67927358317cf460f655f2575c",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        775,
+        930,
+        2240,
+        1280
+      ],
+      "outputPixels": [
+        1465,
+        350
+      ],
+      "asset": "publication-assets/crop-432edbee8ecb03b7c537.png",
+      "assetSHA256": "432edbee8ecb03b7c537722dd5d95efe77ee210fcf2d6185844ca7c52cb344e0",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-h2-config150.jpg",
+      "rawSHA256": "1a77ec83ef2189109ea47eb568c157cd4e8c6cfa84bd0ab5c41d3f502abdd80c",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1870,
+        455,
+        2910,
+        1455
+      ],
+      "outputPixels": [
+        1040,
+        1000
+      ],
+      "asset": "publication-assets/crop-434fe0ac4d3f46cfaf46.png",
+      "assetSHA256": "434fe0ac4d3f46cfaf4658e50f2f440a420a9fab651ad4c433a9dabf75c15051",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-h2-reopened150.jpg",
+      "rawSHA256": "0fc0d22f9184d454959bae26a171439b61da106f36cb364989f92b03eb46391d",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        105,
+        370,
+        758,
+        1365
+      ],
+      "outputPixels": [
+        653,
+        995
+      ],
+      "asset": "publication-assets/crop-c36a9eee3be02622a4d7.png",
+      "assetSHA256": "c36a9eee3be02622a4d7db45912b95ab09219507539a07add494c2bc2e44aab4",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/round11-desktop-empty-light.jpg",
+      "rawSHA256": "3651c1bcea29d411c23f6489faf3f3d0f21f8b751f653fde9e06450296c03c95",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        2400,
+        1664
+      ],
+      "outputPixels": [
+        2400,
+        1664
+      ],
+      "asset": "publication-assets/crop-eb25a0cdb09d3f78fdbd.png",
+      "assetSHA256": "eb25a0cdb09d3f78fdbdc3d77037150b9662350deecf4ac4c59c0aa5b1ea264a",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/round11-desktop-overview-light.jpg",
+      "rawSHA256": "12dbe059c372507feabb45c8f658e12798e3836c0a6f38b102302d49fec1f7c8",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        2400,
+        1664
+      ],
+      "outputPixels": [
+        2400,
+        1664
+      ],
+      "asset": "publication-assets/crop-c885d8ed3b1bcd221501.png",
+      "assetSHA256": "c885d8ed3b1bcd22150155756054e8822c0b8208fbbc4dd9836d337e54dc7d60",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-panels-gallery150.jpg",
+      "rawSHA256": "65f93cf951d9d5ed3bd29960c70d721d557ca9a36956afffc326a9d920058d11",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        990,
+        640,
+        2035,
+        1405
+      ],
+      "outputPixels": [
+        1045,
+        765
+      ],
+      "asset": "publication-assets/crop-50f2208998010f44014c.png",
+      "assetSHA256": "50f2208998010f44014c3572d689661d1ebe76a79dfd4d41fc84ef69d25a8384",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-structure-import-menu150.jpg",
+      "rawSHA256": "65326d89698ff65559bc11fbdb3797ced66f42d198235c066615f155cc8133d4",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        355,
+        595,
+        1030,
+        1035
+      ],
+      "outputPixels": [
+        675,
+        440
+      ],
+      "asset": "publication-assets/crop-e572efea8aa253089edc.png",
+      "assetSHA256": "e572efea8aa253089edc730625749447f63d3b32423428d361f1f306229f6a95",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/desktop-silicon-latest.png",
+      "rawSHA256": "4337ad8c5fd0e3b40bdce2d1a6b7818b572df91206f81f3beec05a948ea88d76",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        2400,
+        1664
+      ],
+      "outputPixels": [
+        2400,
+        1664
+      ],
+      "asset": "publication-assets/crop-693a9be4f512a9a0e125.png",
+      "assetSHA256": "693a9be4f512a9a0e1257aa859c0dc227a2d7f31f0e4b0497b0a3488e06c4214",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-silicon-bond-inspection150.jpg",
+      "rawSHA256": "c2460ceed97498aa112d44d59fee80474de7cda8ed1fa538ec054d69475d4c6f",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        55,
+        899,
+        845,
+        1148
+      ],
+      "outputPixels": [
+        790,
+        249
+      ],
+      "asset": "publication-assets/crop-6bd0b3f7b04c691f91a8.png",
+      "assetSHA256": "6bd0b3f7b04c691f91a8e010a5733cb9da92812e46fffb0d7aa8d3cf031cb8ae",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-h2-site2-inspection150.jpg",
+      "rawSHA256": "293c7aace191f07225c70c3ce434f5938de37c51c3766f762a4f6dfb27078ed3",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        55,
+        775,
+        845,
+        1270
+      ],
+      "outputPixels": [
+        790,
+        495
+      ],
+      "asset": "publication-assets/crop-f7556efd0d7de78b7cf1.png",
+      "assetSHA256": "f7556efd0d7de78b7cf11d91600a4616e62b34227870257cf721882b65ad8537",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-h2-workflow150.jpg",
+      "rawSHA256": "d547a8e21cd6075cc4ec84bcb95571327fb170757e311bb533493be9b8f97b17",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1150,
+        540,
+        1865,
+        1550
+      ],
+      "outputPixels": [
+        715,
+        1010
+      ],
+      "asset": "publication-assets/crop-273037e846506daab173.png",
+      "assetSHA256": "273037e846506daab17352d5372080d1e6a2dbef94c8f869764043c6addd70e9",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-h2-build-advanced150.jpg",
+      "rawSHA256": "4dcf1e8f347bda7d80513ea68d0b21d5ca6318b962d1c0dc50dd362cf367a455",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1905,
+        685,
+        2900,
+        1465
+      ],
+      "outputPixels": [
+        995,
+        780
+      ],
+      "asset": "publication-assets/crop-1d148adc90da2955994e.png",
+      "assetSHA256": "1d148adc90da2955994e30a71fb9689b7b977deb14d32c58ce7a599247751830",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-h2-algorithms150.jpg",
+      "rawSHA256": "322613ab0ccd79442c4ef219c0b80df28a5bfbc590915000eefd21e35447785d",
+      "nativePixels": [
+        2696,
+        1588
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        2090,
+        854,
+        2578,
+        1310
+      ],
+      "outputPixels": [
+        488,
+        456
+      ],
+      "asset": "publication-assets/crop-1581def0867bec552a40.png",
+      "assetSHA256": "1581def0867bec552a40cc24578ef645c7569e99857195f89cb29c70030d1ef7",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-h2-log.jpg",
+      "rawSHA256": "4d23aa588acab094e8d598cfa16b4ebb54e5132bfd7624b424f4ff4d2056bf9d",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1692,
+        1046,
+        2874,
+        1320
+      ],
+      "outputPixels": [
+        1182,
+        274
+      ],
+      "asset": "publication-assets/crop-2984400ea30d3f4eb1f5.png",
+      "assetSHA256": "2984400ea30d3f4eb1f5d1c16684cc732f765aba4982793859ed3d51f0b628df",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/results-h2-scf.pdf",
+      "rawSHA256": "2e572f3c8654292658e80e74336f20489083054c2c13c1316678374b32553111",
+      "nativePixels": null,
+      "cropBoxXYXY": null,
+      "asset": "publication-assets/vector-2e572f3c8654292658e8.pdf",
+      "assetSHA256": "2e572f3c8654292658e80e74336f20489083054c2c13c1316678374b32553111",
+      "format": "PDF"
+    },
+    {
+      "raw": "images/hd-si-poscar-inspection150.jpg",
+      "rawSHA256": "b78dea72c3a4254bfd54a0ad4b154f3ac5b751f7649e8ddbecbd2d442b5beb2d",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        55,
+        743,
+        845,
+        1305
+      ],
+      "outputPixels": [
+        790,
+        562
+      ],
+      "asset": "publication-assets/crop-4ce96785f91c44d963be.png",
+      "assetSHA256": "4ce96785f91c44d963be47960706a4b07aa2066b044cd6338192aae451b3a3e3",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-si-supercell-preview150.jpg",
+      "rawSHA256": "2b1d38f09d292e20de032f3359f31123956f0f8cec33800a6dbdcc9e71290710",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        670,
+        585,
+        2355,
+        1455
+      ],
+      "outputPixels": [
+        1685,
+        870
+      ],
+      "asset": "publication-assets/crop-0ff9d4164c5629316893.png",
+      "assetSHA256": "0ff9d4164c56293168933a23eb08423acbf1339d9fef6fd16c38ff2a04705a94",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-si-supercell-result100.jpg",
+      "rawSHA256": "18406500bb8da3af836f2c7a7f702a8df791c3eb876eabb2f8f780611dfa53d8",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        875,
+        365,
+        2155,
+        1615
+      ],
+      "outputPixels": [
+        1280,
+        1250
+      ],
+      "asset": "publication-assets/crop-0469f894473f746988e3.png",
+      "assetSHA256": "0469f894473f746988e3ff3bebaa5204992ee1d2daf80aef5246f1074250e65d",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-si-supercell-result100.jpg",
+      "rawSHA256": "18406500bb8da3af836f2c7a7f702a8df791c3eb876eabb2f8f780611dfa53d8",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        45,
+        330,
+        465,
+        560
+      ],
+      "outputPixels": [
+        420,
+        230
+      ],
+      "asset": "publication-assets/crop-c0154093dad09f77a9a2.png",
+      "assetSHA256": "c0154093dad09f77a9a245d70ffaa439d66a740072abb2cc1dade41500c5c25c",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/latest-si-vacancy-dialog.png",
+      "rawSHA256": "78cc8f49cd5ea6d26850ac9398031e80a9fc22a1500c914810fbfce59c8fc31e",
+      "nativePixels": [
+        1120,
+        662
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        1120,
+        662
+      ],
+      "outputPixels": [
+        1120,
+        662
+      ],
+      "asset": "publication-assets/crop-601f9ce2a238baeb7b2e.png",
+      "assetSHA256": "601f9ce2a238baeb7b2e87f5b4634900dd0cc165322d463595216765cb41b5bc",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-pyridine-chemistry150.jpg",
+      "rawSHA256": "119ea93f82e9f9d24167b42e4b349f7eea9691f1388e76da8a77dd9196e80669",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        710,
+        735,
+        2315,
+        1585
+      ],
+      "outputPixels": [
+        1605,
+        850
+      ],
+      "asset": "publication-assets/crop-f99354db0f163eccfd81.png",
+      "assetSHA256": "f99354db0f163eccfd81453bc98627cca5f89ebeb621f89190623062499997f8",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-pyridine-chemistry150.jpg",
+      "rawSHA256": "119ea93f82e9f9d24167b42e4b349f7eea9691f1388e76da8a77dd9196e80669",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        700,
+        1615,
+        1520,
+        1670
+      ],
+      "outputPixels": [
+        820,
+        55
+      ],
+      "asset": "publication-assets/crop-8ce96edd826deccee006.png",
+      "assetSHA256": "8ce96edd826deccee0068723eed1242c5a88b7b74e7c1bab8af1f1def639a222",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-pyridine-built-model.jpg",
+      "rawSHA256": "d142043ad4e2358a714b1e22dccfdc5aa275d587cbbdbd8fa15e50f13992c48b",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        900,
+        370,
+        2120,
+        1680
+      ],
+      "outputPixels": [
+        1220,
+        1310
+      ],
+      "asset": "publication-assets/crop-60c8057a2bb7c31f0fd8.png",
+      "assetSHA256": "60c8057a2bb7c31f0fd8da6e9163405bad367eee23bb867eb011a6175810559e",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-ethanol-angle150.jpg",
+      "rawSHA256": "6ccdeb30213878cf76f5ed592643f751748cf19bd262d90251f80a784ebe7385",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        710,
+        820,
+        2310,
+        1400
+      ],
+      "outputPixels": [
+        1600,
+        580
+      ],
+      "asset": "publication-assets/crop-0483f84ce4963946e315.png",
+      "assetSHA256": "0483f84ce4963946e3151dd2a0c57b1490327b0a71c4f8e64712e76bd265ca80",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-ethanol-angle150.jpg",
+      "rawSHA256": "6ccdeb30213878cf76f5ed592643f751748cf19bd262d90251f80a784ebe7385",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        710,
+        1425,
+        1520,
+        1482
+      ],
+      "outputPixels": [
+        810,
+        57
+      ],
+      "asset": "publication-assets/crop-17309e4ada4dd6ce532b.png",
+      "assetSHA256": "17309e4ada4dd6ce532bd267980355b8c304e3c9e97a4c42b75ab4dbe6c4b823",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-ethanol-angle-measured150.jpg",
+      "rawSHA256": "190a64f18a82a11bb688c5d8170a89360d8e29a033c4fe337462acf18a3e3337",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        55,
+        328,
+        845,
+        1717
+      ],
+      "outputPixels": [
+        790,
+        1389
+      ],
+      "asset": "publication-assets/crop-cdb0f92bdcdbb307f144.png",
+      "assetSHA256": "cdb0f92bdcdbb307f1445503e216c098daac7b3b72a2eab72078ef920aa7b6ce",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-ethanol-angle-measured150.jpg",
+      "rawSHA256": "190a64f18a82a11bb688c5d8170a89360d8e29a033c4fe337462acf18a3e3337",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        850,
+        400,
+        2000,
+        1650
+      ],
+      "outputPixels": [
+        1150,
+        1250
+      ],
+      "asset": "publication-assets/crop-4185f48c89b2b877f7b1.png",
+      "assetSHA256": "4185f48c89b2b877f7b1d1ae059c43a21d6840612e93076008b72be53325033e",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/results-neb-idpp.pdf",
+      "rawSHA256": "79e6f35b7afec02715512dc62dcae50551faa3a39f5ce43d13b4fcfde2ba7daf",
+      "nativePixels": null,
+      "cropBoxXYXY": null,
+      "asset": "publication-assets/vector-79e6f35b7afec0271551.pdf",
+      "assetSHA256": "79e6f35b7afec02715512dc62dcae50551faa3a39f5ce43d13b4fcfde2ba7daf",
+      "format": "PDF"
+    },
+    {
+      "raw": "images/hd-pt111-slab-parameters125.jpg",
+      "rawSHA256": "748d493eae13666fd000a562a5b7c97227f8ed67201ac7f5dcd792f9a3a61b78",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        980,
+        735,
+        2045,
+        1290
+      ],
+      "outputPixels": [
+        1065,
+        555
+      ],
+      "asset": "publication-assets/crop-e2fa9f70b6bcca245a04.png",
+      "assetSHA256": "e2fa9f70b6bcca245a04aef7bc0f484cdbf19148e6ad5eda5813563cd7a0780f",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-pt111-slab-parameters125.jpg",
+      "rawSHA256": "748d493eae13666fd000a562a5b7c97227f8ed67201ac7f5dcd792f9a3a61b78",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        975,
+        1460,
+        1520,
+        1495
+      ],
+      "outputPixels": [
+        545,
+        35
+      ],
+      "asset": "publication-assets/crop-f2ece60af591133fac37.png",
+      "assetSHA256": "f2ece60af591133fac377ac5785e47c7bb194bfb6173f96631c334301340eb8b",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-pt111-oh-placement100.jpg",
+      "rawSHA256": "35e92145f378e9ac4ed4ea7a30695d795257c4a2520137aa99cd868b94be82c9",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        980,
+        620,
+        2045,
+        1480
+      ],
+      "outputPixels": [
+        1065,
+        860
+      ],
+      "asset": "publication-assets/crop-c02e14aa8762e8947bbe.png",
+      "assetSHA256": "c02e14aa8762e8947bbe758097b0e721b8f1add320343e42fbea6bfa10047ab1",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-pt111-oh-side.jpg",
+      "rawSHA256": "7d7baff008e35b97a4996fa9b60ec2026aedadd1410a0c4af4da5958679ef3e5",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1000,
+        360,
+        2020,
+        1685
+      ],
+      "outputPixels": [
+        1020,
+        1325
+      ],
+      "asset": "publication-assets/crop-c201c0495d5d847c2fd3.png",
+      "assetSHA256": "c201c0495d5d847c2fd3393a547628be39ee5f351328118d27e11c324046460f",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-pt111-oh-side.jpg",
+      "rawSHA256": "7d7baff008e35b97a4996fa9b60ec2026aedadd1410a0c4af4da5958679ef3e5",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        40,
+        330,
+        445,
+        560
+      ],
+      "outputPixels": [
+        405,
+        230
+      ],
+      "asset": "publication-assets/crop-5caa5064e4762ffc4974.png",
+      "assetSHA256": "5caa5064e4762ffc4974afd25796289c7cb34581abd905060625a75906424fde",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-twist-parameters100.jpg",
+      "rawSHA256": "28bc646c277034b098baec1341531881f14a4f153cc5249ff9ec79a065a8a119",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        975,
+        470,
+        2045,
+        1480
+      ],
+      "outputPixels": [
+        1070,
+        1010
+      ],
+      "asset": "publication-assets/crop-7c221ceb9a35fdad53a3.png",
+      "assetSHA256": "7c221ceb9a35fdad53a3d715e000d171df43d1e35f3fae9a120cc45d826a410a",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-twist-parameters100.jpg",
+      "rawSHA256": "28bc646c277034b098baec1341531881f14a4f153cc5249ff9ec79a065a8a119",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        975,
+        1560,
+        1575,
+        1600
+      ],
+      "outputPixels": [
+        600,
+        40
+      ],
+      "asset": "publication-assets/crop-faecdf5879e359505e34.png",
+      "assetSHA256": "faecdf5879e359505e348e8667a4af8f458404948a66eafa2a4de0c8a21980e6",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-twist-top.jpg",
+      "rawSHA256": "c4f35e5907feb085b288ab3913033e890cb1341016766e7e2792b6ea6d5eafb6",
+      "nativePixels": [
+        3024,
+        1768
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1320,
+        600,
+        2420,
+        1660
+      ],
+      "outputPixels": [
+        1100,
+        1060
+      ],
+      "asset": "publication-assets/crop-89eb072a4598add87b05.png",
+      "assetSHA256": "89eb072a4598add87b052c69f828820f112662cf86daa1927fc037ed81555851",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-online-twist-side.jpg",
+      "rawSHA256": "9c00a0cd39b6d39d61104fc915374b889abe21fec7adf26d3ddfe5a24050174f",
+      "nativePixels": [
+        3024,
+        1768
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1460,
+        610,
+        2270,
+        1650
+      ],
+      "outputPixels": [
+        810,
+        1040
+      ],
+      "asset": "publication-assets/crop-a8d161a93e2745b16ef3.png",
+      "assetSHA256": "a8d161a93e2745b16ef3e5389079663438db58d3d10ba947afbed1a4980ccf9a",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-polymer-block-parameters100.jpg",
+      "rawSHA256": "3fac354c1fb125b49b5ebe78c08491ea7cb33a02dd7a8b0d3f3c18360dadc01e",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        980,
+        580,
+        2040,
+        1030
+      ],
+      "outputPixels": [
+        1060,
+        450
+      ],
+      "asset": "publication-assets/crop-3d7aab6f859860340b2f.png",
+      "assetSHA256": "3d7aab6f859860340b2f287d794a1f7ca06db628145962b8d075f67e3a0ce4a4",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-polymer-block-lower125.jpg",
+      "rawSHA256": "9c426671dddca221fcb7f5a809faad425e9e866bd4cc68d895bd24a78933cb1c",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        845,
+        710,
+        2175,
+        1535
+      ],
+      "outputPixels": [
+        1330,
+        825
+      ],
+      "asset": "publication-assets/crop-14436d05d0623e7cdc6f.png",
+      "assetSHA256": "14436d05d0623e7cdc6fcdc1ff186fee07ee02ade9826806960fe2994f6f2cc8",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-polymer-block-model.jpg",
+      "rawSHA256": "daee0e29a15898970d26596d852249ef1bf68707818606f19bd4e5926251c0e4",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        165,
+        900,
+        2860,
+        1150
+      ],
+      "outputPixels": [
+        2695,
+        250
+      ],
+      "asset": "publication-assets/crop-7684a8a790954b6a1954.png",
+      "assetSHA256": "7684a8a790954b6a1954889a5fa84558d1b416c9132120ecf11981b258d82d9e",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-polymer-block-model.jpg",
+      "rawSHA256": "daee0e29a15898970d26596d852249ef1bf68707818606f19bd4e5926251c0e4",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        40,
+        330,
+        440,
+        560
+      ],
+      "outputPixels": [
+        400,
+        230
+      ],
+      "asset": "publication-assets/crop-c77f26280735587ce6a4.png",
+      "assetSHA256": "c77f26280735587ce6a42d0089c1672548886d81192cd548f1e39c2a77864bc4",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-polymer-block-model.jpg",
+      "rawSHA256": "daee0e29a15898970d26596d852249ef1bf68707818606f19bd4e5926251c0e4",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1000,
+        900,
+        2080,
+        1150
+      ],
+      "outputPixels": [
+        1080,
+        250
+      ],
+      "asset": "publication-assets/crop-71a6b6056b817444ef97.png",
+      "assetSHA256": "71a6b6056b817444ef975fc954e2a17f0fbf80d2ff6b1f59dbd84520541273d6",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/results-h2-relaxation.pdf",
+      "rawSHA256": "a7002e532f8546105cf100db31077873afa99ae2335833cfb22d46f0deaf74ff",
+      "nativePixels": null,
+      "cropBoxXYXY": null,
+      "asset": "publication-assets/vector-a7002e532f8546105cf1.pdf",
+      "assetSHA256": "a7002e532f8546105cf100db31077873afa99ae2335833cfb22d46f0deaf74ff",
+      "format": "PDF"
+    },
+    {
+      "raw": "images/results-si-primitive-bands.pdf",
+      "rawSHA256": "1d3af63f1336e902c5cdb5d78f3a5c340b6e67f27e730582d3c8071f7bf9d622",
+      "nativePixels": null,
+      "cropBoxXYXY": null,
+      "asset": "publication-assets/vector-1d3af63f1336e902c5cd.pdf",
+      "assetSHA256": "1d3af63f1336e902c5cdb5d78f3a5c340b6e67f27e730582d3c8071f7bf9d622",
+      "format": "PDF"
+    },
+    {
+      "raw": "images/hd-si-symmetry-workflow-clean.jpg",
+      "rawSHA256": "2ca6ef0540d9278fa47a7265711435c8b051a21ad9e1fba2269877cee10c644c",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        820,
+        805,
+        1810,
+        1465
+      ],
+      "outputPixels": [
+        990,
+        660
+      ],
+      "asset": "publication-assets/crop-7a61cf8df5b1fcc967e4.png",
+      "assetSHA256": "7a61cf8df5b1fcc967e4b069388aabd403e0fa40288850ece4ef3cce96f71e35",
+      "format": "PNG"
+    },
+    {
+      "raw": "examples/Si-primitive-BZ-Online-050.pdf",
+      "rawSHA256": "cc7185e6fa1fba4c8c3434e06f1c98e1f2d9a3ea920208d2aafdf1226947f2ed",
+      "nativePixels": null,
+      "cropBoxXYXY": null,
+      "asset": "publication-assets/vector-cc7185e6fa1fba4c8c34.pdf",
+      "assetSHA256": "cc7185e6fa1fba4c8c3434e06f1c98e1f2d9a3ea920208d2aafdf1226947f2ed",
+      "format": "PDF"
+    },
+    {
+      "raw": "images/hd-volume-total-clean150.jpg",
+      "rawSHA256": "f94603fad7e50a90d0f7790c309cd03adee8b35cabb0ca29851c4fed0ef942ba",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        850,
+        390,
+        2150,
+        1650
+      ],
+      "outputPixels": [
+        1300,
+        1260
+      ],
+      "asset": "publication-assets/crop-53085697480f4dfda16f.png",
+      "assetSHA256": "53085697480f4dfda16f64b1e191aa75129ecadfeda04e1b81908b8b70b1f3ec",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-total150.jpg",
+      "rawSHA256": "5807fb137627fe9860e3e52212d81c60e8868351f540a7922ea6dd3280efa2c4",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        65,
+        350,
+        720,
+        710
+      ],
+      "outputPixels": [
+        655,
+        360
+      ],
+      "asset": "publication-assets/crop-817224ae41bbaff8bca4.png",
+      "assetSHA256": "817224ae41bbaff8bca4aeb3bb1434ebb385d1204fb8fe04f08a618afbb3c86c",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-total-threshold150.jpg",
+      "rawSHA256": "d64eb8307563c6133e5870cb55369a6707e2a3960d7c46d89abdc4aa790e582e",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1760,
+        600,
+        2685,
+        1410
+      ],
+      "outputPixels": [
+        925,
+        810
+      ],
+      "asset": "publication-assets/crop-f580c4c4a5007b46634f.png",
+      "assetSHA256": "f580c4c4a5007b46634f3c8a13dc81f0088561623fa51f1c0f0cf824bfcd5d1c",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-magnetization150.jpg",
+      "rawSHA256": "2063125efa4af2ddeb638f8b753177b7cff1094c667958142632d468e09b9a13",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        935,
+        460,
+        2090,
+        1585
+      ],
+      "outputPixels": [
+        1155,
+        1125
+      ],
+      "asset": "publication-assets/crop-eb58a23d11fe997c90a4.png",
+      "assetSHA256": "eb58a23d11fe997c90a45ccecefaad5d3b25fad0143506a9714c5a6541902b95",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-magnetization150.jpg",
+      "rawSHA256": "2063125efa4af2ddeb638f8b753177b7cff1094c667958142632d468e09b9a13",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        65,
+        350,
+        735,
+        710
+      ],
+      "outputPixels": [
+        670,
+        360
+      ],
+      "asset": "publication-assets/crop-1252e2f6c064962fc6d9.png",
+      "assetSHA256": "1252e2f6c064962fc6d9f7497a9e7ddd26ee54a3769dae30d2a245dd853796ea",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-magnetization-threshold150.jpg",
+      "rawSHA256": "76f24a5810742bbd6b71e109bfb3122b15937ce1f18be74339b560ca92b08909",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1760,
+        875,
+        2685,
+        1690
+      ],
+      "outputPixels": [
+        925,
+        815
+      ],
+      "asset": "publication-assets/crop-6e54a4267b5bd8c4b3c0.png",
+      "assetSHA256": "6e54a4267b5bd8c4b3c061d8754ecf0b6f1924678778baae0ff07e01f2bd62e1",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-miller110-model150.jpg",
+      "rawSHA256": "6fe4db0fa12265075bc555c9fe9e1913eaf1912e747b5fa8997e6fed20ea83db",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        910,
+        665,
+        2125,
+        1400
+      ],
+      "outputPixels": [
+        1215,
+        735
+      ],
+      "asset": "publication-assets/crop-aa00ad998951381ace74.png",
+      "assetSHA256": "aa00ad998951381ace74b91029e76b12b342b0c37ddd2f015806d8ba04c32085",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-miller110-model150.jpg",
+      "rawSHA256": "6fe4db0fa12265075bc555c9fe9e1913eaf1912e747b5fa8997e6fed20ea83db",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        65,
+        350,
+        610,
+        710
+      ],
+      "outputPixels": [
+        545,
+        360
+      ],
+      "asset": "publication-assets/crop-ab9df592529bd047787b.png",
+      "assetSHA256": "ab9df592529bd047787b712d7256403714f5424e69cce91b0496a1dc3a69fd88",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-miller110-settings150.jpg",
+      "rawSHA256": "a48f1804b7a0b0b6311fbba7fa69b0fe7ef19c8ec4bf69a8b9641389e6caabcc",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1760,
+        760,
+        2685,
+        950
+      ],
+      "outputPixels": [
+        925,
+        190
+      ],
+      "asset": "publication-assets/crop-1de9d3c6e62d7816cea2.png",
+      "assetSHA256": "1de9d3c6e62d7816cea2dec927ef8a80ace26d6e2e385fc1154fba15e98fed51",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-miller110-settings150.jpg",
+      "rawSHA256": "a48f1804b7a0b0b6311fbba7fa69b0fe7ef19c8ec4bf69a8b9641389e6caabcc",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1760,
+        1180,
+        2685,
+        1690
+      ],
+      "outputPixels": [
+        925,
+        510
+      ],
+      "asset": "publication-assets/crop-209a06fc6024f4d5e0ba.png",
+      "assetSHA256": "209a06fc6024f4d5e0baf7cf4d90c3a2f335edd1a245b60458deaef23a61937a",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-direct-clean150.jpg",
+      "rawSHA256": "1104ec105f7eea1ff969843a932cebf7576e55fc909c7e39d1529cfba748c225",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        700,
+        600,
+        2330,
+        1460
+      ],
+      "outputPixels": [
+        1630,
+        860
+      ],
+      "asset": "publication-assets/crop-68bb0517e51ea1057170.png",
+      "assetSHA256": "68bb0517e51ea1057170fc08652821303ba3786f3abf0e44e1857239bf59f24c",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-direct-mode150.jpg",
+      "rawSHA256": "460a48bf041324d95f7153c7048c27ae7128d5963623c8faa2c3860eef42d9e3",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1760,
+        510,
+        2685,
+        1245
+      ],
+      "outputPixels": [
+        925,
+        735
+      ],
+      "asset": "publication-assets/crop-3b2d9027085c84d05818.png",
+      "assetSHA256": "3b2d9027085c84d05818c18077e6e3e7b29599770becc3583e16568bb229da11",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-volume-direct-clipping150.jpg",
+      "rawSHA256": "552ba5a4d6b14ecf46d86723e7da0bdf1aa570e3088c1e3bb578819c744e3dab",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1760,
+        940,
+        2685,
+        1670
+      ],
+      "outputPixels": [
+        925,
+        730
+      ],
+      "asset": "publication-assets/crop-7567d94dfd7d877833b9.png",
+      "assetSHA256": "7567d94dfd7d877833b9dbd6ad4936e606f086dcfb763ea949f17fae6120db42",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/results-si-dos.pdf",
+      "rawSHA256": "02b7a0240bc7f99a0fc68b8c638601d2eac318afb40b375964259102cb2640c5",
+      "nativePixels": null,
+      "cropBoxXYXY": null,
+      "asset": "publication-assets/vector-02b7a0240bc7f99a0fc6.pdf",
+      "assetSHA256": "02b7a0240bc7f99a0fc68b8c638601d2eac318afb40b375964259102cb2640c5",
+      "format": "PDF"
+    },
+    {
+      "raw": "images/hd-atomic-scientific-scene150.jpg",
+      "rawSHA256": "e0cb51133760630a2fd361cdd8fe0870d3a148a51cb9a0211963009617e6ffb2",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        1750,
+        890,
+        2690,
+        1125
+      ],
+      "outputPixels": [
+        940,
+        235
+      ],
+      "asset": "publication-assets/crop-1dadf5469e77f06dffe5.png",
+      "assetSHA256": "1dadf5469e77f06dffe50815aeecf3b98195c79a890cdbc03b3a217554115101",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-atomic-export-image150.jpg",
+      "rawSHA256": "8176fca94cf30e66501a4df63c9f9af824b7a4f547bf502d7d3902f2fb6c4ea2",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        2195,
+        730,
+        2715,
+        1575
+      ],
+      "outputPixels": [
+        520,
+        845
+      ],
+      "asset": "publication-assets/crop-496bc1fbfb3e99bfc4e7.png",
+      "assetSHA256": "496bc1fbfb3e99bfc4e71c713634e167ab604a4d8e1207e8a2e98027d266f9a4",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-atomic-export-file150.jpg",
+      "rawSHA256": "4fba0e839f48b25c9032e958ddf97f985dc0ae00369d0d504f9c2cb74bea58b1",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        2285,
+        730,
+        2795,
+        1105
+      ],
+      "outputPixels": [
+        510,
+        375
+      ],
+      "asset": "publication-assets/crop-68b4df9ea7d48ce9da1e.png",
+      "assetSHA256": "68b4df9ea7d48ce9da1e622f84f615391b35e0dc46f0d3f509162be1c22985a4",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-settings-general150.jpg",
+      "rawSHA256": "54c71add25996fa481a97c0f4b27050a80f2847458e32c088e949790fffa82ec",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        550,
+        600,
+        1620,
+        840
+      ],
+      "outputPixels": [
+        1070,
+        240
+      ],
+      "asset": "publication-assets/crop-290321d16b2310a99270.png",
+      "assetSHA256": "290321d16b2310a99270a76cb58d261898e71ea05f473f2ee7e223fc0970561a",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hd-settings-general150.jpg",
+      "rawSHA256": "54c71add25996fa481a97c0f4b27050a80f2847458e32c088e949790fffa82ec",
+      "nativePixels": [
+        3024,
+        1758
+      ],
+      "sourceDPI": [
+        72.0,
+        72.0
+      ],
+      "cropBoxXYXY": [
+        560,
+        875,
+        2020,
+        1330
+      ],
+      "outputPixels": [
+        1460,
+        455
+      ],
+      "asset": "publication-assets/crop-172fba0260bf90759552.png",
+      "assetSHA256": "172fba0260bf907595523ffe8993785b5444d350f578af62e9ea1d3a6eaa7c15",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hanhai-quantum.png",
+      "rawSHA256": "5c1e856744c02123987ebccffb7d8bed23789a3df8ceec1287ffa1d22f06a1ed",
+      "nativePixels": [
+        584,
+        584
+      ],
+      "sourceDPI": [
+        72.009,
+        72.009
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        584,
+        584
+      ],
+      "outputPixels": [
+        584,
+        584
+      ],
+      "asset": "publication-assets/crop-bbefd67b7ee5e6206f70.png",
+      "assetSHA256": "bbefd67b7ee5e6206f704e421fe87f17be1ebf0ba9c505a4ec9649bfa1e85751",
+      "format": "PNG"
+    },
+    {
+      "raw": "images/hanhai-quantum.png",
+      "rawSHA256": "5c1e856744c02123987ebccffb7d8bed23789a3df8ceec1287ffa1d22f06a1ed",
+      "nativePixels": [
+        584,
+        584
+      ],
+      "sourceDPI": [
+        72.009,
+        72.009
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        584,
+        584
+      ],
+      "outputPixels": [
+        584,
+        584
+      ],
+      "asset": "publication-assets/crop-bbefd67b7ee5e6206f70.png",
+      "assetSHA256": "bbefd67b7ee5e6206f704e421fe87f17be1ebf0ba9c505a4ec9649bfa1e85751",
+      "format": "PNG"
+    }
+  ]
+}

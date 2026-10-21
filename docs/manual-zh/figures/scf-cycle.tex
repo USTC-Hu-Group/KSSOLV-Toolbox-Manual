@@ -1,0 +1,24 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1mm,y=1mm,font=\sffamily\small,
+  stage/.style={draw=teal,fill=paleblue,rounded corners=1.5pt,
+    minimum width=31mm,minimum height=11mm,align=center,text=brand},
+  flow/.style={->,>=stealth,line width=.7pt,draw=teal}]
+  \node[stage] (input) at (15,32) {输入密度\\$\rho_{\mathrm{in}}$};
+  \node[stage] (potential) at (55,32) {构造有效势};
+  \node[stage] (states) at (95,32) {求电子态与占据};
+  \node[stage] (output) at (95,11) {得到新密度\\$\rho_{\mathrm{out}}$};
+  \node[stage] (check) at (55,11) {达到收敛条件？};
+  \node[stage] (mix) at (15,11) {混合新旧密度};
+  \node[text=brand,align=center] (done) at (55,-6) {保留收敛结果};
+  \draw[flow] (input) -- (potential);
+  \draw[flow] (potential) -- (states);
+  \draw[flow] (states) -- (output);
+  \draw[flow] (output) -- (check);
+  \draw[flow] (check) -- node[above,text=brand] {否} (mix);
+  \draw[flow] (mix) -- (input);
+  \draw[flow] (check) -- node[right,text=brand] {是} (done);
+\end{tikzpicture}
+\caption{电子自洽循环（示意）。在原子位置不变的条件下更新电子密度，直到输入与输出满足收敛要求。}
+\label{fig:scf-cycle}
+\end{figure}

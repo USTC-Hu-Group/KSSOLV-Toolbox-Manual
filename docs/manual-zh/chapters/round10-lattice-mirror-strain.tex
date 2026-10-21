@@ -1,0 +1,29 @@
+\subsubsection{反向一条晶格矢量}
+
+\ui{镜像晶格}输入晶格矢量序号1、2或3，将相应矢量反向，其他两行不变。用一个对角矩阵 $D_i$ 表示这一操作：它的第 $i$ 个对角元素为 $-1$，另外两个为1，于是
+\begin{equation}
+ A'=D_iA,\qquad \mathbf f'=\mathbf f.
+ \label{eq:mirror-lattice-row}
+\end{equation}
+例如选第1条轴，就是 $\mathbf a'=-\mathbf a$。分数坐标 $(u,v,w)$ 对应的位置由 $u\mathbf a+v\mathbf b+w\mathbf c$ 变成 $-u\mathbf a+v\mathbf b+w\mathbf c$。由于 $\det D_i=-1$，晶胞体积的大小不变，基矢的手性改变。
+
+这与\ui{镜像原子}的作用不同。在一般斜晶胞中，反向 $\mathbf a$ 并不同时把 $\mathbf b$、$\mathbf c$ 关于某个笛卡尔平面反射，原子间的某些距离可能改变。若目的是将整个分子关于空间中的平面翻到另一侧，应使用前面的平面镜像公式；若要改晶格基矢方向，则按本式操作并核对原子位置。
+
+\ui{旋转晶格}输入旋转角度和全局轴方向，会同时改变晶格与随晶格摆放的原子；其行矩阵关系为 $A'=AR^{\mathsf T}$，分数坐标保持不变。\ui{交换坐标轴}则同时重排晶格行与分数坐标分量：依次填2、1、3可交换 $\mathbf a$ 与 $\mathbf b$，同时交换 $u$ 与 $v$，因此笛卡尔位置不变。每次只做一种变化，按表\ref{tab:round10-lattice-invariants}核对后再保存。
+
+\subsubsection{沿晶格方向施加应变}
+
+\ui{施加应变}和\ui{结构应变}使用无量纲相对伸缩量。为突出作用方向，本书将三个输入记为 $\varepsilon_a,\varepsilon_b,\varepsilon_c$；它们依次缩放晶格矩阵的三行：
+\begin{equation}
+ A'=\begin{bmatrix}
+ 1+\varepsilon_a&0&0\\
+ 0&1+\varepsilon_b&0\\
+ 0&0&1+\varepsilon_c
+ \end{bmatrix}A,\qquad \mathbf f'=\mathbf f.
+ \label{eq:lattice-axial-strain}
+\end{equation}
+对话框中的三个分量仍以 $x,y,z$ 命名；在这个工具中应按第1、2、3条晶格矢量理解，斜胞时不能把它们当作沿全局 $x,y,z$ 分别拉伸。标量0.01使三行都乘1.01；输入\literalinput{0.01 0 0}只使 $\mathbf a$ 乘1.01。0.01表示伸长1\%，不是增加 $0.01\,\text{\AA}$，也不是将胞长直接设为1.01\,\AA。
+
+仍用第\ref{ch:modeling}章的手算斜胞，$\mathbf a=(4,0,0)$、$\mathbf b=(1,3,0)$、$\mathbf c=(0,0,6)$，单位为\AA。施加\literalinput{0.01 0 0}后，只有 $\mathbf a$ 变为 $(4.04,0,0)\,\text{\AA}$；$\mathbf b$ 的 $x$ 分量仍为1\,\AA。分数坐标 $(0.5,0.5,0)$ 不变，笛卡尔位置则由 $(2.5,1.5,0)$ 变为 $(2.52,1.5,0)\,\text{\AA}$。这个结果也说明，它不是把所有原子的全局 $x$ 坐标统一乘1.01。
+
+先保存未变形模型，再填写应变、预览并应用。按上述小比例检查基矢长度和代表性原子的位置，最后另存结果。当前这两个工具只提供三条晶格矢量的伸缩，不提供剪切应变；施加形变后若需要平衡结构，应另行设置相应的优化计算。

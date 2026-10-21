@@ -1,0 +1,104 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{manual-style}[2026/10/21 KSSOLV Chinese user manual]
+\RequirePackage[paperwidth=162mm,paperheight=217.5mm,inner=22mm,outer=18mm,top=19mm,bottom=19mm,headheight=0pt,headsep=0pt,footskip=9mm]{geometry}
+\RequirePackage{fontspec}
+\setmainfont{texgyrepagella}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\setsansfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\setmonofont{lmmono10-regular.otf}[BoldFont=lmmonolt10-bold.otf,ItalicFont=lmmono10-italic.otf,Scale=0.87]
+\RequirePackage{xcolor}
+\definecolor{brand}{HTML}{07548D}
+\definecolor{titleblue}{HTML}{338EC0}
+\definecolor{teal}{HTML}{4A9FA3}
+\definecolor{paleblue}{HTML}{EDF5F8}
+\definecolor{ink}{HTML}{242C33}
+\definecolor{muted}{HTML}{586674}
+\RequirePackage{graphicx,tikz,booktabs,tabularx,longtable,array,enumitem,caption,float,needspace}
+\setlength{\heavyrulewidth}{.45pt}
+\setlength{\lightrulewidth}{.25pt}
+\RequirePackage{amsmath,amssymb}
+\numberwithin{equation}{chapter}
+\RequirePackage{fancyhdr,tocloft,listings,tcolorbox,makeidx}
+\RequirePackage[columns=2,font=small,columnsep=18pt,initsep=1pt]{idxlayout}
+\makeindex
+\renewcommand{\indexname}{主题索引}
+\newcommand{\indexletter}[1]{\par\noindent{\sffamily\bfseries #1}\par\nopagebreak}
+\setindexprenote{\small 主题按中文拼音及英文名称排列。}
+\tcbuselibrary{breakable,skins}
+\RequirePackage[unicode,colorlinks=true,linkcolor=brand,urlcolor=brand,bookmarksnumbered=true,pdfdisplaydoctitle=true]{hyperref}
+\RequirePackage{xurl,newunicodechar}
+\newunicodechar{⋮}{\ensuremath{\vdots}}
+\hypersetup{pdftitle={KSSOLV Toolbox 中文用户手册：独立应用程序与 Online},pdfauthor={合肥瀚海量子科技有限公司},pdfsubject={结构建模、电子结构计算与结果分析},pdfkeywords={KSSOLV,中文,用户手册,DFT,Online}}
+\graphicspath{{images/}}
+\color{ink}
+\AtBeginDocument{\fontsize{10.5}{15.5}\selectfont}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt plus 1pt}
+\setlength{\emergencystretch}{1.8em}
+\raggedbottom
+\widowpenalty=10000
+\clubpenalty=10000
+\ctexset{
+ chapter={name={第,章},number=\arabic{chapter},format=\sffamily\heiti\large\color{ink},nameformat=\small\color{muted},titleformat=\LARGE\bfseries,aftername=\par\vspace{5pt},beforeskip=0pt,afterskip=16pt,aftertitle={\par\vspace{8pt}{\color{teal}\hrule height .45pt}}},
+ section={format=\sffamily\heiti\large\color{brand},numberformat=\normalfont\sffamily,beforeskip=16pt,afterskip=7pt},
+ subsection={format=\sffamily\heiti\normalsize\color{ink},beforeskip=11pt,afterskip=4pt},
+ subsubsection={format=\sffamily\heiti\normalsize,beforeskip=8pt,afterskip=3pt}}
+\setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{1}
+\renewcommand{\contentsname}{目\quad 录}
+\renewcommand{\cfttoctitlefont}{\sffamily\heiti\Large}
+\renewcommand{\cftaftertoctitle}{\par\vspace{7pt}{\color{teal}\hrule}\vspace{10pt}}
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{10pt}
+\setlength{\cftbeforechapskip}{8pt}
+\renewcommand{\cftchapfont}{\sffamily\heiti}
+\renewcommand{\cftchappagefont}{\sffamily}
+\renewcommand{\cftsecfont}{\sffamily\small}
+\renewcommand{\cftsecpagefont}{\sffamily\small}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftchapnumwidth}{3.8em}
+\setlength{\cftsecindent}{1.3em}
+\setlength{\cftsecnumwidth}{2.8em}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[LE]{\sffamily\small\thepage\enspace|}
+\fancyfoot[RO]{\sffamily\small|\enspace\thepage}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[LE]{\sffamily\small\thepage\enspace|}\fancyfoot[RO]{\sffamily\small|\enspace\thepage}\renewcommand{\headrulewidth}{0pt}}
+\captionsetup{font={small,sf},labelfont=bf,labelsep=quad,skip=7pt,justification=raggedright,singlelinecheck=false}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\setlist{leftmargin=1.8em,itemsep=3pt,topsep=5pt,parsep=1pt}
+\newlist{steps}{enumerate}{1}
+\setlist[steps]{label=\textcolor{brand}{\sffamily\bfseries\arabic*.},leftmargin=1.8em,itemsep=6pt,topsep=6pt}
+\newcommand{\ui}[1]{{\sffamily\heiti #1}}
+\newcommand{\file}[1]{\nolinkurl{#1}}
+\newcommand{\literalinput}[1]{\mbox{\texttt{\detokenize{#1}}}}
+\newcommand{\term}[1]{\textbf{#1}}
+\newtcolorbox{notebox}[1]{enhanced,breakable,colback=paleblue,colframe=teal,boxrule=0pt,borderline west={1.2pt}{0pt}{teal},arc=0pt,left=9pt,right=9pt,top=7pt,bottom=7pt,title={#1},coltitle=brand,colbacktitle=paleblue,fonttitle=\sffamily\heiti,attach title to upper={\par\smallskip},before skip=9pt,after skip=9pt}
+\newcommand{\screenshot}[3]{\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{#1}\caption{#2}\label{#3}\end{figure}}
+\newcommand{\chapterlead}[1]{\noindent #1\par\medskip}
+\lstset{basicstyle=\ttfamily\fontsize{9.5}{12}\selectfont,breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,frame=single,framerule=.3pt,rulecolor=\color{teal},backgroundcolor=\color{paleblue},xleftmargin=5pt,xrightmargin=5pt,aboveskip=9pt,belowskip=9pt,language=Matlab}
+\newcommand{\manualcover}{%
+\begin{titlepage}\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay,x=1mm,y=1mm]
+\node[anchor=north west,inner sep=0] at ([xshift=15mm,yshift=-13mm]current page.north west){\includegraphics[width=23mm]{publication-assets/crop-bbefd67b7ee5e6206f70.png}};
+\node[anchor=east,align=right,text=titleblue,inner sep=0] at ([xshift=-15mm,yshift=17mm]current page.east){\sffamily\fontsize{25}{31}\selectfont KSSOLV Toolbox};
+\node[anchor=east,align=right,text=titleblue,inner sep=0] at ([xshift=-15mm,yshift=3mm]current page.east){\sffamily\heiti\fontsize{16}{22}\selectfont 中文用户手册};
+\node[anchor=east,align=right,text=muted,inner sep=0] at ([xshift=-15mm,yshift=-10mm]current page.east){\sffamily\small 独立应用程序与 Online};
+% An original, open lattice motif echoes the subject of the manual.
+\begin{scope}[shift={([xshift=65mm,yshift=79mm]current page.south west)},x={(14mm,3mm)},y={(7mm,-7mm)}]
+\fill[titleblue!7] (0,0) -- (4,0) -- (4,2) -- (0,2) -- cycle;
+\fill[teal!14] (1,0) -- (3,0) -- (3,1) -- (1,1) -- cycle;
+\fill[titleblue!15] (2,1) -- (4,1) -- (4,2) -- (2,2) -- cycle;
+\foreach \row in {0,1,2}{\draw[titleblue!55,line width=.45pt] (0,\row) -- (4,\row);}
+\foreach \column in {0,1,2,3,4}{\draw[teal!65,line width=.45pt] (\column,0) -- (\column,2);}
+\foreach \column in {0,1,2,3,4}{\foreach \row in {0,1,2}{\filldraw[fill=white,draw=titleblue!75,line width=.5pt] (\column,\row) circle[radius=.8mm];}}
+\filldraw[fill=teal,draw=white,line width=.6pt] (2,1) circle[radius=1.35mm];
+\filldraw[fill=titleblue,draw=white,line width=.6pt] (3,1) circle[radius=1.05mm];
+\end{scope}
+\draw[teal!65,line width=.55pt] ([xshift=15mm,yshift=72mm]current page.south west) -- ++(37mm,0);
+\fill[teal!65] ([xshift=56mm,yshift=72mm]current page.south west) circle[radius=.7mm];
+\node[anchor=south west,text=muted,inner sep=0] at ([xshift=15mm,yshift=13mm]current page.south west){\sffamily\small 0.5.0\quad /\quad 2026};
+\node[anchor=south east,text=brand,align=right,inner sep=0] at ([xshift=-15mm,yshift=13mm]current page.south east){\sffamily\heiti\fontsize{10}{14}\selectfont 合肥瀚海量子科技有限公司};
+\end{tikzpicture}\null\end{titlepage}}
+\newcommand{\manualbackcover}{\clearpage\thispagestyle{empty}\null\vfill\begin{center}\includegraphics[width=29mm]{publication-assets/crop-bbefd67b7ee5e6206f70.png}\par\vspace{12mm}{\sffamily\large KSSOLV Toolbox}\par\vspace{3mm}{\sffamily\small 结构建模\enspace ·\enspace 电子结构计算\enspace ·\enspace 结果分析}\par\vspace{17mm}{\color{teal}\rule{.78\linewidth}{.5pt}}\par\vspace{8mm}{\sffamily\small 合肥瀚海量子科技有限公司}\par\vspace{2mm}{\sffamily\footnotesize Hefei Hanhai Quantum Technology Co., Ltd.}\end{center}\vfill\null}

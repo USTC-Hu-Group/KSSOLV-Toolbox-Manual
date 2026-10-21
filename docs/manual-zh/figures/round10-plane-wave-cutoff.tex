@@ -1,0 +1,35 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1mm,y=1mm,font=\sffamily\small]
+  \node[text=brand] at (26,47) {$\Gamma$点的基础平面波集合};
+  \node[text=brand] at (88,47) {波长与空间细节};
+  \fill[paleblue] (26,22) circle (18);
+  \foreach \x in {-24,-18,...,24}
+    \foreach \y in {-18,-12,...,18} {
+      \pgfmathtruncatemacro{\inside}{\x*\x+\y*\y<=324}
+      \ifnum\inside=1
+        \fill[brand] ({26+\x},{22+\y}) circle (.75);
+      \else
+        \fill[muted!35] ({26+\x},{22+\y}) circle (.55);
+      \fi
+    }
+  \draw[teal,line width=.8pt] (26,22) circle (18);
+  \draw[->,draw=muted,line width=.4pt] (1,22) -- (53,22);
+  \draw[->,draw=muted,line width=.4pt] (26,0) -- (26,43);
+  \node[anchor=west,text=muted] at (51,19) {$G_x$};
+  \node[anchor=west,text=muted] at (27,42) {$G_y$};
+  \node[fill=paleblue,inner sep=1pt,text=brand] at (26,22) {$\Gamma$};
+  \draw[draw=muted!40,line width=.4pt] (66,31) -- (112,31);
+  \draw[draw=muted!40,line width=.4pt] (66,12) -- (112,12);
+  \draw[teal,line width=.8pt,domain=0:44,samples=100]
+    plot ({67+\x},{31+3*sin(\x*16.3636)});
+  \draw[brand,line width=.8pt,domain=0:44,samples=140]
+    plot ({67+\x},{12+3*sin(\x*49.0909)});
+  \node[text=ink] at (89,39) {较长波长};
+  \node[text=ink] at (89,20) {较短波长};
+  \node[text=ink] at (26,-7) {提高Ecut，保留更多分量};
+  \node[text=ink] at (89,-7) {短波分量需要更高动能};
+\end{tikzpicture}
+\caption{平面波截断的二维示意。左图蓝点为截断圆内保留的倒格分量；实际计算使用三维集合。右图仅说明波长与空间变化的关系，不表示某个分子的计算波函数。}
+\label{fig:plane-wave-cutoff-concept}
+\end{figure}

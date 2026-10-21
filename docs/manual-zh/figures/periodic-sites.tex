@@ -1,0 +1,29 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1mm,y=1mm,font=\sffamily\small]
+  \node[text=brand] at (21,42) {模型：2 个独立位点};
+  \node[text=brand] at (85,42) {视图：位点与映像};
+  \fill[paleblue] (5,0) rectangle (37,32);
+  \fill[paleblue] (69,0) rectangle (101,32);
+  \draw[teal,line width=.75pt] (5,0) rectangle (37,32);
+  \draw[teal,line width=.75pt] (69,0) rectangle (101,32);
+  \fill[brand] (5,0) circle (2.3);
+  \fill[teal] (21,16) circle (2.3);
+  \node[text=white,font=\sffamily\scriptsize] at (5,0) {A};
+  \node[text=white,font=\sffamily\scriptsize] at (21,16) {B};
+  \fill[brand] (69,0) circle (2.3);
+  \fill[teal] (85,16) circle (2.3);
+  \node[text=white,font=\sffamily\scriptsize] at (69,0) {A};
+  \node[text=white,font=\sffamily\scriptsize] at (85,16) {B};
+  \foreach \x/\y in {101/0,69/32,101/32} {
+    \draw[fill=white,draw=brand,line width=.8pt] (\x,\y) circle (2.3);
+    \node[text=brand,font=\sffamily\scriptsize] at (\x,\y) {A};
+  }
+  \draw[->,>=stealth,teal,line width=.75pt] (43,16) -- (61,16);
+  \node[text=brand,font=\sffamily\footnotesize] at (52,23) {周期显示};
+  \node[text=ink,font=\sffamily\footnotesize,align=center] at (21,-8) {只保存 A、B 两个位点};
+  \node[text=ink,font=\sffamily\footnotesize,align=center] at (85,-8) {空心圆是 A 的边界映像};
+\end{tikzpicture}
+\caption{独立位点与边界映像（二维示意）。同一位点 A 可以出现在多个周期边界上，绘制更多原子球并没有增加模型中的独立位点。}
+\label{fig:periodic-sites}
+\end{figure}

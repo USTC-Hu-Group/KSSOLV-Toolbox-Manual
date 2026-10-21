@@ -1,0 +1,762 @@
+{
+  "mode": "MATLAB-source-nojvm",
+  "MATLAB": "26.2.0.3386108 (R2026b)",
+  "JVM": false,
+  "DFTCalculation": false,
+  "GUIOperated": false,
+  "coordinateUnit": "angstrom",
+  "failures": {},
+  "block": {
+    "analysis": {
+      "schemaVersion": 1,
+      "sequence": [
+        "PEO",
+        "PEO",
+        "PEO",
+        "PPO",
+        "PPO",
+        "PPO",
+        "PPO",
+        "PEO",
+        "PEO",
+        "PEO"
+      ],
+      "seed": 8,
+      "tacticity": "atactic",
+      "repeatUnits": 10,
+      "actualKinds": [
+        "PEO",
+        "PPO"
+      ],
+      "actualCounts": [
+        6,
+        4
+      ],
+      "estimatedAtoms": 102,
+      "atomCount": 84,
+      "chainCount": 1,
+      "headGroup": "none",
+      "tailGroup": "none",
+      "conformation": "extended",
+      "headTailMode": "regular",
+      "headTailFlipped": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "state": "constructed_not_equilibrated",
+      "blocks": [
+        {
+          "Kind": "PEO",
+          "Length": 3
+        },
+        {
+          "Kind": "PPO",
+          "Length": 4
+        },
+        {
+          "Kind": "PEO",
+          "Length": 3
+        }
+      ],
+      "superunitCount": 1
+    },
+    "elementCounts": {
+      "C": 24,
+      "O": 10,
+      "H": 50
+    },
+    "sites": 84,
+    "bondCount": 83,
+    "minimumPairDistance": 0.96000000000000163,
+    "minimumNonbondedDistance": 0.97574932655764934,
+    "singleConnectedComponent": true,
+    "treeTopology": true,
+    "interUnitBondCount": 9,
+    "interUnitPairs": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ]
+    ],
+    "onlyAdjacentUnitsConnected": true,
+    "diagnostics": {
+      "atomIssues": [],
+      "collisions": [],
+      "abnormalBonds": [],
+      "bondOrderSums": [
+        4,
+        4,
+        2,
+        4,
+        4,
+        2,
+        4,
+        4,
+        2,
+        4,
+        4,
+        2,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        2,
+        4,
+        4,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hasErrors": false,
+      "method": "rule-based-valence-and-geometry",
+      "isEnergyMinimization": false
+    },
+    "input": {
+      "blockKinds": "PEO PPO PEO",
+      "blockLengths": [
+        3,
+        4,
+        3
+      ],
+      "superunitCount": 1,
+      "seed": 8,
+      "tacticity": "atactic",
+      "chainCount": 1,
+      "headGroup": "none",
+      "tailGroup": "none",
+      "conformation": "extended",
+      "headTailMode": "regular",
+      "atomLimit": 100000
+    }
+  },
+  "random": {
+    "analysis": {
+      "schemaVersion": 1,
+      "sequence": [
+        "PP",
+        "PP",
+        "PP",
+        "PE",
+        "PE",
+        "PE",
+        "PP",
+        "PE",
+        "PE",
+        "PP",
+        "PP",
+        "PP",
+        "PP",
+        "PP",
+        "PP",
+        "PP",
+        "PE",
+        "PP",
+        "PP",
+        "PP"
+      ],
+      "seed": 91,
+      "tacticity": "syndiotactic",
+      "repeatUnits": 20,
+      "actualKinds": [
+        "PE",
+        "PP"
+      ],
+      "actualCounts": [
+        6,
+        14
+      ],
+      "estimatedAtoms": 162,
+      "atomCount": 164,
+      "chainCount": 1,
+      "headGroup": "none",
+      "tailGroup": "none",
+      "conformation": "extended",
+      "headTailMode": "regular",
+      "headTailFlipped": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "state": "constructed_not_equilibrated",
+      "requestedFractions": [
+        0.3,
+        0.7
+      ],
+      "exactComposition": true,
+      "reactivityRatios": [
+        1,
+        1
+      ]
+    },
+    "elementCounts": {
+      "C": 54,
+      "H": 110
+    },
+    "sites": 164,
+    "bondCount": 163,
+    "minimumPairDistance": 1.0799999999999998,
+    "minimumNonbondedDistance": 1.2085689706831348,
+    "singleConnectedComponent": true,
+    "treeTopology": true,
+    "interUnitBondCount": 19,
+    "interUnitPairs": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        14,
+        15
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        19,
+        20
+      ]
+    ],
+    "onlyAdjacentUnitsConnected": true,
+    "diagnostics": {
+      "atomIssues": [],
+      "collisions": [],
+      "abnormalBonds": [],
+      "bondOrderSums": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hasErrors": false,
+      "method": "rule-based-valence-and-geometry",
+      "isEnergyMinimization": false
+    },
+    "input": {
+      "monomerKinds": "PE PP",
+      "fractions": [
+        0.3,
+        0.7
+      ],
+      "repeatCount": 20,
+      "exactComposition": true,
+      "seed": 91,
+      "tacticity": "syndiotactic",
+      "reactivityRatios": [
+        1,
+        1
+      ],
+      "chainCount": 1,
+      "headGroup": "none",
+      "tailGroup": "none",
+      "conformation": "extended",
+      "headTailMode": "regular",
+      "atomLimit": 100000
+    },
+    "stereoByUnit": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "sameSeedSequenceCoordinatesTopologyReproduced": true,
+    "maxCoordinateDifferenceFromIsotactic": 0,
+    "stereoMetadataDifferenceFromIsotactic": true
+  },
+  "neb": {
+    "input": {
+      "intermediateCount": 5,
+      "maximumSteps": 200,
+      "forceTolerance": 0.1
+    },
+    "diagnostics": {
+      "iterations": 82,
+      "converged": true,
+      "maximum_force": 0.098661944661732143,
+      "initial_energy": 348102.33150000492,
+      "final_energy": 0.74233674017375184,
+      "linear_path_energy": 3.599999988E+33
+    },
+    "imageCount": 7,
+    "imageLabels": [
+      "NEB image 00",
+      "NEB image 01",
+      "NEB image 02",
+      "NEB image 03",
+      "NEB image 04",
+      "NEB image 05",
+      "NEB image 06"
+    ],
+    "minimumPairDistances": [
+      6,
+      4.3485493944276463,
+      3.5755255532784727,
+      3.738028006352538,
+      3.5755255532784727,
+      4.3485493944276463,
+      6
+    ],
+    "linearMinimumPairDistances": [
+      6,
+      4,
+      2.0000000000000009,
+      0,
+      2,
+      4,
+      6
+    ],
+    "coordinates": [
+      [
+        [
+          2,
+          5,
+          5
+        ],
+        [
+          8,
+          5,
+          5
+        ]
+      ],
+      [
+        [
+          2.8258421255382435,
+          5,
+          5.0225387635019008
+        ],
+        [
+          7.1741578744617591,
+          5,
+          4.9774612364980992
+        ]
+      ],
+      [
+        [
+          3.2509983247722349,
+          5,
+          5.3702551628097872
+        ],
+        [
+          6.749001675227766,
+          5,
+          4.6297448371902128
+        ]
+      ],
+      [
+        [
+          5,
+          5,
+          6.869014003176269
+        ],
+        [
+          5,
+          5,
+          3.130985996823731
+        ]
+      ],
+      [
+        [
+          6.749001675227766,
+          5,
+          5.3702551628097872
+        ],
+        [
+          3.2509983247722349,
+          5,
+          4.6297448371902128
+        ]
+      ],
+      [
+        [
+          7.1741578744617591,
+          5,
+          5.0225387635019008
+        ],
+        [
+          2.8258421255382435,
+          5,
+          4.9774612364980992
+        ]
+      ],
+      [
+        [
+          8,
+          5,
+          5
+        ],
+        [
+          2,
+          5,
+          5
+        ]
+      ]
+    ],
+    "files": [
+      "image-00.json",
+      "image-01.json",
+      "image-02.json",
+      "image-03.json",
+      "image-04.json",
+      "image-05.json",
+      "image-06.json"
+    ],
+    "endpointMaxError": 0,
+    "allSpeciesOrderLabelsAndSiteIdsMatch": true,
+    "allCellsAndPeriodicFlagsMatch": true
+  }
+}
