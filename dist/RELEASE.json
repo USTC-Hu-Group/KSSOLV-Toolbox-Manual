@@ -5,10 +5,10 @@
   "pages": 311,
   "pdf": {
     "file": "KSSOLV_Toolbox_User_Manual_zh-CN.pdf",
-    "bytes": 16861402,
-    "sha256": "0e6d59e5f5b0703445bd7b608b33c70c67df3d93eaf3073cf722929fe1759b9f"
+    "bytes": 16861416,
+    "sha256": "c0b8c23d5a8b6806403c4e3f1276b4288480e5b6c81468a32c52f36ed782e1f9"
   },
   "source": "../docs/manual-zh/main.tex",
   "importBaseline": "../docs/provenance/source-import-0.5.0.json",
-  "revision": "frontmatter-heading-spacing"
+  "revision": "reading-and-help-heading-spacing"
 }
