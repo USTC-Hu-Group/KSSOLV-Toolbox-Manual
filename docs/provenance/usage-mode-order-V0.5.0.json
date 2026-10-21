@@ -1,0 +1,41 @@
+{
+  "revision": "usage-mode-order-and-frontmatter",
+  "date": "2026-10-21",
+  "manualVersion": "V0.5.0",
+  "baseManualCommit": "ee075bb",
+  "basePdfSHA256": "16f89670657a81ab382047bfcf685cf045169255704833e07fc5998d1524dbba",
+  "pdfSHA256": "c328ce57ff3c692c2b3606527a7aaf602da747ca1555352b6ccd3d3ee0ddc0db",
+  "pages": 314,
+  "usageModeOrder": [
+    "独立应用程序",
+    "MATLAB® 工具箱",
+    "KSSOLV Toolbox Online"
+  ],
+  "changes": [
+    "Reorder authored mode lists, comparison table and introductory subsections",
+    "Delete private deployment address clause",
+    "Delete requested COMSOL style-reference wording and trademark sentence from front matter"
+  ],
+  "checks": {
+    "latexDiagnostics": "passed",
+    "changedPageContentStreams": [
+      2,
+      3,
+      12,
+      13,
+      14,
+      17
+    ],
+    "unchangedPageContentStreams": 308,
+    "renderedAndVisuallyReviewedPages": [
+      2,
+      3,
+      12,
+      13,
+      14,
+      17
+    ],
+    "renderMaxDimensionPixels": 1200,
+    "embeddedFontAndUnicodeMapPairs": 39
+  }
+}
