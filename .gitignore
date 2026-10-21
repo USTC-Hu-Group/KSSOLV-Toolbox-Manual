@@ -1,7 +1,83 @@
+# Operating system metadata
 .DS_Store
+._*
+.AppleDouble/
+.LSOverride
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+
+# Local editor settings, swap files, and backups
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+\#*\#
+*.bak
+*.orig
+*.rej
+
+# Local environment and credentials (keep distributable templates)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.python-version
+
+# Python environments, bytecode, and tool caches
+.venv/
+venv/
 __pycache__/
 *.py[cod]
-/.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+
+# Local build, preview, and verification output
+# dist/ contains approved releases and must remain tracked.
 /output/
 /docs/manual-zh/build/
+/tmp/
+/temp/
 *.log
+*.tmp
+*.temp
+
+# LaTeX intermediate files, including direct editor builds
+# Keep PDF figures, example PDFs, and the approved release PDF.
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+/docs/manual-zh/main.pdf
+/docs/manual-zh/main.dvi
+/docs/manual-zh/main.ps
+
+# MATLAB editor recovery and crash files (keep example data)
+*.asv
+matlab_crash_dump.*
+octave-workspace
