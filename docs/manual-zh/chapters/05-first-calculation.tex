@@ -8,7 +8,7 @@
 
 我们在一个立方形模拟盒中放入两个氢原子，保持原子位置不变，求解它们在这一位置上的基态电子分布。这是一项单点能计算。“单点”表示只计算一个几何构型，并不表示只进行一次数值迭代。电子密度需要反复更新，直到前后两次计算足够接近，这个过程称为自洽场计算，通常简写为 SCF。
 
-本章完成时，项目中应包含一个氢分子结构、一张可以再次运行的工作流，以及一幅能量和误差曲线。同时保存项目，以便在后面的结构优化教程中继续使用。第一次操作建议使用本地计算资源；Online 用户可以在当前会话的计算环境中执行相同步骤。
+本章完成时，项目中应包含一个氢分子结构、一张可以再次运行的工作流，以及一幅能量和误差曲线。同时保存项目，以便在后面的结构优化教程中继续使用。第一次操作可使用当前工作区的计算环境；在线版在服务器会话中执行相同步骤。
 
 \begin{table}[htbp]
 \centering
@@ -32,10 +32,10 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 \end{tabularx}
 \end{table}
 
-教程文件 \file{examples/h2.cif} 保存了上述模拟盒和原子位置。使用这个文件，可以避免手工输入坐标，也能使桌面版和 Online 的起始结构保持一致。CIF 的晶格描述在此用于保存模拟盒；计算时仍需在 \ui{Build Molecule} 节点中选择 \ui{Molecule}。文件格式和计算对象的类型是两件不同的事。
+教程文件 \file{examples/h2.cif} 保存了上述模拟盒和原子位置。使用这个文件，可以避免手工输入坐标，也能使桌面版和在线版的起始结构保持一致。CIF 的晶格描述在此用于保存模拟盒；计算时仍需在 \ui{Build Molecule} 节点中选择 \ui{Molecule}。文件格式和计算对象的类型是两件不同的事。
 
 \begin{notebox}{为什么选择一个很小的分子}
-小体系便于观察每一步操作，也便于比较参数变化的影响。本例中的盒尺寸和截断能用于教学。它们完整地规定了这次计算，但不能直接代替其他分子的收敛检查。
+小体系便于观察每一步操作，也便于比较参数变化的影响。本例中的盒尺寸和截断能用于演示计算过程。它们完整地规定了这次计算，但不能直接代替其他分子的收敛检查。
 \end{notebox}
 
 \section{建立项目并导入结构}
@@ -51,7 +51,7 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 \item 导入完成后选择 \ui{保存}，为项目指定名称和位置。
 \end{steps}
 
-桌面版通常通过系统文件对话框选择本地文件。Online 的文件选择和下载经过浏览器完成：先把教程文件提供给当前会话，再在应用中选择它。无论在哪一种环境中，导入后的结构都应出现在项目浏览器里，而不是仅仅停留在浏览器的下载列表中。
+桌面版通常通过系统文件对话框选择本地文件。在线版的文件选择和下载经过浏览器完成：先把教程文件提供给当前会话，再在应用中选择它。无论在哪一种环境中，导入后的结构都应出现在项目浏览器里，而不是仅仅停留在浏览器的下载列表中。
 
 \subsection{导入氢分子}
 
@@ -73,7 +73,7 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=79mm]{publication-assets/crop-f7556efd0d7de78b7cf1.png}
-\caption{Online中初始氢分子第2个位点的坐标卡局部，显示笛卡尔坐标、分数坐标与占位。此时尚未改变初始几何；坐标卡用于核对读数，不是完整的模型视图。}
+\caption{在线版中初始氢分子第2个位点的坐标卡局部，显示笛卡尔坐标、分数坐标与占位。此时尚未改变初始几何；坐标卡用于核对读数，不是完整的模型视图。}
 \label{fig:h2-structure-inspection}
 \end{figure}
 
@@ -83,7 +83,7 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 
 \section{建立自洽计算工作流}
 
-\subsection{从 SCF 模板开始}
+\subsection{从 \headinglatin{SCF} 模板开始}
 
 工作流把计算过程分为若干节点。节点之间的连线表示处理顺序。本例只需要三项工作：把导入的结构交给求解器、计算电子结构、显示收敛过程。使用模板可以先得到这套基本关系，再逐项调整其中的参数。
 
@@ -91,7 +91,7 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 \item 打开 \ui{工作流} 的导入菜单，选择 \ui{从模板建立工作流}。
 \item 选择 \ui{SCF} 模板。
 \item 打开新建的工作流文档，查看画布上的节点和连线。
-\item 确认工作流包含结构配置、SCF 计算和能量曲线三个任务，并按这一顺序连接。图中的Online流程将结构配置节点标为\ui{Configuration}，随书桌面项目中同一任务标为\ui{Build Molecule}；后两个节点依次为\ui{SCF}和\ui{Plot}。
+\item 确认工作流包含结构配置、SCF 计算和能量曲线三个任务，并按这一顺序连接。图中的在线版流程将结构配置节点标为\ui{Configuration}，随书桌面项目中同一任务标为\ui{Build Molecule}；后两个节点依次为\ui{SCF}和\ui{Plot}。
 \end{steps}
 
 若选择的是空白工作流，可以自行添加上述三个节点，再依次连接。节点的显示名称可以修改，任务类型则应保持正确。例如，把节点标签改为“计算氢分子”不会改变它是一个 SCF 任务。对于第一次操作，保留模板名称更容易与本章说明对应。
@@ -101,13 +101,13 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=60mm]{publication-assets/crop-273037e846506daab173.png}
-\caption{本次Online氢分子计算完成后的SCF流程。结构配置、电子结构求解和绘制曲线自上而下连接；Configuration对应Build Molecule任务，Plot对应绘制收敛曲线。}
+\caption{本次在线版氢分子计算完成后的SCF流程。结构配置、电子结构求解和绘制曲线自上而下连接；Configuration对应Build Molecule任务，Plot对应绘制收敛曲线。}
 \label{fig:h2-workflow}
 \end{figure}
 
 \subsection{配置结构输入}
 
-在画布上选择结构配置节点，本次Online中标为\ui{Configuration}，再选择 \ui{工作流 → 配置节点}，也可以使用节点上的齿轮。这项命令会展开原本收起的右侧面板，并在 \ui{配置编辑器} 中打开或刷新该节点的专用设置；向下滚动到 \ui{选项} 区，便可以看到 Type 等参数。只看到节点 ID、标签、模块等通用属性时，请先执行配置节点命令。这个节点既指定结构，也规定求解时采用的物理和数值模型。请不要只确认结构名称便直接运行；模板中可能保存着上一次制作模板时的参数。
+在画布上选择结构配置节点，本次在线版中标为\ui{Configuration}，再选择 \ui{工作流 → 配置节点}，也可以使用节点上的齿轮。这项命令会展开原本收起的右侧面板，并在 \ui{配置编辑器} 中打开或刷新该节点的专用设置；向下滚动到 \ui{选项} 区，便可以看到 Type 等参数。只看到节点 ID、标签、模块等通用属性时，请先执行配置节点命令。这个节点既指定结构，也规定求解时采用的物理和数值模型。请不要只确认结构名称便直接运行；模板中可能保存着上一次制作模板时的参数。
 
 如果面板较窄，参数名称或下拉框内容可能被截短。点击\ui{配置编辑器}标题栏右上角的省略号，选择\ui{最大化}，可以暂时把主要工作区让给这个面板。完成填写后，再从同一菜单选择\ui{还原}，回到画布与参数并列的布局。\ui{通用}、\ui{输入}、\ui{选项}和\ui{高级选项}各自可以展开或折叠；填写本例时，可先折叠通用与输入，把空间留给选项。
 
@@ -127,11 +127,11 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=90mm]{publication-assets/crop-1d148adc90da2955994e.png}
-\caption{本次Online结构配置的常规与高级选项。PBE、default赝势、20 Ha、0 K、Nspin=1和Extra bands=0均可在此核对；Molecule与结构h2的选择见图\ref{fig:online-h2-config}。}
+\caption{本次在线版结构配置的常规与高级选项。PBE、default赝势、20 Ha、0 K、Nspin=1和Extra bands=0均可在此核对；Molecule与结构h2的选择见图\ref{fig:online-h2-config}。}
 \label{fig:h2-build-options}
 \end{figure}
 
-\subsection{配置 SCF 节点}
+\subsection{配置 \headinglatin{SCF} 节点}
 
 选择 \ui{SCF} 节点，再选择 \ui{工作流 → 配置节点}，向下滚动到它的 \ui{选项} 区。\ui{DiagMethod} 决定每一步求解电子态时使用的数值方法；\ui{Max SCF steps} 则规定电子密度最多更新多少次。对于本例，使用默认的 \ui{davidson\_qe} 和 $100$ 步即可。
 
@@ -140,7 +140,7 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=48mm]{publication-assets/crop-1581def0867bec552a40.png}
-\caption{Online中SCF节点的算法列表。本例使用davidson\_qe；其他方法保留给有明确比较目标的计算。}
+\caption{在线版中SCF节点的算法列表。本例使用davidson\_qe；其他方法保留给有明确比较目标的计算。}
 \label{fig:h2-scf-methods}
 \end{figure}
 
@@ -188,7 +188,7 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 \item 返回工作流画布，确认需要执行的节点已经完成。
 \end{steps}
 
-本地\ui{停止}按钮目前只恢复运行按钮状态，不会中断正在进行的数值求解；Online同步计算也不提供停止操作。本例应等待计算结束后再继续。运行期间可查看日志判断进度，关闭浏览器标签不会保存项目或结束服务器计算。
+本地\ui{停止}按钮目前只恢复运行按钮状态，不会中断正在进行的数值求解；在线版同步计算也不提供停止操作。本例应等待计算结束后再继续。运行期间可查看日志判断进度，关闭浏览器标签不会保存项目或结束服务器计算。
 
 \subsection{测量一次运行的用时}
 
@@ -206,7 +206,7 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=119.9mm]{publication-assets/crop-2984400ea30d3f4eb1f5.png}
-\caption{本次Online氢分子SCF运行的日志局部。第7步出现\ui{Convergence is reached!}，总能量为$-1.1652136532206$ Ha，相对密度误差约为$6.24\times10^{-9}$。}
+\caption{本次在线版氢分子SCF运行的日志局部。第7步出现\ui{Convergence is reached!}，总能量为$-1.1652136532206$ Ha，相对密度误差约为$6.24\times10^{-9}$。}
 \label{fig:h2-scf-runtime-log}
 \end{figure}
 
@@ -227,9 +227,9 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 
 \subsection{与本书的参考运行比较}
 
-本书配套脚本在 macOS Apple Silicon、MATLAB R2026b 的无 JVM 批处理环境中完成了相同条件的 CPU 计算。固定随机种子后，SCF 在 $7$ 步达到收敛，总能量为约 $-1.1652136531$ Ha，最后的相对密度误差约为 $8.85\times10^{-9}$。这些数字来自保留的运行日志，作为识别教程输入是否一致的参照。
+本书配套脚本在 macOS Apple Silicon、MATLAB\regmark{} R2026b 的无 JVM 批处理环境中完成了相同条件的 CPU 计算。固定随机种子后，SCF 在 $7$ 步达到收敛，总能量为约 $-1.1652136531$ Ha，最后的相对密度误差约为 $8.85\times10^{-9}$。这些数字来自保留的运行日志，作为识别教程输入是否一致的参照。
 
-本次Online计算在7步后收敛，总能量约为$-1.1652136532$ Ha，相对密度误差约为$6.24\times10^{-9}$。它与随书脚本的总能量相差约$1.44\times10^{-10}$ Ha，两次计算均满足本例的收敛条件。图\ref{fig:h2-scf-results}仍采用随书脚本的数据绘制，便于在纸面上清楚阅读坐标和曲线。
+本次在线版计算在7步后收敛，总能量约为$-1.1652136532$ Ha，相对密度误差约为$6.24\times10^{-9}$。它与随书脚本的总能量相差约$1.44\times10^{-10}$ Ha，两次计算均满足本例的收敛条件。图\ref{fig:h2-scf-results}仍采用随书脚本的数据绘制，便于在纸面上清楚阅读坐标和曲线。
 
 在图形界面中运行时，初始电子态、软件版本和数值环境可能使迭代次数或最后几位数字略有不同。比较时先确认结构、盒尺寸、泛函、赝势和截断能一致，再检查最终是否收敛。一次计算的耗时受设备和会话负载影响，因此本教程不把完成秒数作为操作正确与否的标准。
 
@@ -251,7 +251,7 @@ SCF 方法 & davidson\_qe；最大 $100$ 步\\
 
 \section{用脚本复现本例}
 
-本节面向使用完整 MATLAB 的读者。独立应用和 Online 可以继续使用前面的图形操作，无需执行配套脚本。图形界面便于学习和检查结构，脚本便于重复执行相同参数。配套 \file{examples/h2_scf_and_relax.m} 给出完整输入；下面摘录其中的单点计算部分。此段代码用于已经初始化 KSSOLV 数值环境的 MATLAB 会话。
+本节面向使用完整 MATLAB\regmark{} 的读者。独立应用和在线版可以继续使用前面的图形操作，无需执行配套脚本。图形界面便于学习和检查结构，脚本便于重复执行相同参数。配套 \file{examples/h2_scf_and_relax.m} 给出完整输入；下面摘录其中的单点计算部分。此段代码用于已经初始化 KSSOLV 数值环境的 MATLAB\regmark{} 会话。
 
 \Needspace{11\baselineskip}
 \begin{lstlisting}[language=Matlab]

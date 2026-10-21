@@ -1,0 +1,80 @@
+{
+  "revision": "three-use-modes-and-feature-guide",
+  "date": "2026-10-21",
+  "manualVersion": "V0.5.0",
+  "baseManualCommit": "90a42b3",
+  "pages": 314,
+  "pdfSHA256": "16f89670657a81ab382047bfcf685cf045169255704833e07fc5998d1524dbba",
+  "pdfBytes": 16889331,
+  "softwareEvidence": {
+    "repository": "KSSOLV-Toolbox",
+    "gitHEAD": "40369fd08a85aa6491b7849d4a5abd6ac052445d",
+    "workingTreeChangesPresent": true,
+    "execution": "Full MATLAB R2026b source GUI, -nojvm, light theme, isolated capture preferences",
+    "productRepositoryModifiedByThisRevision": false
+  },
+  "changes": [
+    "Cover subtitle removed; main title raised 12 mm and physical Si lattice raised 10 mm",
+    "Three use modes compared; full online product name and upcoming official/private deployment wording",
+    "Workspace chapter precedes online chapter; advanced modeling title corrected",
+    "Full initial workspace overview and clearer Chinese terminology",
+    "Registered trademark marks in authored prose; executable code/paths/native UI preserved",
+    "Native bands/DOS, nanotube/nanowire and Materials Project images",
+    "LLM setup, dollar-prefix conversation and precise supported tools",
+    "Per-node process/GPU resources, NSCF inheritance and support limits"
+  ],
+  "captureManifest": "editorial-revision-captures.json",
+  "nativeCropCount": 13,
+  "checks": {
+    "latexCompilation": "passed: no missing glyphs, undefined references or overfull horizontal boxes",
+    "embeddedFontAndUnicodeMapPairs": 39,
+    "visibleUnprefixedVersionMentions": 0,
+    "privateTestHostInPublicationTextSourceOrPDFLinks": false,
+    "educationIdentityWordingInChaptersAndReadmes": false,
+    "allPagesContactSheetVisualReview": true,
+    "targetedFullPageVisualReview": true,
+    "independentReviewAgents": 3,
+    "reviewRounds": [
+      "content and source fact audit",
+      "318-page first proof and corrections",
+      "314-page frozen proof regression"
+    ],
+    "ranges": [
+      {
+        "pages": [
+          1,
+          106
+        ],
+        "reviewer": "content_audit",
+        "blockingFindingsRemaining": 0
+      },
+      {
+        "pages": [
+          107,
+          212
+        ],
+        "reviewer": "modeling_audit",
+        "blockingFindingsRemaining": 0
+      },
+      {
+        "pages": [
+          213,
+          314
+        ],
+        "reviewer": "online_audit",
+        "blockingFindingsRemaining": 0
+      }
+    ],
+    "resolved": [
+      "MATLAB word hyphenation and first-column wrapping",
+      "Orphaned introduction ending",
+      "Nanotube figures drifting into Cu steps",
+      "Tool chapter orphaned shortcut paragraph",
+      "Bibliography orphaned final lines",
+      "Pointer overlays on material ID and question text",
+      "Si2/Si8 DOS image-text order",
+      "Index grouping and repeated server-access wording"
+    ]
+  },
+  "scope": "Visual review covers all pages through contact sheets and detailed affected-page inspection. Numerical reference data were not recomputed. No successful LLM connection or generated response is claimed; Materials Project query and import were performed. Screenshot crops only, without upsampling or repainting."
+}

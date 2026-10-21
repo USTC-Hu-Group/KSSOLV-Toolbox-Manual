@@ -4,6 +4,7 @@
 \RequirePackage{fontspec}
 \setmainfont{texgyrepagella}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
 \setsansfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\hyphenation{MATLAB KSSOLV Toolbox Online Runtime Windows macOS Linux}
 \setmonofont{lmmono10-regular.otf}[BoldFont=lmmonolt10-bold.otf,ItalicFont=lmmono10-italic.otf,Scale=0.87]
 \RequirePackage{xcolor}
 \definecolor{brand}{HTML}{07548D}
@@ -12,7 +13,7 @@
 \definecolor{paleblue}{HTML}{EDF5F8}
 \definecolor{ink}{HTML}{242C33}
 \definecolor{muted}{HTML}{586674}
-\RequirePackage{graphicx,tikz,booktabs,tabularx,longtable,array,enumitem,caption,float,needspace}
+\RequirePackage{graphicx,tikz,booktabs,tabularx,longtable,array,enumitem,caption,float,needspace,placeins}
 \setlength{\heavyrulewidth}{.45pt}
 \setlength{\lightrulewidth}{.25pt}
 \RequirePackage{amsmath,amssymb}
@@ -27,7 +28,7 @@
 \RequirePackage[unicode,colorlinks=true,linkcolor=brand,urlcolor=brand,bookmarksnumbered=true,pdfdisplaydoctitle=true]{hyperref}
 \RequirePackage{xurl,newunicodechar}
 \newunicodechar{⋮}{\ensuremath{\vdots}}
-\hypersetup{pdftitle={KSSOLV Toolbox 中文用户手册：独立应用程序与 Online},pdfauthor={合肥瀚海量子科技有限公司},pdfsubject={V0.5.0：结构建模、电子结构计算与结果分析},pdfkeywords={KSSOLV,中文,用户手册,DFT,Online}}
+\hypersetup{pdftitle={KSSOLV Toolbox 中文用户手册},pdfauthor={合肥瀚海量子科技有限公司},pdfsubject={V0.5.0：结构建模、电子结构计算与结果分析},pdfkeywords={KSSOLV,中文,用户手册,DFT,Online}}
 \graphicspath{{images/}}
 \color{ink}
 \AtBeginDocument{\fontsize{10.5}{15.5}\selectfont}
@@ -71,6 +72,10 @@
 \newlist{steps}{enumerate}{1}
 \setlist[steps]{label=\textcolor{brand}{\sffamily\bfseries\arabic*.},leftmargin=1.8em,itemsep=6pt,topsep=6pt}
 \newcommand{\ui}[1]{{\sffamily\heiti #1}}
+\DeclareRobustCommand{\regmark}{\textsuperscript{\normalfont\fontsize{5.5}{5.5}\selectfont\textregistered}}
+\newcommand{\ksonline}{KSSOLV Toolbox Online}
+\DeclareRobustCommand{\headinglatin}[1]{\texorpdfstring{\raisebox{-.12ex}{#1}}{#1}}
+\pdfstringdefDisableCommands{\def\regmark{®}\def\ksonline{KSSOLV Toolbox Online}\def\headinglatin#1{#1}}
 \newcommand{\file}[1]{\nolinkurl{#1}}
 \newcommand{\literalinput}[1]{\mbox{\texttt{\detokenize{#1}}}}
 \newcommand{\term}[1]{\textbf{#1}}
@@ -82,12 +87,11 @@
 \begin{titlepage}\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay,x=1mm,y=1mm]
 \node[anchor=north west,inner sep=0] at ([xshift=15mm,yshift=-13mm]current page.north west){\includegraphics[width=23mm]{publication-assets/crop-bbefd67b7ee5e6206f70.png}};
-\node[anchor=east,align=right,text=titleblue,inner sep=0] at ([xshift=-15mm,yshift=17mm]current page.east){\sffamily\fontsize{25}{31}\selectfont KSSOLV Toolbox};
-\node[anchor=east,align=right,text=titleblue,inner sep=0] at ([xshift=-15mm,yshift=3mm]current page.east){\sffamily\heiti\fontsize{16}{22}\selectfont 中文用户手册};
-\node[anchor=east,align=right,text=muted,inner sep=0] at ([xshift=-15mm,yshift=-10mm]current page.east){\sffamily\small 独立应用程序与 Online};
+\node[anchor=east,align=right,text=titleblue,inner sep=0] at ([xshift=-15mm,yshift=29mm]current page.east){\sffamily\fontsize{25}{31}\selectfont KSSOLV Toolbox};
+\node[anchor=east,align=right,text=titleblue,inner sep=0] at ([xshift=-15mm,yshift=15mm]current page.east){\sffamily\heiti\fontsize{16}{22}\selectfont 中文用户手册};
 % Physical diamond-cubic Si structure, generated from the teaching CIF.
 \input{figures/cover-silicon.tex}
 \node[anchor=south west,text=muted,inner sep=0] at ([xshift=15mm,yshift=13mm]current page.south west){\sffamily\small V0.5.0\quad /\quad 2026};
 \node[anchor=south east,text=brand,align=right,inner sep=0] at ([xshift=-15mm,yshift=13mm]current page.south east){\sffamily\heiti\fontsize{10}{14}\selectfont 合肥瀚海量子科技有限公司};
 \end{tikzpicture}\null\end{titlepage}}
-\newcommand{\manualbackcover}{\clearpage\thispagestyle{empty}\null\vfill\begin{center}\includegraphics[width=29mm]{publication-assets/crop-bbefd67b7ee5e6206f70.png}\par\vspace{12mm}{\sffamily\large KSSOLV Toolbox}\par\vspace{3mm}{\sffamily\small 结构建模\enspace ·\enspace 电子结构计算\enspace ·\enspace 结果分析}\par\vspace{17mm}{\color{teal}\rule{.78\linewidth}{.5pt}}\par\vspace{8mm}{\sffamily\small 合肥瀚海量子科技有限公司}\par\vspace{2mm}{\sffamily\footnotesize Hefei Hanhai Quantum Technology Co., Ltd.}\end{center}\vfill\null}
+\newcommand{\manualbackcover}{\clearpage\thispagestyle{empty}\null\vfill\begin{center}\includegraphics[width=29mm]{publication-assets/crop-bbefd67b7ee5e6206f70.png}\par\vspace{12mm}{\sffamily\large KSSOLV Toolbox}\par\vspace{3mm}{\sffamily\small 结构建模\enspace ·\enspace 电子结构计算\enspace ·\enspace 结果分析}\par\vspace{17mm}{\color{teal}\rule{.78\linewidth}{.5pt}}\par\vspace{8mm}{\sffamily\small 合肥瀚海量子\regmark{}科技有限公司}\par\vspace{2mm}{\sffamily\footnotesize Hefei Hanhai Quantum Technology Co., Ltd.}\end{center}\vfill\null}

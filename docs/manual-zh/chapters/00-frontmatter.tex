@@ -2,22 +2,22 @@
 \noindent{\sffamily\heiti\Large KSSOLV Toolbox 中文用户手册}
 
 \vspace{5mm}
-\noindent 独立应用程序与 Online\par
+\noindent 独立应用程序、\ksonline{} 与 MATLAB\regmark{} 工具箱\par
 \noindent 适用版本：V0.5.0\quad 编写日期：2026 年 10 月 21 日
 
 \vspace{7mm}
-本书介绍 KSSOLV Toolbox 的安装、结构准备、电子结构计算和结果分析。教程从小型分子与晶体出发，逐步延伸到表面、异质结、扭转结构、低维模型与软物质。独立应用程序与浏览器工作空间的操作分别说明；完整 MATLAB 工具箱的远程计算另设专节。
+本书介绍 KSSOLV Toolbox 的安装、结构准备、电子结构计算和结果分析。教程从小型分子与晶体出发，逐步延伸到表面、异质结、扭转结构、低维模型与软物质。本书适用于独立应用程序、\ksonline{} 和 MATLAB\regmark{} 工具箱三种使用方式，共通的建模与计算步骤统一讲解，安装、文件管理和远程运行的差别在相应章节说明。
 
 本书界面名称按中文界面书写；仍以英文显示的字段保留原名。软件更新后，部分窗口的位置和外观可能有所调整。计算案例的输入条件和参考结果一并给出，便于读者理解结果的来源。
 
 \noindent{\sffamily\heiti 品牌与参考资料}
 
-瀚海量子标识和 KSSOLV Toolbox 名称用于标明本产品。本书的页面组织和叙述方式参考 COMSOL Server 6.4 与 Physics Builder 6.4 手册，文字、教程和插图说明围绕 KSSOLV Toolbox 另行编写。COMSOL 是其权利人的商标。MATLAB 是 The MathWorks, Inc. 的注册商标。
+瀚海量子\regmark{}标识和 KSSOLV Toolbox 名称用于标明本产品。本书的页面组织和叙述方式参考 COMSOL Server 6.4 与 Physics Builder 6.4 手册，文字、教程和插图说明围绕 KSSOLV Toolbox 另行编写。COMSOL 是其权利人的商标。MATLAB\regmark{} 是 The MathWorks, Inc. 的注册商标。
 
 封面晶体取自随书硅案例，沿 $[100]$ 方向延展三个常规晶胞。球体表示硅原子，连线连接第一近邻；青绿色的四条键突出金刚石结构中的四面体配位。
 
 \vfill
-\noindent{\small © 2026 合肥瀚海量子科技有限公司\par
+\noindent{\small © 2026 合肥瀚海量子\regmark{}科技有限公司\par
 \noindent Hefei Hanhai Quantum Technology Co., Ltd.}
 \clearpage
 
@@ -26,11 +26,11 @@
 \vspace{4mm}
 \noindent{\sffamily\heiti 版本与编写依据}
 
-本书面向即将发布的 KSSOLV Toolbox V0.5.0，界面和功能依据编写期间的工作构建。安装包、运行环境和 Online 部署可分别更新，使用时请在\ui{主页 → 帮助 → 关于 KSSOLV}中确认版本。
+本书面向即将发布的 KSSOLV Toolbox V0.5.0，界面和功能依据编写期间的工作构建。安装包、运行环境和在线版部署可分别更新，使用时请在\ui{主页 → 帮助 → 关于 KSSOLV}中确认版本。
 
 \noindent{\sffamily\heiti 建议的阅读顺序}
 
-第一次使用时，可先阅读安装与 Online 章节中适合自己的部分，再按第\ref{ch:workspace}章熟悉工作区。第\ref{ch:first}章的氢分子教程带读者完成一次从结构到结果的计算，适合在课堂上跟随操作。
+第一次使用时，可先在第\ref{ch:introduction}章选择使用方式，再按安装或在线版章节准备运行环境，随后阅读第\ref{ch:workspace}章熟悉工作区。第\ref{ch:first}章的氢分子教程带读者完成一次从结构到结果的计算，可按步骤操作并核对每一阶段的结果。
 
 准备自己的材料模型时，可按第\ref{ch:modeling}章编辑原子结构，再到第\ref{ch:advanced}章学习材料实例；第\ref{ch:modeling-tools}章提供各项建模工具的查阅说明。计算参数一章解释常见设置的含义；工作流、体数据与结果章节则用于进一步安排任务和阅读输出。不必在第一次操作前读完所有章节。
 
@@ -40,7 +40,7 @@
 
 \begin{itemize}
 \item 软件与发行包：\url{https://github.com/USTC-Hu-Group/KSSOLV-Toolbox}
-\item 浏览器工作空间：使用教师、管理员或部署方提供的 Online 地址。
+\item 在线版：\ksonline{} 的瀚海量子\regmark{}官方在线版即将推出，并支持集群私有化部署；私有部署的访问地址由部署方提供。
 \item 问题反馈：上述仓库的 Issues 页面；也可从应用\ui{帮助}菜单进入相关资源。
 \end{itemize}
 

@@ -1,0 +1,280 @@
+{
+  "date": "2026-10-21",
+  "method": "CUA native screenshots, Light theme, source-mode full MATLAB R2026b -nojvm, isolated preferences. Cropping only; no resampling or UI repaint. Raw captures are retained in ignored output/ui-capture.",
+  "limitations": "No LLM reply or successful model connection is claimed. No new electronic-structure calculation; plots use preserved numerical reference data. Imported JSON geometries were generated and validated previously. Materials Project query and download were actually performed.",
+  "captures": [
+    {
+      "raw_name": "silicon-bands-live.png",
+      "raw_sha256": "3d8691363c7733d977171f418e4eda43f4792a5b1e1aad75ce30cfefcc18ab40",
+      "raw_dimensions": [
+        2400,
+        1664
+      ],
+      "crop_xyxy": [
+        610,
+        360,
+        2330,
+        1590
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-silicon-bands-live.png",
+      "asset_sha256": "6d144e9d3df40e8e6e8e9c1a6ca7ff5346f72e55ed4ab2181fb45fd5a8c7d3d5",
+      "dimensions": [
+        1720,
+        1230
+      ],
+      "purpose": "Si2 native band plot redrawn from stored dataset"
+    },
+    {
+      "raw_name": "silicon-dos-live.png",
+      "raw_sha256": "23585913cbdc9d29263816c968adf70f1b2b33af24dfb3e7601c078b292e1019",
+      "raw_dimensions": [
+        2400,
+        1664
+      ],
+      "crop_xyxy": [
+        610,
+        360,
+        2330,
+        1590
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-silicon-dos-live.png",
+      "asset_sha256": "b4588d0b0c33c74e9d7073a1d4098d35e1093d4058dea589cc034f820942f284",
+      "dimensions": [
+        1720,
+        1230
+      ],
+      "purpose": "Si2 native DOS redrawn from stored dataset"
+    },
+    {
+      "raw_name": "nanotube-perspective.png",
+      "raw_sha256": "14cb8014b3d24753b469e2b485eede89cf1460fdd896386f609ce829c20aed2e",
+      "raw_dimensions": [
+        2400,
+        1664
+      ],
+      "crop_xyxy": [
+        1120,
+        600,
+        1810,
+        1350
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-nanotube-perspective.png",
+      "asset_sha256": "420a526aa63063943f654a66bb61c6a5991b5f2deec145e729952dc9593cb3dd",
+      "dimensions": [
+        690,
+        750
+      ],
+      "purpose": "Imported 32-site carbon nanotube in native viewer"
+    },
+    {
+      "raw_name": "nanotube-axis-c.png",
+      "raw_sha256": "0e9ab07dd7398cc72134f3cc97ccb8d08be038390cf3002e4352f324f7908607",
+      "raw_dimensions": [
+        2400,
+        1664
+      ],
+      "crop_xyxy": [
+        1120,
+        600,
+        1810,
+        1350
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-nanotube-axis-c.png",
+      "asset_sha256": "65a2e533c5137269890a9260025e3878c68de51ad52778ddeb6b496b3e75c255",
+      "dimensions": [
+        690,
+        750
+      ],
+      "purpose": "Same carbon nanotube viewed towards c axis"
+    },
+    {
+      "raw_name": "nanowire-perspective.png",
+      "raw_sha256": "6a8e159ecd1423879b766e0db8ac3b2341b5da57ec5277ab676cc258a9f8cbe0",
+      "raw_dimensions": [
+        2400,
+        1664
+      ],
+      "crop_xyxy": [
+        610,
+        355,
+        2330,
+        1590
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-nanowire-perspective.png",
+      "asset_sha256": "b6201c73b23ebccbe3e7f43f3f0c5c8aee795684aff4bce3d40029285c15dd7a",
+      "dimensions": [
+        1720,
+        1235
+      ],
+      "purpose": "Imported 24-site Cu nanowire in native viewer"
+    },
+    {
+      "raw_name": "nscf-process-resources.png",
+      "raw_sha256": "2a9181205af930d413c898ed2c872589a979f9c3ee72b1e85a26bb8d8412652e",
+      "raw_dimensions": [
+        2400,
+        1664
+      ],
+      "crop_xyxy": [
+        1800,
+        875,
+        2325,
+        1535
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-nscf-process-resources.png",
+      "asset_sha256": "fc995a3d5a9a40b40074e949ec20fbcda590feceed6231b3fc86693dbf432e52",
+      "dimensions": [
+        525,
+        660
+      ],
+      "purpose": "NSCF resource fields; two workers one thread"
+    },
+    {
+      "raw_name": "band-resource-options.png",
+      "raw_sha256": "334c191b631c6be825a1d0daa2d9be1336d7a1a5d4daab21f7b9b6f5e6da62b6",
+      "raw_dimensions": [
+        2400,
+        1664
+      ],
+      "crop_xyxy": [
+        1800,
+        1040,
+        2325,
+        1535
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-band-resource-options.png",
+      "asset_sha256": "8bb91ee6df80a82d80f466f6f40e79361aa8ee9c057df3084c2bcd4bf9cac1b7",
+      "dimensions": [
+        525,
+        495
+      ],
+      "purpose": "Band Calculation resource choices with NSCF inheritance"
+    },
+    {
+      "raw_name": "llm-ollama.png",
+      "raw_sha256": "9757b488b9860b5e26f77689c4cf88755b2b07bfce30d1e008d785da50fb170c",
+      "raw_dimensions": [
+        1360,
+        1164
+      ],
+      "crop_xyxy": [
+        35,
+        330,
+        1325,
+        580
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-llm-ollama.png",
+      "asset_sha256": "f758bbc99b92a9205b40abdd355d3804bd75a11a590ccd9d42e2cebef3cec372",
+      "dimensions": [
+        1290,
+        250
+      ],
+      "purpose": "Ollama connection fields; configuration example only"
+    },
+    {
+      "raw_name": "llm-openai-compatible.png",
+      "raw_sha256": "d1e897b45fa2a5171183464dcfadda8ae5d2a7884809d8e851761eb69860565c",
+      "raw_dimensions": [
+        1360,
+        1164
+      ],
+      "crop_xyxy": [
+        35,
+        380,
+        1325,
+        645
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-llm-openai-compatible.png",
+      "asset_sha256": "95504d0a772c82365c74aba35aa5cae98ef36f291d1114c5fd349892ca308ece",
+      "dimensions": [
+        1290,
+        265
+      ],
+      "purpose": "OpenAI-compatible fields; masked dummy credential; not tested"
+    },
+    {
+      "raw_name": "llm-question-input.png",
+      "raw_sha256": "65b9928643515e7de3821bfa0a5d07389ae73694244036a9e831ec1aeaa6a45a",
+      "raw_dimensions": [
+        2400,
+        1664
+      ],
+      "crop_xyxy": [
+        610,
+        1500,
+        1580,
+        1585
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-llm-question-input.png",
+      "asset_sha256": "8f988a954c9a1f84a63b655da766f0f145b350a63d9dcc8af12800855d36d90b",
+      "dimensions": [
+        970,
+        85
+      ],
+      "purpose": "Unsent question with dollar prefix in actual command input"
+    },
+    {
+      "raw_name": "materials-project-si-results.png",
+      "raw_sha256": "cb16a8624086dea50175a5819e8b144214fcd2173bec92b8b3b4ced4a2c6c425",
+      "raw_dimensions": [
+        2040,
+        1484
+      ],
+      "crop_xyxy": [
+        15,
+        75,
+        2025,
+        920
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-materials-project-si-results.png",
+      "asset_sha256": "bd5e9d5aa728d3fba110639ed77e38db1f30e16f7e02416b63a5b16878c38282",
+      "dimensions": [
+        2010,
+        845
+      ],
+      "purpose": "Si periodic table selection and query modes"
+    },
+    {
+      "raw_name": "materials-project-si-results.png",
+      "raw_sha256": "cb16a8624086dea50175a5819e8b144214fcd2173bec92b8b3b4ced4a2c6c425",
+      "raw_dimensions": [
+        2040,
+        1484
+      ],
+      "crop_xyxy": [
+        15,
+        920,
+        1075,
+        1395
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-materials-project-si-results-identity.png",
+      "asset_sha256": "3e668c72b0620dd9ca1c9576032bc414bbecd2c7f069f69df73145c7864ee0e4",
+      "dimensions": [
+        1060,
+        475
+      ],
+      "purpose": "Si query results, selected mp-149, first five identity columns"
+    },
+    {
+      "raw_name": "materials-project-imported-si.png",
+      "raw_sha256": "904aa3484e3fb7c151e5a7a2e7e05a2b4189b197c18a1ab4045c12b3a6eb43f2",
+      "raw_dimensions": [
+        2400,
+        1664
+      ],
+      "crop_xyxy": [
+        610,
+        355,
+        2330,
+        1590
+      ],
+      "asset": "docs/manual-zh/publication-assets/revision-materials-project-imported-si.png",
+      "asset_sha256": "075f5af11304bb57e8f39c9146c02e190f209e18da2ff3777dd6686d2e4618c4",
+      "dimensions": [
+        1720,
+        1235
+      ],
+      "purpose": "Actual downloaded mp-149 primitive silicon structure"
+    }
+  ]
+}

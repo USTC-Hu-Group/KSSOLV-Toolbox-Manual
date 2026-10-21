@@ -31,7 +31,7 @@ XSF & 带标签的二维或三维 Datagrid，可带原子结构。每个网格�
 
 Cube 和 XSF 的标量不统一解释为电子密度，界面可能显示 \file{arbitrary}。这表示查看器保留了源数值，而没有为所有文件强行指定同一个物理单位。即使图形看起来像电荷分布，也应依据计算来源解释数值。
 
-\subsection{CHGCAR 的自旋通道}
+\subsection{\headinglatin{CHGCAR} 的自旋通道}
 \index{CHGCAR@CHGCAR}
 
 非自旋 CHGCAR 通常使用 \file{total}。对于共线自旋数据，\file{diff} 表示自旋差对应的磁化密度，查看器还提供派生的 \file{up} 与 \file{down}：
@@ -64,7 +64,7 @@ Cube 和 XSF 的标量不统一解释为电子密度，界面可能显示 \file{
 \centering
 % 原图3024×1758；仅裁切场与晶胞，去掉浏览器、账号和调试区域。
 \includegraphics[width=112mm]{publication-assets/crop-53085697480f4dfda16f.png}
-\caption{Online中\file{CHGCAR.nospin.gz}的实际总电荷密度等值面。网格为$32\times32\times32$，通道为\ui{Total charge density}；正阈值为$0.04000\,\text{\AA}^{-3}$，负面关闭，透明度为0.72。}
+\caption{在线版中\file{CHGCAR.nospin.gz}的实际总电荷密度等值面。网格为$32\times32\times32$，通道为\ui{Total charge density}；正阈值为$0.04000\,\text{\AA}^{-3}$，负面关闭，透明度为0.72。}
 \label{fig:volume-total-isosurface}
 \end{figure}
 
@@ -185,7 +185,7 @@ $z$ & 标准差倍数，无量纲；用于将统计位置换成实际阈值\\
 
 若边界处出现表面截断，先检查晶胞边界和周期设置，再判断是否来自网格本身。使用较高质量的图像导出可以使文字和边缘更清楚，但无法弥补源数据采样过粗的问题。
 
-\section{Miller 切面：查看内部数值}
+\section{\headinglatin{Miller} 切面：查看内部数值}
 \index{Qiemian@切面}
 \index{Miller qiemian@Miller 切面}
 
@@ -205,7 +205,7 @@ $z$ & 标准差倍数，无量纲；用于将统计位置换成实际阈值\\
 \end{equation}
 $(0,0,1)$因此给出$w=1/2$；$(1,1,0)$给出$u+v=1$，仍经过网格中心。这里的归一化位置横跨采样范围，不能一概当作完整晶胞的分数坐标。查看器再依据体素矢量把该平面映射到真实空间，所以斜网格也保留相应取向。改变整数组是在改变中心平面的方向，而不是沿某一轴移动它。
 
-\subsection{示例：观察 Cube 的(110)切面}
+\subsection{示例：观察 \headinglatin{Cube} 的(110)切面}
 
 \begin{steps}
   \item 打开\file{elec.cube.gz}，核对摘要中的网格为$23\times23\times24$，通道为\ui{Dataset 1}，单位为\file{arbitrary}。
@@ -222,7 +222,7 @@ $(0,0,1)$因此给出$w=1/2$；$(1,1,0)$给出$u+v=1$，仍经过网格中心。
 \centering
 % 原生高清实机图；矩形裁切完整模型，不使用384×768的切面导出PNG作主图。
 \includegraphics[width=112mm]{publication-assets/crop-aa00ad998951381ace74.png}
-\caption{Online中\file{elec.cube.gz}的实际(110)切面。网格为$23\times23\times24$，通道为\ui{Dataset 1}，标量单位为\file{arbitrary}；采用\ui{Cool--warm}、线性插值和0.0034185至0.2的颜色范围。}
+\caption{在线版中\file{elec.cube.gz}的实际(110)切面。网格为$23\times23\times24$，通道为\ui{Dataset 1}，标量单位为\file{arbitrary}；采用\ui{Cool--warm}、线性插值和0.0034185至0.2的颜色范围。}
 \label{fig:volume-miller110}
 \end{figure}
 
@@ -272,13 +272,13 @@ I、J、K 的裁剪上下限以 0 到 1 的比例表示，可去掉盒子的一�
   \item 保留原子与晶胞，关闭化学键、多面体及外围映像。关闭设置面板并按I隐藏摘要与分布图，转动视图观察内部的连续变化。需要核对文件信息时，再按I恢复辅助界面。
 \end{steps}
 
-图\ref{fig:volume-direct}来自这次Online Chrome中的实际显示，设置局部见图\ref{fig:volume-direct-settings}。I、J、K在这里表示网格方向上的裁剪比例，与前节Miller切面的整数组定义不同；它们也不一定与全局笛卡尔坐标轴重合。将裁剪恢复为0至1即可重新显示完整体积，源网格仍为$23\times23\times24$。
+图\ref{fig:volume-direct}来自这次在线版 Chrome中的实际显示，设置局部见图\ref{fig:volume-direct-settings}。I、J、K在这里表示网格方向上的裁剪比例，与前节Miller切面的整数组定义不同；它们也不一定与全局笛卡尔坐标轴重合。将裁剪恢复为0至1即可重新显示完整体积，源网格仍为$23\times23\times24$。
 
 \begin{figure}[H]
 \centering
 % 隐藏Overlay后的完整晶胞原生截图；裁除浏览器、工具栏和所有辅助面板。
 \includegraphics[width=112mm]{publication-assets/crop-68bb0517e51ea1057170.png}
-\caption{Online Chrome中\file{elec.cube.gz}的实际直接体渲染画面。本次使用\ui{Direct volume (GPU)}，未出现降级提示；\ui{Dataset 1}的颜色范围为0.0034185至0.2，I方向显示0.25至0.75，原子与完整晶胞轮廓用于定位。}
+\caption{在线版 Chrome中\file{elec.cube.gz}的实际直接体渲染画面。本次使用\ui{Direct volume (GPU)}，未出现降级提示；\ui{Dataset 1}的颜色范围为0.0034185至0.2，I方向显示0.25至0.75，原子与完整晶胞轮廓用于定位。}
 \label{fig:volume-direct}
 \end{figure}
 
@@ -341,7 +341,7 @@ CSV 的坐标列以 \AA 输出，数值列保留通道内部采用的单位。�
 
 完成一次观察后，可以为数据与图像建立对应名称，例如在文件名中包含体系、通道和切面。对 CHGCAR 的 \file{total} 与 \file{diff} 分别保留图像，避免用“密度图”概括含义不同的通道。在图注中说明正负面的颜色和阈值；在切面图中说明颜色范围。读者无需打开原文件，也应能判断图上颜色和表面代表什么。
 
-若图形用于学生报告，可保留一张带完整摘要和设置的工作截图，再导出一张布局整洁的结果图。前者便于自己复查，后者用于正文展示。最终选择应围绕要说明的现象：等值面强调形状和连接，切面强调局部变化，体渲染强调空间层次，三者各有用处。
+若图形用于研究报告，可保留一张带完整摘要和设置的工作截图，再导出一张布局整洁的结果图。前者便于自己复查，后者用于正文展示。最终选择应围绕要说明的现象：等值面强调形状和连接，切面强调局部变化，体渲染强调空间层次，三者各有用处。
 
 \section{图像没有按预期出现时}
 

@@ -145,7 +145,7 @@ Shift+Cmd/Ctrl+Z & 重做。\\
 Esc & 退出当前工具或清除选择。\\
 \end{longtable}
 
-吸附物放置中的鼠标动作另有用途：左拖改变取向，Alt+左拖调锚定距离，右拖绕锚定方向旋转。与普通观察视角的动作不同，开始操作时留意当前工具。保存项目使用 Cmd/Ctrl+S；正式 Online 中，保存云端项目后还需下载才能取得本机副本。
+吸附物放置中的鼠标动作另有用途：左拖改变取向，Alt+左拖调锚定距离，右拖绕锚定方向旋转。与普通观察视角的动作不同，开始操作时留意当前工具。保存项目使用 Cmd/Ctrl+S；正式在线版中，保存云端项目后还需下载才能取得本机副本。
 
 \Needspace{145mm}
 \section{中英文术语}
@@ -184,7 +184,7 @@ DOS / PDOS & 态密度／投影态密度，后者还要明确投影对象。\\
 
 \ui{预览}是检查尚未提交的几何效果，\ui{应用}接受当前编辑，\ui{保存}将工作写入文件。\ui{重置}结构恢复编辑基准，\ui{Reset camera}只是重新取景。\ui{Repeat cell}扩大显示范围，\ui{构建超胞}扩大模型。这些命令的差别不在画面是否发生变化，而在模型或文件中的哪些信息被改变。
 
-在 Online 中，上传、导入、保存和下载也各有位置：上传把本机文件放入云端目录，导入把文件内容加入当前项目，保存把项目写入云端文件，下载取得本机副本。记住这一组对应关系，就容易判断下一步应到项目浏览器还是\ui{文件}面板操作。
+在在线版中，上传、导入、保存和下载也各有位置：上传把本机文件放入云端目录，导入把文件内容加入当前项目，保存把项目写入云端文件，下载取得本机副本。记住这一组对应关系，就容易判断下一步应到项目浏览器还是\ui{文件}面板操作。
 
 \section{工作流任务速查}
 
@@ -236,22 +236,22 @@ DOS / PDOS & 态密度／投影态密度，后者还要明确投影对象。\\
 \file{water.xyz} & 水分子几何与坐标导入练习。\\
 \file{silicon.cif} & 8 位点硅常规晶胞，边长约 $5.44370\,\text{\AA}$，用于工作区与硅计算教程。\\
 \file{Si.poscar} & 8 位点硅晶胞，边长约 $5.46873\,\text{\AA}$，用于超胞与空位建模练习。\\
-\file{Si-ground-state.ks} & 第3章实际从Online保存并下载到本机的硅结构项目；未运行SCF。\\
+\file{Si-ground-state.ks} & 第3章实际从在线版保存并下载到本机的硅结构项目；未运行SCF。\\
 \file{Si-introduction.ks} & 第4章实际保存的硅导入项目，作为第7章继续建模的起点。\\
 \file{Si-vacancy-tutorial.ks} & 第7章实机保存的空位项目，含对照硅结构与63位点空位模型。\\
-\file{Si-primitive-BZ-Online-050.pdf} & 二位点硅原胞在Online中由\ui{Symmetry}模板实际生成的三维布里渊区与路径矢量图；无需SCF。\\
+\file{Si-primitive-BZ-Online-050.pdf} & 二位点硅原胞在在线版中由\ui{Symmetry}模板实际生成的三维布里渊区与路径矢量图；无需SCF。\\
 \file{benzene-ring.json} & 六碳芳香环骨架，边长 $1.4\,\text{\AA}$，尚未补氢。\\
 \file{benzene.json}\newline\file{benzene-optimized.json} & 苯补氢后的初始结构，以及通用分子模型优化后的参考结构。\\
 \file{pyridine.json}\newline\file{pyridine-optimized.json} & 中性单重态吡啶的初始与通用分子模型优化结构，保留六条芳香键。\\
 \file{ethanol-backbone.json}\newline\file{ethanol-initial.json} & 乙醇共线重原子骨架，以及补氢后的初始结构。\\
 \file{ethanol-edited.json}\newline\file{ethanol-cleaned.json}\newline\file{ethanol-optimized.json} & 乙醇几何编辑、规则整理与通用分子模型优化的三个状态，便于比较。\\
-\file{ethanol-angle1095.json} & Online中编辑并导出的中性单重态乙醇，9个原子、8条显式键，C1--C2--O3键角为$109.5^\circ$。\\
+\file{ethanol-angle1095.json} & 在线版中编辑并导出的中性单重态乙醇，9个原子、8条显式键，C1--C2--O3键角为$109.5^\circ$。\\
 \file{ethanol-angle1095.png} & 同一乙醇从原子查看器PNG菜单导出的图像，4032\,$\times$\,1964像素。\\
 \file{ethanol-angle1095-scene.json} & 同一模型的原子场景JSON，保留显示位点与连接记录；与用于继续编辑的结构JSON分别保存。\\
 \file{Cu-fcc.cif}\newline\file{Cu-vacancy.cif} & $a=3.61\,\text{\AA}$ 的四位点铜晶胞，以及三位点空位候选。\\
 \file{Pt-fcc.cif}\newline\file{Pt111-slab.cif} & $a=3.92\,\text{\AA}$ 的铂体相晶胞及按第8章参数生成的四层 (111) 薄片。\\
 \file{Pt111-normal-c.json}\newline\file{oh-fragment.mol}\newline\file{Pt111-OH-outward.cif} & 法向晶胞、含单键的 O--H 输入，以及按参数向外放置后的六位点吸附几何。\\
-\file{Pt111-OH-Online-050.json} & Online中实际放置O--H并归胞后导出的六位点结构；O/H法向高度为2.00/2.96\,\AA，O--H长0.96\,\AA。\\
+\file{Pt111-OH-Online-050.json} & 在线版中实际放置O--H并归胞后导出的六位点结构；O/H法向高度为2.00/2.96\,\AA，O--H长0.96\,\AA。\\
 \file{Pt111-OH-candidate-1.json} & 144项参考几何候选中评分第一的结构，供比较锚点、高度和转角。\\
 \file{modeling_examples.m}\newline\file{verify_modeling_examples.m} & 建模案例的生成与重新导入核对脚本，附 JSON 报告；具体文件说明见\file{MODELING-CASES.zh-CN.md}。\\
 \file{PEO3-PPO4-PEO3.json}\newline\file{PE6-PP14-seed91.json} & 嵌段链与精确组成无规链，分别为84与164个原子的初始结构。\\
@@ -273,22 +273,22 @@ DOS / PDOS & 态密度／投影态密度，后者还要明确投影对象。\\
 \file{water-packing.json}\newline\file{water10-ethanol10-packed.json} & 有显式连接的水分子输入，以及10水/10乙醇的低密度初始装填。\\
 \file{interface_packing_examples.m} & 双层候选、混合物装填与独立几何检查；见\file{INTERFACE-PACKING-CASES.zh-CN.md}。\\
 \file{h2-tutorial.ks} & 氢分子教程项目，供查看结构与工作流。\\
-\file{H2-Online-SCF-050.ks} & 本轮Online实际运行、云端保存并下载的氢分子SCF项目，含7步收敛记录。\\
+\file{H2-Online-SCF-050.ks} & 本轮在线版实际运行、云端保存并下载的氢分子SCF项目，含7步收敛记录。\\
 \file{silicon-tutorial.ks} & 硅教程项目，供查看相应工作流。\\
-\file{h2_scf_and_relax.m} & 完整 MATLAB 中的氢分子 SCF 与几何优化复算脚本。\\
-\file{silicon_example.m} & 完整 MATLAB 中的八原子硅 SCF 与 DOS 复算脚本。\\
+\file{h2_scf_and_relax.m} & 完整 MATLAB\regmark{} 中的氢分子 SCF 与几何优化复算脚本。\\
+\file{silicon_example.m} & 完整 MATLAB\regmark{} 中的八原子硅 SCF 与 DOS 复算脚本。\\
 \file{silicon_primitive_example.m} & 二原子标准硅原胞能带复算脚本。\\
-\file{silicon-band-primitive.ks} & 二原子硅原胞的能带与对称性教学项目。\\
+\file{silicon-band-primitive.ks} & 二原子硅原胞的能带与对称性示例项目。\\
 \file{CHGCAR-teaching} & 体数据导入与查看示例。\\
 \file{CHGCAR.nospin.gz} & 非自旋 CHGCAR，用于总密度观察。\\*
 \file{CHGCAR.spin.gz} & 自旋 CHGCAR，用于通道与正负面比较。\\*
 \file{elec.cube.gz} & Cube 体数据，用于切面与导出练习。\\*
-\file{elec.total.slice-1_1_0.csv} & Online导出的(110)切面数值，1568行数据；坐标为\AA，数值保留通道内部单位。\\
+\file{elec.total.slice-1_1_0.csv} & 在线版导出的(110)切面数值，1568行数据；坐标为\AA，数值保留通道内部单位。\\
 \file{elec.total.slice-1_1_0.png} & 同一切面的RGBA图像，384\,$\times$\,768像素，用于核对配色和切面形状。\\
 \file{datagrid_3d.xsf} & XSF 标量网格，用于格式与切面观察。\\
 \end{longtable}
 
-随书的硅结构与氢分子几何各有用途，数值比较时不要只按元素名把它们互换。脚本面向完整 MATLAB，在仓库环境中运行，所需产品与调用方式见计算章节；独立应用用户可直接完成图形教程，无需把脚本当作启动步骤。
+随书的硅结构与氢分子几何各有用途，数值比较时不要只按元素名把它们互换。脚本需要完整 MATLAB\regmark{}及配套工具箱，配置好软件路径后从本手册仓库根目录运行，所需产品与调用方式见计算章节和随书案例说明。三种使用方式均可按正文完成相应的图形教程，无需把复算脚本当作启动步骤。
 
 \subsection{为自己的例子保留说明}
 
@@ -304,13 +304,13 @@ DOS / PDOS & 态密度／投影态密度，后者还要明确投影对象。\\
 \small
 \RaggedRight
 \begin{enumerate}[itemsep=4pt]
-\item Liu Yang, Jinlong Yang, and Wei Hu. \textit{KSSOLV Toolbox: A MATLAB Graphical User Interface for Plane-Wave Density Functional Theory Calculations}. Journal of Chemical Theory and Computation, 2026. \href{https://doi.org/10.1021/acs.jctc.6c00523}{doi:10.1021/acs.jctc.6c00523}. 本条按软件仓库的推荐引用列出。
-\item Shizhe Jiao et al. \textit{KSSOLV 2.0: An efficient MATLAB toolbox for solving the Kohn--Sham equations with plane-wave basis set}. Computer Physics Communications, 279, 108424, 2022. \href{https://doi.org/10.1016/j.cpc.2022.108424}{doi:10.1016/j.cpc.2022.108424}。
+\item Liu Yang, Jinlong Yang, and Wei Hu. \textit{KSSOLV Toolbox: A MATLAB\regmark{} Graphical User Interface for Plane-Wave Density Functional Theory Calculations}. Journal of Chemical Theory and Computation, 2026. \href{https://doi.org/10.1021/acs.jctc.6c00523}{doi:10.1021/acs.jctc.6c00523}. 本条按软件仓库的推荐引用列出。
+\item Shizhe Jiao et al. \textit{KSSOLV 2.0: An efficient MATLAB\regmark{} toolbox for solving the Kohn--Sham equations with plane-wave basis set}. Computer Physics Communications, 279, 108424, 2022. \href{https://doi.org/10.1016/j.cpc.2022.108424}{doi:10.1016/j.cpc.2022.108424}。
 \item P. Hohenberg and W. Kohn. \textit{Inhomogeneous Electron Gas}. Physical Review, 136, B864--B871, 1964. \href{https://doi.org/10.1103/PhysRev.136.B864}{doi:10.1103/PhysRev.136.B864}。
 \item W. Kohn and L. J. Sham. \textit{Self-Consistent Equations Including Exchange and Correlation Effects}. Physical Review, 140, A1133--A1138, 1965. \href{https://doi.org/10.1103/PhysRev.140.A1133}{doi:10.1103/PhysRev.140.A1133}。
 \item John P. Perdew, Kieron Burke, and Matthias Ernzerhof. \textit{Generalized Gradient Approximation Made Simple}. Physical Review Letters, 77, 3865--3868, 1996. \href{https://doi.org/10.1103/PhysRevLett.77.3865}{doi:10.1103/PhysRevLett.77.3865}。
 \item D. R. Hamann. \textit{Optimized norm-conserving Vanderbilt pseudopotentials}. Physical Review B, 88, 085117, 2013. \href{https://doi.org/10.1103/PhysRevB.88.085117}{doi:10.1103/PhysRevB.88.085117}。
 \end{enumerate}
 
-软件文档可从 \href{https://github.com/USTC-Hu-Group/KSSOLV-Toolbox}{KSSOLV Toolbox 项目主页}与\href{https://doc.kssolv.org/}{KSSOLV 文档}继续阅读；\href{https://arxiv.org/abs/2206.01993}{KSSOLV 2.0 论文预印本}也可公开查阅。物理常数的标准资料见\href{https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants}{NIST CODATA 常数资料}，独立应用运行环境见\href{https://www.mathworks.com/help/compiler/matlab-runtime.html}{MathWorks MATLAB Runtime 说明}。本书的教程组织与版面参考了 COMSOL AB 的 \textit{COMSOL Server Manual}、\textit{Physics Builder Manual}（6.4）、\href{https://doc.comsol.com/6.4/doc/com.comsol.help.comsol/IntroductionToCOMSOLMultiphysics.pdf}{Introduction to COMSOL Multiphysics}及\href{https://doc.comsol.com/6.4/doc/com.comsol.help.comsol/helpdesk/helpdesk.html}{COMSOL 6.4 文档}；产品操作和科学内容以 KSSOLV Toolbox 自身为准。
+补充资料见\href{https://github.com/USTC-Hu-Group/KSSOLV-Toolbox}{项目主页}、\href{https://doc.kssolv.org/}{软件文档}、\href{https://www.mathworks.com/help/compiler/matlab-runtime.html}{MATLAB\regmark{} Runtime说明}及\href{https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants}{NIST常数资料}。本书行文与版面参考COMSOL AB的\textit{Server Manual}、\textit{Physics Builder Manual}、\href{https://doc.comsol.com/6.4/doc/com.comsol.help.comsol/IntroductionToCOMSOLMultiphysics.pdf}{入门手册}与\href{https://doc.comsol.com/6.4/doc/com.comsol.help.comsol/helpdesk/helpdesk.html}{6.4文档}。
 \endgroup
