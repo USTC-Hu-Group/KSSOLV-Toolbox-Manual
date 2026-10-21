@@ -64,7 +64,7 @@ Cube 和 XSF 的标量不统一解释为电子密度，界面可能显示 \file{
 \centering
 % 原图3024×1758；仅裁切场与晶胞，去掉浏览器、账号和调试区域。
 \includegraphics[width=112mm]{publication-assets/crop-53085697480f4dfda16f.png}
-\caption{在线版中\file{CHGCAR.nospin.gz}的实际总电荷密度等值面。网格为$32\times32\times32$，通道为\ui{Total charge density}；正阈值为$0.04000\,\text{\AA}^{-3}$，负面关闭，透明度为0.72。}
+\caption{\file{CHGCAR.nospin.gz}的实际总电荷密度等值面。网格为$32\times32\times32$，通道为\ui{Total charge density}；正阈值为$0.04000\,\text{\AA}^{-3}$，负面关闭，透明度为0.72。}
 \label{fig:volume-total-isosurface}
 \end{figure}
 
@@ -138,7 +138,7 @@ $z$ & 标准差倍数，无量纲；用于将统计位置换成实际阈值\\
 \vspace{0pt}
 \includegraphics[width=\linewidth]{publication-assets/crop-f580c4c4a5007b46634f.png}
 \end{minipage}
-\caption{同一总密度视图的实际摘要与阈值设置。左侧列出网格、通道和单位；右侧采用绝对阈值0.04000，关闭负面，透明度为0.72。两个局部来自浏览器150\%缩放时的原生截图。}
+\caption{同一总密度视图的实际摘要与阈值设置。左侧列出网格、通道和单位；右侧采用绝对阈值0.04000，关闭负面，透明度为0.72。}
 \label{fig:volume-total-settings}
 \end{figure}
 
@@ -222,7 +222,7 @@ $(0,0,1)$因此给出$w=1/2$；$(1,1,0)$给出$u+v=1$，仍经过网格中心。
 \centering
 % 原生高清实机图；矩形裁切完整模型，不使用384×768的切面导出PNG作主图。
 \includegraphics[width=112mm]{publication-assets/crop-aa00ad998951381ace74.png}
-\caption{在线版中\file{elec.cube.gz}的实际(110)切面。网格为$23\times23\times24$，通道为\ui{Dataset 1}，标量单位为\file{arbitrary}；采用\ui{Cool--warm}、线性插值和0.0034185至0.2的颜色范围。}
+\caption{\file{elec.cube.gz}的实际(110)切面。网格为$23\times23\times24$，通道为\ui{Dataset 1}，标量单位为\file{arbitrary}；采用\ui{Cool--warm}、线性插值和0.0034185至0.2的颜色范围。}
 \label{fig:volume-miller110}
 \end{figure}
 
@@ -272,13 +272,13 @@ I、J、K 的裁剪上下限以 0 到 1 的比例表示，可去掉盒子的一�
   \item 保留原子与晶胞，关闭化学键、多面体及外围映像。关闭设置面板并按I隐藏摘要与分布图，转动视图观察内部的连续变化。需要核对文件信息时，再按I恢复辅助界面。
 \end{steps}
 
-图\ref{fig:volume-direct}来自这次在线版 Chrome中的实际显示，设置局部见图\ref{fig:volume-direct-settings}。I、J、K在这里表示网格方向上的裁剪比例，与前节Miller切面的整数组定义不同；它们也不一定与全局笛卡尔坐标轴重合。将裁剪恢复为0至1即可重新显示完整体积，源网格仍为$23\times23\times24$。
+图\ref{fig:volume-direct}展示直接体渲染的实际效果，设置局部见图\ref{fig:volume-direct-settings}。I、J、K在这里表示网格方向上的裁剪比例，与前节Miller切面的整数组定义不同；它们也不一定与全局笛卡尔坐标轴重合。将裁剪恢复为0至1即可重新显示完整体积，源网格仍为$23\times23\times24$。
 
 \begin{figure}[H]
 \centering
 % 隐藏Overlay后的完整晶胞原生截图；裁除浏览器、工具栏和所有辅助面板。
 \includegraphics[width=112mm]{publication-assets/crop-68bb0517e51ea1057170.png}
-\caption{在线版 Chrome中\file{elec.cube.gz}的实际直接体渲染画面。本次使用\ui{Direct volume (GPU)}，未出现降级提示；\ui{Dataset 1}的颜色范围为0.0034185至0.2，I方向显示0.25至0.75，原子与完整晶胞轮廓用于定位。}
+\caption{\file{elec.cube.gz}的实际直接体渲染画面。本次使用\ui{Direct volume (GPU)}，未出现降级提示；\ui{Dataset 1}的颜色范围为0.0034185至0.2，I方向显示0.25至0.75，原子与完整晶胞轮廓用于定位。}
 \label{fig:volume-direct}
 \end{figure}
 

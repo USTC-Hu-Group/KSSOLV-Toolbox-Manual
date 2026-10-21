@@ -14,7 +14,7 @@
   "changes": [
     "Reorder authored mode lists, comparison table and introductory subsections",
     "Delete private deployment address clause",
-    "Delete requested COMSOL style-reference wording and trademark sentence from front matter"
+    "Delete requested style-reference wording and third-party trademark sentence from front matter"
   ],
   "checks": {
     "latexDiagnostics": "passed",

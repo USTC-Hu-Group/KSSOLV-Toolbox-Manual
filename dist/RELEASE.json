@@ -1,14 +1,14 @@
 {
   "manualVersion": "V0.5.0",
-  "softwareRelease": "upcoming V0.5.0",
+  "softwareRelease": "V0.5.0",
   "language": "zh-CN",
-  "pages": 314,
+  "pages": 313,
   "pdf": {
     "file": "KSSOLV_Toolbox_User_Manual_zh-CN.pdf",
-    "bytes": 16888859,
-    "sha256": "ccda9aade50a59375d1d6f43c3e28bb8093a815cd85213fa5e820b52c78ba3af"
+    "bytes": 16884851,
+    "sha256": "fdbb4082049c2a4c53c41e273f9f80d348ffed671c37d43c7e008a8da3e2a143"
   },
   "source": "../docs/manual-zh/main.tex",
   "importBaseline": "../docs/provenance/source-import-0.5.0.json",
-  "revision": "brand-cover-headings-and-file-formats"
+  "revision": "formal-version-wording-and-caption-cleanup"
 }

@@ -1,6 +1,6 @@
 # KSSOLV Toolbox 中文用户手册
 
-本仓库独立维护 **KSSOLV Toolbox V0.5.0** 中文用户手册，包含正式 PDF、完整 LaTeX 源码、排版样式、插图和随书案例。手册共 **314 页**，适用于独立应用程序、MATLAB® 工具箱和 KSSOLV Toolbox Online 三种使用方式，涵盖运行准备、结构建模、计算及结果分析。
+本仓库独立维护 **KSSOLV Toolbox V0.5.0** 中文用户手册，包含正式 PDF、完整 LaTeX 源码、排版样式、插图和随书案例。手册共 **313 页**，适用于独立应用程序、MATLAB® 工具箱和 KSSOLV Toolbox Online 三种使用方式，涵盖运行准备、结构建模、计算及结果分析。
 
 [阅读正式 PDF](dist/KSSOLV_Toolbox_User_Manual_zh-CN.pdf) · [源码与编辑说明](docs/manual-zh/README.md) · [随书案例](docs/manual-zh/examples/README.zh-CN.md)
 
