@@ -5,10 +5,10 @@
   "pages": 313,
   "pdf": {
     "file": "KSSOLV_Toolbox_User_Manual_zh-CN.pdf",
-    "bytes": 16884851,
-    "sha256": "fdbb4082049c2a4c53c41e273f9f80d348ffed671c37d43c7e008a8da3e2a143"
+    "bytes": 16884634,
+    "sha256": "0c4a125b6e998cafe18d3bc8f6a2bb816d99b6a07a9d7f0a041466044257b63d"
   },
   "source": "../docs/manual-zh/main.tex",
   "importBaseline": "../docs/provenance/source-import-0.5.0.json",
-  "revision": "formal-version-wording-and-caption-cleanup"
+  "revision": "reference-heading-and-introduction"
 }

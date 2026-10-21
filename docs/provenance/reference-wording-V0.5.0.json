@@ -1,0 +1,25 @@
+{
+  "manualVersion": "V0.5.0",
+  "baseCommit": "53f092c",
+  "revision": "reference-heading-and-introduction",
+  "pages": 313,
+  "pdfSHA256": "0c4a125b6e998cafe18d3bc8f6a2bb816d99b6a07a9d7f0a041466044257b63d",
+  "changes": [
+    "Rename bibliography heading to 参考文献",
+    "Replace introduction with the requested single sentence"
+  ],
+  "checks": {
+    "latexBuild": "passed",
+    "changedPages": [
+      10,
+      310
+    ],
+    "changedPagesVisuallyReviewed": [
+      10,
+      310
+    ],
+    "otherPageContentStreamsIdentical": 311,
+    "embeddedFontAndUnicodeStreamPairs": 39,
+    "visualIssuesOpen": 0
+  }
+}
