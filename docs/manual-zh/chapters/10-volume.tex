@@ -11,7 +11,7 @@
 
 一个三维标量场可以理解为空间网格上的一组数值。每个网格点具有位置和一个标量，查看器用相邻点之间的插值形成连续显示。网格维度说明三个方向分别有多少采样点；体素矢量、原点和晶胞决定这些点在真实空间中的位置。
 
-网格不一定与笛卡尔坐标轴平行，也不一定正交。尤其在斜晶胞或来自其他程序的数据中，不能根据屏幕上切片的倾斜程度推断文件是否错误。观察前先核对文件来源、维度和单位，再把图形与原子结构联系起来。
+网格不一定与笛卡尔坐标轴平行，也不一定正交。尤其在斜晶胞或来自其他程序的数据中，切片会随网格取向而倾斜。观察前先查看文件来源、维度和单位，再把图形与原子结构联系起来。
 
 同一个文件可以含有多个通道。例如，自旋 CHGCAR 同时包含总电荷密度和磁化信息；一个 Cube 文件也可能存放多个数据集。切换通道改变的是正在显示的标量场，而不只是配色。
 
@@ -58,13 +58,12 @@ Cube 和 XSF 的标量不统一解释为电子密度，界面可能显示 \file{
 
 项目已有的体数据列在 \ui{Volume} 分类之下，双击具体条目即可重新打开。顶层分类用于导入新文件，子条目用于查看已导入数据。侧栏中的工作面板与体数据视图内的显示设置分别管理项目和图像，调整原子比例、通道或切面时使用视图内的设置。
 
-图\ref{fig:volume-total-isosurface}显示随书非自旋文件的一次实际观察。浅蓝色等值面与晶胞一起显示，原子保留在场中，便于判断分布相对于结构的位置。文件、通道与阈值的具体检查见下一节。
+图\ref{fig:volume-total-isosurface}显示随书非自旋文件的总电荷密度等值面。浅蓝色等值面与晶胞一起显示，原子保留在场中，便于判断分布相对于结构的位置。文件、通道与阈值的具体检查见下一节。
 
 \begin{figure}[H]
 \centering
-% 原图3024×1758；仅裁切场与晶胞，去掉浏览器、账号和调试区域。
 \includegraphics[width=112mm]{publication-assets/crop-53085697480f4dfda16f.png}
-\caption{\file{CHGCAR.nospin.gz}的实际总电荷密度等值面。网格为$32\times32\times32$，通道为\ui{Total charge density}；正阈值为$0.04000\,\text{\AA}^{-3}$，负面关闭，透明度为0.72。}
+\caption{\file{CHGCAR.nospin.gz}的总电荷密度等值面。网格为$32\times32\times32$，通道为\ui{Total charge density}；正阈值为$0.04000\,\text{\AA}^{-3}$，负面关闭，透明度为0.72。}
 \label{fig:volume-total-isosurface}
 \end{figure}
 
@@ -88,7 +87,7 @@ Cube 和 XSF 的标量不统一解释为电子密度，界面可能显示 \file{
 
 在\ui{Display mode} 中选择 \ui{Isosurfaces}。正面与负面分别具有开关和阈值。总电荷密度通常主要观察正面；磁化差、轨道等带符号数据可能需要同时显示两种符号。透明度影响可见程度，不改变阈值和源数据。
 
-\ui{Isovalue units} 提供三种阈值表示方式：绝对数值、标准差和百分位。绝对值适合明确的物理阈值；标准差按均值与分布宽度描述位置；百分位则按数据分布选择阈值。比较两个模型的绝对分布时，应使用相同单位与明确的阈值，不能只让两张图“看起来差不多大”。
+\ui{Isovalue units} 提供三种阈值表示方式：绝对数值、标准差和百分位。绝对值适合明确的物理阈值；标准差按均值与分布宽度描述位置；百分位则按数据分布选择阈值。比较两个模型的绝对分布时，应使用相同单位，并明确记录各自阈值。
 
 
 \ui{Absolute value}按所选显示单位直接填写$\tau$，并不把负值变成正值。选择\ui{Standard deviations (σ)}时，输入的是相对均值的标准差倍数$z$，实际阈值为
@@ -129,7 +128,6 @@ $z$ & 标准差倍数，无量纲；用于将统计位置换成实际阈值\\
 
 \begin{figure}[H]
 \centering
-% 两幅均为原始全窗截图的独立裁切；不拼接、重绘或改写像素。
 \begin{minipage}[t]{50mm}
 \vspace{0pt}
 \includegraphics[width=\linewidth]{publication-assets/crop-817224ae41bbaff8bca4.png}
@@ -138,7 +136,7 @@ $z$ & 标准差倍数，无量纲；用于将统计位置换成实际阈值\\
 \vspace{0pt}
 \includegraphics[width=\linewidth]{publication-assets/crop-f580c4c4a5007b46634f.png}
 \end{minipage}
-\caption{同一总密度视图的实际摘要与阈值设置。左侧列出网格、通道和单位；右侧采用绝对阈值0.04000，关闭负面，透明度为0.72。}
+\caption{同一总密度视图的摘要与阈值设置。左侧列出网格、通道和单位；右侧采用绝对阈值0.04000，关闭负面，透明度为0.72。}
 \label{fig:volume-total-settings}
 \end{figure}
 
@@ -154,13 +152,12 @@ $z$ & 标准差倍数，无量纲；用于将统计位置换成实际阈值\\
   \item 继续切换到\file{up}和\file{down}，查看由总密度与差密度得到的两个自旋通道。每次切换后重新检查数值范围与阈值，并为不同通道分别记录显示条件。
 \end{steps}
 
-负磁化密度表示当前自旋约定下的差密度为负，并不表示总电荷密度为负。这个真实样例适合学习负面开关和阈值的关系；若要同时观察正、负两种表面，需要所选数据本身具有相应的取值范围。
+负磁化密度表示当前自旋约定下的差密度为负，并不表示总电荷密度为负。本例说明负面开关与阈值的关系；若要同时观察正、负两种表面，需要所选数据本身具有相应的取值范围。
 
 \begin{figure}[H]
 \centering
-% 完整晶胞局部，裁除浏览器、摘要、工具栏及分布图。
 \includegraphics[width=112mm]{publication-assets/crop-eb58a23d11fe997c90a4.png}
-\caption{\file{CHGCAR.spin.gz}中\ui{Magnetization density}通道的实际等值面。网格为$48\times48\times48$，红色表面的阈值为$-0.0006000\,\text{\AA}^{-3}$，透明度为0.72；绿色球体是叠加显示的原子。}
+\caption{\file{CHGCAR.spin.gz}中\ui{Magnetization density}通道的等值面。网格为$48\times48\times48$，红色表面的阈值为$-0.0006000\,\text{\AA}^{-3}$，透明度为0.72；绿色球体是叠加显示的原子。}
 \label{fig:volume-diff-isosurface}
 \end{figure}
 
@@ -174,7 +171,7 @@ $z$ & 标准差倍数，无量纲；用于将统计位置换成实际阈值\\
 \vspace{0pt}
 \includegraphics[width=\linewidth]{publication-assets/crop-6e54a4267b5bd8c4b3c0.png}
 \end{minipage}
-\caption{磁化密度的实际摘要与阈值设置。正面开关保留在0，负面阈值为$-0.0006000\,\text{\AA}^{-3}$。由于本通道全部为负，只形成负等值面。}
+\caption{磁化密度的摘要与阈值设置。正面开关保留在0，负面阈值为$-0.0006000\,\text{\AA}^{-3}$。由于本通道全部为负，只形成负等值面。}
 \label{fig:volume-diff-settings}
 \end{figure}
 
@@ -213,16 +210,15 @@ $(0,0,1)$因此给出$w=1/2$；$(1,1,0)$给出$u+v=1$，仍经过网格中心。
   \item 在\ui{Colormap}中选择\ui{Cool--warm}，将\ui{Interpolation}设为\ui{Linear}。\ui{Range minimum}保留\literalinput{0.0034185}，把\ui{Range maximum}改为\literalinput{0.2}。
   \item 保留原子与晶胞，将\ui{Atom scale}设为\literalinput{0.22}；关闭化学键、配位多面体、深度明暗及外围映像，使倾斜平面更容易辨认。
   \item 关闭设置面板，转动模型，观察切面穿过晶胞的位置及原子相对于平面的分布。需要比较采样效果时，可切换\ui{Nearest}，观察分块，再恢复\ui{Linear}。
-  \item 记录切面指数、色表、颜色范围和插值方式，再从\ui{Slice export}导出PNG或CSV。实际导出示例的检查见本章后面的导出小节。
+  \item 记录切面指数、色表、颜色范围和插值方式，再从\ui{Slice export}导出PNG或CSV。导出文件的内容见本章后面的导出小节。
 \end{steps}
 
 图\ref{fig:volume-miller110}采用较低的颜色上限，使切面中数值较小区域的变化更明显。超过0.2的值使用色表的高端颜色显示，源数据仍保留原值；CSV也不会将它们截为0.2。本例的红蓝表示所选数值区间的两端，不能仅凭颜色判断数值的正负。
 
 \begin{figure}[H]
 \centering
-% 原生高清实机图；矩形裁切完整模型，不使用384×768的切面导出PNG作主图。
 \includegraphics[width=112mm]{publication-assets/crop-aa00ad998951381ace74.png}
-\caption{\file{elec.cube.gz}的实际(110)切面。网格为$23\times23\times24$，通道为\ui{Dataset 1}，标量单位为\file{arbitrary}；采用\ui{Cool--warm}、线性插值和0.0034185至0.2的颜色范围。}
+\caption{\file{elec.cube.gz}的(110)切面。网格为$23\times23\times24$，通道为\ui{Dataset 1}，标量单位为\file{arbitrary}；采用\ui{Cool--warm}、线性插值和0.0034185至0.2的颜色范围。}
 \label{fig:volume-miller110}
 \end{figure}
 
@@ -238,7 +234,7 @@ $(0,0,1)$因此给出$w=1/2$；$(1,1,0)$给出$u+v=1$，仍经过网格中心。
 \par\vspace{2mm}
 \includegraphics[width=\linewidth]{publication-assets/crop-209a06fc6024f4d5e0ba.png}
 \end{minipage}
-\caption{实际切面摘要和设置局部。左侧核对文件、网格与单位；右侧上方填写同一组Miller指数，下方设置色表、插值及颜色范围。颜色上限0.2只控制显示。}
+\caption{切面摘要和设置局部。左侧核对文件、网格与单位；右侧上方填写同一组Miller指数，下方设置色表、插值及颜色范围。颜色上限0.2只控制显示。}
 \label{fig:volume-miller110-settings}
 \end{figure}
 
@@ -272,23 +268,21 @@ I、J、K 的裁剪上下限以 0 到 1 的比例表示，可去掉盒子的一�
   \item 保留原子与晶胞，关闭化学键、多面体及外围映像。关闭设置面板并按I隐藏摘要与分布图，转动视图观察内部的连续变化。需要核对文件信息时，再按I恢复辅助界面。
 \end{steps}
 
-图\ref{fig:volume-direct}展示直接体渲染的实际效果，设置局部见图\ref{fig:volume-direct-settings}。I、J、K在这里表示网格方向上的裁剪比例，与前节Miller切面的整数组定义不同；它们也不一定与全局笛卡尔坐标轴重合。将裁剪恢复为0至1即可重新显示完整体积，源网格仍为$23\times23\times24$。
+图\ref{fig:volume-direct}展示直接体渲染效果，设置局部见图\ref{fig:volume-direct-settings}。I、J、K在这里表示网格方向上的裁剪比例，与前节Miller切面的整数组定义不同；它们也不一定与全局笛卡尔坐标轴重合。将裁剪恢复为0至1即可重新显示完整体积，源网格仍为$23\times23\times24$。
 
 \begin{figure}[H]
 \centering
-% 隐藏Overlay后的完整晶胞原生截图；裁除浏览器、工具栏和所有辅助面板。
 \includegraphics[width=112mm]{publication-assets/crop-68bb0517e51ea1057170.png}
-\caption{\file{elec.cube.gz}的实际直接体渲染画面。本次使用\ui{Direct volume (GPU)}，未出现降级提示；\ui{Dataset 1}的颜色范围为0.0034185至0.2，I方向显示0.25至0.75，原子与完整晶胞轮廓用于定位。}
+\caption{\file{elec.cube.gz}的直接体渲染画面。显示模式为\ui{Direct volume (GPU)}；\ui{Dataset 1}的颜色范围为0.0034185至0.2，I方向显示0.25至0.75，原子与完整晶胞轮廓用于定位。}
 \label{fig:volume-direct}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-% 两幅独立局部按原图直接裁切，保留参数原生文字，不拼接像素。
 \includegraphics[width=80mm]{publication-assets/crop-3b2d9027085c84d05818.png}
 \par\vspace{2mm}
 \includegraphics[width=80mm]{publication-assets/crop-7567d94dfd7d877833b9.png}
-\caption{本次直接体渲染的实际设置。上方为模式、色表、插值和颜色范围；下方为\ui{Balanced}采样质量、0.72透明度、0.35梯度透明度及三个方向的裁剪比例。}
+\caption{直接体渲染设置。上方为模式、色表、插值和颜色范围；下方为\ui{Balanced}采样质量、0.72透明度、0.35梯度透明度及三个方向的裁剪比例。}
 \label{fig:volume-direct-settings}
 \end{figure}
 
@@ -298,7 +292,6 @@ I、J、K 的裁剪上下限以 0 到 1 的比例表示，可去掉盒子的一�
 
 \ui{Lighting \& surface} 控制原子叠加的环境光、方向光、金属度、粗糙度、亮度和对比度。它们影响图像外观，不改变标量场的大小。制作一组比较图时，保持这些设置一致，并把决定科学含义的通道、阈值和单位写入图注。
 
-% 实机图已覆盖：总密度fig:volume-total-isosurface、磁化密度fig:volume-diff-isosurface、Miller切面fig:volume-miller110、直接体渲染fig:volume-direct；各有独立参数局部。
 
 \section{导出体数据}
 \index{Daochu tuxiang yu shuju@导出图像与数据}
@@ -306,7 +299,7 @@ I、J、K 的裁剪上下限以 0 到 1 的比例表示，可去掉盒子的一�
 \subsection{在视图中采样}
 \index{Caiyang@采样数值}
 
-双击体数据可以显示采样值与网格位置。点探针使用三线性插值，数值不一定等于某一个原始网格点。需要精确比较时，应记录通道与采样位置，而不要只从色彩深浅估读。切面中的最近邻或线性选项另用于切面显示与导出，不改变点探针的插值方式。
+双击体数据可以显示采样值与网格位置。点探针使用三线性插值，数值不一定等于某一个原始网格点。需要精确比较时，应记录通道与采样位置，并使用采样数值。切面中的最近邻或线性选项另用于切面显示与导出，不改变点探针的插值方式。
 
 选择叠加原子时，体数据视图内的原子信息区域可显示笛卡尔与分数坐标，复制按钮保留比面板简写更多的数值精度。原子坐标与标量采样是不同的信息：一个用于定位原子，一个用于读取空间场。
 
@@ -316,7 +309,7 @@ I、J、K 的裁剪上下限以 0 到 1 的比例表示，可去掉盒子的一�
 
 图像导出菜单提供 PNG、JPEG、TIFF、SVG，以及向量和栅格两类 PDF。PNG 和 TIFF 适合保留清晰的栅格图；JPEG 便于压缩分享；SVG 和 PDF 适合插入排版流程。导出前先停止自动旋转，选定取景，确认希望保留的原子、晶胞和辅助对象。
 
-图像只是当前视图的表达。为了让读者理解图像，应在正文或图注写明文件来源、通道、阈值或颜色范围、单位与必要取向。单张导出图不能替代原始数据。
+导出图像时，在正文或图注写明文件来源、通道、阈值或颜色范围、单位与必要取向，并保留相应原始数据。
 
 \subsection{导出等值面和切面}
 \index{CSV@CSV 导出}
@@ -327,15 +320,16 @@ I、J、K 的裁剪上下限以 0 到 1 的比例表示，可去掉盒子的一�
 
 导出后可以做一次简单核对：重新打开 PNG，确认取向、色表和感兴趣区域；再查看 CSV 表头，确认坐标单位与数值列。若希望把两套模型的同一切面画在同一张图中，应先保证切面的空间定义、网格范围和通道一致。相同的 Miller 指数给出相同类型的方向，但晶胞改变后，平面的真实尺寸和经过的位置仍可能不同。
 
-本例实际导出的文件随书保留为\file{elec.total.slice-1_1_0.csv}与同名PNG。CSV有1568个采样位置，其中778个具有有限数值，另790个在体数据边界外，\file{value}记为\file{NaN}。NaN不表示数值为零，作图或统计时应先筛选有效值。
+本例导出文件为\file{elec.total.slice-1_1_0.csv}与同名PNG。CSV有1568个采样位置，其中778个具有有限数值，另790个在体数据边界外，\file{value}记为\file{NaN}。NaN不表示数值为零，作图或统计时应先筛选有效值。
 
-这些有效切面值约为0.003525至2.3995，其中147个仍大于显示上限0.2，可以用来核对颜色设置与源数值的区别。原始切面PNG为$384\times768$像素，适合查看这次导出的颜色图；正文图\ref{fig:volume-miller110}另用高清实机截图呈现空间取向。
+这些有效切面值约为0.003525至2.3995，其中147个仍大于显示上限0.2，可以用来核对颜色设置与源数值的区别。切面PNG为$384\times768$像素，显示采样平面中的颜色分布；图\ref{fig:volume-miller110}同时呈现切面在晶胞中的取向。
 
+\Needspace{8\baselineskip}
 \begin{notebox}{显示单位与 CSV}
-CSV 的坐标列以 \AA 输出，数值列保留通道内部采用的单位。对于 \mbox{CHGCAR}，密度数值按 $\text{\AA}^{-3}$ 理解；即使界面切换为 $\mathrm{bohr}^{-3}$，也不要把这一显示选择直接套到 CSV 的数值列。Cube 和 XSF 的标量单位则应按源文件说明记录。
+CSV 的坐标列以 \AA 输出，数值列保留通道内部采用的单位。对于 \mbox{CHGCAR}，密度数值按 $\text{\AA}^{-3}$ 理解；界面切换为 $\mathrm{bohr}^{-3}$ 时，CSV 数值列仍使用 $\text{\AA}^{-3}$。Cube 和 XSF 的标量单位则应按源文件说明记录。
 \end{notebox}
 
-\ui{Export scene JSON} 导出场景描述，便于保留网格、通道及结构等说明信息。它不包含完整体素数组，也不能代替保存原始场文件；当前相机和全部临时显示调整亦不应只依靠这一文件记录。需要重现图像时，另记阈值、颜色范围和取景，并同时保留原始数据。
+\ui{Export scene JSON} 导出场景描述，便于保留网格、通道及结构等说明信息。它不包含完整体素数组，也不能代替保存原始场文件；相机位置和临时显示设置需另行记录。需要重现图像时，另记阈值、颜色范围和取景，并同时保留原始数据。
 
 \subsection{组织一组可比较的结果}
 
@@ -347,6 +341,6 @@ CSV 的坐标列以 \AA 输出，数值列保留通道内部采用的单位。�
 
 等值面为空，先检查通道、正负面开关和阈值范围。切面颜色几乎一致，查看颜色范围是否过宽。原子遮挡场，减小原子比例或暂时隐藏化学键和多面体。旋转后找不到模型，按空格键重新居中。
 
-直接体渲染需要相应的图形支持。若设备不能使用 WebGL2，查看器可采用 CPU 切片方式，并继续提供切片 PNG/CSV 导出；三维纹理容量不足时也可能回到切面。界面显示的降级原因有助于选择当前设备可用的模式。二维 XSF 本身适合切面显示，不需要强行切换到直接体渲染。
+直接体渲染需要相应的图形支持。若设备不能使用 WebGL2，查看器可采用 CPU 切片方式，并继续提供切片 PNG/CSV 导出；三维纹理容量不足时也可能回到切面。界面显示的降级原因有助于选择当前设备可用的模式。二维XSF使用切面显示。
 
 最后，插值、平滑和更大的导出图片都只改善显示。若研究问题需要更细的空间信息，应回到计算阶段提高源网格分辨率，再重新检查收敛。这样，图像中的细节才有相应数据作为依据。

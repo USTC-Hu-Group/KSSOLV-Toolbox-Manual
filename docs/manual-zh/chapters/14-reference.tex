@@ -31,12 +31,12 @@
 CIF、MCIF & 晶格、分数位置、元素与占位等晶体信息；磁结构信息取决于文件与相应读取功能。\\
 POSCAR、CONTCAR、VASP & 晶格、元素与周期原子位置，适合交换显式晶胞和超胞。\\
 XYZ & 元素与笛卡尔坐标，适合小分子几何；普通 XYZ 不完整保存晶胞和显式键级。\\
-MOL、SDF、MOL2 & 分子原子与连接信息。当前版本导出 MOL 时不能正确保留 1.5 芳香键；本书的芳香分子使用 JSON 保存。\\
-JSON、MSON & 结构化保存对象信息；本书分子 JSON 已核对原子、显式键、化学属性与坐标的往返一致性。\\
+MOL、SDF、MOL2 & 分子原子与连接信息。MOL导出不支持1.5芳香键，含芳香键的分子使用原生JSON保存。\\
+JSON、MSON & 结构化保存对象信息；原生分子JSON可保留原子、显式键、化学属性与坐标。\\
 XSF & 原子、晶格及可选网格；结构内容与体数据内容使用相应入口读取。\\
 PDB、CML & 选择器提供的分子交换格式。读入后检查元素、坐标与连接；较复杂文件的额外注释不等于已经转为计算参数。\\
 YAML、YML & 结构化文本对象；与原生JSON一样，文件需要包含相应模型的结构字段，而不是任意同扩展名配置。\\
-CSSR、CONFIG、PWMAT & 特定程序使用的结构文本。适合已有这些输入时导入原子与晶胞，不能据此认为原程序的计算任务和全部控制参数也会导入。\\
+CSSR、CONFIG、PWMAT & 特定程序使用的结构文本，用于导入原子与晶胞；计算任务与控制参数需在工作流中配置。\\
 \end{longtable}
 
 菜单还可能提供其他程序的输入或输出格式。格式名称存在，不表示该程序的全部参数与结果都能转换成同一种模型；选择入口时应先看需要的是原子结构还是完整计算任务。重要模型导出后，重新导入并检查元素计数、晶胞、位置和分子连接，可以及时发现格式表达范围的差别。
@@ -50,7 +50,7 @@ CSSR、CONFIG、PWMAT & 特定程序使用的结构文本。适合已有这些�
 \section{常用单位与换算}
 \index{Danwei huansuan@单位换算}
 
-界面单位写在相应字段或坐标轴旁。结构建模常用 \AA，电子结构计算输入常用原子单位，能带与 DOS 通常以 eV 表示。整理数据前，先核对所在位置的单位，不要因为同一个软件中出现多个能量数字，就默认它们使用同一尺度。
+界面单位写在相应字段或坐标轴旁。结构建模常用 \AA，电子结构计算输入常用原子单位，能带与 DOS 通常以 eV 表示。整理数据前，先核对各字段和坐标轴采用的单位。
 
 \begin{longtable}{>{\raggedright\arraybackslash}p{.20\linewidth}>{\raggedright\arraybackslash}p{\dimexpr.80\linewidth-4\tabcolsep\relax}}
 \caption{本书使用的常用换算，数值按常用有效位数列出。}\\
@@ -145,7 +145,7 @@ Shift+Cmd/Ctrl+Z & 重做。\\
 Esc & 退出当前工具或清除选择。\\
 \end{longtable}
 
-吸附物放置中的鼠标动作另有用途：左拖改变取向，Alt+左拖调锚定距离，右拖绕锚定方向旋转。与普通观察视角的动作不同，开始操作时留意当前工具。保存项目使用 Cmd/Ctrl+S；正式在线版中，保存云端项目后还需下载才能取得本机副本。
+吸附物放置中的鼠标动作另有用途：左拖改变取向，Alt+左拖调锚定距离，右拖绕锚定方向旋转。与普通观察视角的动作不同，开始操作时留意当前工具。保存项目使用 Cmd/Ctrl+S；在线版中，保存云端项目后还需下载才能取得本机副本。
 
 \Needspace{145mm}
 \section{中英文术语}
@@ -200,10 +200,10 @@ DOS / PDOS & 态密度／投影态密度，后者还要明确投影对象。\\
 基态总能量 & Build Molecule、SCF、Energy Curve；第\ref{ch:first}章。 \\
 路径能带 & Symmetry \& K-Path、NSCF、Band Calculation、Band Structure；第\ref{ch:workflows}章硅原胞例。 \\
 总态密度 & SCF、NSCF、DOS；第\ref{ch:workflows}章DOS例。 \\
-电子结构优化 & Build Molecule、Geometry Optimization；第\ref{ch:workflows}章氢分子优化。 \\
+原子结构优化 & Build Molecule、Geometry Optimization；第\ref{ch:workflows}章氢分子优化。 \\
 倒空间几何 & Symmetry \& K-Path、Brillouin Zone 2D或3D；\ref{sec:bz-workflow}节。 \\
 带边曲面 & SCF、NSCF、Band Calculation 3D、Band Structure 3D；\ref{sec:band-surface}节。 \\
-激发态输入 & SCF基态和额外空轨道、TDDFT；\ref{sec:tddft-workflow}节，先读本版使用说明。 \\
+激发态输入 & SCF基态和额外空轨道、TDDFT；\ref{sec:tddft-workflow}节，求解方式见该节说明。 \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -211,6 +211,7 @@ DOS / PDOS & 态密度／投影态密度，后者还要明确投影对象。\\
 任务名称含有3D不代表输入模型一定是三维体相；能带曲面的两个横坐标属于倒空间，体数据图则属于实空间。选择任务时先明确希望得到的量，再决定模型维度和数值采样。
 
 
+\FloatBarrier
 \section{随书示例文件}
 
 示例位于 \file{examples}，原始输入与可继续工作的项目各有用途。复制到自己的学习目录后再练习，可保留随书版本作为对照。下表列出本版正文使用的文件；运行脚本后产生的日志、报告和数值结果另按脚本实际输出保存。
@@ -236,22 +237,22 @@ DOS / PDOS & 态密度／投影态密度，后者还要明确投影对象。\\
 \file{water.xyz} & 水分子几何与坐标导入练习。\\
 \file{silicon.cif} & 8 位点硅常规晶胞，边长约 $5.44370\,\text{\AA}$，用于工作区与硅计算教程。\\
 \file{Si.poscar} & 8 位点硅晶胞，边长约 $5.46873\,\text{\AA}$，用于超胞与空位建模练习。\\
-\file{Si-ground-state.ks} & 第3章实际从在线版保存并下载到本机的硅结构项目；未运行SCF。\\
-\file{Si-introduction.ks} & 第4章实际保存的硅导入项目，作为第7章继续建模的起点。\\
-\file{Si-vacancy-tutorial.ks} & 第7章实机保存的空位项目，含对照硅结构与63位点空位模型。\\
-\file{Si-primitive-BZ-Online-050.pdf} & 二位点硅原胞在在线版中由\ui{Symmetry}模板实际生成的三维布里渊区与路径矢量图；无需SCF。\\
+\file{Si-ground-state.ks} & 第\ref{ch:online}章的硅结构项目，包含结构，尚未运行SCF。\\
+\file{Si-introduction.ks} & 第\ref{ch:workspace}章的硅导入项目，作为第7章继续建模的起点。\\
+\file{Si-vacancy-tutorial.ks} & 第7章的空位项目，含对照硅结构与63位点空位模型。\\
+\file{Si-primitive-BZ-Online-050.pdf} & 二位点硅原胞的三维布里渊区与路径矢量图，由\ui{Symmetry}模板生成。\\
 \file{benzene-ring.json} & 六碳芳香环骨架，边长 $1.4\,\text{\AA}$，尚未补氢。\\
 \file{benzene.json}\newline\file{benzene-optimized.json} & 苯补氢后的初始结构，以及通用分子模型优化后的参考结构。\\
 \file{pyridine.json}\newline\file{pyridine-optimized.json} & 中性单重态吡啶的初始与通用分子模型优化结构，保留六条芳香键。\\
 \file{ethanol-backbone.json}\newline\file{ethanol-initial.json} & 乙醇共线重原子骨架，以及补氢后的初始结构。\\
 \file{ethanol-edited.json}\newline\file{ethanol-cleaned.json}\newline\file{ethanol-optimized.json} & 乙醇几何编辑、规则整理与通用分子模型优化的三个状态，便于比较。\\
-\file{ethanol-angle1095.json} & 在线版中编辑并导出的中性单重态乙醇，9个原子、8条显式键，C1--C2--O3键角为$109.5^\circ$。\\
+\file{ethanol-angle1095.json} & 中性单重态乙醇，9个原子、8条显式键，C1--C2--O3键角为$109.5^\circ$。\\
 \file{ethanol-angle1095.png} & 同一乙醇从原子查看器PNG菜单导出的图像，4032\,$\times$\,1964像素。\\
 \file{ethanol-angle1095-scene.json} & 同一模型的原子场景JSON，保留显示位点与连接记录；与用于继续编辑的结构JSON分别保存。\\
 \file{Cu-fcc.cif}\newline\file{Cu-vacancy.cif} & $a=3.61\,\text{\AA}$ 的四位点铜晶胞，以及三位点空位候选。\\
 \file{Pt-fcc.cif}\newline\file{Pt111-slab.cif} & $a=3.92\,\text{\AA}$ 的铂体相晶胞及按第8章参数生成的四层 (111) 薄片。\\
 \file{Pt111-normal-c.json}\newline\file{oh-fragment.mol}\newline\file{Pt111-OH-outward.cif} & 法向晶胞、含单键的 O--H 输入，以及按参数向外放置后的六位点吸附几何。\\
-\file{Pt111-OH-Online-050.json} & 在线版中实际放置O--H并归胞后导出的六位点结构；O/H法向高度为2.00/2.96\,\AA，O--H长0.96\,\AA。\\
+\file{Pt111-OH-Online-050.json} & 放置O--H并归胞后的六位点结构；O/H法向高度为2.00/2.96\,\AA，O--H长0.96\,\AA。\\
 \file{Pt111-OH-candidate-1.json} & 144项参考几何候选中评分第一的结构，供比较锚点、高度和转角。\\
 \file{modeling_examples.m}\newline\file{verify_modeling_examples.m} & 建模案例的生成与重新导入核对脚本，附 JSON 报告；具体文件说明见\file{MODELING-CASES.zh-CN.md}。\\
 \file{PEO3-PPO4-PEO3.json}\newline\file{PE6-PP14-seed91.json} & 嵌段链与精确组成无规链，分别为84与164个原子的初始结构。\\
@@ -273,7 +274,7 @@ DOS / PDOS & 态密度／投影态密度，后者还要明确投影对象。\\
 \file{water-packing.json}\newline\file{water10-ethanol10-packed.json} & 有显式连接的水分子输入，以及10水/10乙醇的低密度初始装填。\\
 \file{interface_packing_examples.m} & 双层候选、混合物装填与独立几何检查；见\file{INTERFACE-PACKING-CASES.zh-CN.md}。\\
 \file{h2-tutorial.ks} & 氢分子教程项目，供查看结构与工作流。\\
-\file{H2-Online-SCF-050.ks} & 本轮在线版实际运行、云端保存并下载的氢分子SCF项目，含7步收敛记录。\\
+\file{H2-Online-SCF-050.ks} & 氢分子SCF项目，含7步收敛记录。\\
 \file{silicon-tutorial.ks} & 硅教程项目，供查看相应工作流。\\
 \file{h2_scf_and_relax.m} & 完整 MATLAB\regmark{} 中的氢分子 SCF 与几何优化复算脚本。\\
 \file{silicon_example.m} & 完整 MATLAB\regmark{} 中的八原子硅 SCF 与 DOS 复算脚本。\\
@@ -283,18 +284,18 @@ DOS / PDOS & 态密度／投影态密度，后者还要明确投影对象。\\
 \file{CHGCAR.nospin.gz} & 非自旋 CHGCAR，用于总密度观察。\\*
 \file{CHGCAR.spin.gz} & 自旋 CHGCAR，用于通道与正负面比较。\\*
 \file{elec.cube.gz} & Cube 体数据，用于切面与导出练习。\\*
-\file{elec.total.slice-1_1_0.csv} & 在线版导出的(110)切面数值，1568行数据；坐标为\AA，数值保留通道内部单位。\\
+\file{elec.total.slice-1_1_0.csv} & (110)切面数值，1568行数据；坐标为\AA，数值保留通道内部单位。\\
 \file{elec.total.slice-1_1_0.png} & 同一切面的RGBA图像，384\,$\times$\,768像素，用于核对配色和切面形状。\\
 \file{datagrid_3d.xsf} & XSF 标量网格，用于格式与切面观察。\\
 \end{longtable}
 
-随书的硅结构与氢分子几何各有用途，数值比较时不要只按元素名把它们互换。脚本需要完整 MATLAB\regmark{}及配套工具箱，配置好软件路径后从本手册仓库根目录运行，所需产品与调用方式见计算章节和随书案例说明。三种使用方式均可按正文完成相应的图形教程，无需把复算脚本当作启动步骤。
+随书硅结构与氢分子几何的参数有所不同，数值比较时应选择对应文件。脚本需要完整 MATLAB\regmark{}及配套工具箱，配置好软件路径后从本手册仓库根目录运行，所需产品与调用方式见计算章节和随书案例说明。三种使用方式均可按正文完成相应的图形教程。
 
 \subsection{为自己的例子保留说明}
 
 更换材料后，可以为目录增加一份简短说明，记录原始结构来源、做过的超胞或表面操作、最终模型名称、工作流用途和结果位置。对于随机构建，再注明种子和组成；对于图形，再注明能量参考、通道或阈值。这样，即使数周后重新打开，也能把结构、计算和展示联系起来。
 
-压缩 CHGCAR、Cube 与 XSF 来自仓库保留的 \file{pymatgen-core} 测试资料，并非本书计算结果。报告中应按随附来源说明注明出处。
+随书压缩CHGCAR、Cube与XSF示例选自\file{pymatgen-core}的测试资料，来源说明随文件提供。
 
 \section{参考文献}
 

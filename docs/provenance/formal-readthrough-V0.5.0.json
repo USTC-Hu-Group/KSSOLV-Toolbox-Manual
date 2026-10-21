@@ -1,0 +1,126 @@
+{
+  "manualVersion": "V0.5.0",
+  "baseCommit": "cb1fb89",
+  "basePDFSHA256": "0c4a125b6e998cafe18d3bc8f6a2bb816d99b6a07a9d7f0a041466044257b63d",
+  "revision": "whole-book-formal-language-review",
+  "pages": 311,
+  "pdfSHA256": "8c3ad5ec3e11090abe1fdcf757b7bde4b79bb87cd46270f5602418a71fc7e3dd",
+  "readthrough": {
+    "chapterTexFilesRead": 28,
+    "reviewers": 3,
+    "crossReview": "Early and later sections cross-read; figure captions reviewed against modeling text",
+    "scope": [
+      "body text",
+      "captions",
+      "tables",
+      "formula explanations",
+      "front matter",
+      "appendix"
+    ]
+  },
+  "changes": [
+    "Replace authoring, capture and validation narration with user-facing instructions and result descriptions",
+    "Simplify repetitive reminders while retaining functional limits and scientific conditions",
+    "Correct chapter references and optimization terminology",
+    "Keep short notes together and prevent tables from crossing into unrelated sections"
+  ],
+  "checks": {
+    "latexBuild": "passed",
+    "embeddedFontAndUnicodeStreamPairs": 39,
+    "removedEditorialTextMatches": 0,
+    "imageAssetsModified": false,
+    "labelInputImageEnvironmentSequencesPreserved": true,
+    "externalURILinksChecked": 10
+  },
+  "visualProof": {
+    "firstProof": {
+      "pages": 312,
+      "sha256": "0ea0b7c5669d300d751c880c91c201e61c469e7289ae33a20acd09b067f82062",
+      "allPagesReviewedInContactSheets": true,
+      "contactSheets": 27,
+      "detailedPages": [
+        3,
+        22,
+        26,
+        37,
+        59,
+        60,
+        73,
+        74,
+        75,
+        92,
+        112,
+        137,
+        160,
+        169,
+        182,
+        183,
+        203,
+        221,
+        230,
+        236,
+        241,
+        242,
+        263,
+        277,
+        301,
+        302
+      ]
+    },
+    "secondProof": {
+      "pages": 311,
+      "sha256": "e9039ba0ee1812e70b5bd6fb1ab5b00b354c8876e9231594ba16e270394176bd",
+      "allPagesReviewedInContactSheets": true,
+      "contactSheets": 27,
+      "detailedPages": [
+        59,
+        60,
+        181,
+        182,
+        183,
+        240,
+        241,
+        242,
+        300,
+        301,
+        302
+      ]
+    },
+    "finalRegression": {
+      "pages": 311,
+      "sha256": "8c3ad5ec3e11090abe1fdcf757b7bde4b79bb87cd46270f5602418a71fc7e3dd",
+      "changedPagesFromFullProof": [
+        7,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192
+      ],
+      "unchangedPageStreams": 299,
+      "fontStreamsEqualToFullProof": true
+    },
+    "finalChangedPagesActuallyReviewed": [
+      7,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192
+    ],
+    "openIssues": 0
+  },
+  "evidence": "Local page renders and intermediate proof files are retained under output/formal-readthrough and excluded from the public source archive."
+}
