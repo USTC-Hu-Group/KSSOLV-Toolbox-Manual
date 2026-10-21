@@ -35,7 +35,7 @@
 - `water-packing.json`、`water10-ethanol10-packed.json`：水分子输入及10水/10乙醇的低密度装填结果。固定种子23，默认密度1 g/cm³失败，保留同样数量与接触要求后以0.1 g/cm³生成。
 - `interface_packing_examples.m`、`interface-packing-examples-results.json`、`INTERFACE-PACKING-CASES.zh-CN.md`：插入、堆叠候选、密度和跨周期接触的完整参数、结果与失败记录。
 - `oh-fragment.mol`、`Pt111-normal-c.json`、`Pt111-normal-c-OH-outward.json`：O–H参数放置的参考输入与定向结果。该Pt晶胞的c沿真实表面法向；取向原子2、方向`1 1 1`后，O/H距顶位沿法向分别为2/2.96 Å。
-- `Pt111-OH-Online-050.json`：Online 0.5.0实际参数放置并应用、以1×1×1单位超胞归胞后导出的结构，含Pt4OH共6个位点。独立JSON核对得到O/H法向高度2.00/2.96 Å、O–H长0.96 Å；与上述向外参考结构在周期边界下等价。不是吸附能或DFT计算结果。
+- `Pt111-OH-Online-050.json`：Online V0.5.0实际参数放置并应用、以1×1×1单位超胞归胞后导出的结构，含Pt4OH共6个位点。独立JSON核对得到O/H法向高度2.00/2.96 Å、O–H长0.96 Å；与上述向外参考结构在周期边界下等价。不是吸附能或DFT计算结果。
 - `Pt111-OH-outward.cif`：上述向外吸附结构的CIF副本，供直接查看几何或准备后续计算。已通过源模式StructureIO读回核对Pt4OH、O/H高度与O–H距离；CIF不保留分子显式拓扑，尚无GUI视图验收声明。
 - `Pt111-OH-c-offset.json`、`Pt111-normal-c-OH-ontop.json`、`Pt111-OH-candidate-1.json`：原斜胞的c偏移诊断、法向胞的未定向放置和几何评分候选；它们各有用途，不能把第一份的offset2 Å当作法向高度2 Å。
 - `hBN-layer.json`、`graphene-hBN-stacked.json`：采用编写时软件课程案例的理想层参数的真正异材匹配；C2BN、4个位点、面内应变1.6%、层距3.35 Å。

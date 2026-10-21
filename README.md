@@ -1,6 +1,6 @@
 # KSSOLV Toolbox 中文用户手册
 
-本仓库独立维护 **KSSOLV Toolbox 0.5.0** 中文用户手册，包含正式 PDF、完整 LaTeX 源码、排版样式、插图和随书案例。手册共 **296 页**，面向普通使用者与学生，涵盖独立应用程序和 Online 的使用、结构建模、计算及结果分析。
+本仓库独立维护 **KSSOLV Toolbox V0.5.0** 中文用户手册，包含正式 PDF、完整 LaTeX 源码、排版样式、插图和随书案例。手册共 **296 页**，面向普通使用者与学生，涵盖独立应用程序和 Online 的使用、结构建模、计算及结果分析。
 
 [阅读正式 PDF](dist/KSSOLV_Toolbox_User_Manual_zh-CN.pdf) · [源码与编辑说明](docs/manual-zh/README.md) · [随书案例](docs/manual-zh/examples/README.zh-CN.md)
 
@@ -49,6 +49,6 @@ python tools/verify_pdf.py
 
 ## 版本与来源
 
-本仓库从 0.5.0 正式交付源包独立建立；导入基线保存在 `docs/provenance/source-import-0.5.0.json`，其中的哈希描述导入前的源包文件。独立仓库的后续修改以 Git 历史为准。迁移时保留已校样的正文、页面样式、发布素材、参考数据与 PDF，调整案例的路径配置及构建入口。
+本仓库从 V0.5.0 正式交付源包独立建立；导入基线保存在 `docs/provenance/source-import-0.5.0.json`，其中的哈希描述导入前的源包文件。独立仓库的后续修改以 Git 历史为准。迁移时保留已校样的正文、页面样式、发布素材、参考数据与 PDF，调整案例的路径配置及构建入口。
 
 仓库保留原有 [LICENSE](LICENSE) 与[商业许可说明](COMMERCIAL-LICENSE.md)。第三方字体、映射和案例数据的说明见[第三方许可索引](THIRD-PARTY-LICENSES.md)。

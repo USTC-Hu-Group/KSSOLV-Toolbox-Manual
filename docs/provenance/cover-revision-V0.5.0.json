@@ -1,0 +1,52 @@
+{
+  "revision": "silicon-cover-and-version-labels",
+  "date": "2026-10-21",
+  "manualVersion": "V0.5.0",
+  "pdfSHA256": "d7b3aac2ae528ca450b0e8fdbdf78f5628b788a6e95c4db23e165145b41ca9c6",
+  "pages": 296,
+  "geometry": {
+    "source": "docs/manual-zh/examples/silicon.cif",
+    "sourceSHA256": "a8802ed065d2ed08a80e9b54913c80d69fca135381c31d03533ec9f06f3d4ae7",
+    "structure": "silicon diamond cubic",
+    "conventionalCells": [
+      3,
+      1,
+      1
+    ],
+    "closedBoundarySites": 44,
+    "firstNeighbourBonds": 48,
+    "latticeConstantAngstrom": 5.443702372939453,
+    "firstNeighbourDistanceAngstrom": 2.357192272803598,
+    "highlightedCoordination": 4,
+    "tetrahedralBondAngleDegrees": 109.47122063449069,
+    "orthographicAzimuthDegrees": 20,
+    "orthographicElevationDegrees": 14,
+    "projectedWidthMm": 128,
+    "projectedHeightMm": 58.54591245944494
+  },
+  "visualComparison": {
+    "DPI": 96,
+    "changedPages": [
+      1,
+      2,
+      3,
+      26
+    ],
+    "identicalPages": 292
+  },
+  "reviewedChangedPages": [
+    1,
+    2,
+    3,
+    26
+  ],
+  "coverReviewDPI": 300,
+  "visibleTextVersionMentions": 4,
+  "unprefixedVisibleVersionMentions": 0,
+  "independentChecks": [
+    "diamond silicon geometry and orthographic projection",
+    "version labels and explanatory prose",
+    "cover and changed-page visual proof"
+  ],
+  "originalScreenshotsAndScientificDataChanged": false
+}
