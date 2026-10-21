@@ -1,0 +1,15 @@
+{
+  "manualVersion": "V0.5.0",
+  "softwareRelease": "V0.5.0",
+  "language": "zh-TW",
+  "pages": 315,
+  "pdf": {
+    "file": "KSSOLV_Toolbox_User_Manual_zh-TW.pdf",
+    "bytes": 16594016,
+    "sha256": "9205c7d29c365a6339e7bf77ee44e5e84732febb7b27aede5d3d3f7905f61fec"
+  },
+  "source": "../docs/manual-zh-TW/main.tex",
+  "revision": "traditional-chinese-generated-edition",
+  "conversion": "s2twp",
+  "reviewStatus": "automatically-converted; full editorial review pending"
+}
