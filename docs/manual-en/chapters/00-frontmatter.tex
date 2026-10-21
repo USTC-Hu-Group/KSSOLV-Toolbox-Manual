@@ -1,0 +1,52 @@
+\thispagestyle{plain}
+\noindent{\sffamily\heiti\Large KSSOLV Toolbox User Manual}
+
+\vspace{5mm}
+\noindent Standalone application, MATLAB\regmark{} toolbox, and \ksonline{}\par
+\noindent For version V0.5.0\quad October 2026
+
+\vspace{7mm}
+This manual covers installation, structure preparation, electronic structure calculations, and analysis of results in KSSOLV Toolbox. The tutorials begin with small molecules and crystals, then move on to surfaces, heterostructures, twisted structures, low-dimensional systems, and soft matter. The standalone application, MATLAB\regmark{} toolbox, and \ksonline{} share the same modeling and calculation concepts. Their differences in installation, file management, and remote execution are explained where relevant.
+
+Interface labels follow the English interface. Each calculation example includes its input conditions and reference results so that you can follow the procedure and check your work.
+
+\vspace{\baselineskip}
+\noindent{\sffamily\heiti Trademarks}
+
+Hanhai Quantum\regmark{} and KSSOLV Toolbox are product brand names. MATLAB\regmark{} is a registered trademark of The MathWorks, Inc.
+
+\vspace{\baselineskip}
+\noindent{\sffamily\heiti The cover}
+
+The cover shows the silicon structure supplied with the examples, extended over three conventional unit cells along $[100]$. Spheres represent silicon atoms, and lines connect nearest neighbors. Four teal bonds highlight the tetrahedral coordination of the diamond structure.
+
+\vfill
+\noindent{\small © 2026 Hefei Hanhai Quantum Technology Co., Ltd.}
+\clearpage
+
+\noindent{\sffamily\heiti\Large About this manual}
+
+\vspace{4mm}
+\noindent{\sffamily\heiti Software version}
+
+This manual describes KSSOLV Toolbox V0.5.0. To check your software version, choose \ui{Home → Help → About KSSOLV}.
+
+\vspace{\baselineskip}
+\noindent{\sffamily\heiti Where to start}
+
+If you are new to the software, start with Chapter~\ref{ch:introduction} to choose how you will use it. Follow the installation or Online instructions to prepare your environment, then read Chapter~\ref{ch:workspace} to learn your way around the workspace. The hydrogen molecule tutorial in Chapter~\ref{ch:first} takes you through a complete calculation, from the initial structure to the final results, with checks at each stage.
+
+When you are ready to build your own models, use Chapter~\ref{ch:modeling} for basic structure editing and Chapter~\ref{ch:advanced} for worked materials examples. Chapter~\ref{ch:modeling-tools} is a reference for individual modeling tools. The calculation parameters chapter explains common settings; the workflow, volumetric data, and results chapters describe how to organize further calculations and interpret their output. You do not need to read the whole manual before you begin.
+
+The accompanying \file{examples/} directory contains structures, projects, scripts for reproducing calculations, and volumetric datasets. Start each exercise from the specified file and save your own copy of the project. When comparing numerical results, check the structure, pseudopotentials, and calculation settings as well as the numbers themselves.
+
+\vspace{\baselineskip}
+\noindent{\sffamily\heiti Software and support}
+
+\begin{itemize}
+\item Software and releases: \url{https://github.com/USTC-Hu-Group/KSSOLV-Toolbox}
+\item Online: the official Hanhai Quantum\regmark{} \ksonline{} service is forthcoming. Private deployments on computing clusters are also supported.
+\item Feedback: use the Issues page in the software repository, or open the relevant resources from the application's \ui{Help} menu.
+\end{itemize}
+
+\clearpage

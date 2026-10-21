@@ -1,0 +1,1731 @@
+{
+  "edition": "en",
+  "softwareVersion": "V0.5.0",
+  "status": "complete",
+  "capturePolicy": "Actual native English UI; cropping only, no repainting or resampling. Reference structures, parameters and data must match the Chinese scene.",
+  "assets": [
+    {
+      "asset": "crop-0469f894473f746988e3.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/silicon-supercell-result-english.png",
+      "rawSHA256": "573fbd7301708e97e2d0151b0d7591e273f3e0114d70216d4c492a1b360c8df5",
+      "sha256": "dca38cc57d0de95e85e0b1c527972fad96bb1daf1c0337f1ffcea23ca3363b62",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1150,
+        620,
+        2010,
+        1435
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Applied2x2x2 supercell of Si.poscar, 64 Si sites with166displayed atoms and244CrystalNN bonds. Native default oblique view; independent input-cell display1x1x1; no selection."
+    },
+    {
+      "asset": "crop-0483f84ce4963946e315.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/ethanol-angle-preview-desktop-en.png",
+      "rawSHA256": "06cf67908579d456d8e05ea5244feb2f9e10e71adc8f6d85bbc6f52529e4ac61",
+      "sha256": "6c21b9d2c6542489c57aba5f4ac288cfaec91c2700944180f70c7a58cd14157d",
+      "nativePixels": [
+        1120,
+        742
+      ],
+      "cropBoxXYXY": [
+        28,
+        244,
+        1092,
+        623
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "Installed KSSOLV Toolbox V0.5.0, English UI, MATLAB Runtime R2026b, JVM disabled",
+      "scene": "Ethanol sites 1 2 3, angle 109.5 degrees, subtree movement; actual geometry preview."
+    },
+    {
+      "asset": "crop-0ff9d4164c5629316893.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/silicon-supercell-preview-english.png",
+      "rawSHA256": "e5d9678177da85f45e8ac63f7a4ae529699bd3f69b6c62cd85f7e437089d9244",
+      "sha256": "6b6417aac81195a9fa8893973ad46899795a60c6b5c4a55f9a7b3ab3b14c3b28",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        730,
+        650,
+        1856,
+        1236
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Native Build Supercell dialog for Si.poscar with Supercell scaling2 2 2, successful preview green status, and action buttons. Preview only before Apply."
+    },
+    {
+      "asset": "crop-11fbbbc4e8e9d6f1929d.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/online-si-files-english.png",
+      "rawSHA256": "71928483221f1b93ffe908e896d805f50409db0beca38d2029560ab2b47fe062",
+      "sha256": "756411abd89e66323ab33c151fc0c83dea68a6c4fad847c4bb99c4c645da2d4b",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        0,
+        526,
+        2512,
+        1526
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Same Si-ground-state.ks and silicon CIF reference: ordered 8 sites, 46 displayed atoms, 56 CrystalNN bonds, input cell 1x1x1. Existing Si-study project opened read-only. Incidental live account root-folder list differs from the earlier Chinese capture."
+    },
+    {
+      "asset": "crop-1252e2f6c064962fc6d9.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-spin-summary-settings-english.png",
+      "rawSHA256": "50e8a1a65f6df5909f53effc28a9c124166e4660d933e75a601d12d96d86de0b",
+      "sha256": "395ecf80083536220b41b937e046fc5abf7575102b03c5a32dde3162aa987b5f",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        692,
+        615,
+        1240,
+        860
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual CHGCAR.spin.gz,48x48x48 grid,Magnetization density,Angstrom^-3 units; native English summary."
+    },
+    {
+      "asset": "crop-14436d05d0623e7cdc6f.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/polymer-block-lower-en.png",
+      "rawSHA256": "df9dcbba76a6ac56fd963c03d86ec68ba5f8fd0cd1058c6110111c87418834c7",
+      "sha256": "8ac581e1ef68a219d2b7d6435707220fc1e6372e368eb51853ff9b30757cd3ee",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        780,
+        766,
+        1805,
+        1400
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "One complete block-superunit repeat, one chain, head and tail none, Extended conformation, Regular head-to-tail."
+    },
+    {
+      "asset": "crop-1581def0867bec552a40.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/online-scf-algorithms-english.png",
+      "rawSHA256": "d30fde2f2994c27dc11eae5c983f0ef9de64ea1e70476a7290acdcc353bda9f2",
+      "sha256": "af522b369505e4cc1b1cdec4b918e17d8cd4c8a0e0852c8530fcd7962cd31942",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        2252,
+        906,
+        2482,
+        1264
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Native SCF DiagMethod list, davidson_qe selected, followed by lobpcg, eigs, ppcg, davidson, davidson2 and davpcg, exactly matching source choices and order."
+    },
+    {
+      "asset": "crop-17309e4ada4dd6ce532b.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/ethanol-angle-preview-desktop-en.png",
+      "rawSHA256": "06cf67908579d456d8e05ea5244feb2f9e10e71adc8f6d85bbc6f52529e4ac61",
+      "sha256": "4838f2eedd176e7d9e5940f5e2f716a4a5d2cc1fbb083d25c399d24a679df13f",
+      "nativePixels": [
+        1120,
+        742
+      ],
+      "cropBoxXYXY": [
+        28,
+        646,
+        666,
+        679
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "Installed KSSOLV Toolbox V0.5.0, English UI, MATLAB Runtime R2026b, JVM disabled",
+      "scene": "Native English preview-active status for ethanol 109.5-degree angle."
+    },
+    {
+      "asset": "crop-1d148adc90da2955994e.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/online-h2-advanced-english.png",
+      "rawSHA256": "d288829340988d93674035df923320af93fef7e4e78b74d148d219120aafea7e",
+      "sha256": "04eb76846625062ad33d2af44667df6fabd1b446a8d7b8e2f9932472e7aed513",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1936,
+        708,
+        2504,
+        1220
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Same hydrogen Build Molecule values as the source with Advanced Options expanded and Extra bands=0."
+    },
+    {
+      "asset": "crop-1dadf5469e77f06dffe5.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/ethanol-scientific-scene-english.png",
+      "rawSHA256": "198041b09265e331df941b24f7868029f620026ae4e43e0283f5ffc64a347741",
+      "sha256": "e26be4ac84de88b5f741c9897ab547b16763a2d4c5f3de043feb4a2f2d7fc7a6",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1090,
+        1070,
+        1705,
+        1220
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual ethanol-angle1095.json neutral singlet molecule:9atoms,8explicitbonds,CCO109.5degrees. Native Scientific scene bondingstrategySource topology-explicit (Source), matching original input topology."
+    },
+    {
+      "asset": "crop-1de9d3c6e62d7816cea2.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-cube-miller-indices-english.png",
+      "rawSHA256": "8e82eb8dcf328fbbb5d52973c106ebd97066aea86ee6a446744153506e5191cb",
+      "sha256": "e4861f35e98cf4b194240187d50ebf52acc0202855fb322eea64cba7efc78fdf",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1680,
+        754,
+        2280,
+        874
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Native Miller plane controls for same Cube dataset:I1,J1,K0; keyboardcommittedandstateverified. This is one plane through volume center, not clippingbounds."
+    },
+    {
+      "asset": "crop-209a06fc6024f4d5e0ba.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-cube-miller-settings-english.png",
+      "rawSHA256": "fae5639c0f75fd7c4c535993c222035424952a4ef01daa814c5266be26966967",
+      "sha256": "ea1597930cb9675a8049afbab8f0a651cc66ef5a07fe3e20214a07069db01463",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1680,
+        742,
+        2280,
+        1108
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Same Cube(110)slice:Cool-warm,Linear,Range minimum0.0034185,maximum0.2(arbitrary),Atomscale0.22; actual keyboard-committed values verified after render."
+    },
+    {
+      "asset": "crop-273037e846506daab173.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/online-h2-workflow-english.png",
+      "rawSHA256": "10849f6e1a9fdc55980d4713b455c2fd3a6e1cd04bec00ba122177f9250a7939",
+      "sha256": "65399aaf0c350e02d61a00a01066ef10267f4acfbaaab1edc550983757506336",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1348,
+        714,
+        1824,
+        1394
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Same saved H2 SCF workflow: Configuration to SCF to Plot, with all three successful status marks."
+    },
+    {
+      "asset": "crop-290321d16b2310a99270.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/settings-english-ollama.png",
+      "rawSHA256": "a4b2d9586d172e6fd637d01d99d6093046ad94c4316df8da62bffda1d6fee7d4",
+      "sha256": "d7b78e18e9d76063379a695e4a15f2096f43b6a82bb90d8bd5d2d02add592a81",
+      "nativePixels": [
+        1360,
+        1164
+      ],
+      "cropBoxXYXY": [
+        38,
+        156,
+        1320,
+        315
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "MATLAB toolbox, source mode, -nojvm, isolated preferences",
+      "scene": "General settings, Language section with English selected; matches source language selector and restart notice."
+    },
+    {
+      "asset": "crop-2984400ea30d3f4eb1f5.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/h2-scf-final-log-english.png",
+      "rawSHA256": "5370ee6827bbd1ae33eebecf10ecadc2b5befbbff0723dfb7ff0c0c36d8ef3a4",
+      "sha256": "8b8c83c0cdeb24ff72f362826c9607e63d4de9a07f38919845287286f2eb9d56",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        140,
+        1148,
+        1110,
+        1336
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual H2 SCF convergence at iteration seven, relative error 6.236e-9 and total energy -1.1652136532206 Hartree, with force calculation enabled."
+    },
+    {
+      "asset": "crop-348b0d07fb6f4cdab9d3.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/online-project-save-sheet-native.png",
+      "rawSHA256": "890cf118396021d9fa9f7393a830b1575c8510f5b7220c4c8a13e504840b144e",
+      "sha256": "e88cf3f7c14cfb8be897a7d4f0e54e80bc075fcb957cc01a9ffd9b8f94f96096",
+      "nativePixels": [
+        728,
+        420
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        728,
+        420
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online English session; native macOS Chrome save sheet, OS locale zh_CN",
+      "scene": "Actual Online Files download of Online/Si-study/Si-ground-state.ks from English Toolbox session. Native macOS/Chrome save sheet, destinationDownloads.nosync,Tagsfocused; currentOSdialoglabelsremainzh_CN. Filenamewithoutduplicatecounter; currentChromeshowsnativewebsite-change notice. Canceledaftercapture,nooverwrite.",
+      "osLocale": "zh_CN"
+    },
+    {
+      "asset": "crop-3b2d9027085c84d05818.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-gpu-mode-color-english.png",
+      "rawSHA256": "4d300386354b5bcc2b63e5bf16dc18dba1c60262709094ff213dc6cfa4c7de68",
+      "sha256": "2514372fefb9f8d531d94cd9df3b2982ce2c928b990c4b582699315c740f9cab",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1680,
+        742,
+        2280,
+        1224
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Same elec.cube.gzDataset1 rendered via native Direct volume(GPU),Cool-warm,Linear,range0.0034185to0.2arbitrary; native WebGL GPU ready status observed, no fallback."
+    },
+    {
+      "asset": "crop-3d7aab6f859860340b2f.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/polymer-block-upper-en.png",
+      "rawSHA256": "794d8da0cb093df5b76b3d1719dfe9ea014b2af75b4aebec061fb2d8016856b1",
+      "sha256": "79c3edfae80acf28fcd1908829e0d9f442ed8865f36015a68f988869cdc03371",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        780,
+        610,
+        1805,
+        1025
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Block copolymer PEO PPO PEO, lengths 3 4 3, Atactic, random seed 8."
+    },
+    {
+      "asset": "crop-4185f48c89b2b877f7b1.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/ethanol-angle-marker-desktop-en.png",
+      "rawSHA256": "e1adc675824ea1afaecb54c350343119f4a31d27add2f73bd689cb5d457fb7be",
+      "sha256": "4d6ab13edefe14a38716b57b666fa9c60f961b3dde113797cb62db4ade9a56ba",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "cropBoxXYXY": [
+        900,
+        475,
+        1840,
+        1460
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "Installed KSSOLV Toolbox V0.5.0, English UI, MATLAB Runtime R2026b, JVM disabled",
+      "scene": "Nine-atom ethanol after applying 109.5-degree C1-C2-O3 angle, native blue measurement segments and arc; original molecular orientation."
+    },
+    {
+      "asset": "crop-432edbee8ecb03b7c537.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/online-reconnect-portal-english.png",
+      "rawSHA256": "015a09ad1e0de12503542ef9c2984c322a46eb7b80dab7314f86ae0ef628f09b",
+      "sha256": "01a24bac28e43a0ebd15dbc1bf22f8dea2ad449800aefe26486ac5add7bb0e0c",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        728,
+        884,
+        1868,
+        1122
+      ],
+      "locale": "en",
+      "softwareVersion": "V0.5.0",
+      "mode": "Native KSSOLV Toolbox Online public portal, English language selector, Chrome window capture",
+      "scene": "Native portal languageEnglish selected. ReturnedthroughExitKSSOLVToolboxwithinstancekept running:Reconnect to workspace,Sign out and release instance,30minuteinactivity/keep-tab/saveprojectnotice. Reconnected afterwards tosame savedEnglish-capture-workspace.ks withoutinstance release."
+    },
+    {
+      "asset": "crop-434fe0ac4d3f46cfaf46.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/online-h2-config-english.png",
+      "rawSHA256": "eb1f75bab47468f80734a1459c819ef3c782fb210d6a36535e64b6317c9efca5",
+      "sha256": "c4fbc7288359c245c6b85ca57fc80a37db05534f08b991e32a7bf411bf9724d2",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1936,
+        584,
+        2504,
+        1412
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Build Molecule node 1, h2, Molecule, PBE, default pseudopotential, 20 Ha, fermi-dirac, 0 K and Nspin=1. Fresh native SCF template configured without overwriting the original project."
+    },
+    {
+      "asset": "crop-496bc1fbfb3e99bfc4e7.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/ethanol-export-image-menu-english.png",
+      "rawSHA256": "0c26771ef01d15b4e0951b72b12c3272b7ee656ed62f9e9edee590dead8daa91",
+      "sha256": "a8654667d62dfacf39a85b4ceedacd607318932d3414d403dbf58d6bebe97999",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1964,
+        870,
+        2302,
+        1436
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Molecular viewer image menu with all six unchanged formats and native English descriptions: PNG, JPEG, TIFF, SVG, PDF Vector and PDF Raster."
+    },
+    {
+      "asset": "crop-4ce96785f91c44d963be.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/silicon-site7-image-english.png",
+      "rawSHA256": "88da6f485a8e6788ecc305a0c234bc54697939d6b183a0af7d7df9e369e0d7fa",
+      "sha256": "586d3c43fff7147899400ac0bf52dbf4babc4615aa21770e345513ddffc40715",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        684,
+        862,
+        1214,
+        1238
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Original Si.poscar: 8 sites,41 displayed atoms. Selected Site7 periodic image(0,0,1), Cartesian4.102,1.367,6.836 Angstrom; fractional0.750,0.250,1.250; Si occupancy1, matching reference."
+    },
+    {
+      "asset": "crop-50f2208998010f44014c.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/online-open-panels-native.png",
+      "rawSHA256": "8f1708bbb1a6dc7a4e3dbd0bae445aa4f9223430b427cefbdbeff8a271fa1dbe",
+      "sha256": "e4095b42ab8f7481b859e35f91b96a9c5bb847fef35e5eaa8f6fa3c5d40efc29",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        940,
+        684,
+        1642,
+        1202
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Open Panels dialog showing the same six panels, including Files, as the Chinese Online capture."
+    },
+    {
+      "asset": "crop-53085697480f4dfda16f.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-total-isosurface-english.png",
+      "rawSHA256": "e8ba8841408205f8fa48f3774c1e8ca215fffd2108451036c17875da26a09642",
+      "sha256": "a99fd1168a0a7ce5fe5559b56294eb8bd14c0236c93536bb2ceb08c1e3e7d7b0",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1100,
+        590,
+        2060,
+        1510
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual CHGCAR.nospin.gz totalcharge32^3; Absolute positive0.04000Angstrom^-3,negativeoff,opacity0.72; Li overlay and full native oblique cell, no bonds/polyhedra/depthcue/boundaryimages/one-hop. Auxiliary summary hidden by native I shortcut."
+    },
+    {
+      "asset": "crop-5caa5064e4762ffc4974.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/pt111-oh-side-en.png",
+      "rawSHA256": "11c072b50ee5cb92da17f6cbb94bebcee4f55226a4b5fc8a9c80f6864541501f",
+      "sha256": "874a336132efcc1f067c697b78d52572a822d55e1ba2da5c5cc6fd4607a4f143",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        695,
+        615,
+        1085,
+        850
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Native HPt4O summary, Ordered 6 sites 18/52 atoms, 161 bonds CutOffDictNN, Input cell 1x1x1; same raw as side scene."
+    },
+    {
+      "asset": "crop-5eed673aca0b27c69288.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/online-si-save-english.png",
+      "rawSHA256": "3a27bb4aee37f4ed4b67bea01ea0043d738e29b8c1faa162a63cd17095e35112",
+      "sha256": "39cd03b7709ca2166fa72c7bd433d5c56ce43aaa704c931e371b22b38b62fa29",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        728,
+        752,
+        1858,
+        1134
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Save project to Files dialog, Online/Si-study and unchanged Si-ground-state.ks filename, matching the Chinese example. Cancelled without overwriting the source project."
+    },
+    {
+      "asset": "crop-601f9ce2a238baeb7b2e.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/silicon-vacancy-parameters-english.png",
+      "rawSHA256": "f6e5a0d3edc58dc450aa965485b871cf44e695c64f88cb6a500a578f0d1c1ed3",
+      "sha256": "612d3fa2579935a0f1b66e22dde08797d1c006d046e4a26eac6950a3386b3cd5",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        730,
+        608,
+        1856,
+        1278
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Native Create Point Defects dialog before Apply: Vacancy, Site indices MATLAB1-based1, starting from64-site supercell; no preview status, matching original."
+    },
+    {
+      "asset": "crop-60c8057a2bb7c31f0fd8.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/pyridine-built-en.png",
+      "rawSHA256": "a0c4f50dbb8db97bbe267b6457d34c43e311beb195d8e56aa899c12e8141d9fe",
+      "sha256": "0d94316e9f4405899fb1f5661a49cf44e73a9b0197ce290a739c3aaf1b370176",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1185,
+        625,
+        1970,
+        1470
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Initial pyridine built from aromatic benzene ring with atom 6 N, then Add Hydrogens on sites 1 through 6. Eleven atoms and eleven source bonds, N upper right, five hydrogen endpoints, ring-normal camera."
+    },
+    {
+      "asset": "crop-68b4df9ea7d48ce9da1e.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/ethanol-export-file-menu-english.png",
+      "rawSHA256": "7e86754907520d4502c69fea02e3ac32fc5d997444baf3140290b301b6d11b28",
+      "sha256": "43d0c1ac4d0adafb69cf463358c710b820f960568054bf8b8a6f61ecc9540d7d",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        2024,
+        876,
+        2360,
+        1126
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Molecular viewer file export menu: Structure file with exactly 21 formats, Offline HTML interactive single-file viewer, and Scene JSON raw atomic scene data, matching the original molecular-context menu."
+    },
+    {
+      "asset": "crop-68bb0517e51ea1057170.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-gpu-scene-english.png",
+      "rawSHA256": "6b8a0a5e14beca60aa54eb51c62c994379fdb851ffb52392617c728858205758",
+      "sha256": "4a4784b2b0cc3a47c492e3e21522fcecf294356186644a33c23cab37d87d6165",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        860,
+        620,
+        2300,
+        1500
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual CubeGPUdirectvolume;Dataset1,23x23x24,arbitrary;Cool-warm/Linear0.0034185to0.2,Balanced,Opacity0.72,Gradient0.35,I0.25/0.75,J/K0/1. FullcellCr4O5overlayatomscale0.22;supportinginfohidden."
+    },
+    {
+      "asset": "crop-693a9be4f512a9a0e125.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/silicon-conventional-workspace-english.png",
+      "rawSHA256": "4d65ada19e95f36b39543dd89724f7c7232ac96883702bd7280077a92996186a",
+      "sha256": "fcfa723b6faeb4d6d78ffc90a1322fbfc5c2f6411413c8aac1a5314c2f8813ae",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "cropBoxXYXY": [
+        0,
+        64,
+        2400,
+        1664
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox V0.5.0 source GUI, MATLAB R2026b -nojvm, native English UI",
+      "scene": "Unmodified Si-introduction.ks teaching project containing the conventional silicon.cif: eight Si sites, 46 displayed atoms, 56 CrystalNN bonds, input cell 1x1x1. Native English desktop workspace, original oblique camera direction with complete cell in view; window title cropped."
+    },
+    {
+      "asset": "crop-6bd0b3f7b04c691f91a8.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/silicon-bond-2-7-english.png",
+      "rawSHA256": "e20502454d6cdc1e940539b98ce8c97bc14a93a90b2dc9a60fc6936e0fbd4d89",
+      "sha256": "75298e8f5f723fea7ef44c0cda3da8dd17cf206997550d01ea4e6a7224fc5303",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        684,
+        968,
+        1214,
+        1134
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Original silicon.cif conventionalcell: native Bond inspector Sites2-7, length2.35719Angstrom, image0,0,0;8sites46displayed atoms56CrystalNNbonds, matching reference."
+    },
+    {
+      "asset": "crop-6bf7d3c41caf0892911f.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/standalone-startup-english.png",
+      "rawSHA256": "2fb347eaa396f6b1a57ed3e909fa136a35d5364650490c25cb3135e78264637b",
+      "sha256": "841d95d4e088e6d21cd1d81847f58e8df9a6f38837382a999e2199029011d33f",
+      "nativePixels": [
+        1600,
+        988
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        1600,
+        988
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "Native macOS V0.5.0 standalone startup host, MATLAB Runtime R2026b, JVMEnabled=false",
+      "scene": "Actual native V0.5.0 standalone startup card from freshly compiled Developer ID signed application, after selecting English in deployed Settings and restarting. Status: Initializing the runtime environment. Original official bilingual logo and materials artwork unchanged; correct Version 0.5.0, native English subtitle, progress and copyright. The loading substage differs from the Chinese reference because it is transient."
+    },
+    {
+      "asset": "crop-6e54a4267b5bd8c4b3c0.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-spin-summary-settings-english.png",
+      "rawSHA256": "50e8a1a65f6df5909f53effc28a9c124166e4660d933e75a601d12d96d86de0b",
+      "sha256": "cf02e9b6ab973ecdc2dd1cf2fb9c787f5e00d29407577feb7f9a32d29262e3eb",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1680,
+        930,
+        2280,
+        1466
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual spinCHGCAR Magnetization density:Absolute value,Positiveon0.000,Negativeon-0.0006000,Opacity0.72; native controls,rangeentirelynegative."
+    },
+    {
+      "asset": "crop-71a6b6056b817444ef97.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/polymer-block-model-en.png",
+      "rawSHA256": "efe1f2708465d4848e1cb5c6384b56a8ee1b7355f46ea3e2d091709e537e504e",
+      "sha256": "5dd207d3b11d70eb4e2ff054b5a46c819802dfe65557ac28aab3cfff37ef27c6",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1270,
+        970,
+        1905,
+        1135
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Central PPO4 block showing exactly four methyl branches, same construction and camera as entire-chain capture."
+    },
+    {
+      "asset": "crop-7567d94dfd7d877833b9.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-gpu-clipping-english.png",
+      "rawSHA256": "2c7e5d1dc9ca9978f9a3440762410d74a80f7fb6312db7f472a9477986f0f74f",
+      "sha256": "c22f43398a2eaeb88f81a1b947a3811a37aecedbbd94d4ebdff50f9feb618f3b",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1680,
+        690,
+        2280,
+        1235
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Native Direct volume controls:Balanced,Opacity0.72,Gradientopacity0.35,Iclipping0.25/0.75,J0/1,K0/1; values committed through UI and verified."
+    },
+    {
+      "asset": "crop-7684a8a790954b6a1954.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/polymer-block-model-en.png",
+      "rawSHA256": "efe1f2708465d4848e1cb5c6384b56a8ee1b7355f46ea3e2d091709e537e504e",
+      "sha256": "ad7f96857fd3aa3fb4238a86a2a27c0b8cfb63e0e179d6ed76600cdc0e987a9a",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        752,
+        970,
+        2410,
+        1135
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual PEO3-PPO4-PEO3 construction, Atactic seed 8, entire extended 84-atom chain and all four upward methyl side branches."
+    },
+    {
+      "asset": "crop-7a61cf8df5b1fcc967e4.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/silicon-symmetry-complete-en.png",
+      "rawSHA256": "792e1f0049746c690e81e53b154be3bfa2e1b8547b5a24726eac953319c69362",
+      "sha256": "d513be2dccadc2763dbf1eb22834841ed59fda44d93d8d60d111d184c33a5386",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        780,
+        700,
+        1815,
+        1405
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual Online Symmetry workflow run from silicon-band-primitive.ks two-site Initial structure. Build Molecule Crystal, PBE/default/20 Ha/0 K/Nspin 1; SymmetryThreshold 1e-7 and SymmetryPrecision 1e-5. Crystal, Symmetry, BZ 2D and BZ 3D all completed with native green success checks; Symmetry selected. No SCF task in this run."
+    },
+    {
+      "asset": "crop-7c221ceb9a35fdad53a3.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/twist-parameters-top-english.png",
+      "rawSHA256": "3ce8c51a5e0bc616b0de0bb8240de61c5cd9fddaa36f2daa3c935cb80982826c",
+      "sha256": "e5248e2999c6b7f38d21af4e4e9d74034cdc4cba9a9f5ef13b59e0b4f2f658c2",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        740,
+        410,
+        1830,
+        1420
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Native Twist Moire Superlattice dialog, bottom layer twist-graphene-bottom and top twist-graphene-top. Target21.786789 displays21.79; gap3.35, vacuum15, maxstrain0.03, maxatoms200, coincidenceindex6. Successful preview state; scroll positioned at top to show full parameter area."
+    },
+    {
+      "asset": "crop-817224ae41bbaff8bca4.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-total-summary-settings-english.png",
+      "rawSHA256": "92b829d8d0fc7dd88c692801a99beb51934630ea4bd9e484491bb2f7a7fbf116",
+      "sha256": "10864db697b6460f9e73099d536cd208b36e2f00a10e32c07f1ddeb702523be8",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        692,
+        615,
+        1240,
+        860
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual CHGCAR.nospin.gz:32x32x32 grid,Total charge density,Angstrom^-3 units; native English summary. Positive isovalue0.04000,negativeoff,opacity0.72."
+    },
+    {
+      "asset": "crop-89eb072a4598add87b05.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/twist-top-english.png",
+      "rawSHA256": "6d7f96b727d506884a40b72eae19e3a88f1a73366884b2e6da5ae893919aed5c",
+      "sha256": "6dd08f2d7a8021e9c2dabca5b3646451e14f5e2e0276a0717b46b12cefc12c12",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1180,
+        620,
+        1980,
+        1490
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Exact prepared graphene-twist-21p786789.json:28Csites68displayedatoms80CutOffDictNNbonds. Native c-axis view of rotated layers and oblique cell; inputcell1x1x1. Full outer atoms retained."
+    },
+    {
+      "asset": "crop-8ce96edd826deccee006.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/pyridine-atom-chemistry-en.png",
+      "rawSHA256": "4675c224397b14e1f5da1f49e7bdaef36416a8fbfeb4f96b83b85b126c04b2e8",
+      "sha256": "5fbb10f8d0e48626730bf01010e11c6056804804d35ef195b358ccb4b2826585",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        758,
+        1305,
+        1365,
+        1338
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Native successful preview status for ring atom 6 nitrogen chemistry edit."
+    },
+    {
+      "asset": "crop-a8d161a93e2745b16ef3.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/twist-side-english.png",
+      "rawSHA256": "cf108b3e01176107e90b98f6065aac9d807cf12a0e608a9d9f979668cc65030c",
+      "sha256": "73c2c21b08e3f60cad5f2f360651b42e8c94392a35be50e3e87812644c5a132e",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1330,
+        610,
+        1830,
+        1480
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Same unmodified twisted bilayer, native a-axis side view; two atomic rows separated by 3.35 Angstrom and full 18.35 Angstrom cell height including external vacuum."
+    },
+    {
+      "asset": "crop-aa00ad998951381ace74.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-cube-miller-scene-english.png",
+      "rawSHA256": "919eacfbbd5ed7d9a8e81f4b59e63acec3e5195d009966a1c6c60367c98bddfc",
+      "sha256": "814aec50c86a4b7c38f33b183d4cf0924440689bf2f0fb1ddb4db9450053bae9",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        860,
+        620,
+        2300,
+        1500
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual elec.cube.gzDataset1,23x23x24grid,arbitrary units;Millerplane(110),Cool-warm/Linear/range0.0034185to0.2;Cr4O5overlayAtomscale0.22,bonds/imagesoff,fullobliquecellandplane."
+    },
+    {
+      "asset": "crop-ab9df592529bd047787b.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-cube-miller-settings-english.png",
+      "rawSHA256": "fae5639c0f75fd7c4c535993c222035424952a4ef01daa814c5266be26966967",
+      "sha256": "7154e1b98864c3288b105c727c71eba0d0aa8082609caff8964aa325415ffeb8",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        692,
+        615,
+        1180,
+        860
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual elec.cube.gz,FormatCUBE,23x23x24grid,Dataset1,arbitraryunits;Cr4O5atomic overlay; native English summary."
+    },
+    {
+      "asset": "crop-b9b8c6192e335985ecb0.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/macos-installer-license-english.png",
+      "rawSHA256": "3b1d68ac95f334f32273e515ecaf71ddd29ae60a703ac8d88eaeba99bc004024",
+      "sha256": "a61f27d09a6ed0e55eb3fc80d79e2547cb908fb5138bc9db245e81ba38840cdc",
+      "nativePixels": [
+        1240,
+        896
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        1240,
+        896
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "Native macOS Installer, English per-process AppleLanguages, signed V0.5.0 PKG",
+      "scene": "Actual native macOS Installer License page for freshly compiled and Developer ID signed V0.5.0 Apple silicon application-only PKG. English Installer session, original Business Source License 1.1 document at the beginning; no agreement accepted for the screenshot."
+    },
+    {
+      "asset": "crop-bbefd67b7ee5e6206f70.png",
+      "status": "reused-language-neutral",
+      "sourceEdition": "zh-CN",
+      "sha256": "bbefd67b7ee5e6206f704e421fe87f17be1ebf0ba9c505a4ec9649bfa1e85751",
+      "reason": "Existing English scientific plot or unchanged bilingual brand mark."
+    },
+    {
+      "asset": "crop-c0154093dad09f77a9a2.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/silicon-supercell-result-english.png",
+      "rawSHA256": "573fbd7301708e97e2d0151b0d7591e273f3e0114d70216d4c492a1b360c8df5",
+      "sha256": "5085be5608f8a011b884bed9469389350b8d5ea1478027791f6ac35928b96934",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        690,
+        610,
+        1110,
+        850
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Same native Si supercell result summary: Ordered64sites166atoms;244bondsCrystalNN;Inputcell1x1x1."
+    },
+    {
+      "asset": "crop-c02e14aa8762e8947bbe.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/pt111-oh-parameters-en.png",
+      "rawSHA256": "3b6b30fc612575c600577d4df3c305c72502c132650dbfa7a0af99dad85240d6",
+      "sha256": "97904192da5d0de14cbfe90de5bd7a76a8c8e1f492c9f29449b3280113057b9c",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        780,
+        610,
+        1805,
+        1455
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Clean Pt111-normal-c host and oh-fragment: On top candidate 1, anchor height 2 A, O anchor atom 1, orientation H atom 2, periodic direction 1 1 1, minimum distance 0.5 A."
+    },
+    {
+      "asset": "crop-c201c0495d5d847c2fd3.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/pt111-oh-side-en.png",
+      "rawSHA256": "11c072b50ee5cb92da17f6cbb94bebcee4f55226a4b5fc8a9c80f6864541501f",
+      "sha256": "1319082182e6d07fd17b122fc6b1065d2f443443e447f52411e394e4424c591f",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1235,
+        610,
+        1920,
+        1490
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual outward Pt4OH construction on normal-c host, wrapped via 1x1x1 Build Supercell. Native side view along a; two periodic images of the same adsorbate, full tall cell and vacuum. Boundary images on, one-hop bonded atoms off, 18/52 atoms and 161 CutOffDictNN bonds."
+    },
+    {
+      "asset": "crop-c36a9eee3be02622a4d7.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/online-h2-results-english.png",
+      "rawSHA256": "c1b2c788bf421b25d309ef9be80730fc959a4da9f4675f92a10344a20d396781",
+      "sha256": "94014daab6ee479d430eded4c110ed3fc9492aceb21f3bb6b412de828d9d2426",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        70,
+        526,
+        498,
+        1192
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Same H2-Online-SCF-050.ks saved reference project, showing SCF, h2, Run SCF and selected EnergyConvergence in separate dataset/plot branches."
+    },
+    {
+      "asset": "crop-c77f26280735587ce6a4.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/polymer-block-model-en.png",
+      "rawSHA256": "efe1f2708465d4848e1cb5c6384b56a8ee1b7355f46ea3e2d091709e537e504e",
+      "sha256": "bf717c9e53a5d14d7198c3fa9eb084a0b027891863f799588af803d5dce49d00",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        695,
+        615,
+        1090,
+        850
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Native polymer summary H50C24O10, Ordered 84 atoms 83 bonds, Charge 0 spin 1, Molecule Source."
+    },
+    {
+      "asset": "crop-c885d8ed3b1bcd221501.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/desktop-overview.png",
+      "rawSHA256": "66a3af0bdb93b6ee19ef233b711bb795c372906038a5f6068386057390211531",
+      "sha256": "305ae58021e2cad0efc8832b68d2bbad8306002efc28f505e3804c21b6ccd72a",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        2400,
+        1664
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "MATLAB toolbox, source mode, -nojvm, isolated preferences",
+      "scene": "Empty project with Project, Information, Config, Simulation and Command panels open."
+    },
+    {
+      "asset": "crop-cdb0f92bdcdbb307f144.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/ethanol-angle-measured-desktop-en.png",
+      "rawSHA256": "71a32be909a61374c0ef5acb38095a612b1683cffea2b85d4b135dfa2294e568",
+      "sha256": "859676283cdea85606bc6cc17d37d0cfd68f8f161e894ac2ddc15c18decc1231",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "cropBoxXYXY": [
+        625,
+        610,
+        1030,
+        1340
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "Installed KSSOLV Toolbox V0.5.0, English UI, MATLAB Runtime R2026b, JVM disabled",
+      "scene": "Actual ethanol bond-angle measurement 109.500 degrees, target 109.500, Subtree, First side; complete C1-C2-O3 diagram. Native viewer UI scale 75 percent."
+    },
+    {
+      "asset": "crop-e2fa9f70b6bcca245a04.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/pt111-slab-preview-en.png",
+      "rawSHA256": "f22e427acd5872cf028a996ec6cd0699e841f80519c701ab8de25dc7034413da",
+      "sha256": "5f78c1d015cd8e16eed0b2fefc4cdc50349f50f05b4b9a35f308122fb59f2d84",
+      "nativePixels": [
+        1291,
+        655
+      ],
+      "cropBoxXYXY": [
+        380,
+        183,
+        911,
+        500
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome bound-tab viewport capture",
+      "scene": "Native Build Slab preview from four-site Pt-fcc: Miller 1 1 1, minimum slab 8 A, vacuum 10 A, centered, reduced surface cell, termination 1."
+    },
+    {
+      "asset": "crop-e572efea8aa253089edc.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/structure-import-menu.png",
+      "rawSHA256": "9a039730a99cb725e3b76b6a6719dd9465e4d9c5b0980f8644a15ef5fbf186c4",
+      "sha256": "2bb6bb38af04e2011b9cb11d7fbfb4ba993b8393416340da38018f6b813c3c37",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "cropBoxXYXY": [
+        270,
+        269,
+        873,
+        565
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "MATLAB toolbox, source mode, -nojvm, isolated preferences",
+      "scene": "Home > Structure popup; four original structure actions, unchanged item availability."
+    },
+    {
+      "asset": "crop-eb25a0cdb09d3f78fdbd.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/desktop-initial.png",
+      "rawSHA256": "c4c534e7bf471c77222b8228fd79d48a2cc58b010d68906e8bf7b81debf889b4",
+      "sha256": "14338e32abb841c67f6312a892b3a5b1fb6094cbe6196e03afdb30243152b28f",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "cropBoxXYXY": [
+        0,
+        0,
+        2400,
+        1664
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "MATLAB toolbox, source mode, -nojvm, isolated preferences",
+      "scene": "Empty project; Project Browser open, Information Browser folded, right panels closed."
+    },
+    {
+      "asset": "crop-eb58a23d11fe997c90a4.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-spin-isosurface-english.png",
+      "rawSHA256": "289f870a6951d09e65a8d6d7cc4a0e436bdc0fea8664cd9ad20f4c24bdd2006e",
+      "sha256": "002070ca3fa89d714876937012756f7dd0c218d6f7edc2fb1198798d297afcc8",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1150,
+        640,
+        2010,
+        1470
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Actual CHGCAR.spin.gz magnetizationdensity48^3;AbsolutePositive0.000andNegative-0.0006000bothon,opacity0.72. Entire channelnegative,rednegativeisosurfaceandgreenLi overlay;fullcellnativeobliqueview."
+    },
+    {
+      "asset": "crop-f2ece60af591133fac37.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/pt111-slab-preview-en.png",
+      "rawSHA256": "f22e427acd5872cf028a996ec6cd0699e841f80519c701ab8de25dc7034413da",
+      "sha256": "4b82a6e65920d88f4f1906f4a3dcad969746c4697dad328af07f04ab48bb1790",
+      "nativePixels": [
+        1291,
+        655
+      ],
+      "cropBoxXYXY": [
+        378,
+        545,
+        685,
+        563
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome bound-tab viewport capture",
+      "scene": "Successful native preview status for the same Pt(111) slab operation."
+    },
+    {
+      "asset": "crop-f580c4c4a5007b46634f.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/volume-total-clean-settings-english.png",
+      "rawSHA256": "126cd50c0f07ed3bd70bba32e278efc91baf6e79605a14b298edabb86b510b92",
+      "sha256": "7849f7ea5b3a1ee536ce73bc6d11c38e446f5286b42bc194f667a51d1b24a764",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1110,
+        806,
+        1720,
+        1336
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Same native totaldensity state:Absolutevalue,Positiveon0.04000,Negativeoff0.000,Opacity0.72. Pointer moved to documenttab before capture;threshold andopacityunobscured."
+    },
+    {
+      "asset": "crop-f7556efd0d7de78b7cf1.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/online-h2-site2-english.png",
+      "rawSHA256": "566022e8ff5c401df8b51e852dc840cf33a8866e8b5843e8e5181cd47db060fb",
+      "sha256": "c8c0fe645944a24001126abacfba65b55fa81aa7cef0ee15abc7bd65ce11da17",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        684,
+        880,
+        1214,
+        1222
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Hydrogen site 2: Cartesian 2.646,2.646,3.043 Angstrom; fractional 0.500,0.500,0.575; occupancy H1, exactly matching Chinese source."
+    },
+    {
+      "asset": "crop-f99354db0f163eccfd81.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/pyridine-atom-chemistry-en.png",
+      "rawSHA256": "4675c224397b14e1f5da1f49e7bdaef36416a8fbfeb4f96b83b85b126c04b2e8",
+      "sha256": "cf34655d2e70b355604bb95e48213f3ed895e4a64e871e6959974503262d8f72",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        760,
+        720,
+        1822,
+        1286
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Benzene ring atom 6 replaced by N, formal charge 0, sp2 hybridization, Aromatic checked; actual Atom Chemistry preview."
+    },
+    {
+      "asset": "crop-faecdf5879e359505e34.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/twist-parameters-preview-english.png",
+      "rawSHA256": "ccf01b27238fc6bd5579b89518ce1ad181b7a583981ab8373ee2a97e90690501",
+      "sha256": "0abed54637816badf9ce2963ee2298b50681dde8e64c8d6e4502c611b058ecaf",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        750,
+        1470,
+        1380,
+        1516
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Native successfulpreview status from exacttwistdialogandinputs:Preview active-Apply to commit or Cancel to restore. Tight nativepixeltext crop, no edits."
+    },
+    {
+      "asset": "revision-band-resource-options.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/band-resource-options-english.png",
+      "rawSHA256": "1ec9bbf15bd667f4fc64d4232a423f08f0a4b7c380c7b8d5532eb3a08890119f",
+      "sha256": "41daf1ab60a705734d92e014b5fec38aa14dbb0c72493881db84ceef923ff9d1",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "cropBoxXYXY": [
+        1808,
+        580,
+        2368,
+        1070
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox V0.5.0 source GUI, MATLAB R2026b -nojvm, native English UI",
+      "scene": "Silicon Band node: eight segment points; native Parallel dropdown shows Serial, Use NSCF settings, Parallel (process pool), GPU (diagonalization)."
+    },
+    {
+      "asset": "revision-llm-ollama.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/settings-english-ollama.png",
+      "rawSHA256": "a4b2d9586d172e6fd637d01d99d6093046ad94c4316df8da62bffda1d6fee7d4",
+      "sha256": "5c89373c07db739a0653c4ed105db2f01620a9246c6bd13dcdafdf378a3ea805",
+      "nativePixels": [
+        1360,
+        1164
+      ],
+      "cropBoxXYXY": [
+        38,
+        340,
+        1320,
+        580
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "MATLAB toolbox, source mode, -nojvm, isolated preferences",
+      "scene": "General settings, LLM Ollama: http://127.0.0.1:11434 and deepseek-r1:7b, matching source example."
+    },
+    {
+      "asset": "revision-llm-openai-compatible.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/settings-english-openai-compatible.png",
+      "rawSHA256": "3e87ca8f4f1f17fc43c158f45ce49f7ef88584da695485472bc738f047fb588a",
+      "sha256": "acc2d3273510b0701dee7d09f33a0ce048756f8997c16831240ce97ee36dedc2",
+      "nativePixels": [
+        1360,
+        1164
+      ],
+      "cropBoxXYXY": [
+        38,
+        386,
+        1320,
+        637
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "MATLAB toolbox, source mode, -nojvm, isolated preferences",
+      "scene": "General settings, OpenAICompatible: https://api.openai.com/v1, masked key display, gpt-5-mini. Unsaved example edits; no connection request sent."
+    },
+    {
+      "asset": "revision-llm-question-input.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/llm-question-english-unsent.png",
+      "rawSHA256": "78a113f70c51b0a7308aae8882819215d5295673c1edfd5ddf459e65c1d3499b",
+      "sha256": "a5462a9de5deaba0b034c0c1969c464f8c6287bea06a122257d2fa6476a29583",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "cropBoxXYXY": [
+        619,
+        1505,
+        2320,
+        1580
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "MATLAB toolbox, source mode, -nojvm, isolated preferences",
+      "scene": "Command Window question input before sending; English equivalent of the source question about plane-wave cutoff energy and convergence. Not submitted."
+    },
+    {
+      "asset": "revision-materials-project-imported-si.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/materials-project-mp149-imported-english.png",
+      "rawSHA256": "8cc655c34d332b77581b11bb11b65dd4abd3ae43c69c3eedd7c1187569647389",
+      "sha256": "be14d7e9a772a143736bf0859f4c84ad6f5a4f95a6ee5308b9d8b16baecb887f",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        660,
+        580,
+        1920,
+        1516
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Live Materials Project mp-149 imported through Import selected after successful Si-only query. Native English viewer: two Si sites, ten displayed atoms, eight CrystalNN bonds, input cell 1x1x1, translucent periodic images and complete oblique cell."
+    },
+    {
+      "asset": "revision-materials-project-si-results-identity.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/materials-project-mp149-results-english.png",
+      "rawSHA256": "8dc08bbd70fa0718d6fa684b53736478106de7870a549d0e469f1f5d5d260fb9",
+      "sha256": "28e4cfc780c9bdaaeb282e4aee4c8c19caa9a0ad79eb405fd9d303a368d8435b",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        290,
+        974,
+        1444,
+        1448
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Successful live Si-only query: 43 results, first page, selected mp-149 Si Cubic Fd-3m (227), two sites. Native identity columns widened to show full English headings; nine visible records match the Chinese reference identities."
+    },
+    {
+      "asset": "revision-materials-project-si-results.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/materials-project-silicon-query-english.png",
+      "rawSHA256": "e50ad258317b81b7ce5032db428feda7902d5587acbe481fa6571f3c0bc67b0f",
+      "sha256": "d1e961b7be005afeaa38032c4ffda3d150866e22e2505187f740925909000162",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        280,
+        410,
+        2300,
+        1248
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Successful live Si-only query, Only these elements selected, Elements Si, all three query modes and full native periodic table. The same query returned 43 actual Materials Project records including mp-149."
+    },
+    {
+      "asset": "revision-nanotube-axis-c.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/nanotube-axis-c-english.png",
+      "rawSHA256": "209b8a1c6d49aef4c3ddeaf6888829539114f6aaee29c6d90932f0e1d0f7bf2d",
+      "sha256": "901a93cf14fd14e58569568ae7d5a4d286046a25c0f966d3f150dd36ffd6360e",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1330,
+        778,
+        1830,
+        1322
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Same unmodified32-site nanotube, native View along c axis; octagonal carbon ring and hollow center. Full native Chrome window at2582x1596, cropped without resampling."
+    },
+    {
+      "asset": "revision-nanotube-perspective.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/nanotube-perspective-english.png",
+      "rawSHA256": "e564a1a39738618c70df99aa3e558ea0d68ed9dea6f96da3180898b32ffff819",
+      "sha256": "ed2df84340af02a9e2d4b718d8d4994782abbbb626e8e2982a83c024dd61e835",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        1330,
+        778,
+        1830,
+        1322
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Prepared graphene-tube-4-0-l2.json; 32 C sites, 44 displayed atoms, 60 CutOffDictNN bonds, input cell 1x1x1. Native default oblique side view including periodic axial images."
+    },
+    {
+      "asset": "revision-nanowire-perspective.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/nanowire-perspective-english.png",
+      "rawSHA256": "3bef3bf8bcffa2425cc386abaedc2a6794b518bad80d0554e1f5a93a5c71340c",
+      "sha256": "a8965b5bee7787bb779b19ddd95bc7f17711e09e36b25cfcf9fb6c3c948d9cb2",
+      "nativePixels": [
+        2582,
+        1596
+      ],
+      "cropBoxXYXY": [
+        660,
+        580,
+        2500,
+        1510
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox Online, native English UI, Chrome window capture",
+      "scene": "Cu-wire-001-r3-l2.json: 24 Cu sites, 42 displayed atoms, 145 CutOffDictNN bonds. Native oblique view with full transverse vacuum cell and axial periodic images, English summary and toolbar."
+    },
+    {
+      "asset": "revision-nscf-process-resources.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/nscf-process-resources-english.png",
+      "rawSHA256": "b267982ad6d7cef5d3d8c6776b330ef03ab4bd6558b154b9c2aaf8b2f425abb5",
+      "sha256": "358ff0b26246ffee6f2babeeaf6ced4a6af7117478647cf3e8d0dab509e7aa97",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "cropBoxXYXY": [
+        1808,
+        580,
+        2322,
+        1244
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "KSSOLV Toolbox V0.5.0 source GUI, MATLAB R2026b -nojvm, native English UI",
+      "scene": "Silicon primitive-cell NSCF: lobpcg, 20 CG steps, 30 NSCF steps, process pool, two processes, one thread per process, no time limit; native selected dropdown label is ellipsized at the default dock width."
+    },
+    {
+      "asset": "revision-silicon-bands-live.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/silicon-bands-native-english.png",
+      "rawSHA256": "25d8e2c061f453d1d08cec5f5b6dd5538d380a3956263f52c6a7b233a662ee80",
+      "sha256": "d1c7938b05ba0a3b5a9499977b58e68df0fb70ea4b974061d6dcd26901d8fe22",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "cropBoxXYXY": [
+        610,
+        360,
+        2330,
+        1590
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "Native KSSOLV Toolbox English UI, full MATLAB R2026b -nojvm source mode",
+      "scene": "Native fullMATLABR2026bToolboxV0.5.0 launched-nojvm;assertnoJVMpassed. silicon-band-primitive.ks Si2 storedbandProcessingarrays, unchangedshow_reference_results bands helper.8branches,8points/segment,Gamma-X-U|K-Gamma-L-W-X,energyrelativeFermi-15to15eV.Onlynativegraphicsformatnormalizedbyexistinghelper;arraysunchanged."
+    },
+    {
+      "asset": "revision-silicon-dos-live.png",
+      "status": "captured-en",
+      "sourceEdition": "zh-CN",
+      "rawCapture": "output/english-edition/captures/silicon-dos-native-english.png",
+      "rawSHA256": "f3b1171a448bc6d62ddd347f9164e024379c7274681b69bb4a02b6559eaa8962",
+      "sha256": "e4cbcd6f5965da57af0dafe016ac781f1b0f78c93df0ecec425d2671177e9d5a",
+      "nativePixels": [
+        2400,
+        1664
+      ],
+      "cropBoxXYXY": [
+        610,
+        360,
+        2330,
+        1590
+      ],
+      "locale": "en_US",
+      "softwareVersion": "V0.5.0",
+      "mode": "Native KSSOLV Toolbox English UI, full MATLAB R2026b -nojvm source mode",
+      "scene": "NativefullMATLABR2026bToolboxV0.5.0 -nojvm. Same silicon-band-primitive.ks Si2 storedDOS arrays, unchangedshow_reference_results dos helper;401samples,-10to10eV,4x4x4NSCFgrid,0.05eVstep;DOS horizontal0to3,Energyvertical. No recalculation,numericalarraysunchanged."
+    },
+    {
+      "asset": "vector-02b7a0240bc7f99a0fc6.pdf",
+      "status": "reused-language-neutral",
+      "sourceEdition": "zh-CN",
+      "sha256": "02b7a0240bc7f99a0fc68b8c638601d2eac318afb40b375964259102cb2640c5",
+      "reason": "Existing English scientific plot or unchanged bilingual brand mark."
+    },
+    {
+      "asset": "vector-1d3af63f1336e902c5cd.pdf",
+      "status": "reused-language-neutral",
+      "sourceEdition": "zh-CN",
+      "sha256": "1d3af63f1336e902c5cdb5d78f3a5c340b6e67f27e730582d3c8071f7bf9d622",
+      "reason": "Existing English scientific plot or unchanged bilingual brand mark."
+    },
+    {
+      "asset": "vector-2e572f3c8654292658e8.pdf",
+      "status": "reused-language-neutral",
+      "sourceEdition": "zh-CN",
+      "sha256": "2e572f3c8654292658e80e74336f20489083054c2c13c1316678374b32553111",
+      "reason": "Existing English scientific plot or unchanged bilingual brand mark."
+    },
+    {
+      "asset": "vector-79e6f35b7afec0271551.pdf",
+      "status": "reused-language-neutral",
+      "sourceEdition": "zh-CN",
+      "sha256": "79e6f35b7afec02715512dc62dcae50551faa3a39f5ce43d13b4fcfde2ba7daf",
+      "reason": "Existing English scientific plot or unchanged bilingual brand mark."
+    },
+    {
+      "asset": "vector-a7002e532f8546105cf1.pdf",
+      "status": "reused-language-neutral",
+      "sourceEdition": "zh-CN",
+      "sha256": "a7002e532f8546105cf100db31077873afa99ae2335833cfb22d46f0deaf74ff",
+      "reason": "Existing English scientific plot or unchanged bilingual brand mark."
+    },
+    {
+      "asset": "vector-cc7185e6fa1fba4c8c34.pdf",
+      "status": "reused-language-neutral",
+      "sourceEdition": "zh-CN",
+      "sha256": "cc7185e6fa1fba4c8c3434e06f1c98e1f2d9a3ea920208d2aafdf1226947f2ed",
+      "scene": "Language-neutral silicon primitive-cell Brillouin-zone vector plot: Gamma/X/U/W/K/L and reciprocal b1/b2/b3 mathematical labels only; no Chinese or UI text. Identical to supplied Si-primitive-BZ-Online-050.pdf."
+    }
+  ],
+  "review": "All referenced assets inspected against the source scenes; translated chapters and figure layouts cross-reviewed."
+}

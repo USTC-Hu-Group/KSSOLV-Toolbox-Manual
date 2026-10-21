@@ -1,0 +1,10 @@
+Adding vacuum changes the geometry according to
+\begin{equation}
+  \mathbf c'=
+  \frac{\|\mathbf c\|+\Delta}{\|\mathbf c\|}\,\mathbf c,
+  \qquad
+  \Delta H=\Delta\,
+  \left|\frac{\mathbf c}{\|\mathbf c\|}\cdot\hat{\mathbf n}_{\mathrm{slab}}\right|.
+  \label{eq:vacuum-addition-projection}
+\end{equation}
+Both $\Delta$ and $\Delta H$ are in \AA. The former is the requested added length; the latter is the increase in normal cell height. The dot-product factor lies between 0 and 1. With $\mathbf c$ along global $z$ and the surface normal along $(1,1,1)$, adding $2\,\text{\AA}$ increases normal height by only approximately $2/\sqrt{3}=1.155\,\text{\AA}$. In Figure~\ref{fig:surface-vacuum-geometry}, $\Delta\mathbf c=\mathbf c'-\mathbf c$ has length $\Delta$, and $\Delta H$ is its normal projection. Aligning $\mathbf c$ with the normal first makes the added length correspond directly to the actual gap.

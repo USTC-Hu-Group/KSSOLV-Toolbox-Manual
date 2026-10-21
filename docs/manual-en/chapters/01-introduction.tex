@@ -1,0 +1,84 @@
+\chapter{Getting started with \headinglatin{KSSOLV Toolbox}}\label{ch:introduction}
+\chapterlead{KSSOLV Toolbox brings atomic structures, calculation steps, and results together in a single workspace. Start with a molecule or crystal, inspect its geometry, choose a calculation method, and use a workflow to obtain total energies, electronic energy levels, or other properties. This chapter explains how to use the manual and introduces the concepts you will need for your first calculation.}
+
+\section{From structures to results}
+A materials calculation usually begins with a question: How does the total energy change with the lattice constant? What local environment does a defect create? How does a molecule's bond length change during geometry optimization? KSSOLV Toolbox provides tools for preparing structures and performing electronic structure calculations to investigate these questions. It describes the electronic system using plane waves and pseudopotentials, with KSSOLV solving the Kohn--Sham equations numerically.
+
+You do not need to master all the theory before trying the software. Begin by understanding what system you are calculating, which steps the software will perform, and what the resulting quantities can tell you. For a hydrogen molecule, the structure specifies the positions of two hydrogen atoms. A self-consistent field calculation finds the electronic ground state at those fixed positions. Geometry optimization then adjusts the atomic coordinates to find a lower-energy geometry. Understanding these distinctions matters more at first than learning every parameter.
+
+\subsection{The basic calculation sequence}
+\begin{steps}
+\item \term{Prepare the structure.} Import a file or create a structure with the modeling tools. Check the elements, atom count, lattice, and periodicity.
+\item \term{Build a workflow.} Start from a template and select nodes for structure input, calculation settings, solving, and plotting.
+\item \term{Set the calculation conditions.} Check the pseudopotentials, cutoff energy, $k$ points, convergence thresholds, and requested outputs.
+\item \term{Run and check.} Read the output messages, iteration history, and completion status to determine whether the calculation finished successfully.
+\item \term{Analyze and save.} Examine the numbers and plots, record the input conditions, and save the workflow and results in a project.
+\end{steps}
+
+The same sequence applies to more complex tasks. Surface adsorption requires a surface model with vacuum; a band structure calculation requires a self-consistent electron density; and a remote calculation requires you to choose the execution environment before submitting the job. Later chapters explain these requirements through worked examples.
+
+\section{Choose how to run KSSOLV Toolbox}
+KSSOLV Toolbox is available as a standalone application, a MATLAB\regmark{} toolbox, and \ksonline{}. They share the same core concepts of structures, projects, and workflows. Your choice mainly depends on your existing software environment, where you want to store files, and where calculations will run.
+
+\begin{table}[!htb]
+\centering
+\caption{Requirements and typical uses for the three ways to run KSSOLV Toolbox.}
+\label{tab:usage-modes}
+\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}p{23mm}>{\RaggedRight\arraybackslash}X>{\RaggedRight\arraybackslash}X}
+\toprule
+Edition & Requirements & Typical use \\
+\midrule
+Standalone & No full MATLAB\regmark{} installation or MATLAB\regmark{} license is needed. The MATLAB\regmark{} Runtime must match the application release. & Launch from your operating system, prepare structures, run calculations, and save projects locally. \\
+MATLAB\regmark{} toolbox & A supported MATLAB\regmark{} installation with a valid license; MATLAB\regmark{} R2025a or later is required. & Use the graphical workspace alongside MATLAB\regmark{} variables, scripts, and other licensed products. \\
+\ksonline{} & A browser; no client installation. The workspace and calculation session run on a server. & Work in a centrally configured environment, upload inputs, manage server-side projects, and download results. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Standalone application}
+The standalone application runs locally using MATLAB\regmark{} Runtime. Projects, structures, and exported files are normally stored on your computer, and file dialogs use your operating system's desktop environment. Once Runtime is installed, launch the application from the system application menu or a shortcut; you do not need to open MATLAB\regmark{} first.
+
+\subsection{\headinglatin{MATLAB}\regmark{} toolbox}
+Install the toolbox in a supported MATLAB\regmark{} environment to combine the graphical interface with the MATLAB\regmark{} workspace and scripts. Structure import, modeling, workflow configuration, and result inspection use the same workspace described throughout this manual. Requirements involving MATLAB\regmark{} variables, additional products, or remote jobs are noted in the relevant sections. The accompanying scripts provide reproducible inputs and reference results.
+
+\subsection{\headinglatin{\ksonline}}
+\ksonline{} provides the workspace in a browser. The browser handles display and interaction, while a server session performs the calculations. The official Hanhai Quantum\regmark{} service is forthcoming, and private cluster deployments are supported.
+
+The Online working directory and your computer's download directory are separate locations. Uploading transfers local inputs to the server; saving a project writes the current work to server-side storage. To keep a local copy, download the project or export its results. Chapter~\ref{ch:online} covers sign-in, file transfer, and session management.
+
+\section{Understand the project structure}
+A \term{project}, saved as a \file{.ks} file, holds the work for a task. It can contain several structures, several workflows, and their results. Think of it as a laboratory notebook that records both the systems under study and the way the calculations are organized.
+
+A \term{structure} specifies the elements, atomic positions, and, for a periodic system, the unit cell. The 3D view helps you inspect its geometry. Sphere sizes, background colors, and display repetitions are visualization settings rather than electronic structure parameters.
+
+A \term{workflow} defines how tasks fit together. Nodes represent tasks, and connections pass data between them. Connect a structure to an SCF calculation so that the solver can read it; connect the calculation output to a convergence plot to inspect the iteration history. A workflow can also be saved as a \file{.wf} file for reuse in another project.
+
+\term{Data and figures} appear in the results branches of the Project Browser. Data can feed subsequent calculations, while figures help you inspect trends. An image alone is usually insufficient for further analysis, so retain the project and any necessary original data as well.
+
+\begin{notebox}{Display repetitions and the calculation model}
+Displaying a crystal as $2\times2\times2$ cells makes neighboring cells easier to see, but does not create a calculation model with eight times as many atoms. To study a vacancy or dopant in an actual supercell, use \ui{Build Supercell}. The modeling tutorial demonstrates this distinction.
+\end{notebox}
+
+\section{Find your way through the manual}
+\subsection{Complete your first calculation}
+Read the installation, Online, and workspace chapters, then work through the hydrogen molecule calculation in Chapter~\ref{ch:first}. It covers importing a structure, opening a template, setting basic parameters, running the solver, and saving the results. The calculation fundamentals chapter will then help you connect the parameters you have used with their physical meaning.
+
+\subsection{Prepare a materials model}
+If you are familiar with electronic structure calculations and want to build a model, begin with Chapter~\ref{ch:modeling}. The silicon, benzene, and ethanol examples introduce everyday operations on periodic structures and molecules. Chapter~\ref{ch:advanced} extends these methods to surfaces, heterostructures, twisted bilayers, nanostructures, and soft matter. Chapter~\ref{ch:modeling-tools} explains individual tools and their parameters. After each structural change, check the atom count, unit cell, and local distances before passing the model to a calculation workflow.
+
+\subsection{Organize and present results}
+Chapter~\ref{ch:volume} covers volumetric data, and Chapter~\ref{ch:results} covers numerical and graphical results. Always interpret an output in the context of its inputs: Which structure does this total energy describe? Which path was used for this band structure? Which dataset produced this isosurface? These details give a figure a clear meaning and let you explain the calculation in a research report.
+
+\section{Conventions used in this manual}
+An interface path such as \ui{Home → Structure → Import structure from file...} means to select the tab, button, and menu item in sequence. Labels follow the English application; \file{silicon.cif} denotes a filename. Keys appear as \ui{Enter}, \ui{Esc}, or \ui{Ctrl/Cmd+Z}; Ctrl/Cmd means Ctrl on Windows/Linux and Command on macOS.
+
+Copy the accompanying \file{examples} directory to your own working directory, such as \file{KSSOLV-Study}, before starting. Keep each exercise's input structures, projects, and exported figures in a separate subdirectory. Descriptive filenames such as \file{H2-SCF.ks} or \file{Si-vacancy.ks} make the contents easier to recognize later.
+
+Tutorial parameters are chosen to demonstrate the procedure and explain the results. For your own research, test convergence against the physical quantity of interest. The relevant chapters explain how to vary parameters one at a time, compare results, and assess whether the accuracy is sufficient.
+
+\section{Start with a clear question}
+Start with a small, familiar system before creating complex structures or changing materials. Check the self-consistent calculation before adding band structure or density of states steps, and save a well-organized project before trying batch operations. You should be able to explain each step's purpose in a single sentence.
+
+Keep brief notes as you work through the examples: the atom count, unit cell, main parameters, convergence status, and one or two observations are enough. These notes will help you connect models and results as your work progresses.
+
+To find a specific task, use the workflow descriptions in Chapter~\ref{ch:workflows} and the task reference in the appendix. They link the desired result to its required inputs and the relevant tutorial.

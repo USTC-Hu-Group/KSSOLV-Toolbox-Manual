@@ -1,0 +1,57 @@
+\subsubsection{Move a group to a target center}
+
+Centering applies the same displacement to every selected atom. For $N$ selected atoms, use Cartesian positions $\mathbf r_i$ for molecules and fractional positions $\mathbf f_i$ for crystals:
+\begin{equation}
+ \begin{aligned}
+ \Delta\mathbf r&=\mathbf r_{\mathrm{target}}-
+        \frac1N\sum_{i=1}^{N}\mathbf r_i,
+ &\mathbf r_i'&=\mathbf r_i+\Delta\mathbf r,\\
+ \Delta\mathbf f&=\mathbf f_{\mathrm{target}}-
+        \frac1N\sum_{i=1}^{N}\mathbf f_i,
+ &\mathbf f_i'&=\mathbf f_i+\Delta\mathbf f.
+ \end{aligned}
+ \label{eq:center-selected-atoms}
+\end{equation}
+The molecular expression uses \AA for positions and displacements; the crystal expression is entirely dimensionless. Typical targets are $(0,0,0)$ for molecules and $(0.5,0.5,0.5)$ for crystals. Every atom receives equal weight, so centering is not mass-weighted and does not change distances within the selection.
+
+For two molecular atoms with $x$ coordinates 1 and 3\,\AA, moving their mean to the origin gives a common displacement of $-2\,\text{\AA}$. Their new coordinates are $-1$ and 1\,\AA and their separation remains 2\,\AA. For crystal fractional components 0.1 and 0.3 with target 0.5, add 0.3 to obtain 0.4 and 0.6. The other components follow the same rule.
+
+Near a periodic boundary, identify the images first. The ordinary mean of 0.99 and 0.01 is 0.5, although the sites may form a compact group across the boundary. To center that continuous group, first represent its sites in adjacent continuous images. Coordinates may be wrapped afterward, so inspect periodic connectivity rather than only coordinate signs.
+
+\subsubsection{Rotate about a specified anchor}
+
+Subtract the anchor from each position, rotate the relative vector, and add the anchor back. The anchor stays fixed and distances from it are preserved. In row-vector notation,
+\begin{equation}
+ \mathbf r'=\mathbf p+(\mathbf r-\mathbf p)
+              R(\hat{\mathbf n},\theta)^{\mathsf T}.
+ \label{eq:rotate-row-position}
+\end{equation}
+Here $\mathbf p$ is the anchor in \AA, $\hat{\mathbf n}$ is the unit rotation axis, and $\theta$ is the angle; $\mathsf T$ denotes transpose. Dialog angles are in degrees. Positive rotation follows the right-hand rule: point your right thumb along the positive axis and curl your fingers in the positive rotation direction. The vector specifies orientation only; \literalinput{0 0 1} and \literalinput{0 0 2} define the same positive axis.
+
+For rotation about global $z$,
+\[
+ R_z(\theta)=\begin{bmatrix}
+ \cos\theta&-\sin\theta&0\\
+ \sin\theta&\cos\theta&0\\
+ 0&0&1
+ \end{bmatrix}.
+\]
+With $\mathbf p=(1,1,0)\,\text{\AA}$ and $\mathbf r=(2,1,0)\,\text{\AA}$, a positive $90^\circ$ rotation about $z$ gives $\mathbf r'=(1,2,0)\,\text{\AA}$. This checks the rotation direction; the atom remains 1\,\AA\ from its anchor. Crystal positions may be wrapped to equivalent images, so inspect boundary images in the preview as well.
+
+\subsubsection{Reflect across a plane}
+
+A mirror plane needs a point $\mathbf p$ and a nonzero Cartesian normal $\mathbf n$. Normalize the normal, then subtract twice the signed projection:
+\begin{equation}
+ \begin{aligned}
+ \hat{\mathbf n}&=\frac{\mathbf n}{\|\mathbf n\|},\\
+ \mathbf r'&=\mathbf r-
+ 2\bigl[(\mathbf r-\mathbf p)\cdot\hat{\mathbf n}\bigr]
+       \hat{\mathbf n}.
+ \end{aligned}
+ \label{eq:mirror-cartesian-plane}
+\end{equation}
+The dot product $(\mathbf r-\mathbf p)\cdot\hat{\mathbf n}$ is the signed distance in \AA. Reflection reverses its sign without changing its magnitude; atoms on the plane stay fixed. Normal \literalinput{1 0 0} through $(1,0,0)\,\text{\AA}$ defines $x=1\,\text{\AA}$. Reflecting $(1.5,2,0)\,\text{\AA}$ gives $(0.5,2,0)\,\text{\AA}$, each 0.5\,\AA\ from the plane.
+
+\input{figures/round10-anchor-mirror}
+
+Centering, rotation, and reflection are geometric operations. For a molecule, first select the part that should move together, then follow the procedure below. Rotate the camera instead if you only want to change the viewing direction.

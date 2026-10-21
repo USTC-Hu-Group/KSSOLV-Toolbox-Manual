@@ -1,0 +1,747 @@
+{
+  "mode": "MATLAB-source-nojvm",
+  "MATLAB": "26.2.0.3386108 (R2026b)",
+  "JVM": false,
+  "GUIOperated": false,
+  "DFTCalculation": false,
+  "layer": {
+    "sites": 2,
+    "lattice": [
+      [
+        2.46,
+        0,
+        0
+      ],
+      [
+        -1.2299999999999998,
+        2.1304224933097191,
+        0
+      ],
+      [
+        0,
+        0,
+        15
+      ]
+    ],
+    "pbc": [
+      true,
+      true,
+      false
+    ],
+    "surfaceArea": 5.240839333541909,
+    "cellNormalHeight": 15,
+    "layerSeparation": 0,
+    "emptyNormalHeight": 15,
+    "minimumPeriodicPairDistance": 1.4202816622064793
+  },
+  "inserted": {
+    "sites": 4,
+    "lattice": [
+      [
+        2.46,
+        0,
+        0
+      ],
+      [
+        -1.2299999999999998,
+        2.1304224933097191,
+        0
+      ],
+      [
+        0,
+        0,
+        15
+      ]
+    ],
+    "pbc": [
+      true,
+      true,
+      false
+    ],
+    "surfaceArea": 5.240839333541909,
+    "cellNormalHeight": 15,
+    "layerSeparation": 3.3499999999999996,
+    "emptyNormalHeight": 11.65,
+    "minimumPeriodicPairDistance": 1.4202816622064793,
+    "input": {
+      "translation": [
+        0,
+        0,
+        3.35
+      ],
+      "minimumDistance": 0.5
+    }
+  },
+  "stacked": {
+    "sites": 4,
+    "lattice": [
+      [
+        2.46,
+        0,
+        0
+      ],
+      [
+        -1.2299999999999998,
+        2.1304224933097191,
+        0
+      ],
+      [
+        0,
+        -0,
+        18.35
+      ]
+    ],
+    "pbc": [
+      true,
+      true,
+      false
+    ],
+    "surfaceArea": 5.240839333541909,
+    "cellNormalHeight": 18.35,
+    "layerSeparation": 3.3499999999999996,
+    "emptyNormalHeight": 15.000000000000002,
+    "minimumPeriodicPairDistance": 1.4202816622064793,
+    "input": {
+      "gap": 3.35,
+      "vacuum": 15,
+      "maximumStrain": 0.03,
+      "maximumRepeat": 2,
+      "maximumRotation": 0,
+      "sortMode": "area",
+      "candidateIndex": 1
+    },
+    "analysis": {
+      "candidates": [
+        {
+          "index": 1,
+          "bottomRepeat": [
+            1,
+            1,
+            1
+          ],
+          "topRepeat": [
+            1,
+            1,
+            1
+          ],
+          "bottomTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "topTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "area": 5.240839333541909,
+          "strain": 0,
+          "rotationDegrees": 0,
+          "atomCount": 4
+        },
+        {
+          "index": 2,
+          "bottomRepeat": [
+            1,
+            1,
+            1
+          ],
+          "topRepeat": [
+            2,
+            1,
+            1
+          ],
+          "bottomTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "topTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "area": 5.240839333541909,
+          "strain": 0.52491251876883949,
+          "rotationDegrees": 0,
+          "atomCount": 6
+        },
+        {
+          "index": 3,
+          "bottomRepeat": [
+            1,
+            1,
+            1
+          ],
+          "topRepeat": [
+            2,
+            1,
+            1
+          ],
+          "bottomTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "topTransform": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "area": 5.240839333541909,
+          "strain": 0.52491251876883949,
+          "rotationDegrees": 3.180554681463516E-15,
+          "atomCount": 6
+        },
+        {
+          "index": 4,
+          "bottomRepeat": [
+            2,
+            1,
+            1
+          ],
+          "topRepeat": [
+            2,
+            1,
+            1
+          ],
+          "bottomTransform": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "topTransform": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "area": 10.481678667083818,
+          "strain": 0,
+          "rotationDegrees": -7.9513867036587939E-16,
+          "atomCount": 8
+        },
+        {
+          "index": 5,
+          "bottomRepeat": [
+            2,
+            1,
+            1
+          ],
+          "topRepeat": [
+            2,
+            1,
+            1
+          ],
+          "bottomTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "topTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "area": 10.481678667083818,
+          "strain": 0,
+          "rotationDegrees": 1.272221872585407E-14,
+          "atomCount": 8
+        },
+        {
+          "index": 6,
+          "bottomRepeat": [
+            2,
+            1,
+            1
+          ],
+          "topRepeat": [
+            2,
+            1,
+            1
+          ],
+          "bottomTransform": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "topTransform": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "area": 10.481678667083818,
+          "strain": 2.2204460492503131E-16,
+          "rotationDegrees": -1.272221872585407E-14,
+          "atomCount": 8
+        },
+        {
+          "index": 7,
+          "bottomRepeat": [
+            2,
+            1,
+            1
+          ],
+          "topRepeat": [
+            1,
+            1,
+            1
+          ],
+          "bottomTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "topTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "area": 10.481678667083818,
+          "strain": 1.104875500841572,
+          "rotationDegrees": 0,
+          "atomCount": 6
+        },
+        {
+          "index": 8,
+          "bottomRepeat": [
+            2,
+            1,
+            1
+          ],
+          "topRepeat": [
+            1,
+            1,
+            1
+          ],
+          "bottomTransform": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "topTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "area": 10.481678667083818,
+          "strain": 1.104875500841572,
+          "rotationDegrees": 3.180554681463516E-15,
+          "atomCount": 6
+        },
+        {
+          "index": 9,
+          "bottomRepeat": [
+            2,
+            1,
+            1
+          ],
+          "topRepeat": [
+            2,
+            1,
+            1
+          ],
+          "bottomTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "topTransform": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "area": 10.481678667083818,
+          "strain": 1.1889010593167337,
+          "rotationDegrees": 0,
+          "atomCount": 8
+        },
+        {
+          "index": 10,
+          "bottomRepeat": [
+            2,
+            1,
+            1
+          ],
+          "topRepeat": [
+            2,
+            1,
+            1
+          ],
+          "bottomTransform": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "topTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "area": 10.481678667083818,
+          "strain": 1.1889010593167342,
+          "rotationDegrees": 0,
+          "atomCount": 8
+        }
+      ],
+      "selectedCandidate": 1,
+      "sortMode": "area"
+    }
+  },
+  "mixtureInput": {
+    "componentFiles": [
+      "water-packing.json",
+      "ethanol-optimized.json"
+    ],
+    "counts": [
+      10,
+      10
+    ],
+    "compositionMode": "count",
+    "seed": 23,
+    "minimumContact": 1.2,
+    "densityAttempts": [
+      1,
+      0.1
+    ],
+    "densityUnit": "g/cm3",
+    "componentAtomCounts": [
+      3,
+      9
+    ],
+    "componentMassAmu": [
+      18.01528,
+      46.06844
+    ]
+  },
+  "mixtureAttempts": [
+    {
+      "density": 1,
+      "succeeded": false,
+      "errorIdentifier": "KSSOLV:Modeling:PackingInfeasible",
+      "message": "Requested density and tolerance cannot be packed by the deterministic constructor. Lower density/tolerance or use fewer molecules."
+    },
+    {
+      "density": 0.1,
+      "succeeded": true,
+      "errorIdentifier": "",
+      "message": ""
+    }
+  ],
+  "mixture": {
+    "sites": 120,
+    "elementCounts": {
+      "C": 20,
+      "O": 20,
+      "H": 80
+    },
+    "moleculeCountsByComponent": [
+      10,
+      10
+    ],
+    "moleculeCount": 20,
+    "lattice": [
+      [
+        21.995420585523821,
+        0,
+        0
+      ],
+      [
+        0,
+        21.995420585523821,
+        0
+      ],
+      [
+        0,
+        0,
+        21.995420585523821
+      ]
+    ],
+    "volume": 10641.35207417299,
+    "massAmu": 640.8372,
+    "recomputedDensity": 0.10000000000000007,
+    "reportedDensity": 0.10000000000000006,
+    "minimumIntermolecularDistance": 4.099018054781701,
+    "minimumIntermolecularPair": [
+      14,
+      93
+    ],
+    "minimumAcrossBoundaryIntermolecularDistance": 4.4862201245018953,
+    "minimumAcrossBoundaryPair": [
+      15,
+      31
+    ],
+    "minimumAcrossBoundaryImageShift": [
+      0,
+      -1,
+      0
+    ],
+    "maxIntramolecularPairDistanceError": 3.9968028886505635E-15,
+    "outputHasExplicitTopology": false,
+    "analysis": {
+      "schemaVersion": 1,
+      "seed": 23,
+      "targetDensity": 0.1,
+      "actualDensity": 0.10000000000000006,
+      "counts": [
+        10,
+        10
+      ],
+      "tolerance": 1.2,
+      "ringPiercings": 0,
+      "chainInterlocks": 0,
+      "densityRamp": 0.1,
+      "densityStageVolumes": 10641.352074172997,
+      "batchSize": 100,
+      "batchCount": 1,
+      "state": "packed_not_equilibrated",
+      "atomCount": 120,
+      "moleculeCount": 20,
+      "boxLength": [
+        21.995420585523821,
+        21.995420585523821,
+        21.995420585523821
+      ]
+    },
+    "allSavedStructuresReimported": true
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "mode": "MATLAB-source-nojvm",
+  "JVM": false,
+  "MATLAB": "26.2.0.3386108 (R2026b)",
+  "GUIOperated": false,
+  "constructionRerun": false,
+  "JSONImports": 5,
+  "CIFImports": 5,
+  "checks": [
+    {
+      "name": "twist-graphene-bottom",
+      "sites": 2,
+      "JSONPBC": [
+        true,
+        true,
+        false
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 1.4202816622121972E-5,
+      "CIFDistanceCheckTolerance": 0.0003,
+      "CIFHasMoireMetadata": false,
+      "JSONMoireMetadata": {}
+    },
+    {
+      "name": "twist-graphene-top",
+      "sites": 2,
+      "JSONPBC": [
+        true,
+        true,
+        false
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 1.4202816622121972E-5,
+      "CIFDistanceCheckTolerance": 0.0003,
+      "CIFHasMoireMetadata": false,
+      "JSONMoireMetadata": {}
+    },
+    {
+      "name": "graphene-twist-21p786789",
+      "sites": 28,
+      "JSONPBC": [
+        true,
+        true,
+        false
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 3.7574360350234315E-5,
+      "CIFDistanceCheckTolerance": 0.0003,
+      "CIFHasMoireMetadata": false,
+      "JSONMoireMetadata": {
+        "target_angle_degrees": 21.786789,
+        "achieved_angle_degrees": 21.786789298261809,
+        "angle_error_degrees": 2.9826180991676665E-7,
+        "m": 2,
+        "n": 1,
+        "bottom_transform": [
+          [
+            2,
+            -1
+          ],
+          [
+            -1,
+            -3
+          ]
+        ],
+        "top_transform": [
+          [
+            1,
+            -2
+          ],
+          [
+            -2,
+            -3
+          ]
+        ],
+        "in_plane_strain": 0
+      }
+    },
+    {
+      "name": "graphene-twist-target22",
+      "sites": 28,
+      "JSONPBC": [
+        true,
+        true,
+        false
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 3.7574360350234315E-5,
+      "CIFDistanceCheckTolerance": 0.0003,
+      "CIFHasMoireMetadata": false,
+      "JSONMoireMetadata": {
+        "target_angle_degrees": 22,
+        "achieved_angle_degrees": 21.786789298261809,
+        "angle_error_degrees": 0.21321070173819123,
+        "m": 2,
+        "n": 1,
+        "bottom_transform": [
+          [
+            2,
+            -1
+          ],
+          [
+            -1,
+            -3
+          ]
+        ],
+        "top_transform": [
+          [
+            1,
+            -2
+          ],
+          [
+            -2,
+            -3
+          ]
+        ],
+        "in_plane_strain": 0
+      }
+    },
+    {
+      "name": "graphene-hBN-twist-21p786789",
+      "sites": 28,
+      "JSONPBC": [
+        true,
+        true,
+        false
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFUniqueLabels": true,
+      "CIFDistanceSpectrumMaxError": 3.7574360351122493E-5,
+      "CIFDistanceCheckTolerance": 0.0003,
+      "CIFHasMoireMetadata": false,
+      "JSONMoireMetadata": {
+        "target_angle_degrees": 21.786789,
+        "achieved_angle_degrees": 21.786789298261812,
+        "angle_error_degrees": 2.9826181346948033E-7,
+        "m": 2,
+        "n": 1,
+        "bottom_transform": [
+          [
+            2,
+            -1
+          ],
+          [
+            -1,
+            -3
+          ]
+        ],
+        "top_transform": [
+          [
+            1,
+            -2
+          ],
+          [
+            -2,
+            -3
+          ]
+        ],
+        "in_plane_strain": 0.016000000000000014
+      }
+    }
+  ]
+}

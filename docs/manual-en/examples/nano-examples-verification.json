@@ -1,0 +1,155 @@
+{
+  "mode": "MATLAB-source-nojvm",
+  "MATLAB": "26.2.0.3386108 (R2026b)",
+  "JVM": false,
+  "GUIOperated": false,
+  "constructionRerun": false,
+  "JSONImports": 8,
+  "CIFImports": 8,
+  "checks": [
+    {
+      "name": "nano-graphene-60",
+      "sites": 2,
+      "JSONPBC": [
+        true,
+        true,
+        false
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "minimumPairDistance": 1.4202816622064793,
+      "CIFDistanceSpectrumMaxError": 1.4202816621899927E-5,
+      "CIFCheckToleranceAngstrom": 0.001,
+      "CIFUniqueLabels": true
+    },
+    {
+      "name": "graphene-armchair-w3-l2",
+      "sites": 24,
+      "JSONPBC": [
+        false,
+        true,
+        false
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "minimumPairDistance": 1.4202816622064753,
+      "CIFDistanceSpectrumMaxError": 2.8406712857087513E-5,
+      "CIFCheckToleranceAngstrom": 0.001,
+      "CIFUniqueLabels": true
+    },
+    {
+      "name": "graphene-tube-4-0-l2",
+      "sites": 32,
+      "JSONPBC": [
+        false,
+        false,
+        true
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "minimumPairDistance": 1.3932021306520777,
+      "CIFDistanceSpectrumMaxError": 2.8406712857975691E-5,
+      "CIFCheckToleranceAngstrom": 0.001,
+      "CIFUniqueLabels": true
+    },
+    {
+      "name": "nano-Cu-fcc-input",
+      "sites": 4,
+      "JSONPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "minimumPairDistance": 2.5526554800834367,
+      "CIFDistanceSpectrumMaxError": 0,
+      "CIFCheckToleranceAngstrom": 0.001,
+      "CIFUniqueLabels": true
+    },
+    {
+      "name": "Cu-wire-001-r3-l2",
+      "sites": 24,
+      "JSONPBC": [
+        false,
+        false,
+        true
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "minimumPairDistance": 2.5526554800834358,
+      "CIFDistanceSpectrumMaxError": 1.1165216040609494E-7,
+      "CIFCheckToleranceAngstrom": 0.001,
+      "CIFUniqueLabels": true
+    },
+    {
+      "name": "Cu-dot-r3",
+      "sites": 13,
+      "JSONPBC": [
+        false,
+        false,
+        false
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "minimumPairDistance": 2.5526554800834358,
+      "CIFDistanceSpectrumMaxError": 9.5600837468623467E-8,
+      "CIFCheckToleranceAngstrom": 0.001,
+      "CIFUniqueLabels": true
+    },
+    {
+      "name": "Cu-void-host-2x2x2",
+      "sites": 32,
+      "JSONPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "minimumPairDistance": 2.5526554800834358,
+      "CIFDistanceSpectrumMaxError": 8.8817841970012523E-16,
+      "CIFCheckToleranceAngstrom": 0.001,
+      "CIFUniqueLabels": true
+    },
+    {
+      "name": "Cu-void-r2p7",
+      "sites": 19,
+      "JSONPBC": [
+        true,
+        true,
+        true
+      ],
+      "CIFPBC": [
+        true,
+        true,
+        true
+      ],
+      "minimumPairDistance": 2.5526554800834367,
+      "CIFDistanceSpectrumMaxError": 0,
+      "CIFCheckToleranceAngstrom": 0.001,
+      "CIFUniqueLabels": true
+    }
+  ]
+}

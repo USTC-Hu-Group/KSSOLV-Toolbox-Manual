@@ -1,0 +1,25 @@
+\begin{figure}[!htb]
+\centering
+\begin{tikzpicture}[x=1mm,y=1mm,font=\sffamily\small]
+ \fill[paleblue] (8,6)--(56,6)--(68,42)--(20,42)--cycle;
+ \draw[teal,line width=.7pt] (8,6)--(56,6)--(68,42)--(20,42)--cycle;
+ \draw[->,>=stealth,muted] (8,6)--(84,6) node[right] {$x$};
+ \draw[->,>=stealth,muted] (8,6)--(8,49) node[above] {$y$};
+ \draw[->,>=stealth,brand,line width=1pt] (8,6)--(32,6);
+ \draw[->,>=stealth,brand,line width=1pt] (32,6)--(38,24);
+ \draw[->,>=stealth,teal,line width=.8pt] (8,6)--(38,24);
+ \draw[dashed,muted] (38,24)--(38,6);
+ \fill[brand] (38,24) circle (1.2);
+ \node[anchor=north,text=brand] at (22,5) {$u\mathbf a$};
+ \node[anchor=west,text=brand] at (38,14) {$v\mathbf b$};
+ \node[anchor=south east,text=teal] at (25,16) {$\mathbf r$};
+ \node[anchor=north east] at (7,5) {$O$};
+ \node[anchor=west,text=brand] at (42,27) {$\mathbf f=(u,v,0)$};
+ \node[anchor=west,text=muted,font=\sffamily\footnotesize] at (78,35) {Cell cross-section};
+ \node[anchor=west,text=muted,font=\sffamily\footnotesize] at (78,28) {Add vectors for position};
+ \node[anchor=north,text=teal] at (54,4) {$\mathbf a$};
+ \node[anchor=east,text=teal] at (15,31) {$\mathbf b$};
+\end{tikzpicture}
+\caption{Fractional and Cartesian coordinates (2D schematic). Adding $u\mathbf a$ and $v\mathbf b$ gives $\mathbf r$. In a skewed cell, $\mathbf b$ has both global $x$ and $y$ components.}
+\label{fig:round10-fractional-cartesian}
+\end{figure}

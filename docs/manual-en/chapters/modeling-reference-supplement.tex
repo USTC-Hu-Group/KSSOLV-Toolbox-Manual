@@ -1,0 +1,395 @@
+\chapter{Modeling tools in depth}\label{ch:modeling-tools}\label{sec:modeling-reference}
+
+The preceding chapters introduced common modeling procedures through worked examples. This chapter organizes tools by their purpose, providing a reference for parameters and checks while you edit. Start with the task at hand: selection, cell manipulation, soft-matter construction, or recording a modeling procedure.
+
+Modeling tabs depend on the active document. Molecular transformations and measurements are mainly under \ui{Atomic Editor} and \ui{Geometry Editor} on \ui{Molecule Modeling}. Local molecular components of a crystal use \ui{Component Transform} and \ui{Component Geometry} on \ui{Crystal Modeling}. Use \ui{Lattice Editor} or \ui{Supercell \& Lattice} to change the whole crystal. If a command is disabled, check document type and selection count first. \ui{Move Atoms}, for example, requires one independent site; \ui{Set Angle} requires three atoms in order.
+
+\section{Edit structures precisely}
+
+\subsection{Save and recall a group of atoms}\label{sec:selection-set-workflow}
+\index{Selection sets}
+
+A selection set names a group of model sites, making it useful for repeatedly working on bottom surface layers, adsorbates, or a chain segment. Recall the set to select those sites again.
+
+\begin{steps}
+  \item Select atoms in the 3D view. Click selects one; Shift- or Ctrl-click adjusts a multiple selection. \ui{B} enters box selection and \ui{L} enters lasso selection. Double-click an atom to select a connected molecule, or choose \ui{Select Connected Component} from its context menu. Connectivity follows the bonds used by the current display model, so a crystal network may select a large connected region.
+  \item To select an element, open an atom's context menu and choose \ui{Select All \ldots\ Atoms}. Check the selected count before substituting or deleting.
+  \item Open \ui{Selection Sets} on the modeling ribbon, click \ui{Save Current Selection}, and enter a descriptive name such as ``fixed bottom layer.''
+  \item Click empty space or press Esc to clear the selection, then recall the saved name from \ui{Selection Sets}. Check that the same sites are highlighted.
+  \item Save the project. Export native structure JSON as well if you need complete model information for the selection. Exchange formats such as CIF and XYZ do not preserve all selection metadata.
+\end{steps}
+
+Two numbers after a set's name show how many sites can still be found and how many were originally saved. Deleting a member reduces the first number, and recalling the set warns about missing sites. The remaining selection is no longer the original complete group. Saving again under the same name updates that set. The menu provides save and recall actions.
+
+For periodic structures, check \ui{sites} as well. A wider display range may show several images of a site, but selection sets still refer to model sites and do not gain members just because more spheres are visible.
+
+\subsection{Correct elements and positions}\label{sec:atom-edit-reference}
+
+\ui{Add Atom} adds a site directly. Crystals offer fractional or Cartesian coordinates; molecules use Cartesian coordinates in \AA. Molecular \ui{Sketch Atom} additionally specifies a connection target and bond order. Use sketching or bond addition to create connectivity rather than merely placing atoms close together.
+
+\begin{steps}
+  \item Open \ui{Add Atom} under \ui{Atomic Editor}. Enter the element, check coordinate type, then enter the three components. Preview to avoid overlapping an existing atom, then apply.
+  \item To change existing elements, select the atoms and open \ui{Substitute Atoms}. Enter the new element. Substitution retains positions; it does not search for a suitable geometry for the replacement.
+  \item For an exact new position, open \ui{Move Atoms} and enter the target coordinates. In crystals, choose coordinate type first so fractional values are not mistaken for \AA.
+  \item To move a group together, use \ui{Translate Atoms}. Cartesian \((0,0,1)\) translates the group $1\,\text{\AA}$ along global $z$; fractional \((0,0,1)\) in a crystal translates it by one $\mathbf c$ vector.
+  \item Before deleting, check the independent site count, open \ui{Delete Atoms}, and verify indices. After applying, inspect composition and remaining connections, then save a separate structure or project.
+\end{steps}
+
+Local crystal commands may offer \ui{Preserve symmetry} or \ui{Break symmetry}. Preserving symmetry processes related sites according to equivalence. Choose the behavior appropriate to a local dopant or defect. Inspect every change in the preview, not just the atom initially clicked.
+
+\subsection{Clean duplicate sites and reorder atoms}\label{sec:atom-clean-reference}
+
+\ui{Merge Atoms} handles crystal sites very close together, comparing periodic distances against a tolerance in \AA. It does not reduce the number of repeated boundary spheres. The default is $0.01\,\text{\AA}$; start with a small tolerance when checking imported models.
+
+\begin{steps}
+  \item Save an original copy and open \ui{Merge Atoms} under \ui{Atomic Editor}.
+  \item Choose the merge mode. \ui{Delete duplicates} retains one composition record; \ui{Sum occupancies} combines species occupancies within a cluster; \ui{Average properties} handles compatible numerical site properties. Each mode relocates a cluster to its center using neighboring periodic images, so coordinates are not necessarily unchanged.
+  \item Preview and check site count, occupancy, and local positions. If two genuinely distinct neighbors are merged, cancel and reduce the tolerance.
+  \item Apply and save under a new name, keeping the input for comparison.
+\end{steps}
+
+\ui{Sort Atoms} orders sites by element; \ui{Reverse order} reverses that ordering. This organizes files and indices without changing spatial positions. Recheck previously recorded atom numbers after sorting. Selection sets are better for tracking a group over time.
+
+\ui{Perturb Atoms} and \ui{Perturb Structure} apply random displacements using minimum and maximum lengths in \AA and a seed. A small exercise could use minimum 0, maximum $0.05\,\text{\AA}$, and seed 7. Both commands affect the whole model, including unselected atoms. Inspect the overall preview and keep an original copy.
+
+\subsection{Change molecular orientation}\label{sec:orientation-reference}
+
+Centering, rotation, and reflection change geometric placement; they do not optimize energy. Adsorbates in a crystal can use \ui{Component Transform}, provided the complete component is selected first.
+
+\input{chapters/round10-rigid-transform-formulas}
+
+\begin{steps}
+  \item Select the atoms and open \ui{Center Atoms}. A molecular target center is in \AA, commonly \((0,0,0)\); a crystal target is fractional, commonly \((0.5,0.5,0.5)\). The center is the arithmetic mean of the selected positions, not their center of mass.
+  \item For a specified rotation, open \ui{Rotate Atoms}. The angle is in degrees, the axis is a global Cartesian direction, and the anchor is in \AA. Axis \((0,0,1)\), anchor \((0,0,0)\), and $90^\circ$ rotate about the $z$ axis through the origin.
+  \item For a reflection, open \ui{Mirror Atoms} and enter a plane normal and a point in the plane. Normal \((1,0,0)\) and point \((0,0,0)\) define the $yz$ plane. The normal gives a direction, not a length in \AA.
+  \item Preview and compare internal distances, connectivity, and nearby host atoms. A rigid transform of a complete molecule preserves its internal geometry; selecting only part can distort it or break connections.
+  \item Apply and save separately. To change only the viewing direction, leave the modeling tool and rotate the camera instead.
+\end{steps}
+
+\ui{Align Geometry} aligns a long molecule's principal axis or the fitted plane normal of approximately coplanar atoms with a target direction. Choose \ui{principal\_axis} or \ui{plane\_normal}, then enter a nonzero vector. Highly symmetric molecules may have nonunique principal axes; inspect the result from several directions.
+
+\subsection{Edit explicit chemical bonds}\label{sec:bond-edit-reference}
+
+An explicit bond records the two connected atoms and their bond order. Displayed lines may instead be inferred from distance-based neighbors. Use the molecular connectivity record when changing topology. Orders 1, 2, and 3 represent single, double, and triple bonds; 1.5 represents the aromatic connections used here.
+
+\begin{steps}
+  \item Open or import the molecule and save a copy. Select exactly the two atoms forming the bond, in order, and check their indices.
+  \item If they are not connected, open \ui{Add Bond} on \ui{Molecule Modeling}, specify the bond order, and apply.
+  \item Use \ui{Set Bond Order} to change an existing bond or \ui{Delete Bond} to remove it. Deleting a bond retains both atoms; deleting an atom changes the atom count. Choose the operation that matches your purpose.
+  \item In \ui{Atom Chemistry}, check the affected elements, formal charges, hybridization, and aromatic flags. Leave \ui{unchanged} selected when not replacing an element. Formal charge is an atom property, not the molecular net charge divided among all atoms.
+  \item If existing hydrogens no longer suit the edited connectivity, select the heavy atoms, \ui{Remove Hydrogens}, then \ui{Add Hydrogens}. Check composition, heavy-atom connections, hydrogen count, and suspicious short distances. Clean local geometry if needed.
+  \item Save the project and native structure JSON to preserve bond orders and atom properties. The aromatic examples use JSON. Visible bond lines after exchange through another format do not establish that all aromatic information survived.
+\end{steps}
+
+\ui{Diagnose Molecule} performs rule-based checks and reports \ui{Molecule diagnostics completed.}. Follow Section~\ref{sec:molecule-manual-check} in Chapter~\ref{ch:modeling}: inspect composition and connectivity, then measure local geometry. MATLAB\regmark{} toolbox users can inspect individual diagnostic records in the returned data.
+
+For direct sketching, press S. The panel sets element, bond order, formal charge, and hybridization hints. Drag from an existing atom to add a bonded atom, drag to another existing atom to attempt a bond, or click empty space to place an atom. Select the host attachment site before extending an existing molecule. Move the draft if a collision is reported. Press Esc to leave the tool and return clicks to selection.
+
+\subsection{Measure local geometry in periodic structures}\label{sec:periodic-measure-reference}
+
+Use \ui{Measurements} in the 3D viewer, choose a measurement, and select atoms in the prompted order. The ribbon's \ui{Measure Geometry} instead reports \ui{Geometry measurement completed.} without listing readings in its message. The viewer also provides cell parameters, bond statistics, point-to-plane distance, interplanar angle, coordination numbers, and nearest neighbors. Choose the tool according to the quantity required.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+Task & Selection and reading \\
+\midrule
+Distance & Select two atoms in order; lengths are in \AA. \\
+Bond angle & Select three atoms, with the second at the vertex; angles are in degrees. \\
+Dihedral & Select four atoms in order; the middle two define the axis. Note the sign. \\
+Point to plane & Select the point, then three noncollinear points defining the plane. \\
+Between planes & Select three points in the first plane, then three in the second. \\
+Coordination/neighbors & Select the center atom and inspect counts or distances for the current neighbor criteria. \\
+Cell parameters & Read the current cell from the menu without selecting atoms. \\
+Bond statistics & Select two atoms to identify an element pair; read bond count, mean, minimum, and maximum distances found by the current neighbor algorithm. \\
+\bottomrule
+\end{tabularx}
+\caption{Choose a geometry measurement to match the question.}
+\end{table}
+
+In periodic structures, data returned by the ribbon's \ui{Measure Geometry} uses neighboring images to connect local geometry. Interactive viewer measurements instead connect the displayed images actually clicked, so choosing a different boundary image can change the reading. Nearest-neighbor lists include site indices and image offsets; read them together. Coordination counts also depend on neighbor criteria and are not universal fixed chemical constants.
+
+To change a measured quantity, enter a target in its editing control or use \ui{Set Distance}, \ui{Set Angle}, or \ui{Set Dihedral}. In molecules, \ui{atom} moves only the target atom, while \ui{subtree} and \ui{fragment} use connectivity to identify movable parts. A ring that cannot be separated by cutting one bond restricts the movable scope. In periodic crystals, these precise geometry commands move only target sites; they do not automatically treat an adsorbate as a molecular subtree. To translate an entire adsorbate, select all its sites and use \ui{Component Transform}.
+
+\subsection{Save and attach reusable fragments}\label{sec:fragment-library-reference}
+\index{Fragment library}
+
+Fragment Sketcher provides a searchable library of local structures. Attachment ports define connections to a host. Some use one attachment site, others require several, and noncovalent ports do not provide the covalent attachment action used here.
+
+\begin{steps}
+  \item Select host attachment sites and open \ui{Fragment Sketcher} from \ui{Molecule Modeling}. Filter with the search box, select an entry, and inspect its 3D preview, atom count, source, and tags.
+  \item Choose a port under \ui{Connection mode}, read its instructions, and check the host selection count. If \ui{Attach Fragment} is disabled, check whether the selected port supports covalent attachment.
+  \item Click \ui{Attach Fragment} and inspect the new geometry and host connection. Built-in entries already define their attachment heads; do not infer them from sphere sizes in the preview.
+  \item Check the attachment, hydrogen count, and local distances, run \ui{Diagnose Molecule}, and save. To try another connection, undo and choose another port rather than editing repeatedly on an incorrect attachment.
+\end{steps}
+
+To add your own fragment, make the active molecular document contain only the complete structure to reuse. Check connectivity and atom order, open \ui{Save User Fragment}, and name it. This saves the current molecule, not only highlighted spheres. Explicitly enable overwrite to replace an existing name, or use a new name.
+
+\ui{Import library} and \ui{Export library} in Fragment Sketcher exchange fragment-library JSON. Exporting a library for another computer differs from exporting the active structure. After import, search for the entry and check its source, ports, and preview. Save attached models separately.
+
+\section{Work with periodic crystals}
+
+\subsection{Change the cell while preserving the intended geometry}\label{sec:lattice-transform-reference}
+
+Lattice-matrix rows are $\mathbf a,\mathbf b,\mathbf c$; columns are global $x,y,z$ components in \AA. \ui{Edit Lattice} uses an editable table, filled cell by cell rather than a text field accepting all nine values.
+
+\input{chapters/round10-lattice-preservation}
+
+\begin{steps}
+  \item Save the original and open \ui{Edit Lattice} under \ui{Lattice Editor}. Record lengths, angles, and representative Cartesian atomic positions first.
+  \item Enter the new matrix cell by cell. Preserve fractional coordinates for atoms to deform with the lattice. Choose \ui{Preserve Cartesian positions} to change the boundary while retaining current atomic positions, as is often appropriate when enlarging a box around an isolated structure.
+  \item Preview and check the atomic motion, particularly cross-boundary neighbors. Apply, recheck cell volume and positions, and save separately.
+\end{steps}
+
+\ui{Redefine Lattice} directly assigns a new matrix while preserving Cartesian positions. It does not replicate atoms according to the volume ratio. Use \ui{Build Supercell} when the atom count should actually increase.
+
+\input{chapters/round10-lattice-mirror-strain}
+
+\subsection{Build an orthogonal supercell}\label{sec:orthogonal-cell-reference}
+
+Some later operations need angles close to $90^\circ$. \ui{Orthogonalize Cell} searches compatible integer supercells rather than arbitrarily stretching an oblique cell into a right angle. Check atom count and volume together because the model may grow.
+
+\begin{steps}
+  \item Start from the original small cell and open \ui{Orthogonalize Cell} under \ui{Supercell \& Lattice}.
+  \item Enter minimum and maximum lengths in \AA, with maximum greater than minimum. Set an atom-count limit and angular tolerance in degrees. The initial length range depends on the current lattice; defaults are 5000 atoms and $0.1^\circ$ from a right angle.
+  \item Preview using an affordable atom limit. Check each angle's deviation from $90^\circ$, actual lengths, and site count. A rectangle-like camera projection alone is insufficient.
+  \item If no candidate is found, increase maximum length, raise the atom limit where practical, or relax the angular tolerance, recording each set of conditions. Cancel unsuitable or failed previews to return to the original model.
+  \item Apply and save with a distinct filename, recording its independent site count. Calculation inputs should reference this new model.
+\end{steps}
+
+\subsection{Analyze symmetry and choose a standard cell}\label{sec:symmetry-reference}
+
+\ui{Symmetry} identifies the space group from positions and lattice without modifying the structure. \ui{Primitive Cell} and \ui{Conventional Cell} generate standardized representations, potentially changing coordinates and site count. \ui{Make P1} removes symmetry constraints for local editing; it is not primitive-cell reduction.
+
+\begin{steps}
+  \item Choose \ui{Symmetry} under \ui{Symmetry Tools}, starting with positional tolerance $0.01\,\text{\AA}$ and angular tolerance $5^\circ$. Record the space-group symbol, Hall symbol, and international number.
+  \item For inputs with small numerical deviations, compare progressively finer or coarser positional tolerances. They define approximate equivalence; a large tolerance can conceal real distortions. Choose with the structure's origin in mind.
+  \item Generate primitive and conventional representations separately from the same original, saving each. Compare formula, volume, site count, and element ratios to confirm that they represent the same periodic material.
+  \item Open \ui{Wigner-Seitz Cell} to inspect the lattice geometrically. Its polyhedron is defined by the lattice; it neither cuts atoms into a finite cluster nor changes the current sites. Save the original crystal when a structure file is needed.
+\end{steps}
+
+Before local defect editing, practice P1 conversion on the saved space-group-built \file{Cu-fcc}. Choose \ui{Make P1} under \ui{Symmetry Tools}; no additional numerical parameters are needed. Check that the four Cu sites and coordinates remain unchanged and save as \file{Cu-P1}. Continue local edits in that copy and retain the original symmetry model. P1 removes extra space-group constraints; it does not automatically disorder a regular arrangement.
+
+\subsection{Specify which atoms may move}\label{sec:fixed-sites-reference}
+
+\ui{Fix Atoms} writes selective-movement flags for subsequent relaxation constraints. A stationary-looking atom in the 3D view does not establish that a constraint exists.
+
+\begin{steps}
+  \item Select all intended fixed sites, open \ui{Fix Atoms} under \ui{Atomic Editor}, and check indices.
+  \item If a slab has geometric-layer information, a bottom-layer count is also available. Enter the number of lowest layers to fix, or use 0 to honor your explicit site list strictly.
+  \item Apply, save, and export native structure JSON. Reopen it and check site count and fixed-site indices. For a direct read-only check in a text editor, inspect \file{selective_dynamics}: three false values fix all directions; three true values permit motion in all directions.
+\end{steps}
+
+The command fixes selected sites in all three directions and makes the others movable. To fix two groups simultaneously, combine them into one complete selection before applying. Selection sets help avoid omissions during repeated selection.
+
+In molecular geometry optimization, enter constraints under \ui{Fixed atom indices}; for example, \literalinput{1 2} fixes those two atoms before previewing. Crystal fixed-site flags record constraints and do not replace the calculation task's own constraint settings. The hydrogen optimization in Chapter~\ref{ch:workflows} has no fixed atoms. For constrained calculations, confirm the input required by the chosen method and compare fixed coordinates before and after optimization.
+
+\subsection{Create point defects other than vacancies}\label{sec:other-defects-reference}
+
+\ui{Defects \& Alloys}\,$\rightarrow$\,\ui{Create Point Defects} also offers substitutions, interstitials, and antisites. Build each from a saved host copy to avoid unintentionally combining several defects.
+
+\begin{steps}
+  \item For a substitution, choose the substitution type and specify a site and replacement element. The site count should remain unchanged, while one element count increases and another decreases.
+  \item For an interstitial, specify its element, choose fractional or Cartesian coordinates, and enter its position. Preview nearest-neighbor contacts; applying should add one site. Choose the position according to lattice voids and nearest-neighbor distances.
+  \item For an antisite, enter two site indices. The operation exchanges species while retaining positions and overall composition. Exchanging two identical elements creates no meaningful chemical antisite.
+  \item Name each result separately and record its host, supercell size, and defect position. Recheck indices after changing cell representation or atom order.
+\end{steps}
+
+\ui{Enumerate Point Defects} searches vacancy or substitution candidates using an allowed site range, replacement element, reference charge, and symmetry tolerances. \ui{Degeneracy} counts equivalent candidates. \ui{NetCharge} relates to the reference charge entered, and shortest contacts provide geometric checks. None is a defect formation energy or a calculated electronic charge state. Enumeration automatically adds structures to the Project Browser and opens their documents. The result table is for inspection, not model switching. Open candidates from the tree, check composition and site count, and save. Use consistent host and numerical conditions for later comparisons.
+
+\subsection{Generate an alloy with explicit occupancies}\label{sec:sqs-reference}
+
+An SQS, or special quasirandom structure, assigns elements to finite-cell sites so that statistics such as neighboring species pairs approximate random mixing. It turns mixed occupancies into one fully occupied species per site for further calculation, without implying a chemically ordered phase. The command reads elements and occupancy fractions from the input; it does not choose an alloy composition from a pure-element crystal automatically.
+
+The four-site Cu--Ni example below provides the input, scaling, search budget, and result checks. For another composition, choose a cell that accommodates integer species counts; an equal binary mixture needs equal integer counts, for example. Retain both the mixed-occupancy input and the generated arrangement.
+
+\input{chapters/sqs-example}
+
+\subsection{Choose a low-dimensional construction}\label{sec:nano-reference}
+
+Section~\ref{sec:nanostructure-examples} demonstrates five constructions using graphene and copper. Choose according to the boundaries to retain, using that section's example parameters.
+
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+Desired model & Tool and distinction \\
+\midrule
+Finite-width sheet & \ui{Cut Nanoribbon}; width and axial repeats define a ribbon periodic along its length.\\
+Rolled sheet & \ui{Roll Nanotube}; chirality and axial repeats define a tube periodic along its axis.\\
+Crystal with finite cross-section & \ui{Cut Nanowire}; lattice direction and radius retain axial periodicity.\\
+Finite cluster & \ui{Quantum Dot} in \ui{Quantum Dot / Nano Void}; retain atoms inside a sphere.\\
+Spherical hole in periodic bulk & \ui{Nano Void} in the same dialog; remove atoms inside a sphere and retain the outer periodic host.\\
+\bottomrule
+\end{tabularx}
+\caption{Choose a nanostructure tool by its boundaries.}
+\end{table}
+
+Wire, ribbon, and tube repeats are not total dimensions in \AA. Compare actual cells, site counts, and periodic directions. Before passivation, save the unpassivated input, then check added species and boundary coordination.
+
+\FloatBarrier
+\section{Build soft-matter models}
+
+\subsection{Build a branched polymer}\label{sec:branched-polymer-reference}
+
+A branched polymer starts from a backbone and attaches fragments at intervals counted in repeat units. It illustrates backbone/side-chain topology. Backbone names come from the repeat-unit library, while side-chain names come from the fragment library; check them separately.
+
+\begin{steps}
+  \item Import \file{user-repeat-ethane-input.json}, activate its molecular document, and open \ui{Build Branched Polymer} through \ui{Molecule Modeling → Soft Matter → Polymer Builder}. Retain the input: construction replaces the active molecule. Start small, for example backbone \literalinput{PE}, 8 repeats, side chain \literalinput{Methyl}, interval 3, and seed 1.
+  \item Inspect the estimated size and set an appropriate atom limit. The branch interval counts repeat units, not Cartesian length or individual backbone atoms.
+  \item Preview and check attachments near the intended units, both chain ends, and connectivity. To change branch density, return to the original short input and change the interval rather than rebuilding repeatedly on an already branched result.
+  \item Apply, inspect composition, side-chain attachments, and local distances, then run \ui{Diagnose Molecule} and save native structure data. Pack molecules later if a material at a specified density is needed.
+\end{steps}
+
+Use \ui{Build Homopolymer} for an unbranched reference, specifying the repeat unit, repeat count, independent-chain count, end groups, conformation, and seed. More than one independent chain does not create intermolecular covalent bonds. Extended, zigzag, and random-coil options define initial geometries. Check intrachain contacts and whether further cleanup is needed before calculation.
+
+\subsection{Build a basic dendrimer skeleton}\label{sec:dendrimer-reference}
+
+\ui{Build Basic Dendrimer} expands a skeleton by generation and branching, illustrating hierarchical topology. Core functionality sets the first-generation branch count; the branching factor sets the number produced by later branches. Skeleton element and bond length define the initial geometry, which can be developed further with the functional groups and chemistry of the actual material.
+
+\begin{steps}
+  \item Import and activate \file{user-repeat-ethane-input.json}, retaining a copy. Open \ui{Build Basic Dendrimer} through \ui{Molecule Modeling → Soft Matter → Polymer Builder}. Start with generation 2, core functionality 3, branching factor 2, C, skeleton bond length $1.54\,\text{\AA}$, and seed 1.
+  \item Inspect the estimated size and set an atom limit. Branch count grows quickly with generation; check a small model first.
+  \item In the preview, locate the center and trace first- and second-generation connections. Check for branches passing through others and inspect shortest contacts.
+  \item Apply, check composition, branch connectivity, and local contacts, run \ui{Diagnose Molecule}, and save the project and native structure. Clean and relax the starting skeleton as needed.
+\end{steps}
+
+\subsection{Save a custom repeat unit}\label{sec:repeat-unit-reference}
+
+A repeat unit needs two distinct attachment ends in addition to atoms and bonds. Its head connects to the preceding unit, its tail to the following one, and leaving atoms are removed before connection. Here the two carbons of ethane define a simple skeleton that is joined into a dimer to illustrate these fields.
+
+The supplied \file{user-repeat-ethane-input.json} contains two C and six H atoms: 8 atoms and 7 single bonds. C atoms are 1 and 2; H atoms are 3--8. The C--C distance is $1.52\,\text{\AA}$. We remove all six hydrogens in the stored repeat unit and let chain construction add the required hydrogens. This is a geometric unit definition, not a representation of ethane polymerization.
+
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+Field & Input \\
+\midrule
+User repeat-unit name & \literalinput{MANUAL_CC}.\\
+Head and tail atoms & 1 and 2, respectively.\\
+Leaving atom indices & \literalinput{3 4 5 6 7 8}.\\
+Homopolymer repeat unit & The saved name \literalinput{MANUAL_CC}.\\
+Repeats and chains & 2 and 1, respectively.\\
+Conformation and seed & Extended, seed 7.\\
+Head/tail end groups & Both \literalinput{none}; remaining unsatisfied valences are filled with H.\\
+Atom limit & 1000, sufficient for this model.\\
+\bottomrule
+\end{tabularx}
+\caption{Build a dimer from a custom carbon skeleton.}
+\end{table}
+
+\begin{steps}
+  \item Import \file{user-repeat-ethane-input.json} and open its molecular document. Confirm that atoms 1 and 2 are C and 3--8 are H. Retain the input file and do not reorder it before saving the unit.
+  \item Open \ui{Save User Repeat Unit} through \ui{Molecule Modeling → Soft Matter → Polymer Builder}. Enter the table's name, head, tail, and leaving indices. The ends must be distinct existing atoms and cannot also be leaving atoms.
+  \item Leave overwrite disabled on first save. If the name exists, confirm it is an earlier example record before overwriting, or choose another name and use it consistently. Saving the unit does not change the source molecule: ethane still has 8 atoms.
+  \item In the same document, open \ui{Build Homopolymer}, enter the saved name, and set repeats, chains, conformation, end groups, and seed from the table. Retain default head-to-tail connectivity. Preview, apply, and inspect the complete chain.
+  \item Check for 4 C, 10 H, 14 total atoms, and 13 single bonds, including one new C--C connection between units. Rotate and inspect the backbone and terminal hydrogens, measure suspicious contacts, and run \ui{Diagnose Molecule}. \file{user-repeat-CC-dimer.json} is the supplied reference.
+  \item Name the result \file{MANUAL-CC-dimer}, save the project, and export native structure JSON. Retain input ethane, unit parameters, and dimer as three separate stages. Exchanging only the dimer does not register the custom unit in another computer's library.
+\end{steps}
+
+A text editor can inspect elements, coordinates, and connections in the input or output JSON. The supplied \file{user_repeat_unit_example.m} repeats the procedure and writes a separate example library, \file{user-repeat-unit-library.json}, without overwriting the personal library. The accompanying scripts check composition, connectivity, and diagnostics. For longer chains, increase repetitions from the same unit and inspect contacts throughout the resulting chain.
+
+\subsection{Pack one molecule type into a confined region}\label{sec:confined-packing-reference}
+
+\ui{Construct Amorphous Cell} packs copies of the current molecule into a periodic box according to count and density; \ui{Build Confined Layer} further restricts the usable region. Density is in $\mathrm{g/cm^3}$ and minimum contact in \AA. Packing creates initial positions; physical equilibration is a separate step.
+
+\begin{steps}
+  \item Open a molecule whose connectivity and geometry have been checked. Save the original component, then choose single-component packing or a confined layer under \ui{Amorphous Builder}.
+  \item Enter molecule count, density, contact distance, seed, and atom limit. Start with few molecules and a low initial density to check components and boundaries.
+  \item For a confined layer, select axis 1, 2, or 3 and the lower/upper bounds. For example, \literalinput{0.2 0.8} means 20\% to 80\% of that box length. When both values lie between 0 and 1 they are fractional, not $0.2$ to $0.8\,\text{\AA}$.
+  \item Inspect the preview from the side along the confined dimension, checking that molecules lie in the permitted region and excluded empty space is not being treated as available volume.
+  \item Apply, check molecule count, total atoms, box lengths, and periodic contacts, then save the result and input settings separately.
+\end{steps}
+
+\ui{Density ramp stages (optional)} accepts positive, nondecreasing densities ending at the target. Blank uses only the target density. Leave it blank for the confined-layer exercise to avoid conflicting with regional restrictions. \ui{Molecules per packing batch} controls batching without changing the total count. For two components, use the earlier \ui{Pack Mixture} tutorial. Mole- and mass-fraction modes also need a total count; check the converted integer counts.
+
+\subsection{Pack molecules into an existing box}\label{sec:host-packing-reference}
+
+\ui{Pack into Existing Box} retains the current cell and host atoms and adds another project molecule. It does not generate a new cubic box from a target density. \ui{Pack around Nanoparticle} also reserves a gap around the host.
+
+\begin{steps}
+  \item Import and name host and component in one project. Activate an orthogonal-cell host and choose the required tool under \ui{Host Packing}. Prepare a suitable box first if the host is oblique.
+  \item Choose the component under \ui{Molecule to pack}. Enter count, contact distance, seed, batch size, and atom limit. There is no density-based box resizing here, so make sure the host box has enough space.
+  \item For nanoparticle packing, specify a gap in \AA. The exclusion region is a sphere centered on the host's mean position, enclosing its outermost atoms plus the gap. It does not follow an arbitrary corrugated surface atom by atom.
+  \item Preview from several directions and check that the host is retained, molecules are appropriately placed, and periodic contacts are acceptable. If space is insufficient, enlarge the empty box around the original host or reduce the count and restart.
+  \item Check added molecule counts and composition. Retain host, component inputs, and packed result separately, and save the project and native structure.
+\end{steps}
+
+\section{Finish a surface model}
+
+\subsection{Passivate the surface}\label{sec:surface-finishing-reference}
+
+The adsorption exercise in Chapter~\ref{ch:advanced} covers sites and O--H placement. Here we terminate remaining slab boundaries. Start from a saved slab copy so that passivation and later solvent treatment have separate records.
+
+\begin{steps}
+  \item If unsaturated coordination needs terminating atoms, open \ui{Passivate Surface}. Choose element, bond length, upper/lower/both surfaces, and detection depth.
+  \item A target coordination of 0 lets the tool infer it; otherwise enter the known target. Minimum contact excludes overly close positions. Preview both sides and check that existing atoms are correctly identified as surface atoms.
+  \item Apply, compare added element counts and boundary coordination, and save a separate passivated result before deciding whether to add solvent.
+\end{steps}
+
+\subsection{Add solvent above a slab}
+
+\ui{Add Solvent Layer} needs a complete solvent molecule already in the project. Keep the slab document active and select the solvent molecule under \ui{Solvent structure}, then set molecule count, layer thickness, surface gap, remaining vacuum, contact distance, seed, and timeout in seconds. Thickness, gap, vacuum, and contacts are in \AA; the molecule count is an integer. Start with a few molecules to determine which side receives them, then check internal solvent geometry, layer contacts, and remaining vacuum before increasing the count. Temperature and equilibration follow later according to the calculation method.
+
+\section{Reuse a modeling procedure}
+
+\subsection{Save frequently used parameters}\label{sec:modeling-preset-reference}
+\index{Parameter presets}
+
+A parameter preset stores the conditions entered in a command. Reload and adjust them for the current material or model; save generated structures separately.
+
+\begin{steps}
+  \item Open a frequently used command and check its parameters. Preview if useful; a parameter set may also be saved before applying.
+  \item Click \ui{Save Preset} at the top of the dialog and give it a descriptive name such as ``surface exercise thickness.'' Check that it appears in \ui{Preset}.
+  \item Close and reopen the same command, select the name, and click \ui{Load}. Check every value for the current model, especially site indices, project structure references, and lengths.
+  \item Adjust as needed, preview, apply, and save the generated model. Loading a preset does not itself apply a structural change.
+\end{steps}
+
+\ui{Reset} at the bottom of a parameter dialog restores that dialog's initial values and clears its temporary preview. \ui{Reset} in ribbon History restores the current structure draft's baseline. They affect different states. Expand \ui{Help information} for parameter explanations and collapse it to continue editing.
+
+\subsection{Record a traceable modeling procedure}\label{sec:modeling-recipe-reference}
+\index{Modeling recipes}
+
+A Recipe records applied commands, parameters, seeds, and checksums of structures before and after changes. It documents how a result was obtained; retain the starting and final structures as well.
+
+\begin{steps}
+  \item Open and save a clearly named starting model. Activate its 3D document and click \ui{Record} in \ui{History}.
+  \item Perform the operations, previewing and checking before applying. Canceled operations are not recorded.
+  \item Click \ui{Save Recipe} when finished. Recording stops, a time-based name is generated, and the status gives its save location.
+  \item Open \ui{History}\,$\rightarrow$\,\ui{Presets \& Templates}, click \ui{Refresh}, and find the new entry of type \ui{Recipe}. Save the result and project and archive the starting input with them.
+\end{steps}
+
+Recipes cover supported applied modeling commands and parameters in the current structure document. View changes, selection-set management, and analysis inspection are not recorded. Save the final model separately after applying a candidate from an analysis result window. \ui{Presets \& Templates} provides entry inspection and template creation. MATLAB\regmark{} toolbox users can replay a Recipe through the modeling API using the matching starting structure; graphical users can retain it as an operation record.
+
+\subsection{Create a modeling project template}\label{sec:modeling-template-reference}
+
+\ui{Presets \& Templates} lists command presets, Recipes, and modeling project templates by type, name, and details. A modeling project template records a Recipe name and input/output formats. It differs from a calculation workflow template saved as \file{.wf}.
+
+\begin{steps}
+  \item Open \ui{Presets \& Templates} under \ui{History} and click \ui{Refresh} to confirm the intended Recipe exists.
+  \item Click \ui{New Project Template} and enter a name, Recipe name, and input/output formats. Default \literalinput{auto} detects input format; \literalinput{same} retains it for output. These are format choices, not paths.
+  \item Save and check the type, name, and input-to-output relationship in Details. For an invalid entry, inspect its details and verify the referenced records before use.
+  \item Retain the template with its Recipe. Save actual models separately: creating a template does not open a new project or execute modeling automatically.
+\end{steps}
+
+\subsection{Inspect existing batch jobs}\label{sec:modeling-jobs-reference}
+
+\ui{Modeling Jobs} lists stored modeling file-batch jobs, distinct from SCF runs in electronic structure workflows. Columns include ID, status, completed count, requested count, successes, resumability, and errors. A finished batch may still contain failed files.
+
+\begin{steps}
+  \item Open \ui{History}\,$\rightarrow$\,\ui{Modeling Jobs}, click \ui{Refresh}, and identify the batch by ID.
+  \item Compare requested, completed, and successful counts, then read errors. Successes count files for which output was generated normally.
+  \item Select a resumable entry, click \ui{Resume}, wait for a status update, and refresh. If the button is disabled, check whether the entry is marked resumable.
+  \item Use \ui{Cancel Job} to request stopping a resumable job you no longer intend to continue, then refresh to confirm status. Canceling does not delete written results; inspect outputs according to the job record.
+  \item Check result structures and reports in the original output directory. Keep inputs for failures and retain inputs, outputs, and the job record together.
+\end{steps}
+
+This window inspects and resumes existing jobs. MATLAB\regmark{} toolbox users can create file batches through the modeling API; graphical users inspect existing jobs as described above.
+
+\subsection{Recover unsaved structure edits}\label{sec:modeling-draft-reference}
+
+Undo and redo operate on the current structure draft. History's \ui{Reset} restores its baseline, which updates on saving. Save separately named results for lasting model comparisons.
+
+If reopening offers draft recovery, confirm the associated structure, recover it, then inspect atom count, composition, cell, and the last edited region. Save under a new name; recovery does not recreate the full earlier undo history. Before declining recovery and clearing a draft, confirm that the saved file is the version you need.

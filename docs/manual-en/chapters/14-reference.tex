@@ -1,0 +1,319 @@
+\chapter{Quick reference}\label{ch:reference}
+
+\chapterlead{This appendix brings together frequently used formats, conversions, shortcuts, and terms, and identifies the purpose of the accompanying example files. Use it as a reference to the tutorials; when trying a feature for the first time, work through its complete example in the relevant chapter.}
+
+\section{Supported file formats}
+\index{CIF}
+\index{XYZ}
+
+\subsection{Projects and workflows}
+
+A \file{.ks} project stores structures, workflows, and project results. Use it to move an entire exercise between computers or continue it later. A \file{.wf} stores workflow organization and settings for reuse. A structure file alone generally cannot reconstruct all nodes, parameters, and results in the original project.
+
+\Needspace{38mm}
+\subsection{Atomic structures}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.34\linewidth}>{\raggedright\arraybackslash}p{\dimexpr.66\linewidth-4\tabcolsep\relax}}
+\caption{Common structure formats and their uses.}\\
+\toprule
+Format & Information suited to storage and exchange \\
+\midrule
+\endfirsthead
+\caption[]{Common structure formats and their uses (continued).}\\
+\toprule
+Format & Information suited to storage and exchange \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+CIF, MCIF & Crystal information such as lattice, fractional positions, elements, and occupancies. Magnetic information depends on the file and reader support.\\
+POSCAR, CONTCAR, VASP & Lattice, elements, and periodic positions for exchanging explicit cells and supercells.\\
+XYZ & Elements and Cartesian positions for molecular geometry. Ordinary XYZ does not fully preserve cells or explicit bond orders.\\
+MOL, SDF, MOL2 & Molecular atoms and connectivity. MOL export does not support aromatic bond order 1.5; use native JSON for aromatic molecules.\\
+JSON, MSON & Structured object information. Native molecular JSON retains atoms, explicit bonds, chemical attributes, and coordinates.\\
+XSF & Atoms, lattice, and optional grids. Use the appropriate structure or volumetric import entry point.\\
+PDB, CML & Molecular exchange formats offered by the selector. Check elements, positions, and bonds after import; extra annotations in complex files are not automatically calculation parameters.\\
+YAML, YML & Structured text objects requiring the appropriate model fields, as with native JSON; arbitrary configuration files with these extensions are not structures.\\
+CSSR, CONFIG, PWMAT & Program-specific structure text for importing atoms and cells. Configure calculation tasks and controls in the workflow.\\
+\end{longtable}
+
+Menus may offer other programs' input or output formats. A format name does not imply that every parameter and result can be converted to the same model. Decide whether you need an atomic structure or a complete calculation task. Reimport important exported models and check element counts, cells, positions, and molecular connectivity to identify format limitations.
+
+\subsection{Volumetric data and images}
+
+Volumetric import supports CHGCAR/CHG, Cube/CUB, and XSF, including common compressed extensions such as \file{.gz} and \file{.bz2}. Retain the underlying format in compressed filenames for identification. The generating calculation determines the meaning of Cube and XSF scalars; their extensions alone do not identify charge density.
+
+Image exports include PNG, JPEG, TIFF, SVG, and PDF. Isosurface geometry exports include glTF, GLB, PLY, and STL; slices also export CSV. Images support presentation, geometry supports further 3D processing, and CSV supports numerical analysis. Their information content differs: an image is not an editable calculation structure.
+
+\section{Common units and conversions}
+\index{Unit conversions}
+
+Units appear beside fields or axes. Structure modeling commonly uses \AA, electronic calculation inputs often use atomic units, and bands and DOS usually use eV. Check each field and axis before processing data.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.20\linewidth}>{\raggedright\arraybackslash}p{\dimexpr.80\linewidth-4\tabcolsep\relax}}
+\caption{Common conversions, shown to useful working precision.}\\
+\toprule
+Quantity & Conversion \\
+\midrule
+\endfirsthead
+\caption[]{Common conversions, shown to useful working precision (continued).}\\
+\toprule
+Quantity & Conversion \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+Length & $1\,\mathrm{Bohr}\approx0.529177210544\,\text{\AA}$; $1\,\text{\AA}\approx1.8897261259\,\mathrm{Bohr}$.\\
+Energy & $1\,\mathrm{Ha}=2\,\mathrm{Ry}\approx27.211386246\,\mathrm{eV}$.\\
+Force & $1\,\mathrm{Ha/Bohr}\approx51.4221\,\mathrm{eV/\text{\AA}}$.\\
+Temperature and energy & $k_{\mathrm B}\approx8.617333262\times10^{-5}\,\mathrm{eV/K}$; electronic temperature is not atomic temperature.\\
+Density & $1\,\text{\AA}^{-3}\approx0.148184711\,\mathrm{Bohr}^{-3}$; convert units and numerical values together.\\
+Angle & Modeling rotations, bond angles, and dihedrals use degrees; $180^\circ=\pi$ radians.\\
+Mass density & Molecular packing commonly uses $\mathrm{g/cm^3}$, not electron-density units.\\
+\end{longtable}
+
+For example, 20 in \ui{Ecut (Hartree)} is approximately $544.23\,\mathrm{eV}$. Do not enter 400 unchanged in that field when another program specifies $400\,\mathrm{eV}$. Similarly, strain 0.01 means 1\%, not a length increase of $0.01\,\text{\AA}$.
+
+CHGCAR density is normalized by cell volume into $\text{\AA}^{-3}$. Viewer unit switching changes its displayed representation only. Slice CSV coordinate columns are named \file{x_angstrom} and similar; values retain the channel's internal units, as explained in Chapter~\ref{ch:volume}. Do not apply density conversions to arbitrary scalars from other sources.
+
+Per-atom energy comparisons also require normalization. An eight-atom cell with energy $E_8$ has per-atom energy $E_8/8$. For a 64-atom supercell of the same structure, compare $E_{64}/64$ with $E_8/8$, rather than the totals. Defects, different elements, or different charge states require reference states appropriate to the question; division by atom count alone may not give a formation energy.
+
+\section{Keyboard and mouse reference}
+\index{Keyboard shortcuts}
+
+These shortcuts mainly apply to the 3D structure view. Give the view focus first; an active text or numeric field may handle the key instead. Cmd/Ctrl means Command on macOS or Ctrl on Windows/Linux.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.37\linewidth}>{\raggedright\arraybackslash}p{\dimexpr.63\linewidth-4\tabcolsep\relax}}
+\caption{Viewing and selection.}\\
+\toprule
+Key or mouse action & Effect \\
+\midrule
+\endfirsthead
+\caption[]{Viewing and selection (continued).}\\
+\toprule
+Key or mouse action & Effect \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+Left drag & Rotate the view.\\
+Right drag & Pan the view.\\
+Scroll or middle drag & Zoom.\\
+Space & Center and fit the model.\\
+Click & Select an atom or object.\\
+Shift/Ctrl+click & Add atoms to or remove them from the selection.\\
+Double-click & Select a connected structure in modeling; sample a point in volumetric data.\\
+B, then drag & Box-select atoms.\\
+L, then drag & Lasso-select atoms.\\
+Cmd/Ctrl+A & Select all atoms.\\
+I & Toggle the minimal view.\\
+? or / & Open structure-view shortcut help.\\
+\end{longtable}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.37\linewidth}>{\raggedright\arraybackslash}p{\dimexpr.63\linewidth-4\tabcolsep\relax}}
+\caption{Modeling and history.}\\
+\toprule
+Key or mouse action & Effect \\
+\midrule
+\endfirsthead
+\caption[]{Modeling and history (continued).}\\
+\toprule
+Key or mouse action & Effect \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+G, then drag & Move the selection.\\
+R, then drag & Rotate the selection.\\
+X, Y, Z & Constrain a transform to the corresponding axis.\\
+Shift+middle drag & Move the selection directly.\\
+Shift+right drag & Rotate the selection directly.\\
+S & Enter 3D molecular sketching.\\
+O & Enter interactive adsorbate placement.\\
+Enter & Accept the current interactive placement when available.\\
+Delete or Backspace & Delete the selection.\\
+Cmd/Ctrl+Z & Undo an applied edit.\\
+Shift+Cmd/Ctrl+Z & Redo.\\
+Esc & Leave the current tool or clear the selection.\\
+\end{longtable}
+
+Adsorbate placement uses different mouse actions: left drag changes orientation, Alt+left drag adjusts the anchor distance, and right drag rotates around the anchoring direction. Check the active tool before interacting. Save projects with Cmd/Ctrl+S. In Online, download after saving to obtain a local copy.
+
+\Needspace{145mm}
+\section{Terminology}
+
+\begin{table}[H]
+\centering
+\caption{Common workspace, structure, and calculation terms.}
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+Term & Meaning \\
+\midrule
+Project & A container organizing structures, workflows, and results.\\
+Workflow / Node & Tasks and their data connections.\\
+Dataset / Plot & Numerical records / graphical results.\\
+Site / Image atom & A model position / its periodic display copy.\\
+Lattice / Unit cell & The geometry describing periodicity.\\
+Primitive / Conventional cell & Different representations of the same crystal.\\
+Supercell & A periodic model with an integer multiple of the base cell's atoms.\\
+Fractional / Cartesian & Coordinates in the lattice basis / orthogonal spatial axes.\\
+SCF / NSCF & Self-consistent / non-self-consistent field calculation.\\
+Pseudopotential & An effective description of ionic-core interactions with valence electrons.\\
+Cutoff energy & The limit defining the plane-wave basis.\\
+Smearing / Occupation & Energy smoothing / electronic state populations.\\
+Fermi energy & A common energy reference for bands and DOS.\\
+Relaxation & Adjustment of geometry using forces or related criteria.\\
+DOS / PDOS & Density of states / projected density of states; a projection must identify its target.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+For surfaces, a slab is a thin periodic model; a termination identifies the exposed surface, an adsorbate is the attached species, and an anchor is its reference attachment point. Ontop, bridge, and hollow name adsorption sites. A hollow adsorption site is distinct from a vacancy created by removing a lattice atom.
+
+For volumetric data, a channel selects a scalar dataset. An isosurface connects equal values, a Miller plane slice samples one plane, and direct volume rendering combines information through a volume. A threshold sets an isosurface value, a color range sets the colormap interval, and opacity controls transparency. These names identify the corresponding viewer settings.
+
+\subsection{Terms that are easy to confuse}
+
+\ui{Preview} checks an uncommitted geometric change, \ui{Apply} accepts it, and \ui{Save} writes work to a file. Resetting a structure restores the editing baseline; \ui{Reset camera} changes framing only. \ui{Repeat cell} expands the display; \ui{Build Supercell} expands the model. Distinguish these commands by the model or file information they change, rather than whether the screen changes.
+
+Online file operations also have distinct roles: upload copies a local file to server storage, import adds its contents to the current project, save writes the project to a server-side file, and download obtains a local copy. This distinction tells you whether the next action belongs in the Project Browser or \ui{Files} panel.
+
+\section{Workflow task reference}
+
+Workflow nodes belong to four modules. For connections and parameters, use Table~\ref{tab:task-catalog} in Chapter~\ref{ch:workflows} and its worked examples. The table below starts from the desired result.
+
+\begin{table}[htbp]
+\centering
+\caption{Find a task by its purpose.}
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+Goal & Tasks and tutorial \\
+\midrule
+Ground-state total energy & Build Molecule, SCF, Energy Curve; Chapter~\ref{ch:first}. \\
+Bands along a path & Symmetry \& K-Path, NSCF, Band Calculation, Band Structure; silicon primitive-cell example in Chapter~\ref{ch:workflows}. \\
+Total DOS & SCF, NSCF, DOS; DOS example in Chapter~\ref{ch:workflows}. \\
+Relax atomic positions & Build Molecule, Geometry Optimization; hydrogen optimization in Chapter~\ref{ch:workflows}. \\
+Reciprocal geometry & Symmetry \& K-Path, Brillouin Zone 2D or 3D; Section~\ref{sec:bz-workflow}. \\
+Band-edge surfaces & SCF, NSCF, Band Calculation 3D, Band Structure 3D; Section~\ref{sec:band-surface}. \\
+Excited-state inputs & SCF ground state and extra unoccupied orbitals, TDDFT; Section~\ref{sec:tddft-workflow} explains the solution procedure. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+A task with 3D in its name does not necessarily require a three-dimensional bulk model. The two horizontal band-surface coordinates are reciprocal-space coordinates, whereas volumetric figures describe real space. Identify the desired quantity before choosing model dimensionality and numerical sampling.
+
+\FloatBarrier
+\section{Accompanying example files}
+
+Files in \file{examples} include original inputs and projects for continued work. Copy them into your own study directory to retain the supplied versions as references. The table lists files used in this edition. Save logs, reports, and numerical outputs according to each script's actual output locations.
+
+\begingroup
+% Break example filenames at separators, keeping extensions readable.
+\def\UrlBreaks{\do\/\do\-\do\_\do\.}
+\begin{longtable}{>{\raggedright\arraybackslash}p{.44\linewidth}>{\raggedright\arraybackslash}p{\dimexpr.56\linewidth-4\tabcolsep\relax}}
+\caption{Example files and their purposes.}\\
+\toprule
+File & Purpose \\
+\midrule
+\endfirsthead
+\caption[]{Example files and their purposes (continued).}\\
+\toprule
+File & Purpose \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+\file{h2.cif} & Hydrogen simulation box for the first calculation; initial bond approximately $0.793766\,\text{\AA}$.\\
+\file{h2_optimized.cif} & Optimized reference hydrogen geometry; bond approximately $0.757292\,\text{\AA}$.\\
+\file{hydrogen.xyz} & Coordinate import exercise; bond approximately $0.740848\,\text{\AA}$, different from the calculation input above.\\
+\file{water.xyz} & Water geometry and coordinate import exercise.\\
+\file{silicon.cif} & Eight-site conventional silicon cell, side approximately $5.44370\,\text{\AA}$, for workspace and calculation tutorials.\\
+\file{Si.poscar} & Eight-site silicon cell, side approximately $5.46873\,\text{\AA}$, for supercell and vacancy modeling.\\
+\file{Si-ground-state.ks} & Silicon structure project from Chapter~\ref{ch:online}; no SCF calculation yet.\\
+\file{Si-introduction.ks} & Silicon import project from Chapter~\ref{ch:workspace}, used to continue modeling in Chapter 7.\\
+\file{Si-vacancy-tutorial.ks} & Chapter 7 vacancy project with reference silicon and a 63-site vacancy model.\\
+\file{Si-primitive-BZ-Online-050.pdf} & Vector 3D Brillouin zone and path for two-site silicon, generated by the \ui{Symmetry} template.\\
+\file{benzene-ring.json} & Six-carbon aromatic ring, side $1.4\,\text{\AA}$, before hydrogen addition.\\
+\file{benzene.json}\newline\file{benzene-optimized.json} & Hydrogenated initial benzene and its generic molecular-model optimized reference.\\
+\file{pyridine.json}\newline\file{pyridine-optimized.json} & Initial and generic molecular-model optimized neutral singlet pyridine, retaining six aromatic bonds.\\
+\file{ethanol-backbone.json}\newline\file{ethanol-initial.json} & Collinear heavy-atom ethanol backbone and initial structure after hydrogen addition.\\
+\file{ethanol-edited.json}\newline\file{ethanol-cleaned.json}\newline\file{ethanol-optimized.json} & Ethanol after geometric editing, rule-based cleanup, and generic molecular-model optimization.\\
+\file{ethanol-angle1095.json} & Neutral singlet ethanol with 9 atoms, 8 explicit bonds, and a C1--C2--O3 angle of $109.5^\circ$.\\
+\file{ethanol-angle1095.png} & The same ethanol exported through the atomic viewer's PNG menu, 4032\,$\times$\,1964 pixels.\\
+\file{ethanol-angle1095-scene.json} & Scene JSON recording displayed sites and connections, separate from the editable structure JSON.\\
+\file{Cu-fcc.cif}\newline\file{Cu-vacancy.cif} & Four-site copper cell with $a=3.61\,\text{\AA}$ and a three-site vacancy candidate.\\
+\file{Pt-fcc.cif}\newline\file{Pt111-slab.cif} & Platinum bulk cell with $a=3.92\,\text{\AA}$ and a four-layer (111) slab generated using Chapter 8 settings.\\
+\file{Pt111-normal-c.json}\newline\file{oh-fragment.mol}\newline\file{Pt111-OH-outward.cif} & Normal-aligned cell, singly bonded O--H input, and six-site outward-oriented adsorption geometry.\\
+\file{Pt111-OH-Online-050.json} & Six-site structure after O--H placement and wrapping; O/H heights 2.00/2.96\,\AA, O--H length 0.96\,\AA.\\
+\file{Pt111-OH-candidate-1.json} & Highest-ranked structure among 144 reference geometric candidates, for comparing anchor, height, and rotation.\\
+\file{modeling_examples.m}\newline\file{verify_modeling_examples.m} & Generation and reimport checks with JSON reports; see \file{MODELING-CASES.zh-CN.md}.\\
+\file{PEO3-PPO4-PEO3.json}\newline\file{PE6-PP14-seed91.json} & Initial block and exact-composition random chains with 84 and 164 atoms, respectively.\\
+\file{neb-exchange/initial.json}\newline\file{neb-exchange/final.json} & Geometric path endpoints exchanging two sites while retaining atom correspondence.\\
+\file{neb-exchange/image-00.json}\newline through \file{image-06.json} & Complete seven-image IDPP path: two endpoints and five intermediate configurations.\\
+\file{polymer_neb_examples.m} & Chain and path construction, reimport, and geometry checks; see \file{POLYMER-NEB-CASES.zh-CN.md}.\\
+\file{graphene-layer.json}\newline\file{graphene-inserted.json}\newline\file{graphene-stacked.json} & Two-site graphene layer, directly inserted bilayer, and layer-matched bilayer.\\
+\file{hBN-layer.json}\newline\file{graphene-hBN-stacked.json} & Ideal h-BN monolayer and matched graphene/h-BN, with 1.6\% in-plane strain.\\
+\file{twist-graphene-bottom.json}\newline\file{twist-graphene-top.json} & Original two-site graphene monolayers for the twist tutorial.\\
+\file{graphene-twist-21p786789.json}\newline\file{graphene-twist-target22.json}\newline\file{graphene-hBN-twist-21p786789.json} & Two target-angle cases and a heteromaterial twisted structure, all with 28 sites; matching CIF files support geometry exchange.\\
+\file{twist_examples.m}\newline\file{verify_twist_examples.m} & Twisted structure generation and reimport verification; see \file{TWIST-CASES.zh-CN.md}.\\
+\file{nano-graphene-60.json}\newline\file{graphene-armchair-w3-l2.json}\newline\file{graphene-tube-4-0-l2.json} & Graphene input with a 60-degree basis, a 24-site ribbon, and a 32-site tube.\\
+\file{Cu-wire-001-r3-l2.json}\newline\file{Cu-dot-r3.json}\newline\file{Cu-void-r2p7.json} & Copper wire, finite cluster, and spherical void; parameters in \file{NANO-CASES.zh-CN.md}.\\
+\file{user-repeat-ethane-input.json}\newline\file{user-repeat-CC-dimer.json}\newline\file{user-repeat-unit-library.json} & Ethane input, 14-atom dimer, and library for the custom two-carbon repeat unit.\\
+\file{user_repeat_unit_example.m}\newline\file{verify_user_repeat_unit_example.m} & Custom-unit generation and independent read-back; see \file{USER-REPEAT-UNIT-CASE.zh-CN.md}.\\
+\file{nano_examples.m}\newline\file{verify_nano_examples.m} & Generation, periodicity, coordination, and exchange-file checks for five nanostructure types.\\
+\file{sqs-cu-ni-input.json}\newline\file{sqs-cu-ni-ordered.json}\newline\file{sqs_example.m} & Mixed-occupancy Cu--Ni input, four-site ordered SQS result, and generator; see \file{SQS-CASE.zh-CN.md}.\\
+\file{adsorption_bn_examples.m}\newline\file{orient_oh_example.m}\newline\file{export_oh_cif.m} & Adsorption candidates, outward orientation, and heteromaterial matching; see \file{ADSORPTION-BN-CASES.zh-CN.md}.\\
+\file{water-packing.json}\newline\file{water10-ethanol10-packed.json} & Explicitly bonded water input and a low-density initial packing of 10 water and 10 ethanol molecules.\\
+\file{interface_packing_examples.m} & Bilayer candidates, mixture packing, and independent geometry checks; see \file{INTERFACE-PACKING-CASES.zh-CN.md}.\\
+\file{h2-tutorial.ks} & Hydrogen tutorial project for inspecting structures and workflows.\\
+\file{H2-Online-SCF-050.ks} & Hydrogen SCF project with a seven-iteration convergence record.\\
+\file{silicon-tutorial.ks} & Silicon tutorial project and its workflow.\\
+\file{h2_scf_and_relax.m} & Hydrogen SCF and geometry optimization reproduction in full MATLAB\regmark{}.\\
+\file{silicon_example.m} & Eight-atom silicon SCF and DOS reproduction in full MATLAB\regmark{}.\\
+\file{silicon_primitive_example.m} & Band calculation reproduction for a standardized two-atom silicon primitive cell.\\
+\file{silicon-band-primitive.ks} & Two-atom silicon band and symmetry project.\\
+\file{CHGCAR-teaching} & Volumetric import and viewing example.\\
+\file{CHGCAR.nospin.gz} & Non-spin-polarized CHGCAR for total density.\\*
+\file{CHGCAR.spin.gz} & Spin-polarized CHGCAR for channel and sign comparisons.\\*
+\file{elec.cube.gz} & Cube data for slicing and export.\\*
+\file{elec.total.slice-1_1_0.csv} & (110) slice with 1568 data rows; coordinates in \AA, values in channel-internal units.\\
+\file{elec.total.slice-1_1_0.png} & RGBA image of that slice, 384\,$\times$\,768 pixels, for checking colors and shape.\\
+\file{datagrid_3d.xsf} & XSF scalar grid for format and slice inspection.\\
+\end{longtable}
+\endgroup
+
+The supplied silicon and hydrogen inputs have different geometries and parameters; select the specified file for numerical comparisons. Scripts require full MATLAB\regmark{} and the matching toolbox. Configure its path and run from this manual repository's root. Calculation chapters and example notes list required products and commands. All three editions support the applicable graphical tutorials.
+
+\subsection{Document your own examples}
+
+When changing materials, add a short note recording the source structure, supercell or surface operations, final model name, workflow purpose, and result locations. For random construction, include seed and composition. For figures, include the energy reference, channel, or threshold. These notes reconnect structures, calculations, and presentation when you return later.
+
+The compressed CHGCAR, Cube, and XSF examples come from \file{pymatgen-core} test data. Source notes accompany the files.
+
+\section{References}
+
+The following references provide further reading directly related to the fundamentals used in this manual.
+
+\begingroup
+\small
+\RaggedRight
+\begin{enumerate}[itemsep=4pt]
+\item Liu Yang, Jinlong Yang, and Wei Hu. \textit{KSSOLV Toolbox: A MATLAB\regmark{} Graphical User Interface for Plane-Wave Density Functional Theory Calculations}. Journal of Chemical Theory and Computation, 2026. \href{https://doi.org/10.1021/acs.jctc.6c00523}{doi:10.1021/acs.jctc.6c00523}.
+\item Shizhe Jiao et al. \textit{KSSOLV 2.0: An efficient MATLAB\regmark{} toolbox for solving the Kohn--Sham equations with plane-wave basis set}. Computer Physics Communications, 279, 108424, 2022. \href{https://doi.org/10.1016/j.cpc.2022.108424}{doi:10.1016/j.cpc.2022.108424}.
+\item P. Hohenberg and W. Kohn. \textit{Inhomogeneous Electron Gas}. Physical Review, 136, B864--B871, 1964. \href{https://doi.org/10.1103/PhysRev.136.B864}{doi:10.1103/PhysRev.136.B864}.
+\item W. Kohn and L. J. Sham. \textit{Self-Consistent Equations Including Exchange and Correlation Effects}. Physical Review, 140, A1133--A1138, 1965. \href{https://doi.org/10.1103/PhysRev.140.A1133}{doi:10.1103/PhysRev.140.A1133}.
+\item John P. Perdew, Kieron Burke, and Matthias Ernzerhof. \textit{Generalized Gradient Approximation Made Simple}. Physical Review Letters, 77, 3865--3868, 1996. \href{https://doi.org/10.1103/PhysRevLett.77.3865}{doi:10.1103/PhysRevLett.77.3865}.
+\item D. R. Hamann. \textit{Optimized norm-conserving Vanderbilt pseudopotentials}. Physical Review B, 88, 085117, 2013. \href{https://doi.org/10.1103/PhysRevB.88.085117}{doi:10.1103/PhysRevB.88.085117}.
+\end{enumerate}
+
+\endgroup

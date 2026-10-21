@@ -1,0 +1,30 @@
+Let $A$ and $A'$ be the original and edited lattices. \ui{Preserve Cartesian positions} determines how atoms adapt to the new cell. Equation~\eqref{eq:row-lattice-coordinates} gives
+\begin{equation}
+ \begin{aligned}
+ \text{Keep fractional:}\quad&\mathbf f'=\mathbf f,
+       &\mathbf r'&=\mathbf f A',\\
+ \text{Keep Cartesian:}\quad&\mathbf r'=\mathbf r,
+       &\mathbf f'&=\mathbf r(A')^{-1}.
+ \end{aligned}
+ \label{eq:lattice-preservation-options}
+\end{equation}
+For example, increase a cubic cell side from 4 to 8\,\AA. An atom initially at fractional position $(0.5,0,0)$ has Cartesian position $(2,0,0)\,\text{\AA}$. Without preserving Cartesian coordinates, it remains halfway along the cell and moves to $(4,0,0)\,\text{\AA}$. With the option enabled, it stays at $(2,0,0)\,\text{\AA}$ and its fractional position becomes $(0.25,0,0)$. Both choices can be useful; decide which geometric relationship to retain before editing the table.
+
+\begin{table}[!htb]
+\centering\small
+\begin{tabularx}{\linewidth}{p{30mm}XX}
+\toprule
+Operation & Preserves & Main checks\\
+\midrule
+Edit lattice, keep fractional & $\mathbf f$ and site count & Cell lengths, angles, and changed interatomic distances.\\
+Edit lattice, keep Cartesian & $\mathbf r$ and site count & New fractional positions and periodic boundary contacts.\\
+Build supercell & Original periodic arrangement & Volume and independent sites multiplied by $|\det S|$.\\
+Rotate lattice & Internal geometry and site count & Lattice and atoms rotating together.\\
+Swap axes & Cartesian geometry and site count & Basis order and matching fractional components.\\
+Mirror lattice & Fractional coordinates and site count & Reversed vector and cell handedness.\\
+Apply strain & Fractional coordinates and site count & Vector lengths and affected distances.\\
+\bottomrule
+\end{tabularx}
+\caption{Choose a lattice operation according to the quantities to preserve. Internal geometry means interatomic distances and angles; after changing periodic boundaries, inspect neighboring images in the new cell as well.}
+\label{tab:round10-lattice-invariants}
+\end{table}

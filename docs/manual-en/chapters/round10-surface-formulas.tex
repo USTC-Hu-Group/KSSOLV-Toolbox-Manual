@@ -1,0 +1,36 @@
+\subsubsection{Obtain the normal from Miller indices}
+
+A crystal plane's normal is determined by reciprocal vectors. Using the convention in Chapter~\ref{ch:theory},
+\begin{equation}
+  \mathbf G_{hkl}=h\mathbf b_1+k\mathbf b_2+l\mathbf b_3,
+  \qquad
+  \hat{\mathbf n}=\frac{\mathbf G_{hkl}}{\|\mathbf G_{hkl}\|}.
+  \label{eq:surface-miller-normal}
+\end{equation}
+The reciprocal vectors $\mathbf b_1,\mathbf b_2,\mathbf b_3$ have units $\text{\AA}^{-1}$; $h,k,l$ are dimensionless integers and $\hat{\mathbf n}$ is a unit normal. In a cubic cell, the (111) normal is parallel to $\mathbf a+\mathbf b+\mathbf c$. Here the lattice axes align with global axes, so it is also parallel to global $(1,1,1)$. A skewed cell generally lacks this correspondence: do not use Miller indices directly as a Cartesian adsorbate-orientation vector.
+
+For a constructed slab with in-plane vectors $\mathbf a,\mathbf b$, check its actual normal and cell height using
+\begin{equation}
+  \hat{\mathbf n}_{\mathrm{slab}}=
+  \frac{\mathbf a\times\mathbf b}{\|\mathbf a\times\mathbf b\|},
+  \qquad H=|\mathbf c\cdot\hat{\mathbf n}_{\mathrm{slab}}|
+  \label{eq:surface-normal-height}
+\end{equation}
+The height $H$ is the repeat distance between periodic slabs along the normal, and need not equal $\|\mathbf c\|$. Represent atoms of one slab in continuous periodic images, then project their positions onto the normal to obtain the outermost-layer span. Record this separately from the requested minimum thickness and complete-repeat thickness.
+
+\begin{table}[H]
+\centering
+\caption{Lengths used in surface construction.}
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+Quantity & Interpretation and checks\\
+\midrule
+Minimum slab thickness & A criterion for selecting complete repeat units, not a direct layer count.\\
+Atomic-layer span & Normal distance between outermost layers; select one continuous slab first.\\
+Normal cell height $H$ & Equation~\eqref{eq:surface-normal-height}; includes the slab and periodic gap.\\
+Added vacuum $\Delta$ & Length added along the third lattice vector by \ui{Add Vacuum}, not the final total vacuum.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+For nonorthogonal input, also check the output normal, layer count, and periodic separation. Orientation handling can affect thickness conversion and candidate reduction; the minimum input thickness alone does not establish the result. The platinum example starts from a cubic cell and checks the generated slab.

@@ -1,0 +1,18 @@
+A general supercell is defined by an integer matrix $S$. Each row specifies one new lattice vector as a combination of the original three. For example, the first row $(2,1,0)$ means $\mathbf a'=2\mathbf a+\mathbf b$. With row-vector lattices,
+\begin{equation}
+ A'=SA,\qquad V'=|\det S|V,\qquad N'=|\det S|N.
+ \label{eq:supercell-count-volume}
+\end{equation}
+The entries of $S$ must be integers and its determinant nonzero. The magnitude $|\det S|$ is both the volume ratio and the multiplier of independent sites. $N$ always counts model sites, not extra boundary-image spheres. For three repeat counts, $S=\operatorname{diag}(n_a,n_b,n_c)$ reduces Eq.~\eqref{eq:supercell-count-volume} to their product. The silicon example uses $S=2I$, so $|\det S|=8$ and 8 sites become 64.
+
+For a nondiagonal algebraic check,
+\[
+ S=\begin{bmatrix}2&1&0\\0&1&0\\0&0&1\end{bmatrix},\qquad
+ \begin{cases}
+ \mathbf a'=2\mathbf a+\mathbf b,\\
+ \mathbf b'=\mathbf b,\quad \mathbf c'=\mathbf c.
+ \end{cases}
+\]
+The determinant is 2. An eight-site input should produce 16 sites and twice the volume. The new outline can be skewed, while the local periodic arrangement is copied from the original. This differs from strain: choosing a larger repeat unit does not double every interatomic bond length.
+
+\ui{Supercell scaling} accepts either three repeat integers or a full $3\times3$ matrix. Write out the new basis vectors, check the determinant, preview the outline, and verify the applied site count to distinguish reorientation from replication. Input \literalinput{1 1 1} gives $I$ and does not enlarge the model. The tool still wraps equivalent positions into the unit cell, which can help collect representatives lying outside it.

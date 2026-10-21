@@ -1,0 +1,25 @@
+\subsubsection{How intermediate images are distributed}
+
+Requesting $M$ intermediate images produces $M+2$ structures including both endpoints, indexed by $j=0,\ldots,M+1$. For a nonperiodic model, or endpoints represented by continuous periodic images, linear interpolation gives
+\begin{equation}
+  \alpha_j=\frac{j}{M+1},\qquad
+  \mathbf r_i^{(j)}=(1-\alpha_j)\mathbf r_i^{(0)}
+     +\alpha_j\mathbf r_i^{(M+1)}.
+  \label{eq:neb-image-interpolation}
+\end{equation}
+Index $i$ identifies the same atom at both endpoints; $\alpha_j$ is dimensionless and positions are in \AA. For periodic structures, endpoint displacements must respect the applicable periodic boundaries. Coordinates of different images of one atom must not be interpreted as an unnecessarily long migration distance.
+
+IDPP further brings pair distances in each image toward interpolated targets:
+\begin{equation}
+\begin{aligned}
+  d_{ik}^{*,(j)}&=(1-\alpha_j)d_{ik}^{(0)}
+                      +\alpha_j d_{ik}^{(M+1)},\\
+  E_{\mathrm{IDPP}}^{(j)}&=
+    \sum_{i<k}\frac{\bigl(d_{ik}^{(j)}-d_{ik}^{*,(j)}\bigr)^2}
+                         {\bigl(d_{ik}^{(j)}\bigr)^4}.
+\end{aligned}
+\label{eq:idpp-pair-objective}
+\end{equation}
+Here $i,k$ are atom indices and $j$ is an image index. The current pair distance is $d_{ik}^{(j)}$ and its target is $d_{ik}^{*,(j)}$. The denominator strongly penalizes short separations, helping IDPP resolve collisions in a linear path. This expression describes one image's pair objective; path optimization also couples neighboring images.
+
+$E_{\mathrm{IDPP}}$ is an auxiliary geometric objective, not a reaction barrier. A barrier requires subsequent energy calculations. The dialog's IDPP \ui{Force tolerance} applies to this auxiliary optimization and is separate from electronic-structure force thresholds. For $M=5$, the parameters are $0,1/6,2/6,\ldots,1$, corresponding to example structures 00 through 06.

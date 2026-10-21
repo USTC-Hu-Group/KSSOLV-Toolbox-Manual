@@ -1,0 +1,49 @@
+\subsection{Example: a four-site Cu--Ni \headinglatin{SQS}}\label{sec:sqs-cu-ni-example}
+\index{SQS models}
+
+The supplied \file{sqs-cu-ni-input.json} provides a ready-to-use input: a face-centered cubic cell with side length $3.61\,\text{\AA}$ and four independent sites. Each site has Cu occupancy 0.5 and Ni occupancy 0.5, giving an overall composition equivalent to Cu$_2$Ni$_2$. Mixed occupancy describes a statistical composition; it does not place two physical atoms at one position. An SQS converts those fractions into explicit species assignments, with one element fully occupying each site.
+
+The small cell and example lattice constant make the conversion from mixed occupancy to explicit arrangements easy to inspect. For alloy-property studies, use larger models as needed and test convergence of the correlation functions and lattice parameters.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+Item & Settings and checks\\
+\midrule
+Input & \file{sqs-cu-ni-input.json}; a CIF with the same base name is also supplied.\\
+Lattice & $a=b=c=3.61\,\text{\AA}$; all angles are $90^\circ$.\\
+Independent sites & 4; fractional positions $(0,0,0)$, $(0,\frac12,\frac12)$, $(\frac12,0,\frac12)$, and $(\frac12,\frac12,0)$.\\
+Occupancies & Cu 0.5 and Ni 0.5 at every site, summing to 1.\\
+Supercell scaling & Enter \literalinput{1} to retain the four-site cell.\\
+Search budget & Enter 1 second; this small example uses exact enumeration.\\
+Expected result & Two Cu and two Ni sites, four sites in total, each with occupancy 1.\\
+\bottomrule
+\end{tabularx}
+\caption{The four-site Cu--Ni SQS exercise.}
+\end{table}
+
+\begin{steps}
+  \item Import \file{sqs-cu-ni-input.json} and open its 3D document. In Online, upload the file first, then import it from server-side storage. Name the document \file{CuNi-mixed} and save the starting project so that you can return to the mixed-occupancy input.
+  \item Check the independent site count, cell, and atom information. There should be four sites, each listing both Cu and Ni at 0.5. In the input JSON, every \file{sites} entry has two elements under \file{species}, each with its own \file{occu}. This is more reliable than inferring composition from display colors alone.
+  \item Keep the crystal document active. Open \ui{Generate SQS Model} from \ui{Crystal Modeling}\,$\rightarrow$\,\ui{Defects \& Alloys}. Enter \literalinput{1} under \ui{Supercell scaling} and 1 under \ui{Search budget (seconds)}.
+  \item Click \ui{Preview}. Check that the four sites have explicit assignments to the two elements and that the cell and site count have not grown, then click \ui{Apply}. The lattice and positions remain unchanged; only the species assignments change.
+  \item Check for Cu$_2$Ni$_2$, four sites, and one fully occupied element at every site. The nearest-neighbor distance should be approximately $3.61/\sqrt{2}=2.552655\,\text{\AA}$. Cell symmetry can produce equivalent species arrangements; assess composition, occupancy, and periodic geometry rather than requiring one visual ordering.
+  \item Export native JSON using the structure-export procedure described earlier, naming it \file{sqs-cu-ni-ordered.json} to retain the search record. Here \file{ordered} means that every site has a definite element, not that a chemically long-range-ordered phase has been generated.
+  \item Name the result \file{CuNi-SQS-4} and save the project. Also export CIF for cell and explicit-occupancy exchange. In Online, download the exports and keep the input JSON, result JSON, and project copy. Use CIF for structure exchange and native JSON for the SQS search record.
+\end{steps}
+
+\subsubsection*{Inspect the search record}
+
+Open the exported JSON in a text editor and inspect \file{properties.sqs} without editing it. \file{search_mode} identifies the search method, \file{configuration_count} counts candidate arrangements, and \file{objective_function} measures correlation matching.
+
+The reference uses \literalinput{exact-enumeration}, with \file{configuration_count} equal to 6 and \file{objective_function} approximately 0.1666667. The six arrangements choose two of four sites for Cu and assign Ni to the rest. All six distinct site pairs have the same shortest periodic distance. One pair is Cu--Cu and one Ni--Ni, so this finite cell cannot reproduce the pair proportions of independent random occupancy exactly. The objective is therefore nonzero. This dimensionless value measures deviation from random-occupancy target correlations; it is not an adsorption energy, total energy, or defect formation energy.
+
+The time budget controls candidate searching. The full operation also includes exact enumeration, comparison of equivalent structures, and result assembly, so total elapsed time can exceed the entered value. Consider both the site count and candidate count when enlarging the model.
+
+\Needspace{10\baselineskip}
+\begin{notebox}{Scaling and mixed occupancy}
+A single integer here specifies a cell volume multiplier, not that integer applied independently in all three directions. To give explicit repeats, enter a triplet such as \literalinput{2 2 2} in the same field; it expands this example to 32 sites. Record the actual cell, composition, and search conditions before comparing models. Mixed occupancy is a modeling input; electronic structure calculations should use the generated, checked explicit assignments. A calculation object may warn that fractional occupancy cannot be represented directly. A resulting single-element display does not mean an SQS has been generated.
+\end{notebox}
+
+The corresponding results are supplied as \file{sqs-cu-ni-ordered.json} and \file{sqs-cu-ni-ordered.cif}. Run \file{sqs_example.m} in the MATLAB\regmark{} toolbox environment started with \file{-nojvm} to regenerate inputs and results. Once explicit occupancies are established, proceed with an electronic structure workflow.

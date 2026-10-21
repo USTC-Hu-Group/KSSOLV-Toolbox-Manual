@@ -1,0 +1,29 @@
+\subsubsection{Reverse one lattice vector}
+
+\ui{Mirror Lattice} accepts vector index 1, 2, or 3 and reverses that vector, leaving the other rows unchanged. Let $D_i$ be diagonal, with entry $-1$ at position $i$ and 1 at the other two positions. Then
+\begin{equation}
+ A'=D_iA,\qquad \mathbf f'=\mathbf f.
+ \label{eq:mirror-lattice-row}
+\end{equation}
+Selecting axis 1 gives $\mathbf a'=-\mathbf a$. Position $(u,v,w)$ changes from $u\mathbf a+v\mathbf b+w\mathbf c$ to $-u\mathbf a+v\mathbf b+w\mathbf c$. Since $\det D_i=-1$, the volume magnitude stays the same while basis handedness changes.
+
+This differs from \ui{Mirror Atoms}. In a general skewed cell, reversing $\mathbf a$ does not simultaneously reflect $\mathbf b$ and $\mathbf c$ in one Cartesian plane, so some interatomic distances may change. To reflect an entire molecule across a spatial plane, use the preceding plane-reflection formula. To reverse a lattice basis vector, use this operation and check the resulting atomic positions.
+
+\ui{Rotate Lattice} takes an angle and global axis and rotates the lattice and its atoms together: $A'=AR^{\mathsf T}$, with fractional coordinates unchanged. \ui{Swap Axes} reorders both lattice rows and fractional components. Entering 2, 1, 3 swaps $\mathbf a$ with $\mathbf b$ and $u$ with $v$, leaving Cartesian positions unchanged. Perform one operation at a time and check Table~\ref{tab:round10-lattice-invariants} before saving.
+
+\subsubsection{Apply strain along lattice directions}
+
+\ui{Apply Strain} and \ui{Strain Structure} use dimensionless relative extensions. To emphasize their directions, write the inputs as $\varepsilon_a,\varepsilon_b,\varepsilon_c$. They scale the lattice rows:
+\begin{equation}
+ A'=\begin{bmatrix}
+ 1+\varepsilon_a&0&0\\
+ 0&1+\varepsilon_b&0\\
+ 0&0&1+\varepsilon_c
+ \end{bmatrix}A,\qquad \mathbf f'=\mathbf f.
+ \label{eq:lattice-axial-strain}
+\end{equation}
+The dialog still names the components $x,y,z$, but this tool applies them to lattice vectors 1, 2, and 3. For a skewed cell they are not independent global Cartesian extensions. A scalar 0.01 multiplies every row by 1.01; \literalinput{0.01 0 0} multiplies only $\mathbf a$ by 1.01. The value 0.01 means 1\% extension, not an added $0.01\,\text{\AA}$ or a final length of 1.01\,\AA.
+
+Using the skewed-cell example from Chapter~\ref{ch:modeling}, take $\mathbf a=(4,0,0)$, $\mathbf b=(1,3,0)$, and $\mathbf c=(0,0,6)$ in \AA. After \literalinput{0.01 0 0}, only $\mathbf a$ becomes $(4.04,0,0)\,\text{\AA}$; the $x$ component of $\mathbf b$ remains 1\,\AA. Fractional position $(0.5,0.5,0)$ stays fixed, while its Cartesian position changes from $(2.5,1.5,0)$ to $(2.52,1.5,0)\,\text{\AA}$. Thus this operation does not multiply every atom's global $x$ coordinate by 1.01.
+
+Save the undeformed model first, then enter the strain, preview, and apply. Check vector lengths and representative atomic positions using a small strain like this before saving a separate result. These tools extend the three lattice vectors without shear strain. If the deformed structure needs relaxation, configure that as a separate calculation.

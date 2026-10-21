@@ -1,0 +1,114 @@
+\chapter{Troubleshooting}\label{ch:troubleshooting}
+
+\chapterlead{First identify where the problem occurs: opening the application, reading a file, editing a model, running a calculation, or saving results. A small, targeted check is usually more useful than changing many settings at once. This chapter is organized by the symptoms you may see during everyday use; refer back to the relevant tutorial for the full procedure.}
+
+\section{The application will not start after installation}
+\index{Installation problems}
+
+Check the package's operating system and processor architecture, then the MATLAB\regmark{} Runtime release requested by the installer. The application version and Runtime release have separate numbering, and the standalone application needs a matching Runtime.
+
+If Runtime configuration is still in progress, wait for the installer to report completion. For a Windows offline package reporting missing files, keep the EXE and matching volumes together. If a macOS application-only installer does not detect Runtime, select the correct Runtime root directory in the wizard. If startup still fails, keep the startup message and installation location and use the support resources described in Chapter~\ref{ch:remote}.
+
+\section{A command appears to do nothing}
+
+Look for an unfinished parameter dialog, confirmation dialog, or system file picker. A modal dialog prevents interaction with the main window. On macOS in particular, a system file panel may belong to a separate runtime window. Switch between application windows or inspect the Dock's windows to find it, then complete or cancel the selection.
+
+If a calculation is running or a large structure is loading, check the \ui{Simulation Browser} or status area. Updating messages indicate that work is still in progress. Wait for completion before starting the next operation.
+
+\section{Online stays on the connection page}
+\index{Online connection problems}
+
+Return to the service entry page and check whether the workspace is still starting. First startup can take longer; wait with one active tab. If the workspace is already open elsewhere, return to that tab. Use the entry page's retry connection action when available rather than repeatedly refreshing several pages.
+
+If all workspace slots are occupied, follow the portal's instructions and try again later. Save your project before restarting a workspace: a restart ends the in-memory session, although saved server-side files remain. Use reconnect for a dropped connection; restart only when the current instance needs to be replaced.
+
+\section{An uploaded file does not appear as a project structure}
+
+The Online \ui{Files} panel and Project Browser manage different things. Uploading places a local file in a server-side directory. Double-click the uploaded file or choose \ui{Import} to add its contents to the project. Confirm that the upload finished, then check the Project Browser's \ui{Structure} branch.
+
+If import still produces no structure, check that the contents match the selected format. Renaming an extension does not convert a file. Try the supplied \mbox{\file{silicon.cif}} or \mbox{\file{hydrogen.xyz}} first. If the example opens, inspect your own file's cell, elements, coordinates, and format specification.
+
+\section{The displayed atom count is not what you expected}
+\index{Periodic images and atom counts}
+
+In the 3D view, \ui{sites} counts independent model sites; \ui{atoms} can include boundary and periodic images. Use the site count to check supercells and defects. A $2\times2\times2$ supercell built from an eight-site cell should contain 64 sites, although more atomic spheres may be displayed.
+
+If the site count itself is wrong, check whether you changed only \ui{Repeat cell} or applied a supercell operation to a model that was already enlarged. Also check whether the input is a primitive or conventional cell. Structures built from space groups expand asymmetric sites into equivalent positions, so one input row can produce several atoms.
+
+\section{A modeling command is missing or unavailable}
+
+Activate the 3D structure document first. \ui{Crystal Modeling} and \ui{Molecule Modeling} depend on the active document and may disappear when you switch to a workflow or plot. Next check the object type and selection count: distance needs two atoms, an angle needs three, a dihedral needs four, and moving one atom precisely requires a single site.
+
+If the selection is unclear, press Esc to leave the current tool, clear the selection, and select atoms again in order. With many periodic images visible, first restore display repetitions to $1\times1\times1$. If a parameter dialog is open, check its site indices before selecting again.
+
+\section{A preview disappears when the dialog closes}
+
+A preview lets you inspect a proposed change. \ui{Cancel} or closing the dialog restores the previous document. Click \ui{Apply} to accept the change, then save the project to retain it after reopening. Chapter~\ref{ch:modeling} explains these three stages.
+
+An applied change can be undone. Saving establishes the latest saved state as a new baseline and clears the current undo history. Keep a separate project or structure if you need a lasting before-and-after comparison. A stale preview usually means the document changed after it was created. Reopen the command and generate a new preview instead of repeatedly applying the old dialog.
+
+\section{A modeling command reports an error}
+
+For a surface, check that the Miller indices are not all zero, thickness and vacuum are positive and appropriate, and the termination index is within the available range. Orthogonalization can fail when no suitable integer supercell fits the current length, angle, and atom-count limits. Adjust the search range deliberately.
+
+A message identifying a component that cannot load, such as ``Invalid MEX-file,'' indicates an application component loading problem. Keep the input and complete message. You can continue learning with a prepared surface structure while reporting the version and platform to support.
+
+For packing failures, check the available space first: reduce the initial density or molecule count, enlarge the permitted region, or try another seed. Resolve any remaining close contacts before subsequent equilibration; increasing calculation steps alone is not a remedy.
+
+\section{A workflow runs but produces no curve}
+
+Check that the intended workflow is active and that the plotting node is connected to the appropriate calculation output. \ui{Energy Curve} plots results; it does not run SCF on its own. A failed structure input or parameter step leaves downstream plotting nodes without data.
+
+Expand \ui{Results → Datasets} and \ui{Results → Plots} to see whether results exist but their documents are closed. Read the last messages in the \ui{Simulation Browser} to identify the last completed node. If necessary, return to a minimal structure-input, SCF, and curve workflow, verify its data flow, and then add other analyses.
+
+\section{\headinglatin{SCF} reaches its iteration limit without converging}
+\index{Convergence checks}
+
+Distinguish an error that is still decreasing from one that oscillates persistently. More \ui{Max SCF steps} may help the former. For the latter, inspect the structure, occupations, and mixing. A higher iteration limit allows more iterations but does not automatically cure oscillations.
+
+\begin{steps}
+\item Check for overlapping atoms, abnormal bond lengths, or an obviously undersized simulation box.
+\item Check elements, pseudopotentials, molecule/crystal type, and cutoff units. A value of 20 in \ui{Ecut (Hartree)} means 20 Ha.
+\item For metals or near-degenerate systems, check that occupations and smearing suit the task. Do not copy the isolated hydrogen molecule's zero-temperature settings indiscriminately.
+\item Inspect the error and energy histories. Change one major setting at a time and keep the previous output for comparison.
+\end{steps}
+
+A visually flat energy curve does not establish density convergence. Read the completion message and final error. Geometry optimization additionally requires force and geometry stopping checks; assess electronic and geometric convergence separately.
+
+\section{Results differ from the tutorial}
+
+Compare the structure, functional, pseudopotentials, cutoff, and $k$ points before comparing plot references. If bands use the Fermi energy as zero, compare them with curves using the same zero. Different cells can have different high-symmetry paths, so check path coordinates too.
+
+The DOS examples use tetrahedron integration. Grid density and energy sampling affect curve details, while extra bands set the available unoccupied-state range. Optimization also depends on the initial geometry, fixed atoms, and convergence settings. Reproduce the supplied inputs first, then vary parameters individually. Software versions and initial electronic states can change iteration counts or the last few digits. Checking physical quantities and convergence is more informative than demanding line-by-line identical logs.
+
+\section{Volumetric data is blank or has little color contrast}
+
+Check the channel and value range. An isovalue outside the data range produces no surface, and a positive-only channel cannot produce a negative isosurface. Return to \ui{Value Distribution}, choose a suitable threshold, and confirm that construction finishes.
+
+For a low-contrast slice, narrow the color range appropriately and check the Miller indices. I, J, and K together define one central plane and cannot all be zero. If direct volume rendering is unsupported, use slices as indicated by the status message. Interpolation and smoothing improve appearance but cannot add details absent from the source grid.
+
+\section{A saved project cannot be found locally}
+
+Desktop editions save to the chosen local directory. Online saves to server-side storage; download the project to obtain a local copy. An existing project continues saving to its original location even if you select a different folder. Use \ui{Save As} to rename it or change its directory.
+
+Save before downloading from Online, then select the correct \file{.ks} file in \ui{Files}. Check the browser's download list to confirm that transfer and local saving have finished. Chapter~\ref{ch:online} lists the file and transfer size limits. Before signing out, confirm that important work is saved in a file rather than relying on the in-memory session.
+
+\section{A remote job finishes but its results are not imported}
+
+This section applies to the full MATLAB\regmark{} toolbox. The standalone and Runtime-based Online editions do not provide the same remote menu. Open the project used for submission, refresh the status in \ui{Remote Jobs and Results}, inspect Diary, then retrieve and import the results. Keep the original workflow in the project so that imported results can be matched to it.
+
+Unknown means that the state could not be read reliably at that moment; it does not mean failure. Deleting a record does not cancel its job. Use the cancel-job action to stop a calculation. After retrieval, check convergence and save the project.
+
+\section{A chat question is interpreted as a command}
+
+Check the start of the input. The Command Window interprets ordinary text as a command. Prefix a natural-language question with one dollar sign, or use two dollar signs for an independent question. See Section~\ref{sec:chat-use} in Chapter~\ref{ch:remote}. If the input format is correct but configuration is missing, open Settings and check the service, endpoint, and model.
+
+\section{A new task does not produce the expected data}
+
+Check what the task actually does. NSCF prepares options; a subsequent Band Calculation or DOS task performs the sampling. A Brillouin-zone plot displays reciprocal-space geometry rather than calculating a band gap. TDDFT needs unoccupied ground-state orbitals; Section~\ref{sec:tddft-workflow} describes the graphical node's input limitations and the solver procedure in full MATLAB\regmark{}. Use the complete workflows in Table~\ref{tab:task-catalog}, Chapter~\ref{ch:workflows}, and retain the last log message before an error. When viewing a figure, check which run produced it.
+
+\section{Write a useful problem report}
+
+Include the software version, operating system, edition, input files, and shortest steps that reproduce the problem. Describe the expected and actual results. Attach the complete message, relevant log, and a screenshot that includes the pertinent parameters. A small reproducible project is usually more useful than many disconnected screenshots.
+
+Open logs from \ui{Help} and locate the relevant time. \ui{Request Support} opens an email draft; review it and send it yourself. Once the issue is resolved, save the final settings and run a small example to confirm that you can continue.

@@ -1,0 +1,48 @@
+Cartesian coordinates specify positions directly in space, usually in angstroms (\AA) in the modeling interface. Fractional coordinates give proportions along the three lattice vectors. For $(u,v,w)$, the position is $u\mathbf a+v\mathbf b+w\mathbf c$. These components are dimensionless: they specify how far to go along each lattice vector, rather than distances along global Cartesian axes.
+
+To read the lattice input table, arrange the vectors as matrix rows:
+\[
+ A=\begin{bmatrix}
+ a_x&a_y&a_z\\
+ b_x&b_y&b_z\\
+ c_x&c_y&c_z
+ \end{bmatrix},\qquad
+ \mathbf f=(u,v,w),\qquad \mathbf r=(x,y,z).
+\]
+The rows are $\mathbf a$, $\mathbf b$, and $\mathbf c$; the columns within each row are global $x,y,z$ components. With the row-vector convention used in this manual,
+\begin{equation}
+ \mathbf r=\mathbf f A,\qquad \mathbf f=\mathbf r A^{-1}.
+ \label{eq:row-lattice-coordinates}
+\end{equation}
+Here $A^{-1}$ is the inverse of the complete lattice matrix, not the reciprocal of each entry. The cell must have nonzero volume for a Cartesian position to determine unique fractional coordinates.
+
+For a simple example, take $\mathbf a=(4,0,0)$, $\mathbf b=(1,3,0)$, and $\mathbf c=(0,0,6)$, all in \AA. The fractional position $(0.5,0.5,0)$ gives
+\[
+ \mathbf r=0.5(4,0,0)+0.5(1,3,0)
+          =(2.5,1.5,0)\,\text{\AA}.
+\]
+Half of $\mathbf b$ includes $0.5\,\text{\AA}$ along global $x$ and $1.5\,\text{\AA}$ along global $y$. The second fractional component of a skewed cell is therefore not its Cartesian $y$ coordinate. Figure~\ref{fig:round10-fractional-cartesian} shows the addition as two joined arrows.
+
+\input{figures/round10-fractional-cartesian}
+
+In a cubic cell of side $5\,\text{\AA}$, $(0.5,0,0)$ instead gives a displacement of $2.5\,\text{\AA}$ along $\mathbf a$. The lattice differs, not the conversion rule. Holding $\mathbf f$ fixed while changing $A$ generally moves atoms with the cell. To keep their spatial positions fixed, retain $\mathbf r$ and recalculate $\mathbf f$ using the new lattice. Section~\ref{sec:lattice-transform-reference} in Chapter~\ref{ch:modeling-tools} explains these options.
+
+\begin{table}[!htb]
+\centering\small
+\begin{tabularx}{\linewidth}{llX}
+\toprule
+Symbol & Units & Meaning in the parameters\\
+\midrule
+$A$ & \AA & Lattice matrix with rows $\mathbf a,\mathbf b,\mathbf c$.\\
+$\mathbf f$ & Dimensionless & Fractional coordinates along the lattice vectors.\\
+$\mathbf r,\mathbf p$ & \AA & Cartesian position and a rotation anchor or point on a mirror plane.\\
+$\mathbf n,\hat{\mathbf n}$ & Direction & A nonzero direction vector and its unit vector; direction alone is not a length in \AA.\\
+$\theta$ & Degrees & Dialog rotation angle, positive by the right-hand rule.\\
+$S$ & Integers & Supercell transformation matrix defining the new lattice.\\
+$N,V$ & Count, \AA$^3$ & Independent model-site count and cell volume.\\
+$\varepsilon_a,\varepsilon_b,\varepsilon_c$ & Dimensionless & Relative extension along the three lattice vectors.\\
+\bottomrule
+\end{tabularx}
+\caption{Symbols used in modeling formulas. Coordinates and anchors have length units; direction vectors specify orientation. Their roles in dialogs differ.}
+\label{tab:round10-modeling-symbols}
+\end{table}

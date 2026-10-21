@@ -1,0 +1,20 @@
+{
+  "manualVersion": "V0.5.0",
+  "softwareRelease": "V0.5.0",
+  "language": "en",
+  "pages": 309,
+  "pdf": {
+    "file": "KSSOLV_Toolbox_User_Manual_en.pdf",
+    "bytes": 13596276,
+    "sha256": "da3d9d25dbce69e2eace34a29410e8759a97b89ca2a5184f57fa3ee0a7809782"
+  },
+  "source": "../docs/manual-en/main.tex",
+  "revision": "english-translated-edition",
+  "reviewStatus": "translated and cross-reviewed; native English screenshots and PDF layout reviewed",
+  "assets": {
+    "total": 83,
+    "nativeCaptures": 76,
+    "languageNeutral": 7
+  },
+  "provenance": "../docs/provenance/english-edition-assets.json"
+}

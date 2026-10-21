@@ -1,0 +1,336 @@
+\chapter{Choosing calculation parameters}\label{ch:theory}
+
+After completing a calculation, you will usually want to know why its parameters were chosen, which ones to change for a new system, and how to tell whether the accuracy is sufficient. This chapter introduces the essentials of electronic structure calculations through the settings in the interface. Keep the hydrogen molecule project from Chapter~\ref{ch:first} open so that you can relate each parameter to the physical problem it describes.
+
+A complete calculation specification has three parts: geometry, the electronic model, and numerical accuracy. Geometry defines the elements, positions, and lattice. The electronic model specifies assumptions such as the functional, pseudopotentials, and spin treatment. Numerical accuracy depends on the cutoff energy, $k$-point sampling, and iterative convergence criteria. All three matter. A numerically converged calculation still gives an answer within the chosen model, and a suitable model still needs adequate numerical accuracy to produce stable results.
+
+\section{From atomic positions to electron density}
+
+\subsection{What density functional theory describes}
+\index{Density functional theory}
+
+For fixed atomic positions, electrons are not stationary particles arranged around the atoms. Their motion and interactions determine the system's energy, chemical bonding, and many material properties. Tracking the full many-electron wavefunction directly is difficult. Density functional theory instead formulates the ground-state problem in terms of the electron density in space.
+
+Electron density describes the spatial distribution of electrons. A region of higher density generally contains more electrons, but the density is unrelated to the sizes of the atomic spheres in the viewer. A ball-and-stick model depicts geometry; electron density is a calculated quantity. The two visualizations serve different purposes.
+
+KSSOLV solves the Kohn--Sham equations for the electronic states. Their effective potential depends on the electron density, which in turn is obtained from those states. A single solution step is therefore insufficient. The solver updates the density until the density used to construct the equations agrees with the density obtained from their solution. This is self-consistency.
+
+For the nonmagnetic PBE pseudopotential tutorials in this manual, the equations can be written as
+\begin{equation}
+  \begin{aligned}
+  \widehat H[\rho]\psi_{n\mathbf k}
+    &=\varepsilon_{n\mathbf k}\psi_{n\mathbf k},\\
+  \widehat H[\rho]&= -\frac12\nabla^2
+  +V_{\mathrm{loc}}^{\mathrm{ps}}+\widehat V_{\mathrm{NL}}^{\mathrm{ps}}
+  +V_{\mathrm H}[\rho]+V_{\mathrm{xc}}[\rho].
+  \end{aligned}
+  \label{eq:ks-operator}
+\end{equation}
+Atomic units are used here: lengths are in Bohr and energies in Ha. The kinetic term describes spatial variation of the electronic states; the local and nonlocal pseudopotentials describe the ionic cores. The Hartree and exchange-correlation potentials are updated with the density. The \ui{Pseudopotential} and \ui{Functional} settings select the corresponding parts of the model. HSE06 also includes nonlocal exchange and cannot be described solely by the local exchange-correlation potential shown above.
+
+For the nonmagnetic setting \ui{Nspin}=1, the weighted states give the electron density:
+\begin{equation}
+  \begin{aligned}
+  \rho(\mathbf r)&=2\sum_{\mathbf k}w_{\mathbf k}
+       \sum_n f_{n\mathbf k}|\psi_{n\mathbf k}(\mathbf r)|^2,\\
+  N_{\mathrm e}&=\int_{\Omega}\rho(\mathbf r)\,\mathrm d^3r.
+  \end{aligned}
+  \label{eq:ks-density}
+\end{equation}
+Each wavefunction is normalized within one calculation cell. The factor of 2 accounts for nonmagnetic spin degeneracy: a fully occupied spatial state has $f=1$ and contains two electrons. Do not also set $f$ to 2. The molecular tutorial uses a single $\Gamma$ point with weight 1. In a pseudopotential calculation, $N_{\mathrm e}$ is the number of explicitly treated valence electrons. The density is an electron number per unit volume; it differs in sign from a charge density that includes the negative electron charge.
+
+\begin{table}[htbp]
+\centering
+\caption{Common symbols in electronic structure equations.}
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+Symbol & Meaning and relation to the settings\\
+\midrule
+$\psi_{n\mathbf k}$, $\varepsilon_{n\mathbf k}$ & Electronic state $n$ and its energy; $\mathbf k$ labels the crystal wavevector\\
+$\rho$, $\Omega$ & Valence electron density and calculation-cell volume; in atomic units, $\mathrm{Bohr}^{-3}$ and $\mathrm{Bohr}^{3}$, respectively\\
+$f_{n\mathbf k}$ & Occupation weight, determined by the electron count, \ui{Smearing}, and \ui{Temperature}\\
+$w_{\mathbf k}$ & $k$-point integration weight; the weights sum to 1 within a spin channel\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Increasing \ui{Extra bands} includes more unoccupied states in the solution, but does not change the electron count required by Eq.~\eqref{eq:ks-density}. Spin-polarized and noncollinear modes require the appropriate channel treatment; the factor of 2 used here cannot simply be carried over.
+
+\subsection{Why fixed atoms still require iterations}
+
+An SCF calculation repeatedly improves an electron distribution. It starts from an initial density and constructs an effective potential, solves for electronic states, forms a new density from the states and their occupations, and mixes new and previous information to obtain the next starting point.
+
+\input{figures/scf-cycle}
+
+The atomic positions can remain fixed throughout this process. The tenth SCF iteration does not mean that the atoms have moved ten times. Geometry optimization adds an outer loop: converge the electronic problem for one geometry, move the atoms according to the forces, and calculate the electronic structure again for the new geometry. Distinguishing electronic iterations from geometry steps is essential when reading a log.
+
+\subsection{SCF and non-self-consistent calculations}
+\index{Self-consistent field (SCF)}
+
+SCF establishes an electron density consistent with the structure and electronic model. Band structures and densities of states require electronic energies at additional or different $k$ points. These can be obtained using the converged density, without updating the effective potential self-consistently for each new sampling set. Such calculations are called non-self-consistent field calculations, or NSCF.
+
+In a workflow, \ui{SCF} first supplies the converged density. \ui{NSCF} specifies the solver options for the subsequent calculation. \ui{Band Calculation} or \ui{DOS} then performs the calculation on its own path or grid. A band path and a DOS grid serve different sampling purposes; do not give them the same list merely because both contain $k$ points.
+
+\section{Choose a molecule or a crystal}
+
+\subsection{What the calculation type means}
+
+The \ui{Molecule} and \ui{Crystal} choices in \ui{Build Molecule} determine how the calculation object is organized. For the isolated-molecule tutorial, choose Molecule and provide a suitable simulation box. For a periodic material, choose Crystal and specify its lattice and $k$-point sampling.
+
+A molecular calculation still needs a box: the plane-wave expansion requires a finite spatial region. Use enough vacuum to reduce interactions between the molecule and its periodic images. Charged, strongly polar, or spatially extended systems may need different box sizes from compact neutral molecules.
+
+File formats do not determine the calculation type on their own. CIF usually describes a crystal, but can also store a molecular example's simulation box and atomic coordinates. XYZ usually stores molecular coordinates; the software can construct a box after import. Inspect the actual geometry and explicitly select the calculation type in the node.
+
+\subsection{Lattice vectors and atomic coordinates}
+
+A periodic structure consists of three lattice vectors and atomic positions within the cell. Vector lengths and angles define the cell shape. Atomic positions can be expressed in Cartesian coordinates or as fractional coordinates relative to the three lattice vectors.
+
+The fractional position $(0.25,0.25,0.25)$ is the sum of one quarter of each lattice vector. It does not generally mean that each Cartesian coordinate is one quarter of a lattice constant. That simple correspondence holds only for the appropriate orthogonal cell. Check the coordinate type carefully for hexagonal, monoclinic, and other nonorthogonal cells.
+
+Let $\mathbf a_i$ denote the real-space lattice vectors and $f_i$ the fractional coordinates. Positions and reciprocal vectors satisfy
+\begin{equation}
+  \begin{gathered}
+  \mathbf r=\sum_{i=1}^{3}f_i\mathbf a_i,
+  \qquad \mathbf k=\sum_{j=1}^{3}\kappa_j\mathbf b_j,\\
+  \mathbf a_i\!\cdot\!\mathbf b_j=2\pi\delta_{ij}.
+  \end{gathered}
+  \label{eq:reciprocal-convention}
+\end{equation}
+Here $\delta_{ij}$ is 1 when $i=j$ and 0 otherwise. This reciprocal-lattice convention includes $2\pi$. The $\kappa_j$ are dimensionless coordinates in the reciprocal basis, whereas $\mathbf k$ has units of inverse length. Thus $(0.5,0,0)$ on a path means half of the first reciprocal vector, not half a real-space lattice length.
+
+A crystal may be represented by a primitive cell, conventional cell, or supercell. These can describe the same infinite periodic structure while containing different atom counts and having different Brillouin-zone sizes. A larger supercell contains more electronic states per cell. The same integer $k$-point grid therefore no longer gives the same sampling density.
+
+\subsection{Keep track of units}
+
+Structure editing and common file formats generally use Å, numerical geometry interfaces use Bohr, and electronic energies may be reported in Ha, Ry, or eV. The software performs the required conversions between import and solving, but you must still check units when reading external data or organizing results.
+
+\begin{table}[htbp]
+\centering
+\caption{Common quantities and units in this manual.}
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+Quantity & Units and where to find them\\
+\midrule
+Length & Å in the viewer, CIF, and most XYZ files; numerical interfaces may use Bohr\\
+Cutoff energy & Hartree (Ha) for Ecut in Build Molecule\\
+Total energy & Ha on the left convergence-plot axis; logs may also report Ry\\
+Band and DOS energy & eV; tutorial plots use the Fermi energy as zero\\
+Electronic temperature & K in Temperature\\
+Atomic forces & Atomic units in numerical records; convert when comparing external sources\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Useful conversions are $1\,\mathrm{Ha}=2\,\mathrm{Ry}\approx27.2114\,\mathrm{eV}$ and $1\,\mathrm{Bohr}\approx0.529177\,\text{Å}$. These approximations are adequate for checking inputs. For batch numerical processing, use the program's conversion constants rather than mixing differently rounded values across tables.
+
+\section{Functionals: approximate electron interactions}
+
+\subsection{Common functionals}
+
+\ui{Functional} offers PBE, PZ, and HSE06. They approximate exchange and correlation differently. PZ is a local-density approximation, PBE is a generalized-gradient approximation, and HSE06 is a screened hybrid functional. These choices affect equilibrium geometries, relative energies, and electronic levels.
+
+PBE is a convenient starting point for learning workflows and for initial materials calculations. The basic tutorials consistently use PBE so that you can focus on the structure and calculation sequence. When changing functionals, consider the suitability of the pseudopotentials, your research objective, and the conditions used in the literature, as well as the computational cost.
+
+HSE06 includes a fraction of exact exchange and is usually more expensive than a semilocal functional. It also requires appropriate exchange-algorithm settings and follow-up calculation conditions. Begin with PBE SCF, band structure, and DOS calculations, then learn the hybrid-functional settings using the same small system.
+
+\subsection{Compare functionals consistently}
+
+First decide whether you want to compare electronic models at the same geometry or compare results at each model's own equilibrium geometry. The former holds the structure fixed and changes only the electronic model. The latter allows each model to find a different minimum-energy structure. These comparisons answer different questions.
+
+For example, comparing two hydrogen molecule total energies at one fixed bond length does not tell you which functional predicts a bond length closer to experiment. Optimize the geometry with each functional if bond length is your target. Use the same geometry if you want to compare electronic levels at a fixed structure. State this choice explicitly when describing the calculations.
+
+\section{Pseudopotentials: describe the ionic cores}
+\index{Pseudopotentials}
+
+A pseudopotential combines the effects of the nucleus and tightly bound core electrons into an effective description, leaving the calculation to treat mainly valence electrons. This makes plane-wave calculations practical for many elements. Pseudopotentials contain modeling choices of their own and are part of the calculation specification.
+
+The \ui{default} choice under \ui{Pseudopotential} uses the collection supplied with the software. The hydrogen and silicon tutorials use the built-in PBE-1.3 ONCV files. Check the run messages for the filenames actually loaded and confirm that a pseudopotential was found for every element.
+
+Use pseudopotentials appropriate to the functional. Changing Functional does not imply that the software selects a new pseudopotential collection automatically or that all combinations are equally suitable. For a new materials study, record the source, version, and valence-electron treatment, and keep them consistent across calculations you intend to compare.
+
+\subsection{Why cutoff requirements vary}
+\index{Cutoff energy}
+
+Some pseudopotentials produce smoother valence wavefunctions that need fewer plane waves; others require a higher cutoff. An adequate cutoff depends on both the system and its pseudopotentials, rather than simply on atomic numbers or atom counts.
+
+For a multielement structure, test the complete system. The element with the most demanding plane-wave requirement often sets the cutoff needed for the whole calculation. Perform separate cutoff convergence tests for oxides, transition-metal systems, and hydrogen-containing materials.
+
+\section{Plane-wave cutoff energy}
+\index{Plane waves}
+
+\subsection{What \headinglatin{Ecut} controls}
+
+The plane-wave method expands electronic wavefunctions as sums of spatial waves. Shorter wavelengths represent finer spatial variation and have higher kinetic energies. The cutoff determines which plane waves are retained and therefore how finely the electronic states can be represented.
+
+A crystal electronic state can be expanded as
+\begin{equation}
+  \begin{aligned}
+  \psi_{n\mathbf k}(\mathbf r)
+   &=\frac{1}{\sqrt{\Omega}}\sum_{\mathbf G}
+      c_{n\mathbf k}(\mathbf G)
+      \exp\!\left[\mathrm i(\mathbf k+\mathbf G)\cdot\mathbf r\right],\\
+  T_{\mathbf k+\mathbf G}&=\frac{|\mathbf k+\mathbf G|^2}{2}.
+  \end{aligned}
+  \label{eq:plane-wave-expansion}
+\end{equation}
+The vector $\mathbf G$ is an integer linear combination of reciprocal-lattice vectors, and the coefficients $c$ are to be determined. With lengths in Bohr and wavevectors in inverse Bohr, the kinetic energy is in Ha. At $\Gamma$, $\mathbf k=0$, and the base plane-wave set satisfies $|\mathbf G|^2/2\leq E_{\mathrm{cut}}$. Raising the cutoff adds more distant reciprocal-space components with shorter wavelengths.
+
+\input{figures/round10-plane-wave-cutoff}
+
+At nonzero $k$, the kinetic energy depends on $\mathbf k+\mathbf G$. Crystal calculations can share a basis selected by the base $\mathbf G$ vectors. The circle in the diagram therefore illustrates the $\Gamma$-point case; it does not imply that an identical kinetic-energy sphere is selected afresh at every $k$ point. Check \ui{Ecut} by convergence testing in practice.
+
+Increasing \ui{Ecut (Hartree)} generally increases the plane-wave count, memory use, and time per iteration. It improves the basis representation; it does not automatically increase $k$-point sampling or change the SCF convergence criteria. Accuracy parameters interact, but they cannot replace one another.
+
+\subsection{Test cutoff convergence}
+
+Hold the structure, box, functional, pseudopotentials, and $k$ points fixed, then increase Ecut in stages. For a small example, you might try $15$, $20$, $25$, and $30$ Ha and record the converged energy and target properties. This sequence illustrates the method; choose an appropriate range for your own system.
+
+Assess changes between successive settings rather than whether a total energy looks sufficiently negative. For relative energies, record a per-atom energy difference or the difference between two structures. For geometry optimization, also check the forces and optimized dimensions.
+
+\begin{steps}
+\item Create another workflow from the same template, or save the existing workflow as a \file{.wf} file and import a copy. Keep the structure unchanged.
+\item Change only Ecut and converge each SCF calculation to the same criterion.
+\item Tabulate the cutoff and the property of interest.
+\item Choose a setting at which that property is stable within your required accuracy, then use it for production calculations.
+\end{steps}
+
+Do not include unconverged SCF results in this comparison. Their differences may reflect unfinished iterations rather than a basis-set effect. A convergence test usually saves more work overall than choosing very large parameters without checking them.
+
+\section{$k$ points and Brillouin-zone sampling}
+\index{k-point sampling}
+
+\subsection{Why a crystal needs $k$ points}
+
+Electronic states in a periodic structure are labeled by wavevector $k$. Many quantities contributing to the total energy and density require sums or integrals over the Brillouin zone. A calculation approximates them using finitely many $k$ points. \mbox{\ui{Autokpts}} specifies a regular grid: the first three integers give the grid dimensions and the last three give its shifts.
+
+For a quantity $Q(\mathbf k)$, a Brillouin-zone average can be approximated by a weighted sum:
+\begin{equation}
+  \langle Q\rangle_{\mathrm{BZ}}
+      \approx\sum_{\mathbf k}w_{\mathbf k}Q(\mathbf k),
+  \qquad \sum_{\mathbf k}w_{\mathbf k}=1.
+  \label{eq:k-point-average}
+\end{equation}
+A complete regular grid can use equal weights. Increasing the grid density improves this zone sampling. Adding points along a path only refines the curve on that path and cannot replace an integration grid covering the Brillouin zone.
+
+For example, \mbox{\texttt{[2 2 2 0 0 0]}} is the starting grid in the silicon tutorial. It is small enough for learning; it does not establish convergence for every silicon property. Compare denser grids to check whether the total energy, forces, or band edges are stable.
+
+An elongated or flat cell need not use the same integer in every direction. A longer real-space period gives a shorter reciprocal-space interval, which usually changes the required number of samples. Choose a grid that suits the cell shape and target accuracy, rather than making the three numbers equal by default.
+
+\subsection{Match the sampling to the task}
+
+The SCF grid builds the electron density and effective potential. A band path follows selected symmetry directions to show how energy varies with $k$. A DOS grid covers the Brillouin zone to count states near each energy.
+
+\input{figures/k-sampling}
+
+All three sampling types can appear in a project. A periodic workflow might demonstrate SCF on a $2\times2\times2$ grid, then calculate bands along a recommended high-symmetry path or a total DOS on a $4\times4\times4$ grid. Each follow-up task inherits the self-consistent density from its own workflow and uses its own sampling scheme. The introductory silicon DOS workflow in this manual uses an eight-atom cell; the band workflow uses a standardized two-atom primitive cell. Each performs its own SCF calculation. Chapter~\ref{ch:results} also explains how to redraw DOS data stored in the two-atom project. Always check which cell a dataset belongs to.
+
+A smooth band curve does not establish accurate Brillouin-zone integration. Conversely, a dense DOS grid does not smooth a band path containing only its endpoints. Decide what the current node is meant to calculate before choosing its sampling parameters.
+
+\subsection{Understand high-symmetry paths}
+
+Symmetry analysis recommends high-symmetry points and paths from the lattice and atomic arrangement. Labels such as $\Gamma$, X, and L identify reciprocal-space positions. The same label does not necessarily have the same coordinates in different crystal systems.
+
+Changing the cell representation, atomic arrangement, or symmetry tolerance can change the recommended path. When comparing band plots, check the cells and paths as well as the functionals and energy zeros. Similar axis labels alone do not justify subtracting the curves point by point.
+
+This manual uses \ui{Symmetry \& K-Path} to generate paths and \mbox{\ui{Segment Points}} in \ui{Band Calculation} to set the number of samples per segment, including endpoints. Start with fewer points to inspect the overall structure. Increase the count for smoother plots or detailed curvature comparisons.
+
+\section{Set electronic occupations}
+
+\subsection{Occupations and the Fermi energy}
+\index{Fermi energy}
+
+Once the electronic states have been found, the calculation must assign electrons to them. The Fermi energy depends on the electron count and occupation scheme and is a common reference for band and DOS plots. Metals have partially occupied states near the Fermi energy; insulators and semiconductors may have a gap between occupied and unoccupied states.
+
+A calculated Fermi energy is not an absolute vacuum level that can be compared directly across arbitrary systems. Band plots in this manual shift it to zero to show nearby states clearly. Work functions, band alignment, and absolute-level comparisons require an additional, consistent energy reference.
+
+\subsection{Smearing and electronic temperature}
+\index{Smearing and occupations}
+
+\ui{Smearing} offers fermi-dirac, cold, gaussian, and mp. Smearing smooths occupations in energy and often improves integration and convergence for metals or systems with nearly degenerate states. \ui{Temperature (K)} supplies the associated electronic temperature parameter.
+
+Electronic temperature does not heat the atoms or imply that atomic vibrations at that temperature are included. A static SCF calculation with $300$ K electronic occupations can still hold every atom fixed. Choose a method suited to your physical question when studying finite-temperature structural properties.
+
+Changing smearing or temperature changes occupations and the associated energy quantities. When comparing results, identify whether you are using total energy, free energy, or another processed quantity, and keep the definition consistent. For a first tutorial, use the specified conditions before investigating smearing separately.
+
+\subsection{Extra bands}
+\index{Extra bands}
+
+The electron count sets the minimum number of occupied states, but band and DOS plots often need unoccupied states above the Fermi energy as well. \ui{Extra bands} increases the number of unoccupied bands solved for. It does not add electrons or directly change atomic valence states.
+
+If a plot contains occupied states but lacks the conduction-band range you need, check Extra bands rather than simply expanding the vertical axis. An axis can display existing data; it cannot create states that were never calculated. The silicon tutorial adds $4$ bands as a starting point for low-energy unoccupied states. Higher energy ranges require more.
+
+\section{Spin and magnetism}
+\index{Spin}
+
+\ui{Nspin} offers settings such as $1$, $2$, and $4$ for different spin treatments. The nonmagnetic examples use $1$. For unpaired electrons, magnetic order, or spin--orbit coupling, choose a mode appropriate to the physical problem and check its advanced settings.
+
+Spin is not merely a performance switch. A hydrogen atom and a hydrogen molecule have different occupation patterns; the spin treatment of the atomic reference directly affects a molecular dissociation energy. Transition-metal systems may have several self-consistent solutions, with the final state depending on the starting magnetism and geometry.
+
+The basic examples do not use magnetism, noncollinearity, or spin--orbit coupling. Learn the nonmagnetic workflow first, then create a separate project for a well-defined magnetic question. This makes structural, sampling, and spin effects easier to distinguish.
+
+\section{Converge the SCF calculation}
+
+\subsection{Diagonalization methods}
+
+\ui{DiagMethod} selects the numerical method used to solve for electronic states. Methods such as \ui{davidson\_qe} and \ui{lobpcg} apply different iterative strategies to the same electronic structure problem. Once sufficiently converged, they should agree physically; their main differences are efficiency and convergence behavior.
+
+Compare algorithms using identical inputs and target accuracy, and assess agreement from their converged results. The SCF examples use the default method, and subsequent NSCF examples retain the default solver settings.
+
+\subsection{Iteration limits and convergence thresholds}
+
+\ui{Max SCF steps} limits the number of electronic iterations. Raising it from $100$ to $200$ gives the solver more iterations; it does not double the accuracy. Convergence is determined by an error measure and its threshold. Reaching the iteration limit without meeting that threshold means that the calculation still needs attention.
+
+The basic SCF panel provides the method, iteration limit, force options, and related settings. Density thresholds and mixing parameters are more advanced numerical settings available through \texttt{options.SCF} in the scripting interface. The basic tutorials retain the default density threshold of $10^{-8}$. To adjust density convergence and mixing, use that interface in full MATLAB\regmark{}.
+
+Let the difference between the output and input densities of an electronic iteration be
+\begin{equation}
+  \Delta\rho=\rho_{\mathrm{out}}-\rho_{\mathrm{in}},
+  \qquad e_{\mathrm{SCF}}<\varepsilon_{\mathrm{SCF}}.
+  \label{eq:scf-stopping}
+\end{equation}
+The first expression identifies the densities being compared. The second states that the chosen error measure must fall below its threshold. Default density mixing forms a weighted reciprocal-space measure of $\Delta\rho$ to obtain $e_{\mathrm{SCF}}$ and compares it with $10^{-8}$. Although the log calls the quantity \file{Rel Rho Err}, it is neither a percentage nor simply the norm of the density difference divided by the input-density norm. Check the metric against its corresponding threshold and read the final run status.
+
+\subsection{What density mixing does}
+\index{Density mixing}
+
+The latest output density is not always the best starting point for the next iteration. Density mixing combines current and historical information to reduce oscillations and improve convergence. Responses differ between systems; metals, large cells, and magnetic materials may require more careful settings.
+
+If the error repeatedly alternates between two levels, check the structure and occupations before adjusting mixing and sampling. More iterations may help a steadily decreasing error finish converging, but will not necessarily cure persistent oscillations. Keep the full log rather than just the final error message when diagnosing such behavior.
+
+\section{Two accuracy requirements in geometry optimization}
+\index{Geometry optimization}
+
+Geometry optimization calculates the electronic structure at each trial geometry before using the forces to update atomic positions. Electronic convergence controls the reliability of each energy and force evaluation. The geometry threshold determines when the atomic positions are considered sufficiently relaxed.
+
+The force on atom $I$ is the negative gradient of the total energy with respect to its position:
+\begin{equation}
+  \mathbf F_I=-\nabla_{\mathbf R_I}E,
+  \qquad F_{I\alpha}=-\frac{\partial E}{\partial R_{I\alpha}}
+  \quad(\alpha=x,y,z).
+  \label{eq:atomic-force}
+\end{equation}
+Forces are in Ha/Bohr in the calculation's atomic units. A force points locally downhill in energy. A small energy change does not by itself imply that every atomic force is small. Optimization records may report the maximum atomic force, root-mean-square force, or full gradient norm. Check column names and definitions before comparing them.
+
+\ui{RelaxTolerance} controls the stopping scale, while \ui{MaxRelaxSteps} limits the number of geometry steps. The hydrogen optimization example explicitly sets them to $10^{-4}$ and $100$. Graphical and scripting interfaces may have different defaults; record the values actually used.
+
+Check that the geometry optimization and its final electronic calculation both converged, and that the final forces meet your research requirements. A bond length that no longer changes visibly is not enough to establish a relaxed geometry.
+
+\section{Choose a hybrid exchange algorithm}
+
+Selecting HSE06 under \ui{Functional} in Build Molecule enables hybrid-functional exchange. The SCF node's advanced \ui{ExxMethod} option selects the algorithm used for that part of the calculation. Available choices are default, normal, ace, qrcp, and kmeans. The functional defines the approximation; the exchange algorithm organizes its evaluation. These settings are not interchangeable.
+
+Begin with default. To compare algorithms, save a separate project for a small system with an established ground-state calculation, change only ExxMethod, and compare total energy, convergence, and elapsed time. Keep the functional, model dimensions, and sampling unchanged. For a semilocal functional such as PBE, leave default selected.
+
+\section{Distinguish ground and excited states}
+
+SCF orbital eigenvalues, differences between orbital energies, and excitation energies of a many-electron system are different quantities. A converged ground-state calculation answers the ground-state problem. Studying excitations also requires a response method and a calculation space built from occupied and unoccupied orbitals.
+
+In a TDDFT task, \ui{nvbands} and \ui{ncbands} specify the occupied and unoccupied orbitals included in the response calculation; \ui{nroots} is the requested number of excited states. None of these is an atom count or a $k$-point count. First obtain enough extra bands in Build Molecule, then select the unoccupied orbitals for TDDFT. With one occupied and four unoccupied orbitals, there are at most four such orbital pairs; that space cannot supply ten excitation roots.
+
+\ui{Use TDA} enables the Tamm--Dancoff approximation. \ui{Use IPA} and \ui{Use RPA} allow comparisons between response approximations. Start from a clearly specified set of options, then vary one approximation at a time. Section~\ref{sec:tddft-workflow} in Chapter~\ref{ch:workflows} covers input preparation, applicability, and example parameters. Absorption peaks require the corresponding response calculation.
+
+\section{Choose parameters for a new system}
+
+Define the objective first: relative energies of adsorption sites, the effect of strain on bands, or a molecular equilibrium geometry, for example. Establish a small calculation that runs, check the structure, elements, and electron count, then improve accuracy one parameter at a time against the property of interest. Keep a baseline result so that every comparison has a clear reference.
+
+Save a short specification with the project: structure source and preparation, cell, functional, pseudopotentials, cutoff, $k$ points, occupations, spin, and both electronic and geometry convergence criteria. Include the conditions that affect your conclusions in a report, and retain complete workflows and inputs with the project so that the calculation can be understood and reproduced later.
