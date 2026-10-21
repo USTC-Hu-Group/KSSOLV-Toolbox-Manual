@@ -1,0 +1,32 @@
+{
+  "revision": "brand-cover-headings-and-file-formats",
+  "date": "2026-10-21",
+  "manualVersion": "V0.5.0",
+  "baseManualCommit": "0d4131b",
+  "basePdfSHA256": "c328ce57ff3c692c2b3606527a7aaf602da747ca1555352b6ccd3d3ee0ddc0db",
+  "pdfSHA256": "ccda9aade50a59375d1d6f43c3e28bb8093a815cd85213fa5e820b52c78ba3af",
+  "pages": 314,
+  "changes": [
+    "Rename file-format section to 支持的文件格式, including table of contents",
+    "Remove registered mark from full legal company name throughout authored manual text",
+    "Separate 品牌 and 封面 headings on page 2"
+  ],
+  "checks": {
+    "latexDiagnostics": "passed",
+    "changedPageContentStreams": [
+      2,
+      10,
+      296,
+      314
+    ],
+    "unchangedPageContentStreams": 310,
+    "renderedAndVisuallyReviewedPages": [
+      2,
+      10,
+      296,
+      314
+    ],
+    "renderMaxDimensionPixels": 1200,
+    "embeddedFontAndUnicodeMapPairs": 39
+  }
+}
