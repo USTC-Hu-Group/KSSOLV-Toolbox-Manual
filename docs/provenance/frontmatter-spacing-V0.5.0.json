@@ -1,0 +1,22 @@
+{
+  "manualVersion": "V0.5.0",
+  "baseCommit": "8ac5e41",
+  "revision": "frontmatter-heading-spacing",
+  "pages": 311,
+  "pdfSHA256": "0e6d59e5f5b0703445bd7b608b33c70c67df3d93eaf3073cf722929fe1759b9f",
+  "changes": [
+    "Add one baseline of vertical space before 品牌 and 封面 on page 2"
+  ],
+  "checks": {
+    "latexBuild": "passed",
+    "visuallyReviewedPages": [
+      2
+    ],
+    "changedPageContentStreams": [
+      2
+    ],
+    "otherPageContentStreamsIdentical": 310,
+    "embeddedFontAndUnicodeStreamsEqual": true,
+    "visualIssuesOpen": 0
+  }
+}
