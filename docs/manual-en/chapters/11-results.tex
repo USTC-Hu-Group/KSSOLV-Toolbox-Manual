@@ -93,7 +93,7 @@ In the hydrogen example, the energy approaches its final value before the densit
 
 \subsection{Three common convergence patterns}
 
-If the error keeps decreasing but reaches the iteration limit, more iterations may allow that trend to finish. If it oscillates between two or more levels, check the structure, occupations, and numerical settings. Nonfinite values or clearly abnormal energies from the outset call for checking atomic separations, the cell, and pseudopotential loading.
+If the error keeps decreasing but the calculation reaches the iteration limit, increasing the limit may allow it to converge. If it oscillates between two or more levels, check the structure, occupations, and numerical settings. Nonfinite values or clearly abnormal energies from the outset call for checking atomic separations, the cell, and pseudopotential loading.
 
 These patterns require different responses. A complete stretch of iteration history is more informative than ``the run failed.'' Comparing with a small successful example also helps distinguish a new-system problem from an environment-wide issue.
 
@@ -227,7 +227,7 @@ show_reference_results("dos");
 \item Export the curve using the figure's save tools and retain the project with its original data. Reopen the image to check that both axes are included.
 \end{steps}
 
-The data samples $-10$ to $10$ eV in $0.05$ eV steps, using PBE, default pseudopotentials, and a 20 Ha cutoff. To change the grid or energy range, import the \ui{DOS} template as in Chapter~\ref{ch:workflows}, select the two-atom cell, and run with new parameters. Redrawing existing arrays does not improve their sampling accuracy.
+The DOS is sampled from $-10$ to $10$ eV in $0.05$ eV steps, using PBE, default pseudopotentials, and a 20 Ha cutoff. To change the grid or energy range, import the \ui{DOS} template as in Chapter~\ref{ch:workflows}, select the two-atom cell, and run with new parameters. Redrawing existing arrays does not improve their sampling accuracy.
 
 \begin{figure}[!htb]
 \centering
@@ -325,7 +325,7 @@ Molecules have different choices: \ui{Source topology · preferred} favors sourc
 
 Under \ui{Visibility}, begin with \ui{Atoms}, \ui{Bonds}, and, for crystals, \ui{Unit cell}. \ui{Boundary image atoms} controls boundary images; \ui{One-hop bonded atoms} adds directly bonded neighbors of displayed atoms; \ui{Hide incomplete bonds} hides connections without complete endpoints. These change the boundary appearance. Read site and image indices rather than simply counting spheres.
 
-Enable \ui{Polyhedra} for local coordination or \ui{Orientation axes} for directions. \ui{Magnetic moments} displays moments already present in the data; it does not calculate them. Molecules also offer \ui{Hydrogens} and \ui{Multiple bond order}. \ui{Continuous measurement} controls whether you can select another measurement immediately afterward; it does not change coordinates.
+Enable \ui{Polyhedra} for local coordination or \ui{Orientation axes} for directions. \ui{Magnetic moments} displays moments already present in the data; it does not calculate them. Molecules also offer \ui{Hydrogens} and \ui{Multiple bond order}, which control the display of hydrogen atoms and multiple bonds, respectively. \ui{Continuous measurement} controls whether you can select another measurement immediately afterward; it does not change coordinates.
 
 Under \ui{Style}, compare VESTA and Jmol element colors, choose \ui{Atomic} or \ui{Uniform} radii for your purpose, and adjust \ui{Atom scale} and \ui{Bond radius}. If spheres look too large, reduce their scale before judging a close contact. \ui{Lighting \& surface} adjusts lighting, materials, brightness, and contrast; \ui{Reset appearance} restores the starting appearance. Use consistent styling for comparison figures and separately record structural and measurement conditions.
 
@@ -416,7 +416,7 @@ Online exports through the browser. Check the browser's actual download location
 
 Move over the axes and use the tools available for the current figure to pan, zoom, rotate, or restore the view. Enlarge the last few SCF iterations in a 2D convergence plot; rotate Brillouin zones or band surfaces. Restore the full range before exporting a complete result, rather than inadvertently saving a magnified fragment.
 
-Three-dimensional band surfaces mainly show two band-edge surfaces. Their separation is not automatically the global gap: another direction may contain a lower conduction minimum or higher valence maximum. A Brillouin-zone plot shows reciprocal-space geometry, not energies encoded by polyhedron color. Band surfaces, zones, path bands, and DOS represent different quantities; identify the figure type in its caption.
+Three-dimensional band surfaces mainly show two band-edge surfaces. Do not interpret their separation as the global band gap without checking the coordinates and sampling: another direction may contain a lower conduction minimum or higher valence maximum. A Brillouin-zone plot shows reciprocal-space geometry, not energies encoded by polyhedron color. Band surfaces, zones, path bands, and DOS represent different quantities; identify the figure type in its caption.
 
 \subsection{Export a figure from Online}
 

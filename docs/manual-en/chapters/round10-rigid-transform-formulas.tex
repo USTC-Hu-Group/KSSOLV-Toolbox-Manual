@@ -16,7 +16,7 @@ The molecular expression uses \AA for positions and displacements; the crystal e
 
 For two molecular atoms with $x$ coordinates 1 and 3\,\AA, moving their mean to the origin gives a common displacement of $-2\,\text{\AA}$. Their new coordinates are $-1$ and 1\,\AA and their separation remains 2\,\AA. For crystal fractional components 0.1 and 0.3 with target 0.5, add 0.3 to obtain 0.4 and 0.6. The other components follow the same rule.
 
-Near a periodic boundary, identify the images first. The ordinary mean of 0.99 and 0.01 is 0.5, although the sites may form a compact group across the boundary. To center that continuous group, first represent its sites in adjacent continuous images. Coordinates may be wrapped afterward, so inspect periodic connectivity rather than only coordinate signs.
+Near a periodic boundary, identify the images first. The ordinary mean of 0.99 and 0.01 is 0.5, although the sites may form a compact group across the boundary. To center the group as a continuous structure, first choose periodic images that keep its atoms together. Coordinates may be wrapped afterward, so inspect periodic connectivity rather than only coordinate signs.
 
 \subsubsection{Rotate about a specified anchor}
 
@@ -26,7 +26,7 @@ Subtract the anchor from each position, rotate the relative vector, and add the 
               R(\hat{\mathbf n},\theta)^{\mathsf T}.
  \label{eq:rotate-row-position}
 \end{equation}
-Here $\mathbf p$ is the anchor in \AA, $\hat{\mathbf n}$ is the unit rotation axis, and $\theta$ is the angle; $\mathsf T$ denotes transpose. Dialog angles are in degrees. Positive rotation follows the right-hand rule: point your right thumb along the positive axis and curl your fingers in the positive rotation direction. The vector specifies orientation only; \literalinput{0 0 1} and \literalinput{0 0 2} define the same positive axis.
+Here $\mathbf p$ is the anchor in \AA, $\hat{\mathbf n}$ is the unit vector along the rotation axis, and $\theta$ is the angle; $\mathsf T$ denotes transpose. Dialog angles are in degrees. Positive rotation follows the right-hand rule: point your right thumb along the positive axis and curl your fingers in the positive rotation direction. The vector specifies orientation only; \literalinput{0 0 1} and \literalinput{0 0 2} define the same positive axis.
 
 For rotation about global $z$,
 \[
@@ -50,7 +50,7 @@ A mirror plane needs a point $\mathbf p$ and a nonzero Cartesian normal $\mathbf
  \end{aligned}
  \label{eq:mirror-cartesian-plane}
 \end{equation}
-The dot product $(\mathbf r-\mathbf p)\cdot\hat{\mathbf n}$ is the signed distance in \AA. Reflection reverses its sign without changing its magnitude; atoms on the plane stay fixed. Normal \literalinput{1 0 0} through $(1,0,0)\,\text{\AA}$ defines $x=1\,\text{\AA}$. Reflecting $(1.5,2,0)\,\text{\AA}$ gives $(0.5,2,0)\,\text{\AA}$, each 0.5\,\AA\ from the plane.
+The dot product $(\mathbf r-\mathbf p)\cdot\hat{\mathbf n}$ is the signed distance in \AA. Reflection reverses its sign without changing its magnitude; atoms on the plane stay fixed. The normal \literalinput{1 0 0} and a point at $(1,0,0)\,\text{\AA}$ define the plane $x=1\,\text{\AA}$. Reflecting $(1.5,2,0)\,\text{\AA}$ gives $(0.5,2,0)\,\text{\AA}$, each 0.5\,\AA\ from the plane.
 
 \input{figures/round10-anchor-mirror}
 

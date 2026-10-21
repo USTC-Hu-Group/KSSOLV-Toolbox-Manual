@@ -77,7 +77,7 @@ This command selects one match internally. Unlike \ui{Stack Heterostructure}, it
 
 \subsection{Interpret the generated cell}
 
-The supplied \file{graphene-twist-21p786789.json} is the reference structure generated with these parameters; a CIF with the same base name is provided for geometry exchange. The model contains 28 C sites, 14 in each layer. Relative to the original two-site monolayer, each layer's in-plane area is seven times larger.
+The supplied \file{graphene-twist-21p786789.json} is the reference structure generated with these parameters; a CIF with the same base name is provided for geometry exchange. The model contains 28 C sites, 14 in each layer. Each layer's in-plane area is seven times that of the original two-site monolayer.
 
 Both in-plane vectors are approximately $6.508548\,\text{\AA}$ long, giving an area of approximately $36.6859\,\text{\AA}^2$. The new cell angle is $60^\circ$, whereas the input primitive cell uses $120^\circ$. These are different lattice-basis representations; the angle change alone does not establish that the crystal has been distorted. Check lengths, area, site count, and periodic connectivity together.
 
@@ -94,7 +94,7 @@ The side view shows a layer separation of $3.35\,\text{\AA}$ and a normal cell h
 
 The reference model's achieved angle is $21.786789298^\circ$, approximately $2.98\times10^{-7}$ degrees from the target, with zero in-plane strain. The relative angle can also be obtained from nearest-neighbor bond directions in the two layers.
 
-Exact matching information is stored under \file{properties} in the native JSON's \file{moire} section. Open the JSON in a text editor and search for \file{achieved_angle_degrees}. The fields \file{target_angle_degrees}, \file{angle_error_degrees}, and \file{in_plane_strain} record the target, angle error, and in-plane strain. For your own structures, choose \ui{Export file → Structure file}, then export JSON. Do not choose \ui{Scene JSON}: it records the viewing scene rather than the structural matching information.
+Exact matching information is stored in the \file{moire} section under \file{properties} in the native JSON. Open the JSON in a text editor and search for \file{achieved_angle_degrees}. The fields \file{target_angle_degrees}, \file{angle_error_degrees}, and \file{in_plane_strain} record the target, angle error, and in-plane strain. For your own structures, choose \ui{Export file → Structure file}, then export JSON. Do not choose \ui{Scene JSON}: it records the viewing scene rather than the structural matching information.
 
 \subsection{Why the achieved angle may differ from the target}
 
@@ -135,7 +135,7 @@ Tool & Suitable starting situation\\
 \midrule
 Insert Structure & The two parts already have defined positions; specify a translation and retain the current host cell.\\
 Stack Heterostructure & Compare common in-plane cells using allowed strain, repetition, and rotation ranges.\\
-Twist Moiré Superlattice & Start from hexagonal monolayers and a target angle, then find a common integer period.\\
+Twist Moiré Superlattice & Start from hexagonal monolayers and a target angle, then find a common period from integer lattice relations.\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -166,7 +166,7 @@ Both construction commands produce geometric models. To study interfacial charge
 
 \subsection{Save twisted models}
 
-A project retains the input layers, generated structures, and later workflows. JSON and CIF are supplied for structure exchange. JSON preserves in-plane/normal periodicity flags, layer indices, and twist-matching metadata. CIF exchanges the cell and atomic positions. These CIF files are imported as periodic in all three directions, and moiré metadata must be retained separately. Prefer JSON for further 2D modeling comparisons here. When using CIF in another calculation, check normal boundary conditions and vacuum for the target method.
+A project retains the input layers, generated structures, and later workflows. JSON and CIF are supplied for structure exchange. JSON preserves in-plane/normal periodicity flags, layer indices, and twist-matching metadata. CIF is used to exchange the cell and atomic positions. These CIF files are imported as periodic in all three directions, and moiré metadata must be retained separately. Prefer JSON for further 2D modeling comparisons here. When using CIF in another calculation, check normal boundary conditions and vacuum for the target method.
 
 \begin{steps}
   \item Give each result a name identifying the material, achieved angle, and main change, such as ``graphene bilayer, achieved angle 21.7868 degrees,'' rather than a generic \file{result}.

@@ -46,7 +46,7 @@ Figure~\ref{fig:si-periodic-image-inspection} shows the information card for a p
 \[
  (0.750,0.250,1.250)-(0,0,1)=(0.750,0.250,0.250).
 \]
-The offset is a translation by one cell along $\mathbf c$. The Cartesian coordinates locate the displayed image. A fractional coordinate outside 0 to 1 does not add an independent site to the model. The viewer summary reads 8 sites and 41 atoms; the latter includes displayed images.
+The offset is a translation by one cell along $\mathbf c$. The Cartesian coordinates locate the displayed image. A fractional coordinate outside the range 0 to 1 does not add an independent site to the model. The viewer summary reads 8 sites and 41 atoms; the latter includes displayed images.
 
 \begin{figure}[!htb]
 \centering
@@ -94,7 +94,7 @@ After selecting atoms, press G and drag to translate them, or R and drag to rota
 
 \section{Apply and save structural changes}
 
-Most parameter dialogs that modify a structure offer \ui{Preview}, \ui{Apply}, and \ui{Cancel}. Preview shows the geometric effect of the parameters. Apply commits the change to the current document's editing state. Saving writes that state into the project. After changing parameters, preview again. Cancel leaves the command and restores the original view.
+Most parameter dialogs that modify a structure offer \ui{Preview}, \ui{Apply}, and \ui{Cancel}. Preview shows the geometric effect of the parameters. Apply commits the change to the current document's editing state. Saving writes that state into the project. After changing parameters, preview again. Cancel closes the dialog and restores the original view.
 
 \begin{steps}
   \item Open the modeling command and check the selection and parameter units.
@@ -143,7 +143,7 @@ A supercell repeats a base cell along selected directions and includes all repli
 % Separate summary from the same image (45,330,465,560), 420×230; approximately 254 ppi at 42 mm.
 \includegraphics[width=\linewidth]{publication-assets/crop-c0154093dad09f77a9a2.png}
 \end{minipage}
-\caption{The applied silicon supercell, with the full model and a separate summary detail. The model contains 64 independent sites; 166 atoms includes boundary images. \ui{Input cell $1\times1\times1$} is the display range for the new supercell.}
+\caption{The applied silicon supercell, with the full model and a separate summary detail. The model contains 64 independent sites; the displayed count of 166 atoms includes boundary images. \ui{Input cell $1\times1\times1$} is the display range for the new supercell.}
 \label{fig:si-supercell-result}
 \end{figure}
 
@@ -246,7 +246,7 @@ With \ui{Use force-field ideal bond length} enabled, sketching uses an ideal bon
 
 To read a distance, choose \ui{Measurements → Atom-to-atom distance} in the viewer toolbar and click atoms 1 and 2 in order. To change it, open \ui{Set Distance} in the ribbon, enter \literalinput{1 2} as the atom indices, and set the target to $1.52\,\text{\AA}$. Then open \ui{Set Angle}, enter \literalinput{1 2 3}, and set $109.5^\circ$. For the distance, angle, and dihedral operations here, choose the subtree movement scope so connected atoms move together.
 
-The atoms scope moves local atoms only; subtree moves one side along the connectivity; fragments adjusts a connected fragment as a whole. Changing an angle by moving a heavy atom without its attached hydrogens can distort neighboring geometry. Inspect the whole molecule in the preview rather than only the target angle.
+The atoms scope moves local atoms only; subtree moves the connected atoms on one side; fragments adjusts a connected fragment as a whole. Changing an angle by moving a heavy atom without its attached hydrogens can distort neighboring geometry. Inspect the whole molecule in the preview rather than only the target angle.
 
 \begin{steps}
   \item Set the required distances and angle in the C--C--O skeleton, measuring again after each application.
@@ -270,7 +270,7 @@ Figures~\ref{fig:ethanol-angle-parameters} and \ref{fig:ethanol-angle-measured} 
 
 \begin{steps}[resume]
   \item Close the parameter dialog. On the 3D view's right toolbar, open the ruler-shaped \ui{Measurements} button and choose \ui{Bond angle}. Select the atoms afresh after entering measurement mode.
-  \item Click C atom 1, C atom 2, and O atom 3 in order; the second atom is the vertex. In the illustration, C1 is at the top, C2 is in the middle, and oxygen is red. After the third click, the left measurement card shows the angle and atom path, and two sides and an arc appear on the model.
+  \item Click C atom 1, C atom 2, and O atom 3 in order; the second atom is the vertex. In the illustration, C1 is at the top, C2 is in the middle, and oxygen is red. After the third click, the left measurement card shows the angle and atom path, and two line segments and an arc appear on the model.
   \item Check for $109.500^\circ$ and the path \ui{\#1 C}, \ui{\#2 C}, \ui{\#3 O}. Record the value and atom order, close the card, and save the edited copy.
 \end{steps}
 

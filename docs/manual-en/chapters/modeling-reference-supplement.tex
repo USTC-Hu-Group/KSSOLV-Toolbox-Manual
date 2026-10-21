@@ -12,11 +12,11 @@ Modeling tabs depend on the active document. Molecular transformations and measu
 A selection set names a group of model sites, making it useful for repeatedly working on bottom surface layers, adsorbates, or a chain segment. Recall the set to select those sites again.
 
 \begin{steps}
-  \item Select atoms in the 3D view. Click selects one; Shift- or Ctrl-click adjusts a multiple selection. \ui{B} enters box selection and \ui{L} enters lasso selection. Double-click an atom to select a connected molecule, or choose \ui{Select Connected Component} from its context menu. Connectivity follows the bonds used by the current display model, so a crystal network may select a large connected region.
-  \item To select an element, open an atom's context menu and choose \ui{Select All \ldots\ Atoms}. Check the selected count before substituting or deleting.
+  \item Select atoms in the 3D view. A click selects one atom; Shift- or Ctrl-click adjusts a multiple selection. \ui{B} enters box selection and \ui{L} enters lasso selection. Double-click an atom to select a connected molecule, or choose \ui{Select Connected Component} from its context menu. Connectivity follows the bonds used by the current display model, so a crystal network may select a large connected region.
+  \item To select all atoms of one element, open the context menu of an atom of that element and choose \ui{Select All \ldots\ Atoms}. Check the selected count before substituting or deleting.
   \item Open \ui{Selection Sets} on the modeling ribbon, click \ui{Save Current Selection}, and enter a descriptive name such as ``fixed bottom layer.''
   \item Click empty space or press Esc to clear the selection, then recall the saved name from \ui{Selection Sets}. Check that the same sites are highlighted.
-  \item Save the project. Export native structure JSON as well if you need complete model information for the selection. Exchange formats such as CIF and XYZ do not preserve all selection metadata.
+  \item Save the project. Export native structure JSON as well to retain the selection metadata with the model. Exchange formats such as CIF and XYZ do not preserve all selection metadata.
 \end{steps}
 
 Two numbers after a set's name show how many sites can still be found and how many were originally saved. Deleting a member reduces the first number, and recalling the set warns about missing sites. The remaining selection is no longer the original complete group. Saving again under the same name updates that set. The menu provides save and recall actions.
@@ -83,7 +83,7 @@ An explicit bond records the two connected atoms and their bond order. Displayed
 
 \ui{Diagnose Molecule} performs rule-based checks and reports \ui{Molecule diagnostics completed.}. Follow Section~\ref{sec:molecule-manual-check} in Chapter~\ref{ch:modeling}: inspect composition and connectivity, then measure local geometry. MATLAB\regmark{} toolbox users can inspect individual diagnostic records in the returned data.
 
-For direct sketching, press S. The panel sets element, bond order, formal charge, and hybridization hints. Drag from an existing atom to add a bonded atom, drag to another existing atom to attempt a bond, or click empty space to place an atom. Select the host attachment site before extending an existing molecule. Move the draft if a collision is reported. Press Esc to leave the tool and return clicks to selection.
+For direct sketching, press S. The panel sets element, bond order, formal charge, and hybridization hints. Drag from an existing atom to add a bonded atom, drag to another existing atom to attempt a bond, or click empty space to place an atom. Select the host attachment site before extending an existing molecule. Move the draft if a collision is reported. Press Esc to leave the tool so that subsequent clicks select atoms.
 
 \subsection{Measure local geometry in periodic structures}\label{sec:periodic-measure-reference}
 
@@ -108,7 +108,7 @@ Bond statistics & Select two atoms to identify an element pair; read bond count,
 \caption{Choose a geometry measurement to match the question.}
 \end{table}
 
-In periodic structures, data returned by the ribbon's \ui{Measure Geometry} uses neighboring images to connect local geometry. Interactive viewer measurements instead connect the displayed images actually clicked, so choosing a different boundary image can change the reading. Nearest-neighbor lists include site indices and image offsets; read them together. Coordination counts also depend on neighbor criteria and are not universal fixed chemical constants.
+In periodic structures, the ribbon's \ui{Measure Geometry} calculates local geometry using neighboring periodic images. Interactive viewer measurements instead connect the displayed images actually clicked, so choosing a different boundary image can change the reading. Nearest-neighbor lists include site indices and image offsets; read them together. Coordination counts also depend on neighbor criteria and are not universal fixed chemical constants.
 
 To change a measured quantity, enter a target in its editing control or use \ui{Set Distance}, \ui{Set Angle}, or \ui{Set Dihedral}. In molecules, \ui{atom} moves only the target atom, while \ui{subtree} and \ui{fragment} use connectivity to identify movable parts. A ring that cannot be separated by cutting one bond restricts the movable scope. In periodic crystals, these precise geometry commands move only target sites; they do not automatically treat an adsorbate as a molecular subtree. To translate an entire adsorbate, select all its sites and use \ui{Component Transform}.
 
@@ -246,7 +246,7 @@ Use \ui{Build Homopolymer} for an unbranched reference, specifying the repeat un
 
 \subsection{Build a basic dendrimer skeleton}\label{sec:dendrimer-reference}
 
-\ui{Build Basic Dendrimer} expands a skeleton by generation and branching, illustrating hierarchical topology. Core functionality sets the first-generation branch count; the branching factor sets the number produced by later branches. Skeleton element and bond length define the initial geometry, which can be developed further with the functional groups and chemistry of the actual material.
+\ui{Build Basic Dendrimer} expands a skeleton by generation and branching, illustrating hierarchical topology. Core functionality sets the first-generation branch count; the branching factor sets how many new branches each subsequent branch produces. Skeleton element and bond length define the initial geometry, which can be developed further with the functional groups and chemistry of the actual material.
 
 \begin{steps}
   \item Import and activate \file{user-repeat-ethane-input.json}, retaining a copy. Open \ui{Build Basic Dendrimer} through \ui{Molecule Modeling → Soft Matter → Polymer Builder}. Start with generation 2, core functionality 3, branching factor 2, C, skeleton bond length $1.54\,\text{\AA}$, and seed 1.
@@ -289,17 +289,17 @@ Atom limit & 1000, sufficient for this model.\\
   \item Name the result \file{MANUAL-CC-dimer}, save the project, and export native structure JSON. Retain input ethane, unit parameters, and dimer as three separate stages. Exchanging only the dimer does not register the custom unit in another computer's library.
 \end{steps}
 
-A text editor can inspect elements, coordinates, and connections in the input or output JSON. The supplied \file{user_repeat_unit_example.m} repeats the procedure and writes a separate example library, \file{user-repeat-unit-library.json}, without overwriting the personal library. The accompanying scripts check composition, connectivity, and diagnostics. For longer chains, increase repetitions from the same unit and inspect contacts throughout the resulting chain.
+Open the input or output JSON in a text editor to inspect elements, coordinates, and connections. The supplied \file{user_repeat_unit_example.m} repeats the procedure and writes a separate example library, \file{user-repeat-unit-library.json}, without overwriting the personal library. The accompanying scripts check composition, connectivity, and diagnostics. For longer chains, increase repetitions from the same unit and inspect contacts throughout the resulting chain.
 
 \subsection{Pack one molecule type into a confined region}\label{sec:confined-packing-reference}
 
-\ui{Construct Amorphous Cell} packs copies of the current molecule into a periodic box according to count and density; \ui{Build Confined Layer} further restricts the usable region. Density is in $\mathrm{g/cm^3}$ and minimum contact in \AA. Packing creates initial positions; physical equilibration is a separate step.
+\ui{Construct Amorphous Cell} packs copies of the current molecule into a periodic box according to count and density; \ui{Build Confined Layer} further restricts the usable region. Density is in $\mathrm{g/cm^3}$ and minimum contact distance in \AA. Packing creates initial positions; physical equilibration is a separate step.
 
 \begin{steps}
   \item Open a molecule whose connectivity and geometry have been checked. Save the original component, then choose single-component packing or a confined layer under \ui{Amorphous Builder}.
   \item Enter molecule count, density, contact distance, seed, and atom limit. Start with few molecules and a low initial density to check components and boundaries.
   \item For a confined layer, select axis 1, 2, or 3 and the lower/upper bounds. For example, \literalinput{0.2 0.8} means 20\% to 80\% of that box length. When both values lie between 0 and 1 they are fractional, not $0.2$ to $0.8\,\text{\AA}$.
-  \item Inspect the preview from the side along the confined dimension, checking that molecules lie in the permitted region and excluded empty space is not being treated as available volume.
+  \item Inspect the preview from a side view that shows the extent along the confinement axis. Check that molecules lie in the permitted region and that excluded empty space is not being treated as available volume.
   \item Apply, check molecule count, total atoms, box lengths, and periodic contacts, then save the result and input settings separately.
 \end{steps}
 
@@ -324,14 +324,14 @@ A text editor can inspect elements, coordinates, and connections in the input or
 The adsorption exercise in Chapter~\ref{ch:advanced} covers sites and O--H placement. Here we terminate remaining slab boundaries. Start from a saved slab copy so that passivation and later solvent treatment have separate records.
 
 \begin{steps}
-  \item If unsaturated coordination needs terminating atoms, open \ui{Passivate Surface}. Choose element, bond length, upper/lower/both surfaces, and detection depth.
-  \item A target coordination of 0 lets the tool infer it; otherwise enter the known target. Minimum contact excludes overly close positions. Preview both sides and check that existing atoms are correctly identified as surface atoms.
+  \item If undercoordinated surface sites need capping atoms, open \ui{Passivate Surface}. Choose element, bond length, upper/lower/both surfaces, and detection depth.
+  \item A target coordination of 0 lets the tool infer it; otherwise enter the known target. The minimum contact distance excludes overly close positions. Preview both sides and check that existing atoms have not been incorrectly classified as surface atoms.
   \item Apply, compare added element counts and boundary coordination, and save a separate passivated result before deciding whether to add solvent.
 \end{steps}
 
 \subsection{Add solvent above a slab}
 
-\ui{Add Solvent Layer} needs a complete solvent molecule already in the project. Keep the slab document active and select the solvent molecule under \ui{Solvent structure}, then set molecule count, layer thickness, surface gap, remaining vacuum, contact distance, seed, and timeout in seconds. Thickness, gap, vacuum, and contacts are in \AA; the molecule count is an integer. Start with a few molecules to determine which side receives them, then check internal solvent geometry, layer contacts, and remaining vacuum before increasing the count. Temperature and equilibration follow later according to the calculation method.
+\ui{Add Solvent Layer} needs a complete solvent molecule already in the project. Keep the slab document active and select the solvent molecule under \ui{Solvent structure}, then set molecule count, layer thickness, surface gap, remaining vacuum, contact distance, seed, and timeout in seconds. Thickness, gap, vacuum, and contacts are in \AA; the molecule count is an integer. Start with a few molecules to determine which side receives them, then check internal solvent geometry, layer contacts, and remaining vacuum before increasing the count. After generating the initial layer, configure temperature and equilibration according to the calculation method.
 
 \section{Reuse a modeling procedure}
 
@@ -376,7 +376,7 @@ Recipes cover supported applied modeling commands and parameters in the current 
 
 \subsection{Inspect existing batch jobs}\label{sec:modeling-jobs-reference}
 
-\ui{Modeling Jobs} lists stored modeling file-batch jobs, distinct from SCF runs in electronic structure workflows. Columns include ID, status, completed count, requested count, successes, resumability, and errors. A finished batch may still contain failed files.
+\ui{Modeling Jobs} lists saved batch modeling jobs for structure files, distinct from SCF runs in electronic structure workflows. Columns include ID, status, completed count, requested count, successes, resumability, and errors. A finished batch may still contain failed files.
 
 \begin{steps}
   \item Open \ui{History}\,$\rightarrow$\,\ui{Modeling Jobs}, click \ui{Refresh}, and identify the batch by ID.

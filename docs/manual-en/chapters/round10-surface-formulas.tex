@@ -16,7 +16,7 @@ For a constructed slab with in-plane vectors $\mathbf a,\mathbf b$, check its ac
   \qquad H=|\mathbf c\cdot\hat{\mathbf n}_{\mathrm{slab}}|
   \label{eq:surface-normal-height}
 \end{equation}
-The height $H$ is the repeat distance between periodic slabs along the normal, and need not equal $\|\mathbf c\|$. Represent atoms of one slab in continuous periodic images, then project their positions onto the normal to obtain the outermost-layer span. Record this separately from the requested minimum thickness and complete-repeat thickness.
+The height $H$ is the repeat distance between periodic slabs along the normal, and need not equal $\|\mathbf c\|$. First choose periodic images that form one continuous slab, then project the atomic positions onto the normal to measure the distance between the outermost layers. Record this distance separately from the requested minimum thickness and the thickness of the complete structural repeats used for construction.
 
 \begin{table}[H]
 \centering
@@ -27,7 +27,7 @@ Quantity & Interpretation and checks\\
 \midrule
 Minimum slab thickness & A criterion for selecting complete repeat units, not a direct layer count.\\
 Atomic-layer span & Normal distance between outermost layers; select one continuous slab first.\\
-Normal cell height $H$ & Equation~\eqref{eq:surface-normal-height}; includes the slab and periodic gap.\\
+Cell height $H$ & Measured along the surface normal, Eq.~\eqref{eq:surface-normal-height}; includes the slab and periodic gap.\\
 Added vacuum $\Delta$ & Length added along the third lattice vector by \ui{Add Vacuum}, not the final total vacuum.\\
 \bottomrule
 \end{tabularx}

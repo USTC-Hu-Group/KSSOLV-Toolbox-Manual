@@ -7,7 +7,7 @@ Requesting $M$ intermediate images produces $M+2$ structures including both endp
      +\alpha_j\mathbf r_i^{(M+1)}.
   \label{eq:neb-image-interpolation}
 \end{equation}
-Index $i$ identifies the same atom at both endpoints; $\alpha_j$ is dimensionless and positions are in \AA. For periodic structures, endpoint displacements must respect the applicable periodic boundaries. Coordinates of different images of one atom must not be interpreted as an unnecessarily long migration distance.
+Index $i$ identifies the same atom at both endpoints; $\alpha_j$ is dimensionless and positions are in \AA. For periodic structures, endpoint displacements must respect the applicable periodic boundaries. Coordinates in different periodic images can otherwise suggest an artificially long migration distance for the same atom.
 
 IDPP further brings pair distances in each image toward interpolated targets:
 \begin{equation}
@@ -22,4 +22,4 @@ IDPP further brings pair distances in each image toward interpolated targets:
 \end{equation}
 Here $i,k$ are atom indices and $j$ is an image index. The current pair distance is $d_{ik}^{(j)}$ and its target is $d_{ik}^{*,(j)}$. The denominator strongly penalizes short separations, helping IDPP resolve collisions in a linear path. This expression describes one image's pair objective; path optimization also couples neighboring images.
 
-$E_{\mathrm{IDPP}}$ is an auxiliary geometric objective, not a reaction barrier. A barrier requires subsequent energy calculations. The dialog's IDPP \ui{Force tolerance} applies to this auxiliary optimization and is separate from electronic-structure force thresholds. For $M=5$, the parameters are $0,1/6,2/6,\ldots,1$, corresponding to example structures 00 through 06.
+$E_{\mathrm{IDPP}}$ is an auxiliary geometric objective, not a reaction barrier. A barrier requires subsequent energy calculations. The dialog's IDPP \ui{Force tolerance} applies to this auxiliary optimization and is separate from electronic-structure force thresholds. For $M=5$, the path parameters are $0,1/6,2/6,\ldots,1$, corresponding to example structures 00 through 06.

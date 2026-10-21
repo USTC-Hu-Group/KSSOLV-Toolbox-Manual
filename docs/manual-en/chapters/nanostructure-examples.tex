@@ -61,7 +61,7 @@ First identify which in-plane vector becomes the circumference. The geometry des
   \qquad R=\frac{\|\mathbf C_h\|}{2\pi}.
   \label{eq:nanotube-circumference-radius}
 \end{equation}
-Here $\mathbf a_1,\mathbf a_2$ are the input in-plane vectors in \AA; $n,m$ are dimensionless chiral indices; $\mathbf C_h$ is the chiral vector; and $R$ is the initial radius. Circumference is the magnitude of that vector combination. Equal vectors enclosing $60^\circ$ give $\|\mathbf C_h\|=a\sqrt{n^2+nm+m^2}$. For another basis, use Eq.~\eqref{eq:nanotube-circumference-radius} directly. This section retains the prepared $60^\circ$ basis: the same $(n,m)$ in different bases need not select the same rolling direction.
+Here $\mathbf a_1,\mathbf a_2$ are the input in-plane vectors in \AA; $n,m$ are dimensionless chiral indices; $\mathbf C_h$ is the chiral vector; and $R$ is the initial radius. The circumference is the magnitude of that vector combination. Vectors of equal length enclosing $60^\circ$ give $\|\mathbf C_h\|=a\sqrt{n^2+nm+m^2}$. For another basis, use Eq.~\eqref{eq:nanotube-circumference-radius} directly. This section retains the prepared $60^\circ$ basis: the same $(n,m)$ in different bases need not select the same rolling direction.
 
 \input{figures/round10-nanotube-geometry}
 
@@ -109,7 +109,7 @@ The hole in the axial view confirms a tubular arrangement. The side and repeated
 \FloatBarrier
 \subsection{Cut a nanowire from copper}
 
-Use \file{nano-Cu-fcc-input.json}, derived from the same four-site face-centered cubic cell as \file{Cu-fcc.cif}, with lattice constant $3.61\,\text{\AA}$. A nanowire retains translation along one lattice direction and selects a cross-section by radius. Atomic positions are discrete, not a continuous medium: the outermost span of a spherical or cylindrical cut need not equal twice the entered radius.
+Use \file{nano-Cu-fcc-input.json}, derived from the same four-site face-centered cubic cell as \file{Cu-fcc.cif}, with lattice constant $3.61\,\text{\AA}$. A nanowire retains translation along one lattice direction and selects a cross-section by radius. Atoms occupy discrete positions rather than forming a continuous medium: the outermost span of a spherical or cylindrical cut need not equal twice the entered radius.
 
 Direction indices $[u\,v\,w]$ define the wire axis through the real-space lattice:
 \begin{equation}
@@ -154,7 +154,7 @@ The atom limit also bounds the parent supercell needed for construction. This ex
 \FloatBarrier
 \subsection{Inspect the wire's cross-section and axis}
 
-Open \file{Cu-wire-001-r3-l2.json} to inspect the completed 24-site wire. Like the nanotube, it is periodic along $c$. A nanotube rolls a sheet into a hollow circumference; the copper wire retains crystal atoms inside a cylinder, including atoms within the cross-section.
+Open \file{Cu-wire-001-r3-l2.json} to inspect the completed 24-site wire. Like the nanotube, it is periodic along $c$. The nanotube is made by rolling a sheet into a hollow cylinder; the copper wire retains crystal atoms inside a cylinder, including atoms within the cross-section.
 
 \begin{steps}
   \item Import the JSON, open the document, and retain \ui{Input cell}. Check for Cu and 24 independent sites.
@@ -187,7 +187,7 @@ Void mode retains the host outside the sphere and preserves the periodic box, th
 
 \begin{steps}
   \item Import \file{Cu-void-host-2x2x2.json}, or use \ui{Build Supercell} on four-site Cu to make a $2\times2\times2$ host. Check for 32 Cu sites and cell lengths $7.22\,\text{\AA}$.
-  \item Activate this host, open \ui{Quantum Dot / Nano Void}, choose \ui{Nano Void}, and set radius to $2.7\,\text{\AA}$. Void mode does not need external vacuum for a finite cluster.
+  \item Activate this host, open \ui{Quantum Dot / Nano Void}, choose \ui{Nano Void}, and set radius to $2.7\,\text{\AA}$. No external vacuum is needed around this periodic host.
   \item Preview with cell boundaries shown. The void center is fixed at host fractional position \((0.5,0.5,0.5)\). Check that central atoms are removed while the outer periodic host remains.
   \item Check that 13 atoms are removed, leaving 19 Cu sites. The cubic lattice remains $7.22\,\text{\AA}$ and periodic in all directions.
   \item Apply and save as \file{Cu-void-r2p7}, retaining the complete 32-site host for later radius changes or defect comparisons.
@@ -197,7 +197,7 @@ The shortest periodic distance from the void center to a remaining atom is $3.61
 
 \subsection{Check periodicity and save the files}
 
-Each native JSON retains its lattice, coordinates, periodicity flags, and construction metadata. CIF exchanges cell and atomic geometry, but these CIFs are imported as periodic in all directions. Use JSON to retain the low-dimensional periodicity in further modeling.
+Each native JSON retains its lattice, coordinates, periodicity flags, and construction metadata. CIF is used to exchange cell and atomic geometry, but these CIFs are imported as periodic in all directions. Use JSON to retain the low-dimensional periodicity in further modeling.
 
 \begin{table}[htbp]
 \centering\small

@@ -29,7 +29,7 @@ Expected result & Two Cu and two Ni sites, four sites in total, each with occupa
   \item Keep the crystal document active. Open \ui{Generate SQS Model} from \ui{Crystal Modeling}\,$\rightarrow$\,\ui{Defects \& Alloys}. Enter \literalinput{1} under \ui{Supercell scaling} and 1 under \ui{Search budget (seconds)}.
   \item Click \ui{Preview}. Check that the four sites have explicit assignments to the two elements and that the cell and site count have not grown, then click \ui{Apply}. The lattice and positions remain unchanged; only the species assignments change.
   \item Check for Cu$_2$Ni$_2$, four sites, and one fully occupied element at every site. The nearest-neighbor distance should be approximately $3.61/\sqrt{2}=2.552655\,\text{\AA}$. Cell symmetry can produce equivalent species arrangements; assess composition, occupancy, and periodic geometry rather than requiring one visual ordering.
-  \item Export native JSON using the structure-export procedure described earlier, naming it \file{sqs-cu-ni-ordered.json} to retain the search record. Here \file{ordered} means that every site has a definite element, not that a chemically long-range-ordered phase has been generated.
+  \item Export native JSON using the structure-export procedure described earlier, naming it \file{sqs-cu-ni-ordered.json} to retain the search record. Here \file{ordered} means that every site has a definite element, not that a phase with long-range chemical order has been generated.
   \item Name the result \file{CuNi-SQS-4} and save the project. Also export CIF for cell and explicit-occupancy exchange. In Online, download the exports and keep the input JSON, result JSON, and project copy. Use CIF for structure exchange and native JSON for the SQS search record.
 \end{steps}
 

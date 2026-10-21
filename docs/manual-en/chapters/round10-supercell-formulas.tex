@@ -3,7 +3,7 @@ A general supercell is defined by an integer matrix $S$. Each row specifies one 
  A'=SA,\qquad V'=|\det S|V,\qquad N'=|\det S|N.
  \label{eq:supercell-count-volume}
 \end{equation}
-The entries of $S$ must be integers and its determinant nonzero. The magnitude $|\det S|$ is both the volume ratio and the multiplier of independent sites. $N$ always counts model sites, not extra boundary-image spheres. For three repeat counts, $S=\operatorname{diag}(n_a,n_b,n_c)$ reduces Eq.~\eqref{eq:supercell-count-volume} to their product. The silicon example uses $S=2I$, so $|\det S|=8$ and 8 sites become 64.
+The entries of $S$ must be integers and its determinant nonzero. The magnitude $|\det S|$ is both the volume ratio and the scale factor for the independent site count. $N$ always counts model sites, not extra boundary-image spheres. For three repeat counts, $S=\operatorname{diag}(n_a,n_b,n_c)$ reduces Eq.~\eqref{eq:supercell-count-volume} to their product. The silicon example uses $S=2I$, so $|\det S|=8$ and 8 sites become 64.
 
 For a nondiagonal algebraic check,
 \[

@@ -157,7 +157,7 @@ Use this chapter's silicon DOS workflow without changing its structure, cutoff, 
 \item Record resources and timing. To compare serial execution again, set NSCF to \ui{Serial} and check that DOS still inherits it.
 \end{steps}
 
-NSCF mainly prepares solver options; it does not complete band or DOS sampling itself. The subsequent non-self-consistent sampling task actually uses the pool. A supported $k$-point loop is distributed only when there is more than one $k$ point; a single-point calculation cannot provide the same parallel benefit. \ui{Serial} disables the node's pool path while retaining an existing pool.
+NSCF mainly prepares solver options; it does not complete band or DOS sampling itself. The subsequent non-self-consistent sampling task actually uses the pool. A supported $k$-point loop is distributed only when there is more than one $k$ point; sampling only one $k$ point cannot provide the same parallel benefit. \ui{Serial} disables the node's pool path while retaining an existing pool.
 
 Resource choices do not change the physical model. Still compare convergence, sampling, and energy references; execution modes may differ in their last numerical digits. Distinguish pool startup time from solving time as well.
 
@@ -250,7 +250,7 @@ This total energy belongs to the eight-atom cell. Normalize consistently before 
 
 A band plot shows electronic energies as functions of wavevector along representative high-symmetry directions. This is easier to interpret than a list of eigenvalues at every $k$ point. The full workflow builds the structure, analyzes symmetry, converges the density, prepares NSCF options, samples a path, and plots the result.
 
-Use \file{examples/silicon_primitive.cif}, or open \file{examples/silicon-band-primitive.ks}. This standardized two-atom cell has three equal lattice vectors approximately $3.84928$ Å long at mutual angles of $60^\circ$. It represents the same periodic crystal as the eight-atom conventional cell. Recommended path coordinates are expressed in the standardized primitive reciprocal basis, so using that cell keeps path and calculation coordinates consistent. Start with \ui{Energy Band}. \ui{Build Molecule} supplies the structure, \ui{Symmetry \& K-Path} the path, \ui{SCF} the density, \ui{NSCF} solver options, \ui{Band Calculation} the path sampling, and \ui{Band Structure} the plot.
+Use \file{examples/silicon_primitive.cif}, or open \file{examples/silicon-band-primitive.ks}. This standardized two-atom cell has three lattice vectors of equal length, approximately $3.84928$ Å, at mutual angles of $60^\circ$. It represents the same periodic crystal as the eight-atom conventional cell. Recommended path coordinates are expressed in the standardized primitive reciprocal basis, so using that cell keeps path and calculation coordinates consistent. Start with \ui{Energy Band}. \ui{Build Molecule} supplies the structure, \ui{Symmetry \& K-Path} the path, \ui{SCF} the density, \ui{NSCF} solver options, \ui{Band Calculation} the path sampling, and \ui{Band Structure} the plot.
 
 Symmetry and SCF may occupy different branches. Check that both kinds of information are available before band calculation rather than forcing every node into one column. Preserve template dependencies when rearranging the canvas.
 
@@ -303,7 +303,7 @@ The horizontal axis lists high-symmetry points in path order. The vertical axis 
 
 \screenshot{publication-assets/vector-1d3af63f1336e902c5cd.pdf}{Reference bands for the two-atom silicon primitive cell, with 8 points per segment and the Fermi energy set to zero. Combined labels mark disconnected path segments.}{fig:si-band-results}
 
-The reference has six recommended path segments and eight bands. Its primitive-cell SCF converges in seven iterations, at approximately $-7.6905500238$ Ha and $8.19\times10^{-10}$ final relative density error. The coarse SCF grid and short path make the workflow easy to learn. A band-gap study requires further sampling tests and identification of the band extrema.
+The reference has six recommended path segments and eight bands. Its primitive-cell SCF converges in seven iterations, at approximately $-7.6905500238$ Ha and $8.19\times10^{-10}$ final relative density error. The coarse SCF grid and sparse path sampling make the workflow easy to learn. A band-gap study requires further sampling tests and identification of the band extrema.
 
 \subsection{Make a controlled comparison}
 
@@ -433,7 +433,7 @@ Reopen the saved project and check the figure, structure, and path before using 
 
 Path bands sample line segments; an energy surface samples a reciprocal-space plane and uses height for electronic energy. This helps reveal directional variation near a band edge. Here, ``3D'' means two sampling coordinates and one energy coordinate, not a full 3D $k$-point volume. It also differs from the real-space volumetric data in Chapter~\ref{ch:volume}.
 
-Prepare a separate project using \file{silicon_primitive.cif}. Keep Crystal, PBE, default, 20 Ha, and the primitive-cell SCF grid; set 4 extra bands to include unoccupied states. A small-range exercise uses a non-spin-polarized insulator so that the highest occupied and lowest unoccupied bands are clear.
+Prepare a separate project using \file{silicon_primitive.cif}. Keep Crystal, PBE, default, 20 Ha, and the primitive-cell SCF grid; set 4 extra bands to include unoccupied states. This exercise samples a small region and uses a non-spin-polarized insulating system so that the highest occupied and lowest unoccupied bands are easy to identify.
 
 \begin{steps}
 \item Save a copy of the SCF project and retain \ui{Build Molecule → SCF}.
@@ -465,7 +465,7 @@ The plotting task selects the highest occupied and lowest unoccupied bands and s
 \section{Prepare an excited-state calculation}\label{sec:tddft-workflow}
 \index{TDDFT}
 
-SCF gives ground-state electronic structure. Excitations in response to a small perturbation require a different calculation. The TDDFT task prepares Casida-method inputs from converged ground-state states with enough unoccupied orbitals. Replacing the last SCF task with TDDFT while retaining occupied orbitals only does not provide the required excitation space.
+SCF gives ground-state electronic structure. Excitations in response to a small perturbation require a different calculation. The TDDFT task prepares Casida-method inputs from converged ground-state electronic states with enough unoccupied orbitals. Replacing the last SCF task with TDDFT while retaining occupied orbitals only does not provide the required excitation space.
 
 \subsection{Retain unoccupied hydrogen orbitals}
 
@@ -494,7 +494,7 @@ Use IPA / Use RPA & Both cleared here; use separately to compare response approx
 Explicitly enter \ui{nvbands}=1 and \ui{ncbands}=4. The solver requires Nspin=1. Check ground-state extra bands together with any changes in occupied bands, unoccupied bands, or root count. To retain a degenerate group of transitions, the program may increase the final number of roots. Use the actual count in logs and output arrays for analysis.
 
 \begin{notebox}{How to solve TDDFT}
-A parameter-passing issue in the graphical TDDFT node prevents it from completing this excited-state solve. Prepare the ground state and excitation space above, then pass explicit name/value arguments in full MATLAB\regmark{} as below to obtain excitation energies and transition vectors. The associated message is \texttt{Wrong input for tddft\_input}.
+A parameter-passing issue in the graphical TDDFT node prevents it from completing this excited-state solve. Prepare the ground state and excitation space above, then pass explicit name/value arguments in full MATLAB\regmark{} as shown below to obtain excitation energies and transition vectors. The associated message is \texttt{Wrong input for tddft\_input}.
 \end{notebox}
 
 \subsection{Pass explicit parameters in full \headinglatin{MATLAB}\regmark{}}

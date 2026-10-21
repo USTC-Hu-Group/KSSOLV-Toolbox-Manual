@@ -1,4 +1,4 @@
-\chapter{Calculate the electronic structure of hydrogen}\label{ch:first}
+\chapter{Calculate the electronic structure of a hydrogen molecule}\label{ch:first}
 
 A hydrogen molecule has only two atoms, yet introduces the essentials of an electronic structure calculation: where to place the atoms, how the electrons are distributed, how to recognize completion, and which geometry the final numbers describe. Starting from a prepared file, this chapter runs a self-consistent field calculation and examines the energy and error histories. The same procedure can then be applied to larger molecules and crystals.
 
@@ -192,7 +192,7 @@ The local \ui{Stop} button resets the run-button state but does not interrupt an
 
 \subsection{Measure elapsed time}
 
-The dropdown next to \ui{Run} offers \ui{Run and time}. Activate this SCF workflow and choose it. When a local run finishes, the window bottom reports its elapsed time. This includes execution and associated preparation for the whole workflow, not an individual profile for each node.
+The dropdown next to \ui{Run} offers \ui{Run and time}. Activate this SCF workflow and choose it. When a local run finishes, the window bottom reports its elapsed time. This includes execution and associated preparation for the whole workflow, not a separate performance profile for each node.
 
 Compare timings only with the same model, settings, and execution environment, and state whether a run was the first one. Initializing numerical functions or creating a figure can add startup time. For a remote submission, local submission time is not remote calculation time; read the remote job records. Record timing separately in your notes if useful. Scientific validity still rests on energy, error, and convergence.
 

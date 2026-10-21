@@ -42,7 +42,7 @@ Figure~\ref{fig:settings-language-field} shows the language section of Online Ge
 
 The Command Window accepts both ordinary commands and questions for a large language model. \ui{OpenAICompatible} uses an OpenAI-compatible API with an endpoint, key, and model supplied by the provider. \ui{Ollama} connects to a running Ollama server and uses models installed there.
 
-Chat can explain terminology, compare parameter purposes, and help organize notes. Models supporting tool calls can also read the current workflow and rename node labels. Chat is optional: structure import, modeling, and DFT calculations work independently.
+Chat can explain terminology, compare the roles of different parameters, and help organize notes. Models supporting tool calls can also read the current workflow and change node labels. Chat is optional: structure import, modeling, and DFT calculations work independently.
 
 \begin{table}[!htb]
 \centering
@@ -64,7 +64,7 @@ Requests originate from the computer running the toolbox. For a desktop applicat
 
 \subsection{Configure an \headinglatin{OpenAI}-compatible service}
 
-Obtain the base URL, personal API key, and authorized model identifier from your provider. ``OpenAI-compatible'' describes the interface; the service determines the provider and models.
+Obtain the base URL, personal API key, and authorized model identifier from your provider. ``OpenAI-compatible'' describes the interface; the provider and available models depend on the service you use.
 
 \begin{steps}
 \item Under \ui{Home → Settings → General → LLM}, set \ui{Type} to \ui{OpenAICompatible}.
@@ -210,7 +210,7 @@ A remote job record contains the workflow, submission target, status, and output
 
 The \ui{Resources} panel in Section~\ref{sec:node-resources} chooses Serial, a process pool, or GPU on the execution machine. Remote configuration chooses the machine, cluster profile, and retrieval method. Enabling a node pool does not submit a cluster job; selecting a cluster does not make every node parallel.
 
-Online may disable the Home \ui{Parallel} button while still offering task-specific node resources. Actual capability depends on the server's components, pools, and GPUs. Cluster submission here applies to the Remote menu in full MATLAB\regmark{}.
+In Online, the Home \ui{Parallel} button is disabled, while the node Resources panel still offers options appropriate to each task. Actual capability depends on the server's components, pools, and GPUs. Cluster submission here applies to the Remote menu in full MATLAB\regmark{}.
 
 \subsection{Choose an execution mode}
 
@@ -274,7 +274,7 @@ Attach Current Toolbox transfers the current toolbox to the target, useful when 
 
 Cluster Installed uses an administrator-maintained installation. Enter its root and confirm version compatibility. Centrally managed environments usually specify which option to use; do not modify shared application directories yourself.
 
-A post-login script initializes the environment, for example by loading a site's MATLAB\regmark{} module. Command templates and prompt rules address special routing or additional authentication; fill them only when the administrator requires them. Keep ordinary direct connections simple when they work.
+A post-login script initializes the environment, for example by loading a site's MATLAB\regmark{} module. Command templates and prompt rules address special routing or additional authentication; configure them only when the administrator requires them. Keep ordinary direct connections simple when they work.
 
 \section{Exercise: submit and retrieve a calculation}
 \index{Remote jobs}

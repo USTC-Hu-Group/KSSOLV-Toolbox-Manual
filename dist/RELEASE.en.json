@@ -5,12 +5,12 @@
   "pages": 309,
   "pdf": {
     "file": "KSSOLV_Toolbox_User_Manual_en.pdf",
-    "bytes": 13596276,
-    "sha256": "da3d9d25dbce69e2eace34a29410e8759a97b89ca2a5184f57fa3ee0a7809782"
+    "bytes": 13597264,
+    "sha256": "63d3c1bce63c5fe08b75728fe378d4d9f7e6e71d52242149a5180c8427a5dd63"
   },
   "source": "../docs/manual-en/main.tex",
-  "revision": "english-translated-edition",
-  "reviewStatus": "translated and cross-reviewed; native English screenshots and PDF layout reviewed",
+  "revision": "english-editorial-review",
+  "reviewStatus": "translated, cross-reviewed, and revised after a second bilingual editorial review; native English screenshots and PDF layout reviewed",
   "assets": {
     "total": 83,
     "nativeCaptures": 76,

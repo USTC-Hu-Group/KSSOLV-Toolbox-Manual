@@ -101,7 +101,7 @@ Termination index & 1; compare terminations separately if several are available.
 
 \input{figures/pt111-parameters}
 
-The supplied \file{Pt-fcc.cif} and \file{Pt111-slab.cif} contain the bulk and slab models. These parameters give 4 independent sites in 4 geometric layers. Along the normal, the cell's periodic height is approximately $20.3689\,\text{\AA}$, the outermost atomic planes span approximately $6.7896\,\text{\AA}$, and the separation between outermost planes of neighboring periodic slabs is approximately $13.5793\,\text{\AA}$. Construction thickness is selected in crystal repeats and is not the same measurement as the outermost-coordinate difference. Project distances along the normal; the third vector's length in an oblique cell is not directly the vacuum thickness.
+The supplied \file{Pt-fcc.cif} and \file{Pt111-slab.cif} contain the bulk and slab models. These parameters give 4 independent sites in 4 geometric layers. Along the normal, the cell's periodic height is approximately $20.3689\,\text{\AA}$, the outermost atomic planes span approximately $6.7896\,\text{\AA}$, and the separation between outermost planes of neighboring periodic slabs is approximately $13.5793\,\text{\AA}$. The thickness used for construction is based on complete crystal repeats and differs from the distance between the outermost atomic planes. Project distances along the normal; the third vector's length in an oblique cell is not directly the vacuum thickness.
 
 \subsection{Fix the bottom layers}
 \index{Fixed atoms}
@@ -163,7 +163,7 @@ Parameter-based placement makes configurations easy to record and reproduce. The
   \item Open \ui{Place Adsorbate} and select the imported O--H molecule under \ui{Project adsorbate}.
   \item Choose ontop, candidate index 1, and \ui{Anchor height (Å)} of 2.
   \item Set anchor atom to 1 (O) and orientation atom to 2 (H). Enter 1, 1, 1 in the direction fields so the O-to-H direction follows this surface normal. Retain the minimum allowed distance of $0.5\,\text{\AA}$.
-  \item Preview from the side: O should lie outside the selected Pt atom, with H farther outward. Then click \ui{Apply}.
+  \item Preview from the side: O should lie above the selected Pt atom, with H farther from the surface. Then click \ui{Apply}.
   \item This input has negative fractional coordinates. To view host and adsorbate within one unit cell, open \ui{Build Supercell}, enter 1 in all three scaling components, and apply. This wraps equivalent sites into the unit cell without enlarging the model. The lattice and 6 independent sites remain unchanged.
   \item Rename the result \file{Pt111-OH-outward} and save. Display the cell boundary and inspect the O--H direction from the side. Boundary images may show the same fragment several times; check composition against the 6 independent sites in the summary.
 \end{steps}
@@ -176,9 +176,9 @@ The supplied \file{Pt111-OH-Online-050.json} contains the wrapped six-site model
 
 \subsection{Compare adsorption configurations in a batch}
 
-\ui{Adsorption Locator} enumerates sites, heights, and rotations and retains candidates by score. Import a fresh \file{Pt111-normal-c.json}, activate the clean four-site host, and select the same O--H molecule. Enter \literalinput{ontop bridge hollow} under \ui{Site types} and \literalinput{1.8 2.1 2.4} under \ui{Candidate heights (Å)} to compare $1.8$, $2.1$, and $2.4\,\text{\AA}$. Set anchor atom to 1 and orientation atom to 0. Use rotation step $30^\circ$, minimum contact $0.6\,\text{\AA}$, at most 200 retained candidates, and seed 0. Keep the default geometric contact score.
+\ui{Adsorption Locator} enumerates sites, heights, and rotations and retains candidates by score. Import a fresh \file{Pt111-normal-c.json}, activate the clean four-site host, and select the same O--H molecule. Enter \literalinput{ontop bridge hollow} under \ui{Site types} and \literalinput{1.8 2.1 2.4} under \ui{Candidate heights (Å)} to compare $1.8$, $2.1$, and $2.4\,\text{\AA}$. Set anchor atom to 1 and orientation atom to 0. Use rotation step $30^\circ$, minimum contact distance $0.6\,\text{\AA}$, at most 200 retained candidates, and seed 0. Keep the default geometric contact score.
 
-These parameters produce 144 candidates. Each retains the O--H bond length and places its anchor at the specified normal height. \file{Pt111-OH-candidate-1.json} is the highest-ranked geometric result: hollow candidate 2, height $2.4\,\text{\AA}$, and rotation $60^\circ$. Compare it with the earlier ontop model, then inspect the anchors and rotations of other candidates.
+These parameters produce 144 candidates. Each retains the O--H bond length and places its anchor at the specified height along the surface normal. \file{Pt111-OH-candidate-1.json} is the highest-ranked geometric result: hollow candidate 2, height $2.4\,\text{\AA}$, and rotation $60^\circ$. Compare it with the earlier ontop model, then inspect the anchors and rotations of other candidates.
 
 These values illustrate the search space. For a larger molecule, begin with fewer height and rotation combinations, confirm the anchor settings, then broaden the search. Select a candidate, \ui{Preview} and compare it with others, then \ui{Apply} the required configuration. Retain clearly named separate models for configurations that will be relaxed independently.
 
@@ -188,11 +188,11 @@ The default geometric contact score measures geometric suitability. The optional
 
 \subsection{Passivate an unsaturated surface}
 
-\ui{Passivate Surface} adds atoms according to unsaturated coordination. Settings include passivating element, bond length, upper/lower surface selection, and detection depth. Defaults are H, $1.1\,\text{\AA}$, both surfaces, and $1.5\,\text{\AA}$. Choose bond lengths and coordination appropriate to the desired chemistry. A target coordination of 0 lets the tool infer it; specify it explicitly when the surface chemistry is known.
+\ui{Passivate Surface} adds atoms to undercoordinated surface sites. Settings include passivating element, bond length, upper/lower surface selection, and detection depth. Defaults are H, $1.1\,\text{\AA}$, both surfaces, and $1.5\,\text{\AA}$. Choose bond lengths and coordination appropriate to the desired chemistry. A target coordination of 0 lets the tool infer it; specify it explicitly when the surface chemistry is known.
 
 \subsection{Add a solvent layer}
 
-\ui{Add Solvent Layer} packs a project solvent above the surface. Prepare and check one solvent molecule first, then set molecule count, layer thickness, surface gap, and remaining vacuum. A readily inspected exercise might use 20 molecules, thickness $10\,\text{\AA}$, gap $2\,\text{\AA}$, and remaining vacuum $5\,\text{\AA}$. Contact tolerance and seed affect the packing. Inspect its extent from the side and local packing from above.
+\ui{Add Solvent Layer} packs solvent molecules from the project above the surface. Prepare and check one solvent molecule first, then set molecule count, layer thickness, surface gap, and remaining vacuum. A readily inspected exercise might use 20 molecules, thickness $10\,\text{\AA}$, gap $2\,\text{\AA}$, and remaining vacuum $5\,\text{\AA}$. Contact tolerance and seed affect the packing. Inspect its extent from the side and local packing from above.
 
 \section{Build a heterojunction}\label{sec:heterojunction}
 \index{Layer matching}
@@ -208,7 +208,7 @@ In-plane strain measures how much the original lattices change to share a period
 
 \subsection{Insert a structure by translation}
 
-\ui{Insert Structure} places another project structure into the active model using a Cartesian translation and minimum interatomic distance. Use it when the relative positions are already known. After insertion, check the cell, composition, and near contacts across boundaries.
+\ui{Insert Structure} places another project structure into the active model using a Cartesian translation and minimum interatomic distance. Use it when the relative positions are already known. After insertion, check the cell, composition, and close contacts across boundaries.
 
 \subsection{Find an in-plane lattice match}
 
@@ -226,7 +226,7 @@ Start again from the original bottom layer and open \ui{Stack Heterostructure}, 
 
 Set \ui{Interface candidate index} to 1, preview and apply, then inspect the candidate table. The reference lists 10 candidates. Candidate 1 has zero strain and an estimated 4 sites. Applying it gives a bilayer with box height $18.35\,\text{\AA}$ and layer spacing $3.35\,\text{\AA}$, saved as \file{graphene-stacked.json}. Direct insertion preserves the original box, whereas matching rebuilds the normal dimension from the slab and total vacuum.
 
-The list may include combinations above the requested strain limit; appearing in the table does not make them applicable. Candidates 2 and 3 here have approximately 52.49\% strain and should be excluded. Candidates 4, 5, and 6 have nearly zero strain but require 8 sites. Check constraints before choosing a suitable area or size rather than relying on the atomic picture alone.
+The list may include combinations above the requested strain limit; being listed does not mean that they can be applied. Candidates 2 and 3 here have approximately 52.49\% strain and should be excluded. Candidates 4, 5, and 6 have nearly zero strain but require 8 sites. Check constraints before choosing a suitable area or size rather than relying on the atomic picture alone.
 
 \subsection{Example: match graphene and h-\headinglatin{BN}}
 
@@ -314,7 +314,7 @@ Branched polymers specify a backbone unit, side-chain fragment, and attachment i
 
 \subsection{Density and molecule counts}
 
-Packing places molecules in a region while satisfying geometric constraints such as minimum contacts. It is not a chemical reaction or molecular-dynamics equilibration. Target density is generally entered in $\mathrm{g/cm^3}$ and minimum contact in \AA. Higher density leaves less space and makes packing more difficult.
+Packing places molecules in a region while satisfying geometric constraints such as minimum contact distances. It is not a chemical reaction or molecular-dynamics equilibration. Target density is generally entered in $\mathrm{g/cm^3}$ and minimum contact distance in \AA. Higher density leaves less space and makes packing more difficult.
 
 \ui{Construct Amorphous Cell} uses the current molecule as its component, with a molecule count, target density, contact distance, and seed. Begin with fewer molecules, check molecular integrity and box dimensions, then increase the count. Different components need not produce equal box sizes for the same molecule count, because molecular mass also enters the density relation.
 
@@ -324,7 +324,7 @@ Packing places molecules in a region while satisfying geometric constraints such
 
 Import \file{water-packing.json} and \file{ethanol-optimized.json}. The former retains water's two O--H bonds; the latter is the optimized ethanol from Chapter~\ref{ch:modeling}. Activate water, open \ui{Pack Mixture}, and choose ethanol under \ui{Second project molecule}.
 
-Choose \ui{Exact counts}, enter \literalinput{10 10}, and set density to $0.1\,\mathrm{g/cm^3}$, tolerance to $1.2\,\text{\AA}$, and seed to 23. Retain 100 molecules per batch and leave density ramp stages blank. The deliberately loose initial box makes molecular integrity easy to inspect. The liquid mixture's equilibrium density belongs to a later equilibration procedure.
+Choose \ui{Exact counts}, enter \literalinput{10 10}, and set density to $0.1\,\mathrm{g/cm^3}$, tolerance to $1.2\,\text{\AA}$, and seed to 23. Retain 100 molecules per batch and leave density ramp stages blank. The low initial density makes molecular integrity easy to inspect. The equilibrium density of the liquid mixture is determined during subsequent equilibration.
 
 The result, \file{water10-ethanol10-packed.json}, has 20 molecules, 120 atoms, and composition $\mathrm{C_{20}H_{80}O_{20}}$. Its cubic side length is approximately $21.9954\,\text{\AA}$; total mass divided by volume gives $0.1\,\mathrm{g/cm^3}$. The shortest intermolecular distance, including periodic images, is approximately $4.0990\,\text{\AA}$, while intramolecular distances remain unchanged. Contact requirements apply between molecules, not to water's internal O--H bonds.
 

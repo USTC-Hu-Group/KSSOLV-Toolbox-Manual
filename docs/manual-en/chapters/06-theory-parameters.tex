@@ -137,7 +137,7 @@ HSE06 includes a fraction of exact exchange and is usually more expensive than a
 
 First decide whether you want to compare electronic models at the same geometry or compare results at each model's own equilibrium geometry. The former holds the structure fixed and changes only the electronic model. The latter allows each model to find a different minimum-energy structure. These comparisons answer different questions.
 
-For example, comparing two hydrogen molecule total energies at one fixed bond length does not tell you which functional predicts a bond length closer to experiment. Optimize the geometry with each functional if bond length is your target. Use the same geometry if you want to compare electronic levels at a fixed structure. State this choice explicitly when describing the calculations.
+For example, comparing the total energies from two functionals for a hydrogen molecule at one fixed bond length does not tell you which functional predicts a bond length closer to experiment. Optimize the geometry with each functional if bond length is your target. Use the same geometry if you want to compare electronic levels at a fixed structure. State this choice explicitly when describing the calculations.
 
 \section{Pseudopotentials: describe the ionic cores}
 \index{Pseudopotentials}
@@ -230,7 +230,7 @@ A smooth band curve does not establish accurate Brillouin-zone integration. Conv
 
 Symmetry analysis recommends high-symmetry points and paths from the lattice and atomic arrangement. Labels such as $\Gamma$, X, and L identify reciprocal-space positions. The same label does not necessarily have the same coordinates in different crystal systems.
 
-Changing the cell representation, atomic arrangement, or symmetry tolerance can change the recommended path. When comparing band plots, check the cells and paths as well as the functionals and energy zeros. Similar axis labels alone do not justify subtracting the curves point by point.
+Changing the cell representation, atomic arrangement, or symmetry tolerance can change the recommended path. When comparing band plots, check the cells and paths as well as the functionals and energy references. Similar axis labels alone do not justify subtracting the curves point by point.
 
 This manual uses \ui{Symmetry \& K-Path} to generate paths and \mbox{\ui{Segment Points}} in \ui{Band Calculation} to set the number of samples per segment, including endpoints. Start with fewer points to inspect the overall structure. Increase the count for smoother plots or detailed curvature comparisons.
 
@@ -311,7 +311,7 @@ The force on atom $I$ is the negative gradient of the total energy with respect 
 \end{equation}
 Forces are in Ha/Bohr in the calculation's atomic units. A force points locally downhill in energy. A small energy change does not by itself imply that every atomic force is small. Optimization records may report the maximum atomic force, root-mean-square force, or full gradient norm. Check column names and definitions before comparing them.
 
-\ui{RelaxTolerance} controls the stopping scale, while \ui{MaxRelaxSteps} limits the number of geometry steps. The hydrogen optimization example explicitly sets them to $10^{-4}$ and $100$. Graphical and scripting interfaces may have different defaults; record the values actually used.
+\ui{RelaxTolerance} controls the stopping tolerance, while \ui{MaxRelaxSteps} limits the number of geometry steps. The hydrogen optimization example explicitly sets them to $10^{-4}$ and $100$. Graphical and scripting interfaces may have different defaults; record the values actually used.
 
 Check that the geometry optimization and its final electronic calculation both converged, and that the final forces meet your research requirements. A bond length that no longer changes visibly is not enough to establish a relaxed geometry.
 
@@ -325,7 +325,7 @@ Begin with default. To compare algorithms, save a separate project for a small s
 
 SCF orbital eigenvalues, differences between orbital energies, and excitation energies of a many-electron system are different quantities. A converged ground-state calculation answers the ground-state problem. Studying excitations also requires a response method and a calculation space built from occupied and unoccupied orbitals.
 
-In a TDDFT task, \ui{nvbands} and \ui{ncbands} specify the occupied and unoccupied orbitals included in the response calculation; \ui{nroots} is the requested number of excited states. None of these is an atom count or a $k$-point count. First obtain enough extra bands in Build Molecule, then select the unoccupied orbitals for TDDFT. With one occupied and four unoccupied orbitals, there are at most four such orbital pairs; that space cannot supply ten excitation roots.
+In a TDDFT task, \ui{nvbands} and \ui{ncbands} specify the numbers of occupied and unoccupied orbitals included in the response calculation; \ui{nroots} is the requested number of excited states. None of these is an atom count or a $k$-point count. First obtain enough extra bands in Build Molecule, then select the unoccupied orbitals for TDDFT. With one occupied and four unoccupied orbitals, there are at most four such orbital pairs; that space cannot supply ten excitation roots.
 
 \ui{Use TDA} enables the Tamm--Dancoff approximation. \ui{Use IPA} and \ui{Use RPA} allow comparisons between response approximations. Start from a clearly specified set of options, then vary one approximation at a time. Section~\ref{sec:tddft-workflow} in Chapter~\ref{ch:workflows} covers input preparation, applicability, and example parameters. Absorption peaks require the corresponding response calculation.
 
