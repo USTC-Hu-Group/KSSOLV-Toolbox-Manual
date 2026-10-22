@@ -1,118 +1,47 @@
 # KSSOLV Toolbox User Manuals
 
-This repository maintains the user manuals for **KSSOLV Toolbox V0.5.0**, covering the standalone application, MATLAB® toolbox, and KSSOLV Toolbox Online. It includes LaTeX sources, publication figures, examples, and downloadable PDFs in Simplified Chinese, Traditional Chinese, and English.
+[![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-blue)](LICENSE)
+[![Language: LaTeX](https://img.shields.io/badge/Language-LaTeX-008080?logo=latex)](#build-the-manuals)
+[![Python >=3.9](https://img.shields.io/badge/Python-%3E%3D3.9-3776AB?logo=python&logoColor=white)](#build-the-manuals)
+[![Latest release](https://img.shields.io/github/v/release/USTC-Hu-Group/KSSOLV-Toolbox-Manual)](https://github.com/USTC-Hu-Group/KSSOLV-Toolbox-Manual/releases/latest)
 
-## Languages
+This repository provides the user manuals for [KSSOLV Toolbox](https://github.com/USTC-Hu-Group/KSSOLV-Toolbox), covering the standalone application, MATLAB toolbox, and online version.
 
-| Language | Tag | Sources | PDF |
-| --- | --- | --- | --- |
-| Simplified Chinese | `zh-CN` | [manual-zh-CN](docs/manual-zh-CN/README.md) | [Approved edition](dist/KSSOLV_Toolbox_User_Manual_zh-CN.pdf) |
-| Traditional Chinese (Taiwan) | `zh-TW` | [manual-zh-TW](docs/manual-zh-TW/README.md) | [Download PDF](dist/KSSOLV_Toolbox_User_Manual_zh-TW.pdf) |
-| English | `en` | [manual-en](docs/manual-en/README.md) | [Download PDF](dist/KSSOLV_Toolbox_User_Manual_en.pdf) |
+Download PDFs from the [latest release](https://github.com/USTC-Hu-Group/KSSOLV-Toolbox-Manual/releases/latest):
 
-`zh-TW` identifies the Taiwan edition of Traditional Chinese. The generated edition uses Taiwan characters and terminology through OpenCC's `s2twp` conversion. Simplified Chinese remains the editing source; automatic conversion still needs editorial review. The index retains the original pinyin sorting.
+| Language | Download |
+| --- | --- |
+| Simplified Chinese | [Download PDF](https://github.com/USTC-Hu-Group/KSSOLV-Toolbox-Manual/releases/latest/download/KSSOLV_Toolbox_User_Manual_zh-CN.pdf) |
+| Traditional Chinese (Taiwan) | [Download PDF](https://github.com/USTC-Hu-Group/KSSOLV-Toolbox-Manual/releases/latest/download/KSSOLV_Toolbox_User_Manual_zh-TW.pdf) |
+| English | [Download PDF](https://github.com/USTC-Hu-Group/KSSOLV-Toolbox-Manual/releases/latest/download/KSSOLV_Toolbox_User_Manual_en.pdf) |
 
-The English edition contains 28 translated and cross-reviewed chapter and supplement files. Its 83 image assets comprise 76 screenshots captured from the native English interface and 7 language-neutral resources. Equations, numerical examples, executable listings, and all 23 executable files (21 MATLAB examples and 2 Python figure generators) are preserved from the Simplified Chinese edition. The [asset manifest](docs/provenance/english-edition-assets.json) records capture provenance.
+## Contents
+
+The manuals cover installation, the workspace, atomic structure modeling, calculation parameters and workflows, volumetric data, results analysis, remote computing, and troubleshooting, with worked examples for molecules and materials.
+
+## Reading guide
+
+New users can start with installation (or the Online instructions), explore the workspace, and follow the hydrogen molecule tutorial for a complete first calculation. Then use the modeling and workflow chapters for your own systems, and consult the parameter chapters, quick reference, and subject index as needed. Example inputs and scripts are included under each edition's `examples/` directory.
 
 ## Build the manuals
 
-Use Python 3.9 or later and TeX Live 2026, or a compatible TeX installation with the same packages and fonts. Required tools are XeLaTeX, latexmk, MakeIndex, and kpsewhich. Required packages include ctex, fontspec, TikZ, tcolorbox, xurl, makeidx, idxlayout, and adobemapping. Fonts are provided by TeX: Fandol, TeX Gyre, Latin Modern, and AMS Computer Modern.
-
-From the repository root:
+Install Python 3.9+ and TeX Live 2026 (or a compatible distribution with XeLaTeX and latexmk); see the [TeX requirements](docs/manual-zh-CN/README.md#build). Run from the repository root:
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 
-# Simplified Chinese (also the default for python build.py)
+python build.py --language en
 python build.py --language zh-CN
 
-# Build the Traditional Chinese sources already checked into the repository
+# Traditional Chinese: download the required fonts once before building.
 python tools/download_tw_fonts.py
 python build.py --language zh-TW
-
-# English release build, including coverage and capture-provenance checks
-python build.py --language en
 ```
 
-PDFs are written to:
+PDFs are saved to `output/pdf/KSSOLV_Toolbox_User_Manual_<language>.pdf`, where `<language>` is `en`, `zh-CN`, or `zh-TW`.
 
-- `output/pdf/KSSOLV_Toolbox_User_Manual_zh-CN.pdf`
-- `output/pdf/KSSOLV_Toolbox_User_Manual_zh-TW.pdf`
-- `output/pdf/KSSOLV_Toolbox_User_Manual_en.pdf`
+## License
 
-For an optional English layout proof with a DRAFT watermark, use `python build.py --language en --draft`. This writes `output/pdf/KSSOLV_Toolbox_User_Manual_en_DRAFT.pdf`; the download link above points to the release edition.
-
-The build rejects missing glyphs, horizontal overflow, and undefined references, and embeds required Unicode mappings for text search and copying. Reading and building the manuals requires no KSSOLV Toolbox installation, MATLAB®, Java/JVM, or native-code compilation.
-
-The Traditional Chinese edition additionally uses [Noto Serif CJK TC and Noto Sans CJK TC](https://github.com/notofonts/noto-cjk), because Fandol does not cover all required Taiwan characters. The font script downloads four prebuilt OTF files (about 80 MiB) and their SIL Open Font License texts from a pinned upstream revision, checks SHA256 hashes, and caches them in `output/fonts/noto-cjk/`. Internet access is needed only for the initial download; subsequent builds can run offline. No system font installation is needed.
-
-## Regenerate Traditional Chinese
-
-After editing the Simplified Chinese sources, run:
-
-```sh
-# Regenerate the tracked Traditional Chinese source tree
-python tools/translate_zh_tw.py
-
-# Check synchronization without modifying files (nonzero exit status on drift)
-python tools/translate_zh_tw.py --check
-
-# Or regenerate and build the Traditional Chinese PDF in one step
-python tools/translate_zh_tw.py --build
-```
-
-The script converts `main.tex`, `manual-style.sty`, and `chapters/*.tex`. It preserves LaTeX commands, labels, file paths, URLs, code listings, and literal inputs. Screenshot captions and ordinary interface labels in the prose are converted. All files under `figures/` (including TikZ source), `publication-assets/`, and `examples/` are copied unchanged, so text inside existing pictures remains as supplied.
-
-Run the font download step once before using `--build`. Taiwan font settings are maintained in `tools/manual-fonts-tw.sty` and copied into the generated edition.
-
-The converter uses the [pure-Python OpenCC implementation](https://github.com/yichen0831/opencc-python), pinned in `requirements.txt`; it does not use the compiled OpenCC bindings. Regeneration overwrites generated files in `docs/manual-zh-TW/` and removes obsolete files recorded in its generation manifest. Make edits in `docs/manual-zh-CN/`, then regenerate and commit the resulting Traditional Chinese sources alongside them. Build directories and Python caches are excluded.
-
-Run the converter regression tests with:
-
-```sh
-python -m unittest discover -s tests
-```
-
-## Repository layout
-
-| Path | Contents |
-| --- | --- |
-| `dist/` | Published PDF editions, release metadata, and checksums |
-| `docs/manual-zh-CN/` | Simplified Chinese manuscript and build support |
-| `docs/manual-zh-TW/` | Generated Traditional Chinese manuscript and unchanged assets |
-| `docs/manual-en/` | English manuscript, native English captures, and release/draft builds |
-| `docs/manual-*/chapters/` | Chapter text |
-| `docs/manual-*/manual-style.sty` | Page layout, fonts, and document style |
-| `docs/manual-*/figures/` | Editable figures and optional generation scripts |
-| `docs/manual-*/publication-assets/` | Published screenshot crops and vector figures |
-| `docs/manual-*/examples/` | Structures, projects, reference data, and MATLAB® examples |
-| `tools/translate_zh_tw.py` | Traditional Chinese generation and synchronization check |
-| `tools/verify_english_manual.py` | English coverage, unchanged-code, and capture-provenance checks |
-| `docs/manual-plan.zh-CN.md` | Writing plan and acceptance criteria |
-| `docs/provenance/` | Import provenance, asset records, and migration verification |
-
-`dist/` contains the published PDF editions. Local builds stay in `output/`; review them before promoting a new release. The Traditional Chinese edition is automatically generated and has not yet undergone the full editorial review of the approved Simplified Chinese release. Its release metadata is recorded in `dist/RELEASE.zh-TW.json`; `dist/SHA256SUMS` covers the published PDFs.
-
-After changing the build environment, compare a rebuilt Simplified Chinese PDF with the approved edition:
-
-```sh
-python tools/verify_pdf.py
-```
-
-This compares page text, page geometry, decoded page content, embedded fonts, and Unicode mappings. PDF metadata may differ between builds, so matching file hashes are not required.
-
-Intentional manuscript edits also cause this comparison to fail. In particular, the example path printed in the results chapter now uses `manual-zh-CN`, while the approved PDF still records the previous directory name.
-
-## Run the examples
-
-See the [example instructions](docs/manual-zh-CN/examples/README.zh-CN.md) for inputs, units, and reference results. MATLAB® examples require a separately installed matching KSSOLV Toolbox. Set `KSSOLV_TOOLBOX_ROOT` to its source directory, or use an installation MATLAB® can already locate. Run applicable non-graphical examples with `-nojvm`.
-
-Published figures are included. The optional NEB/IDPP figure script needs NumPy and Matplotlib and writes to `output/figures/neb-idpp/` without replacing the published assets. These optional libraries are unnecessary for PDF builds.
-
-## Provenance and licensing
-
-This standalone repository was imported from the V0.5.0 release source package. The import baseline in `docs/provenance/source-import-0.5.0.json` records the original package paths and hashes; subsequent changes are tracked by Git.
-
-The original [LICENSE](LICENSE) and [commercial licensing terms](COMMERCIAL-LICENSE.md) are retained. See the [third-party license index](THIRD-PARTY-LICENSES.md) for fonts, character mappings, example data, and conversion dependencies.
+Original content is licensed under the [Business Source License 1.1](LICENSE). Production use outside its Additional Use Grant requires a [commercial license](COMMERCIAL-LICENSE.md). [Third-party materials](THIRD-PARTY-LICENSES.md) retain their respective licenses.
